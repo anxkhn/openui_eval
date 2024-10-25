@@ -8,8 +8,7 @@ from typing import Any, Dict, List, Optional, Union
 import ollama
 from pydantic import BaseModel
 
-
-from ..core.logger import get_logger
+from core.logger import get_logger
 
 
 class OllamaClient:

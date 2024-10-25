@@ -7,9 +7,8 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from .framework_factory import FrameworkFactory
-
-from ..core.logger import get_logger
+from core.logger import get_logger
+from frameworks.framework_factory import FrameworkFactory
 
 
 class ProjectManager:

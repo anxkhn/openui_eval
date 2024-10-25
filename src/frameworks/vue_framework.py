@@ -3,7 +3,7 @@
 from pathlib import Path
 from typing import Any, Dict, List
 
-from .base_framework import BaseFramework
+from frameworks.base_framework import BaseFramework
 
 
 class VueFramework(BaseFramework):

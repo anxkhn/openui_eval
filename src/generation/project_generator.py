@@ -6,13 +6,12 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from ..core.config import TaskConfig
-
-from ..core.logger import get_logger
-from ..frameworks.framework_factory import FrameworkFactory
-from ..models.model_manager import ModelManager
-from ..rendering.node_renderer import NodeProjectRenderer
-from .html_processor import HTMLProcessor
+from core.config import TaskConfig
+from core.logger import get_logger
+from frameworks.framework_factory import FrameworkFactory
+from models.model_manager import ModelManager
+from rendering.node_renderer import NodeProjectRenderer
+from generation.html_processor import HTMLProcessor
 
 
 class ProjectGenerator:
@@ -362,7 +361,7 @@ class ProjectGenerator:
 
         base_prompt = f"""Create a complete {framework} {framework_info['version']} application for the following task:
 
-{task.prompt_template}
+{task.prompt}
 
 **Important Instructions:**
 - Generate a complete, working {framework} application with all necessary files

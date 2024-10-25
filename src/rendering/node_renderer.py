@@ -4,11 +4,10 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from .renderer import WebRenderer
-from ..core.config import RenderingConfig
-
-from ..core.logger import get_logger
-from ..frameworks.project_manager import ProjectManager
+from core.config import RenderingConfig
+from core.logger import get_logger
+from frameworks.project_manager import ProjectManager
+from rendering.renderer import WebRenderer
 
 
 class NodeProjectRenderer:

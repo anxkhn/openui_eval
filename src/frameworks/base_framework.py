@@ -6,8 +6,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-
-from ..core.logger import get_logger
+from core.logger import get_logger
 
 
 class BaseFramework(ABC):

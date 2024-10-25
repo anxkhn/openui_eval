@@ -6,11 +6,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from ..core.config import TaskConfig
-
-from ..core.logger import get_logger
-from ..models.model_manager import ModelManager
-from .html_processor import HTMLProcessor
+from core.config import TaskConfig
+from core.logger import get_logger
+from models.model_manager import ModelManager
+from generation.html_processor import HTMLProcessor
 
 
 class HTMLGenerator:
@@ -42,7 +41,7 @@ class HTMLGenerator:
             # Generate initial response
             start_time = time.time()
             response = self.model_manager.generate(
-                model_name=model_name, prompt=task.prompt_template
+                model_name=model_name, prompt=task.prompt
             )
             duration = time.time() - start_time
             # Extract HTML from response

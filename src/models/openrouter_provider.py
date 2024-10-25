@@ -8,9 +8,8 @@ from typing import Any, Dict, List, Optional
 import requests
 from pydantic import BaseModel
 
-
-from ..core.logger import get_logger
-from .base_provider import LLMProvider
+from core.logger import get_logger
+from models.base_provider import LLMProvider
 
 
 class OpenRouterProvider(LLMProvider):

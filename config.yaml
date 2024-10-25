@@ -39,17 +39,20 @@ provider:
 
 # Task Configuration
 tasks:
-  task_names:
-    - "basic_calculator"
-    - "personal_portfolio"
-    - "tic_tac_toe"
-    - "contact_form"
-    - "todo_app"
-    # Framework-specific tasks
-    - "react_todo_app"
-    - "vue_dashboard"
-    - "nextjs_blog"
-    - "svelte_portfolio"
+  tasks_dir: "tasks"
+  include_default_tasks: true
+  include_artifactsbench: true
+  include_webgen_bench: true
+  include_frontendbench: true
+  include_astra: true
+  include_frontend_tasks: true
+  custom_task_files: []
+
+  # Optional filtering (leave empty to include all)
+  task_names: []
+  categories: []
+  difficulties: []
+  project_types: []
 
   # Task execution settings
   timeout_minutes: 10

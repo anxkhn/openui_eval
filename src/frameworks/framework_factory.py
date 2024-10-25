@@ -2,12 +2,12 @@
 
 from typing import Dict, List, Type
 
-from .angular_framework import AngularFramework
-from .base_framework import BaseFramework
-from .nextjs_framework import NextJSFramework
-from .react_framework import ReactFramework
-from .svelte_framework import SvelteFramework
-from .vue_framework import VueFramework
+from frameworks.angular_framework import AngularFramework
+from frameworks.base_framework import BaseFramework
+from frameworks.nextjs_framework import NextJSFramework
+from frameworks.react_framework import ReactFramework
+from frameworks.svelte_framework import SvelteFramework
+from frameworks.vue_framework import VueFramework
 
 
 class FrameworkFactory:

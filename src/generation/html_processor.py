@@ -7,8 +7,7 @@ from typing import Any, Dict, List, Optional
 
 from bs4 import BeautifulSoup, Comment
 
-
-from ..core.logger import get_logger
+from core.logger import get_logger
 
 
 class HTMLProcessor:
