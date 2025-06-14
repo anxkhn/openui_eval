@@ -1,0 +1,29 @@
+# Core dependencies
+ollama
+selenium
+chromedriver-autoinstaller
+requests
+pyyaml
+tqdm
+psutil
+
+# Data handling and validation
+pydantic
+pandas
+numpy
+
+# Image processing
+Pillow
+
+# Logging and utilities
+python-dotenv
+click
+rich
+
+# HTML processing
+beautifulsoup4
+lxml
+
+# Testing (optional)
+pytest
+pytest-asyncio

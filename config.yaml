@@ -1,0 +1,137 @@
+# Multimodal LLM Benchmark System Configuration
+# This file contains default settings for the benchmark system
+
+# Model Configuration
+models:
+  enabled_models:
+    - "gemma3:4b"
+    - "qwen2.5vl:7b"
+    - "granite3.2-vision:2b"
+    - "llama3.2-vision:11b"
+    - "minicpm-v:8b"
+    - "llava-phi3:3.8b"
+
+  # Ollama client settings
+  ollama:
+    host: "http://localhost:11434"
+    timeout: 300
+    num_ctx: 32768 # 32K context window
+    num_predict: -1 # No limit on prediction length
+    temperature: 0.1
+    top_p: 0.9
+    top_k: 40
+    repeat_penalty: 1.1
+
+# Task Configuration
+tasks:
+  task_names:
+    - "basic_calculator"
+    - "personal_portfolio"
+    - "tic_tac_toe"
+    - "contact_form"
+    - "todo_app"
+
+  # Task execution settings
+  timeout_minutes: 10
+  max_retries: 3
+
+# Generation Configuration
+generation:
+  max_iterations: 3
+  improvement_prompt: "This is iteration {iteration}. You are provided with the previous code's visual output. Please use this to analyze and self improve and meet the previously requested requirements."
+
+  # HTML processing settings
+  html_processing:
+    extract_method: "regex" # or "beautifulsoup"
+    validate_html: true
+    clean_html: true
+    minify_output: false
+
+# Rendering Configuration
+rendering:
+  # Selenium WebDriver settings
+  webdriver:
+    browser: "chrome" # chrome, firefox, safari, edge
+    headless: true
+    window_size:
+      width: 1920
+      height: 1080
+    page_load_timeout: 30
+    implicit_wait: 10
+
+  # Screenshot settings
+  screenshot:
+    format: "png"
+    quality: 90
+    full_page: true
+    capture_element: null # null for full page, or CSS selector
+    # Full resolution screenshots at 1920x1080
+    # LLM-optimized versions automatically created at 1280x720
+
+  # Rendering options
+  wait_for_load: true
+  wait_time_seconds: 3
+  enable_javascript: true
+
+# Evaluation Configuration
+evaluation:
+  judge_models:
+    - "gemma3:4b"
+    - "qwen2.5vl:7b"
+    - "granite3.2-vision:2b"
+    - "llama3.2-vision:11b"
+    - "minicpm-v:8b"
+    - "llava-phi3:3.8b"
+
+  # Evaluation criteria weights
+  criteria_weights:
+    functionality: 0.3
+    visual_design: 0.25
+    code_quality: 0.2
+    user_experience: 0.15
+    responsiveness: 0.1
+
+  # Structured output settings
+  use_structured_output: true
+  max_evaluation_retries: 2
+
+# Execution Configuration
+execution:
+  mode: "full" # full, generation, evaluation
+  parallel_tasks: false
+  max_concurrent_models: 1
+  resume_from: null
+  dry_run: false
+
+  # Progress tracking
+  save_checkpoints: true
+  checkpoint_interval: 5 # Save every 5 tasks
+
+# Output Configuration
+output_dir: "results"
+save_artifacts: true
+compress_results: true
+
+# Logging Configuration
+logging:
+  level: "INFO" # DEBUG, INFO, WARNING, ERROR
+  format: "json" # json, text
+  save_to_file: true
+  log_api_calls: true
+  log_file_rotation: true
+  max_log_size_mb: 100
+
+# System Configuration
+system:
+  # Memory management
+  memory:
+    max_memory_usage_gb: 8
+    cleanup_interval_minutes: 30
+    force_gc_after_model: true
+
+  # Performance settings
+  performance:
+    enable_caching: true
+    cache_size_mb: 512
+    parallel_rendering: false
+    batch_size: 1
