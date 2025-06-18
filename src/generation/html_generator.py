@@ -36,8 +36,7 @@ class HTMLGenerator:
             Dictionary with generation results
         """
         try:
-            self.logger.log_task_operation(
-                "generate_initial", task.name, iteration=1)
+            self.logger.log_task_operation("generate_initial", task.name, iteration=1)
             # Clear any existing conversation history for this model
             self.model_manager.clear_conversation(model_name)
             # Generate initial response
@@ -47,14 +46,11 @@ class HTMLGenerator:
             )
             duration = time.time() - start_time
             # Extract HTML from response
-            html_content = self.html_processor.extract_html(
-                response["content"])
+            html_content = self.html_processor.extract_html(response["content"])
             if not html_content:
-                raise HTMLExtractionError(
-                    "No valid HTML found in model response")
+                raise HTMLExtractionError("No valid HTML found in model response")
             # Validate HTML
-            validation_results = self.html_processor.validate_html(
-                html_content)
+            validation_results = self.html_processor.validate_html(html_content)
             html_stats = self.html_processor.get_html_stats(html_content)
             # Prepare result
             result = {
@@ -108,8 +104,7 @@ class HTMLGenerator:
                 "improve_html", task.name, iteration=iteration
             )
             # Create improvement prompt
-            improvement_prompt = self._create_improvement_prompt(
-                task, iteration)
+            improvement_prompt = self._create_improvement_prompt(task, iteration)
             # Generate improved HTML using conversation history and screenshot
             start_time = time.time()
             response = self.model_manager.generate_with_conversation(
@@ -119,16 +114,14 @@ class HTMLGenerator:
             )
             duration = time.time() - start_time
             # Extract HTML from response
-            html_content = self.html_processor.extract_html(
-                response["content"])
+            html_content = self.html_processor.extract_html(response["content"])
             if not html_content:
                 self.logger.warning(
                     f"No HTML found in improvement iteration {iteration}, using previous HTML"
                 )
                 html_content = previous_html
             # Validate HTML
-            validation_results = self.html_processor.validate_html(
-                html_content)
+            validation_results = self.html_processor.validate_html(html_content)
             html_stats = self.html_processor.get_html_stats(html_content)
             # Prepare result
             result = {
@@ -228,14 +221,12 @@ Please provide the complete improved HTML code with inline CSS and JavaScript. M
                 # Save HTML to file
                 html_filename = f"v{iteration}.html"
                 html_path = task_dir / html_filename
-                self.html_processor.save_html(
-                    result["html_content"], str(html_path))
+                self.html_processor.save_html(result["html_content"], str(html_path))
                 result["html_path"] = str(html_path)
                 # Render screenshot if renderer is available
                 if renderer:
                     try:
-                        screenshot_path = task_dir / \
-                            f"v{iteration}_screenshot.png"
+                        screenshot_path = task_dir / f"v{iteration}_screenshot.png"
                         render_result = renderer.render_html_file(
                             str(html_path), str(screenshot_path)
                         )
@@ -246,8 +237,7 @@ Please provide the complete improved HTML code with inline CSS and JavaScript. M
                             result["llm_screenshot_path"] = render_result[
                                 "llm_screenshot_path"
                             ]
-                            self.logger.info(
-                                f"Screenshots saved: {screenshot_path}")
+                            self.logger.info(f"Screenshots saved: {screenshot_path}")
                             if render_result["llm_screenshot_path"]:
                                 self.logger.info(
                                     f"LLM-optimized screenshot: {render_result['llm_screenshot_path']}"
@@ -264,8 +254,7 @@ Please provide the complete improved HTML code with inline CSS and JavaScript. M
                 metadata_path = task_dir / f"v{iteration}_metadata.json"
                 with open(metadata_path, "w") as f:
                     # Create a copy without the HTML content for metadata
-                    metadata = {k: v for k, v in result.items()
-                                if k != "html_content"}
+                    metadata = {k: v for k, v in result.items() if k != "html_content"}
                     json.dump(metadata, f, indent=2, default=str)
                 result["metadata_path"] = str(metadata_path)
                 results.append(result)

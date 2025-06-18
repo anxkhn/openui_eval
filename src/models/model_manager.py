@@ -43,15 +43,13 @@ class ModelManager:
         # Initialize Ollama client
         self.client = OllamaClient()
         # Track model states
-        self.model_states = {name: ModelState(
-            name=name) for name in self.models.keys()}
+        self.model_states = {name: ModelState(name=name) for name in self.models.keys()}
         # Currently loaded models
         self.loaded_models = set()
         # Check Ollama availability
         if not self.client.is_available():
             raise ModelError("Ollama server is not available")
-        self.logger.info(
-            f"ModelManager initialized with {len(self.models)} models")
+        self.logger.info(f"ModelManager initialized with {len(self.models)} models")
 
     def get_memory_usage(self) -> Dict[str, float]:
         """Get current system memory usage."""
@@ -76,15 +74,13 @@ class ModelManager:
         try:
             available_models = self.client.list_models()
             if model_name not in available_models:
-                self.logger.info(
-                    f"Model {model_name} not found locally, pulling...")
+                self.logger.info(f"Model {model_name} not found locally, pulling...")
                 success = self.client.pull_model(model_name)
                 if not success:
                     raise ModelError(f"Failed to pull model {model_name}")
             return True
         except Exception as e:
-            self.logger.error(
-                f"Failed to ensure model {model_name} availability: {e}")
+            self.logger.error(f"Failed to ensure model {model_name} availability: {e}")
             return False
 
     def load_model(self, model_name: str) -> bool:
@@ -98,8 +94,7 @@ class ModelManager:
         try:
             # Check memory before loading
             if not self.check_memory_threshold():
-                self.logger.warning(
-                    "Memory usage high, attempting to free memory")
+                self.logger.warning("Memory usage high, attempting to free memory")
                 self._free_memory()
             # Ensure we don't exceed concurrent model limit
             if len(self.loaded_models) >= self.max_concurrent_models:

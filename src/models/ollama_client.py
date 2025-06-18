@@ -47,8 +47,7 @@ class OllamaClient:
                         model_names.append(model.name)
                     elif isinstance(model, dict):
                         name = (
-                            model.get("model") or model.get(
-                                "name") or model.get("id")
+                            model.get("model") or model.get("name") or model.get("id")
                         )
                         if name:
                             model_names.append(name)
@@ -82,8 +81,7 @@ class OllamaClient:
                         model_names.append(model.name)
                     elif isinstance(model, dict):
                         name = (
-                            model.get("model") or model.get(
-                                "name") or model.get("id")
+                            model.get("model") or model.get("name") or model.get("id")
                         )
                         if name:
                             model_names.append(name)
@@ -270,8 +268,7 @@ class OllamaClient:
             duration = time.time() - start_time
             error_msg = f"Failed to generate response from {model_name}: {e}"
             self.logger.error(
-                error_msg, model_name=model_name, duration=duration, error=str(
-                    e)
+                error_msg, model_name=model_name, duration=duration, error=str(e)
             )
             raise ModelError(error_msg)
 
@@ -326,8 +323,7 @@ class OllamaClient:
             info = self.client.show(model_name)
             return info
         except Exception as e:
-            self.logger.error(
-                f"Failed to get info for model {model_name}: {e}")
+            self.logger.error(f"Failed to get info for model {model_name}: {e}")
             return {}
 
     def delete_model(self, model_name: str) -> bool:

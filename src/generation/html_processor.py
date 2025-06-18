@@ -77,8 +77,7 @@ class HTMLProcessor:
             # Unescape HTML entities
             html_content = html.unescape(html_content)
             # Remove markdown code block markers
-            html_content = re.sub(r"^```html\s*", "",
-                                  html_content, flags=re.IGNORECASE)
+            html_content = re.sub(r"^```html\s*", "", html_content, flags=re.IGNORECASE)
             html_content = re.sub(r"^```\s*", "", html_content)
             html_content = re.sub(r"\s*```$", "", html_content)
             # Parse with BeautifulSoup for cleaning
@@ -109,8 +108,7 @@ class HTMLProcessor:
                 html_content = soup.prettify()
             return html_content.strip()
         except Exception as e:
-            self.logger.warning(
-                f"Failed to clean HTML, returning original: {e}")
+            self.logger.warning(f"Failed to clean HTML, returning original: {e}")
             return html_content.strip()
 
     def _is_valid_html(self, content: str) -> bool:
@@ -200,19 +198,16 @@ class HTMLProcessor:
             }
             # Check for common issues
             if not validation_results["has_doctype"]:
-                validation_results["warnings"].append(
-                    "Missing DOCTYPE declaration")
+                validation_results["warnings"].append("Missing DOCTYPE declaration")
             if not validation_results["has_title"]:
                 validation_results["warnings"].append("Missing title tag")
             if not validation_results["has_meta_charset"]:
-                validation_results["warnings"].append(
-                    "Missing charset meta tag")
+                validation_results["warnings"].append("Missing charset meta tag")
             if validation_results["tag_count"] == 0:
                 validation_results["errors"].append("No HTML tags found")
                 validation_results["is_valid"] = False
             if validation_results["text_content_length"] == 0:
-                validation_results["warnings"].append(
-                    "No visible text content")
+                validation_results["warnings"].append("No visible text content")
             return validation_results
         except Exception as e:
             return {
@@ -308,8 +303,7 @@ class HTMLProcessor:
             text_content = soup.get_text().strip()
             # Count lines of CSS and JS
             assets = self.extract_inline_assets(html_content)
-            css_lines = sum(len(css.split("\n"))
-                            for css in assets["inline_css"])
+            css_lines = sum(len(css.split("\n")) for css in assets["inline_css"])
             js_lines = sum(len(js.split("\n")) for js in assets["inline_js"])
             return {
                 "total_elements": len(soup.find_all()),

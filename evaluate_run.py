@@ -146,8 +146,7 @@ def main():
         # Discover run contents
         run_contents = discover_run_contents(run_path)
         if not run_contents["models"]:
-            raise BenchmarkError(
-                f"No models found in run: {args.run_timestamp}")
+            raise BenchmarkError(f"No models found in run: {args.run_timestamp}")
         logger.info(f"Found models: {run_contents['models']}")
         # Filter models if specified
         models_to_evaluate = args.models if args.models else run_contents["models"]
@@ -188,8 +187,7 @@ def main():
                     run_path, model, task, iterations
                 )
                 if not generation_results:
-                    logger.warning(
-                        f"    No generation results found for {task}")
+                    logger.warning(f"    No generation results found for {task}")
                     continue
                 logger.info(f"    Found {len(generation_results)} iterations")
                 # Run evaluation
@@ -205,14 +203,12 @@ def main():
                     # Create task summary and save it in the timestamp folder
                     if evaluations:
                         task_path = run_path / model / task
-                        summary = judge.create_task_summary(
-                            model, task, evaluations)
+                        summary = judge.create_task_summary(model, task, evaluations)
                         summary_path = task_path / "evaluation_summary.json"
                         import json
 
                         with open(summary_path, "w") as f:
-                            json.dump(summary.model_dump(), f,
-                                      indent=2, default=str)
+                            json.dump(summary.model_dump(), f, indent=2, default=str)
                         logger.info(f"      Saved: evaluation_summary.json")
                     logger.info(
                         f"    Completed evaluation: {len(evaluations)} evaluations"

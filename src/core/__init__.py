@@ -1,8 +1,7 @@
 """Core utilities and configuration for the benchmark system."""
 
 from .config import Config
-from .exceptions import (BenchmarkError, EvaluationError, ModelError,
-                         RenderingError)
+from .exceptions import BenchmarkError, EvaluationError, ModelError, RenderingError
 from .logger import Logger
 
 __all__ = [

@@ -13,8 +13,11 @@ from tqdm import tqdm
 from ..core.config import Config
 from ..core.exceptions import BenchmarkError
 from ..core.logger import get_logger, setup_logger
-from ..evaluation.evaluation_schemas import (BenchmarkSummary, ModelRanking,
-                                             TaskDifficultyRanking)
+from ..evaluation.evaluation_schemas import (
+    BenchmarkSummary,
+    ModelRanking,
+    TaskDifficultyRanking,
+)
 from ..evaluation.judge import Judge
 from ..generation.html_generator import HTMLGenerator
 from ..models.model_manager import ModelManager
@@ -90,8 +93,7 @@ class BenchmarkPipeline:
             }
             self.logger.log_system_info(system_info)
             # Save system info to file
-            system_info_path = Path(
-                self.config.output_dir) / "system_info.json"
+            system_info_path = Path(self.config.output_dir) / "system_info.json"
             with open(system_info_path, "w") as f:
                 json.dump(system_info, f, indent=2, default=str)
         except Exception as e:
@@ -134,8 +136,7 @@ class BenchmarkPipeline:
                 * len(judge_models)
             )
             self.total_operations = generation_ops + evaluation_ops
-        self.logger.info(
-            f"Total operations to perform: {self.total_operations}")
+        self.logger.info(f"Total operations to perform: {self.total_operations}")
 
     def _update_progress(self, operation_name: str):
         """Update progress tracking."""
@@ -160,13 +161,11 @@ class BenchmarkPipeline:
                 for model_config in self.config.models:
                     model_name = model_config.name
                     generation_results[model_name] = {}
-                    self.logger.info(
-                        f"Starting generation with model: {model_name}")
+                    self.logger.info(f"Starting generation with model: {model_name}")
                     for task in self.config.tasks:
                         task_name = task.name
                         try:
-                            self.logger.info(
-                                f"Generating HTML for task: {task_name}")
+                            self.logger.info(f"Generating HTML for task: {task_name}")
                             # Generate HTML with iterations
                             task_results = self.html_generator.generate_complete_task(
                                 model_name=model_name,
@@ -211,8 +210,7 @@ class BenchmarkPipeline:
             if generation_results is None:
                 generation_results = self.results.get("generation_results", {})
             if not generation_results:
-                raise BenchmarkError(
-                    "No generation results available for evaluation")
+                raise BenchmarkError("No generation results available for evaluation")
             # Determine judge models using the new method
             judge_models = self._determine_judge_models()
             self.logger.info(f"Using judge models: {judge_models}")
@@ -246,8 +244,7 @@ class BenchmarkPipeline:
                                     f"Task config not found for {task_name}"
                                 )
                                 continue
-                            self.logger.info(
-                                f"Evaluating {model_name} on {task_name}")
+                            self.logger.info(f"Evaluating {model_name} on {task_name}")
                             # Run evaluations with all judges
                             evaluations = self.judge.evaluate_all_iterations(
                                 judge_models=judge_models,
@@ -322,11 +319,9 @@ class BenchmarkPipeline:
                     strength_counts = {}
                     weakness_counts = {}
                     for strength in strengths:
-                        strength_counts[strength] = strength_counts.get(
-                            strength, 0) + 1
+                        strength_counts[strength] = strength_counts.get(strength, 0) + 1
                     for weakness in weaknesses:
-                        weakness_counts[weakness] = weakness_counts.get(
-                            weakness, 0) + 1
+                        weakness_counts[weakness] = weakness_counts.get(weakness, 0) + 1
                     model_strengths[model_name] = sorted(
                         strength_counts.keys(),
                         key=lambda x: strength_counts[x],
@@ -355,8 +350,7 @@ class BenchmarkPipeline:
                     if summary:
                         if task_name not in task_scores:
                             task_scores[task_name] = []
-                        task_scores[task_name].append(
-                            summary.final_overall_score)
+                        task_scores[task_name].append(summary.final_overall_score)
             task_difficulty_ranking = [
                 TaskDifficultyRanking(
                     task=task, average_score=sum(scores) / len(scores)
@@ -410,8 +404,7 @@ class BenchmarkPipeline:
                 recommended_model_for_tasks={},  # Would need task-specific analysis
             )
             # Save benchmark summary
-            summary_path = Path(self.config.output_dir) / \
-                "benchmark_summary.json"
+            summary_path = Path(self.config.output_dir) / "benchmark_summary.json"
             with open(summary_path, "w") as f:
                 json.dump(summary.model_dump(), f, indent=2, default=str)
             self.results["benchmark_summary"] = summary
@@ -438,12 +431,10 @@ class BenchmarkPipeline:
                 # Load existing generation results
                 # This would need implementation to load from saved files
                 generation_results = {}
-                evaluation_results = self.run_evaluation_phase(
-                    generation_results)
+                evaluation_results = self.run_evaluation_phase(generation_results)
             else:  # full-pipeline
                 generation_results = self.run_generation_phase()
-                evaluation_results = self.run_evaluation_phase(
-                    generation_results)
+                evaluation_results = self.run_evaluation_phase(generation_results)
                 benchmark_summary = self.create_benchmark_summary()
             # Cleanup
             if self.model_manager:

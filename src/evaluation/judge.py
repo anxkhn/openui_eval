@@ -10,8 +10,7 @@ from ..core.config import EvaluationConfig
 from ..core.exceptions import EvaluationError
 from ..core.logger import get_logger
 from ..models.model_manager import ModelManager
-from .evaluation_schemas import (CriteriaScore, EvaluationResult,
-                                 TaskEvaluationSummary)
+from .evaluation_schemas import CriteriaScore, EvaluationResult, TaskEvaluationSummary
 
 
 class Judge:
@@ -105,8 +104,7 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
                     evaluation.code_quality.score,
                     evaluation.task_completion.score,
                 ]
-                evaluation.overall_score = sum(
-                    criteria_scores) / len(criteria_scores)
+                evaluation.overall_score = sum(criteria_scores) / len(criteria_scores)
             # Ensure criteria_scores list is populated
             evaluation.criteria_scores = [
                 evaluation.visual_appeal,
@@ -206,8 +204,7 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
                             )
                             eval_path = eval_dir / eval_filename
                         with open(eval_path, "w") as f:
-                            json.dump(evaluation.model_dump(),
-                                      f, indent=2, default=str)
+                            json.dump(evaluation.model_dump(), f, indent=2, default=str)
                         self.logger.info(f"Saved evaluation: {eval_path}")
                     except Exception as e:
                         self.logger.error(
@@ -263,15 +260,12 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
                 score_progression.append(avg_overall)
                 # Average criteria scores
                 for criteria in average_scores_by_criteria.keys():
-                    scores = [
-                        getattr(e, criteria).score for e in iter_evaluations]
+                    scores = [getattr(e, criteria).score for e in iter_evaluations]
                     avg_score = sum(scores) / len(scores)
                     average_scores_by_criteria[criteria].append(avg_score)
             # Find best and worst iterations
-            best_iteration = score_progression.index(
-                max(score_progression)) + 1
-            worst_iteration = score_progression.index(
-                min(score_progression)) + 1
+            best_iteration = score_progression.index(max(score_progression)) + 1
+            worst_iteration = score_progression.index(min(score_progression)) + 1
             # Calculate judge agreement (variance-based measure)
             judge_agreement_scores = []
             for iteration in evaluations_by_iteration.keys():
@@ -295,8 +289,7 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
                 for iteration in evaluations_by_iteration.keys():
                     iter_evaluations = evaluations_by_iteration[iteration]
                     if len(iter_evaluations) > 1:
-                        scores = [
-                            getattr(e, criteria).score for e in iter_evaluations]
+                        scores = [getattr(e, criteria).score for e in iter_evaluations]
                         variance = sum(
                             (s - sum(scores) / len(scores)) ** 2 for s in scores
                         ) / len(scores)
@@ -328,11 +321,9 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
             strength_counts = {}
             weakness_counts = {}
             for strength in all_strengths:
-                strength_counts[strength] = strength_counts.get(
-                    strength, 0) + 1
+                strength_counts[strength] = strength_counts.get(strength, 0) + 1
             for weakness in all_weaknesses:
-                weakness_counts[weakness] = weakness_counts.get(
-                    weakness, 0) + 1
+                weakness_counts[weakness] = weakness_counts.get(weakness, 0) + 1
             key_strengths = sorted(
                 strength_counts.keys(), key=lambda x: strength_counts[x], reverse=True
             )[:5]
@@ -345,11 +336,9 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
             )
             priority_improvements = []
             for evaluation in recent_evaluations:
-                priority_improvements.extend(
-                    evaluation.improvement_suggestions)
+                priority_improvements.extend(evaluation.improvement_suggestions)
             # Remove duplicates while preserving order
-            priority_improvements = list(
-                dict.fromkeys(priority_improvements))[:10]
+            priority_improvements = list(dict.fromkeys(priority_improvements))[:10]
             # Create summary
             summary = TaskEvaluationSummary(
                 task_name=task_name,

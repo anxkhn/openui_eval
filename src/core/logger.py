@@ -127,8 +127,7 @@ class Logger:
         error_handler = logging.FileHandler(error_log_file)
         error_handler.setLevel(logging.ERROR)
         error_handler.setFormatter(
-            logging.Formatter(
-                "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+            logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
         )
         self.logger.addHandler(error_handler)
         # API calls log file
@@ -288,8 +287,7 @@ class Logger:
             model_stats[model]["total_duration"] += call["duration"]
         for model in model_stats:
             model_stats[model]["avg_duration"] = (
-                model_stats[model]["total_duration"] /
-                model_stats[model]["calls"]
+                model_stats[model]["total_duration"] / model_stats[model]["calls"]
             )
         return {
             "total_calls": total_calls,

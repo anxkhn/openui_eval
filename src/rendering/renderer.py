@@ -45,8 +45,7 @@ class WebRenderer:
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-plugins")
             chrome_options.add_argument("--disable-images")  # Faster loading
-            chrome_options.add_argument(
-                "--disable-javascript")  # For static rendering
+            chrome_options.add_argument("--disable-javascript")  # For static rendering
             chrome_options.add_argument(
                 f"--window-size={self.config.viewport_width},{self.config.viewport_height}"
             )
@@ -138,8 +137,7 @@ class WebRenderer:
                     if self._create_llm_optimized_image(
                         screenshot_path, str(llm_screenshot_path)
                     ):
-                        result["llm_screenshot_path"] = str(
-                            llm_screenshot_path)
+                        result["llm_screenshot_path"] = str(llm_screenshot_path)
                 self.logger.log_rendering_operation(
                     url=file_url,
                     screenshot_path=screenshot_path,
@@ -241,8 +239,7 @@ class WebRenderer:
             # Wait for page to load
             time.sleep(self.config.wait_time)
             # Get page dimensions
-            total_width = self.driver.execute_script(
-                "return document.body.offsetWidth")
+            total_width = self.driver.execute_script("return document.body.offsetWidth")
             total_height = self.driver.execute_script(
                 "return document.body.parentNode.scrollHeight"
             )
@@ -322,14 +319,10 @@ class WebRenderer:
             }
             # Try to get more detailed information
             try:
-                info["element_count"] = len(
-                    self.driver.find_elements(By.XPATH, "//*"))
-                info["image_count"] = len(
-                    self.driver.find_elements(By.TAG_NAME, "img"))
-                info["link_count"] = len(
-                    self.driver.find_elements(By.TAG_NAME, "a"))
-                info["form_count"] = len(
-                    self.driver.find_elements(By.TAG_NAME, "form"))
+                info["element_count"] = len(self.driver.find_elements(By.XPATH, "//*"))
+                info["image_count"] = len(self.driver.find_elements(By.TAG_NAME, "img"))
+                info["link_count"] = len(self.driver.find_elements(By.TAG_NAME, "a"))
+                info["form_count"] = len(self.driver.find_elements(By.TAG_NAME, "form"))
             except Exception as e:
                 self.logger.warning(f"Failed to get detailed page info: {e}")
             return info
@@ -354,8 +347,7 @@ class WebRenderer:
             "desktop": (1920, 1080),
         }
         results = {}
-        original_size = (self.config.viewport_width,
-                         self.config.viewport_height)
+        original_size = (self.config.viewport_width, self.config.viewport_height)
         try:
             for viewport_name, (width, height) in viewports.items():
                 try:
@@ -368,10 +360,8 @@ class WebRenderer:
                         self.config.viewport_height = height
                         self._setup_driver()
                     # Capture screenshot
-                    screenshot_path = Path(
-                        screenshot_dir) / f"{viewport_name}_view.png"
-                    success = self.render_html_file(
-                        html_path, str(screenshot_path))
+                    screenshot_path = Path(screenshot_dir) / f"{viewport_name}_view.png"
+                    success = self.render_html_file(html_path, str(screenshot_path))
                     results[viewport_name] = success
                     if success:
                         self.logger.info(

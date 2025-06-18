@@ -37,14 +37,11 @@ class EvaluationResult(BaseModel):
     judge_model: str = Field(
         description="Name of the model that performed the evaluation"
     )
-    target_model: str = Field(
-        description="Name of the model that generated the HTML")
+    target_model: str = Field(description="Name of the model that generated the HTML")
     task_name: str = Field(description="Name of the task being evaluated")
-    iteration: int = Field(
-        ge=1, description="Iteration number of the generated HTML")
+    iteration: int = Field(ge=1, description="Iteration number of the generated HTML")
     # Overall assessment
-    overall_score: float = Field(
-        ge=0, le=10, description="Overall score from 0 to 10")
+    overall_score: float = Field(ge=0, le=10, description="Overall score from 0 to 10")
     overall_feedback: str = Field(
         description="General feedback about the HTML generation"
     )
@@ -69,8 +66,7 @@ class EvaluationResult(BaseModel):
         description="Assessment of how well the task requirements were met"
     )
     # Additional insights
-    strengths: List[str] = Field(
-        description="List of strengths identified in the HTML")
+    strengths: List[str] = Field(description="List of strengths identified in the HTML")
     weaknesses: List[str] = Field(
         description="List of weaknesses identified in the HTML"
     )
@@ -103,8 +99,7 @@ class TaskEvaluationSummary(BaseModel):
     """Summary of all evaluations for a specific task."""
 
     task_name: str = Field(description="Name of the task")
-    target_model: str = Field(
-        description="Name of the model that generated the HTML")
+    target_model: str = Field(description="Name of the model that generated the HTML")
     total_iterations: int = Field(
         ge=1, description="Total number of iterations evaluated"
     )
@@ -112,8 +107,7 @@ class TaskEvaluationSummary(BaseModel):
     judge_models: List[str] = Field(
         description="List of models that performed evaluations"
     )
-    total_evaluations: int = Field(
-        description="Total number of evaluations performed")
+    total_evaluations: int = Field(description="Total number of evaluations performed")
     # Score progression
     score_progression: List[float] = Field(
         description="Overall scores for each iteration"
@@ -166,14 +160,12 @@ class BenchmarkSummary(BaseModel):
     )
     total_models: int = Field(description="Total number of models benchmarked")
     total_tasks: int = Field(description="Total number of tasks evaluated")
-    total_iterations_per_task: int = Field(
-        description="Number of iterations per task")
+    total_iterations_per_task: int = Field(description="Number of iterations per task")
     # Model performance
     model_rankings: List[ModelRanking] = Field(
         description="Models ranked by overall performance"
     )
-    model_scores: Dict[str, float] = Field(
-        description="Average scores for each model")
+    model_scores: Dict[str, float] = Field(description="Average scores for each model")
     model_strengths: Dict[str, List[str]] = Field(
         description="Key strengths for each model"
     )

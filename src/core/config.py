@@ -289,8 +289,7 @@ class Config:
                 data = yaml.safe_load(f)
             return cls.from_dict(data)
         except Exception as e:
-            raise ConfigurationError(
-                f"Failed to load config from {yaml_path}: {e}")
+            raise ConfigurationError(f"Failed to load config from {yaml_path}: {e}")
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Config":
@@ -328,8 +327,7 @@ class Config:
             with open(yaml_path, "w") as f:
                 yaml.dump(data, f, default_flow_style=False, indent=2)
         except Exception as e:
-            raise ConfigurationError(
-                f"Failed to save config to {yaml_path}: {e}")
+            raise ConfigurationError(f"Failed to save config to {yaml_path}: {e}")
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert configuration to dictionary."""
@@ -430,8 +428,7 @@ class Config:
             raise ConfigurationError("At least one task must be specified")
         for task in self.tasks:
             if not task.name or not task.prompt_template:
-                raise ConfigurationError(
-                    "Task name and prompt_template are required")
+                raise ConfigurationError("Task name and prompt_template are required")
         # Validate iterations
         if self.iterations < 1:
             raise ConfigurationError("Iterations must be at least 1")
