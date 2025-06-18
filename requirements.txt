@@ -27,3 +27,4 @@ lxml
 # Testing (optional)
 pytest
 pytest-asyncio
+black
