@@ -4,6 +4,7 @@
 # Model Configuration
 models:
   enabled_models:
+    - "gemma3n:e2b"
     - "gemma3:4b"
     - "qwen2.5vl:7b"
     - "granite3.2-vision:2b"
@@ -76,6 +77,7 @@ rendering:
 # Evaluation Configuration
 evaluation:
   judge_models:
+    - "gemma3n:e2b"
     - "gemma3:4b"
     - "qwen2.5vl:7b"
     - "granite3.2-vision:2b"

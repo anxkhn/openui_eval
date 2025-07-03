@@ -45,6 +45,7 @@
 
 4. **Pull required models** (this may take time):
    ```bash
+   ollama pull gemma3n:e2b
    ollama pull gemma3:4b
    ollama pull qwen2.5vl:7b
    ollama pull granite3.2-vision:2b
@@ -68,13 +69,13 @@ python main.py
 **Run specific models and tasks**:
 
 ```bash
-python main.py --models gemma3:4b qwen2.5vl:7b --tasks basic_calculator personal_portfolio
+python main.py --models gemma3n:e2b gemma3:4b qwen2.5vl:7b --tasks basic_calculator personal_portfolio
 ```
 
 **Customize iterations and judges**:
 
 ```bash
-python main.py --iterations 5 --judges gemma3:4b llama3.2-vision:11b
+python main.py --iterations 5 --judges gemma3n:e2b gemma3:4b llama3.2-vision:11b
 ```
 
 **Resume from checkpoint**:

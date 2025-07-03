@@ -26,9 +26,9 @@ Examples:
   # Evaluate a specific run
   python evaluate_run.py 20250611_024703
   # Evaluate with specific judges
-  python evaluate_run.py 20250611_024703 --judges gemma3:4b qwen2.5vl:7b
+  python evaluate_run.py 20250611_024703 --judges gemma3n:e2b gemma3:4b qwen2.5vl:7b
   # Evaluate specific models/tasks from a run
-  python evaluate_run.py 20250611_024703 --models gemma3:4b --tasks basic_calculator
+  python evaluate_run.py 20250611_024703 --models gemma3n:e2b gemma3:4b --tasks basic_calculator
         """,
     )
     parser.add_argument(

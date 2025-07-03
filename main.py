@@ -25,9 +25,9 @@ Examples:
   # Run with default configuration
   python main.py
   # Run specific models and tasks
-  python main.py --models gemma3:4b qwen2.5vl:7b --tasks calculator portfolio
+  python main.py --models gemma3n:e2b gemma3:4b qwen2.5vl:7b --tasks calculator portfolio
   # Run with custom iterations and judges
-  python main.py --iterations 5 --judges gemma3:4b llama3.2-vision:11b
+  python main.py --iterations 5 --judges gemma3n:e2b gemma3:4b llama3.2-vision:11b
   # Resume from a specific checkpoint
   python main.py --resume-from results/benchmark_20241201_143022
   # Run in evaluation-only mode

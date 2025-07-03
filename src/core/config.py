@@ -51,6 +51,7 @@ class EvaluationConfig:
 
     judge_models: List[str] = field(
         default_factory=lambda: [
+            "gemma3n:e2b",
             "gemma3:4b",
             "qwen2.5vl:7b",
             "granite3.2-vision:2b",
@@ -79,6 +80,7 @@ class Config:
     # Model settings
     models: List[ModelConfig] = field(
         default_factory=lambda: [
+            ModelConfig("gemma3n:e2b"),
             ModelConfig("gemma3:4b"),
             ModelConfig("qwen2.5vl:7b"),
             ModelConfig("granite3.2-vision:2b"),
