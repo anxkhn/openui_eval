@@ -27,6 +27,15 @@
    pip install -r requirements.txt
    ```
 
+   If you are using uv **(recommended)**:
+
+      ```bash
+      uv venv
+      source .venv/bin/activate
+      uv sync
+      ```
+
+
 3. **Install and start Ollama**:
 
    ```bash
