@@ -1,5 +1,6 @@
 # Core dependencies
 ollama
+google-genai
 selenium
 chromedriver-autoinstaller
 requests
@@ -19,6 +20,7 @@ Pillow
 python-dotenv
 click
 rich
+pyyaml
 
 # HTML processing
 beautifulsoup4
@@ -28,3 +30,40 @@ lxml
 pytest
 pytest-asyncio
 black
+
+# Other dependencies
+annotated-types
+anyio
+attrs
+certifi
+charset-normalizer
+h11
+httpcore
+httpx
+idna
+iniconfig
+markdown-it-py
+mdurl
+mypy-extensions
+outcome
+packaging
+pathspec
+platformdirs
+pluggy
+pydantic-core
+pygments
+pysocks
+python-dateutil
+pytz
+six
+sniffio
+sortedcontainers
+soupsieve
+trio
+trio-websocket
+typing-extensions
+typing-inspection
+tzdata
+urllib3
+websocket-client
+wsproto
