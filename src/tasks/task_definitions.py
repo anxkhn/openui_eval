@@ -848,6 +848,593 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
         time_estimate_minutes=25,
         tags=["event", "tech", "conference", "announcement", "modern"],
     ),
+    "weather_dashboard": TaskDefinition(
+        name="weather_dashboard",
+        category=TaskCategory.DASHBOARD,
+        difficulty=DifficultyLevel.INTERMEDIATE,
+        prompt="""Create a comprehensive weather dashboard with real-time-style interface and interactive elements.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a modern, clean interface with a gradient background transitioning from light blue to deep blue.
+- Include a prominent header with "Weather Dashboard" title and current date/time display that updates via JavaScript.
+- Main content area should feature:
+  * Current weather section: Large temperature display (72°F), weather icon placeholder, humidity (65%), wind speed (12 mph), UV index (6)
+  * 5-day forecast: Horizontal cards showing day, weather icon, high/low temps
+  * Hourly forecast: Scrollable horizontal timeline with hourly data for next 12 hours
+  * Weather map section: Placeholder for interactive map with zoom controls
+  * Air quality index: Visual indicator with color-coded AQI scale (Good/Moderate/Unhealthy)
+- Add location search bar with autocomplete styling and "Use Current Location" button
+- Include weather alerts section with sample severe weather warnings
+- Weather metrics should use realistic sample data and proper units
+- Implement smooth transitions, hover effects, and interactive elements throughout
+- The dashboard must be fully responsive with mobile-optimized layouts
+- Use modern weather icons (Unicode symbols or CSS-created icons) and consistent color coding for different weather conditions""",
+        description="A comprehensive weather dashboard with current conditions, forecasts, and interactive elements",
+        requirements=[
+            "Current weather display with temperature, humidity, wind",
+            "5-day forecast with weather icons",
+            "Hourly forecast timeline",
+            "Location search with geolocation option",
+            "Weather map placeholder with controls",
+            "Air quality index display",
+            "Weather alerts section",
+            "Real-time clock and date",
+            "Responsive design for all devices",
+            "Interactive hover effects and transitions",
+        ],
+        evaluation_criteria=[
+            "Data organization and presentation clarity",
+            "Interactive elements functionality",
+            "Visual design and weather iconography",
+            "Responsive layout quality",
+            "Information hierarchy effectiveness",
+            "Mobile usability and touch interactions",
+        ],
+        expected_features=[
+            "JavaScript for time updates and interactions",
+            "CSS Grid and Flexbox for complex layouts",
+            "Weather data visualization techniques",
+            "Responsive breakpoints and mobile optimization",
+            "Modern UI components and animations",
+        ],
+        time_estimate_minutes=50,
+        tags=["weather", "dashboard", "interactive", "real-time", "responsive"],
+    ),
+    "fitness_tracker_app": TaskDefinition(
+        name="fitness_tracker_app",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.ADVANCED,
+        prompt="""Create a comprehensive fitness tracking application with workout logging and progress visualization.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a modern, health-focused interface using energetic colors: vibrant orange (#FF6B35), fresh green (#4ECDC4), and clean whites/grays.
+- Include a dashboard header with user profile section, daily step counter (8,247 steps), calories burned (1,847 cal), and water intake tracker (6/8 glasses).
+- Main sections should include:
+  * Today's Activity: Visual progress rings for steps, calories, and active minutes with percentage completion
+  * Workout Logger: Form to add new workouts with exercise type dropdown (Cardio, Strength, Yoga, Sports), duration, intensity level, and notes
+  * Recent Workouts: List of recent activities with edit/delete options, showing date, exercise, duration, and calories
+  * Weekly Progress: Chart visualization showing daily activity over the past 7 days
+  * Goal Setting: Interface to set and track fitness goals with progress bars
+  * Achievement Badges: Grid of earned fitness milestones with colorful badge designs
+- Implement local storage to persist workout data and user preferences
+- Add workout timer functionality with start/pause/stop controls and time display
+- Include exercise suggestions and quick-add buttons for common activities
+- The app must be fully responsive with mobile-first design and touch-friendly controls
+- Add smooth animations for progress indicators, form interactions, and page transitions""",
+        description="A comprehensive fitness tracking app with workout logging, progress visualization, and goal tracking",
+        requirements=[
+            "User dashboard with daily metrics",
+            "Workout logging form with multiple input types",
+            "Progress visualization with charts/rings",
+            "Recent activity history with CRUD operations",
+            "Goal setting and tracking interface",
+            "Achievement badge system",
+            "Workout timer with controls",
+            "Local storage for data persistence",
+            "Exercise suggestions and quick-add features",
+            "Mobile-responsive design with touch optimization",
+        ],
+        evaluation_criteria=[
+            "Fitness tracking functionality completeness",
+            "Data visualization effectiveness",
+            "User interface intuitiveness for fitness users",
+            "Mobile usability and touch interactions",
+            "Progress tracking accuracy and visual appeal",
+            "Local storage implementation and data persistence",
+        ],
+        expected_features=[
+            "Complex form handling and validation",
+            "JavaScript for timers and calculations",
+            "Local storage management for workout data",
+            "CSS animations for progress indicators",
+            "Responsive design with mobile optimization",
+            "CRUD operations for workout management",
+        ],
+        time_estimate_minutes=65,
+        tags=["fitness", "tracking", "health", "mobile", "progressive", "advanced"],
+    ),
+    "music_streaming_interface": TaskDefinition(
+        name="music_streaming_interface",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.ADVANCED,
+        prompt="""Create a modern music streaming application interface with playlist management and audio controls.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a sleek, dark-themed interface inspired by modern music apps using deep blacks (#121212), rich purples (#7B68EE), and accent greens (#1DB954).
+- Layout should include:
+  * Left Sidebar: Navigation menu (Home, Browse, Library, Playlists), user playlists list, and recently played section
+  * Main Content Area: Featured playlists grid, new releases carousel, recommended songs list with album art placeholders
+  * Right Sidebar: Now playing section with large album art, song info, and queue display
+  * Bottom Player Bar: Audio controls (previous, play/pause, next, shuffle, repeat), progress bar, volume control, and current song info
+- Implement interactive features:
+  * Playlist creation and management with drag-and-drop song reordering
+  * Search functionality with real-time filtering of songs and artists
+  * Heart/like buttons for songs with animation feedback
+  * Volume slider with visual feedback
+  * Progress bar that can be clicked to seek (simulated)
+  * Play/pause button state changes with smooth animations
+- Show sample music data with realistic artist names, song titles, album art placeholders, and durations
+- Add hover effects for all interactive elements with smooth transitions
+- Include context menus for songs (Add to Playlist, Remove, Share options)
+- The interface must be fully responsive, adapting to tablet and mobile layouts
+- Implement keyboard shortcuts for common actions (spacebar for play/pause, arrow keys for seek)""",
+        description="A modern music streaming interface with playlist management, audio controls, and rich interactions",
+        requirements=[
+            "Three-panel layout (sidebar, main, now playing)",
+            "Interactive audio player controls with progress bar",
+            "Playlist creation and management system",
+            "Search functionality with real-time filtering",
+            "Drag-and-drop song reordering",
+            "Volume control with visual feedback",
+            "Song library with like/heart functionality",
+            "Context menus for song actions",
+            "Keyboard shortcut support",
+            "Responsive design for multiple screen sizes",
+        ],
+        evaluation_criteria=[
+            "Music app interface design authenticity",
+            "Interactive controls functionality and responsiveness",
+            "Playlist management system effectiveness",
+            "Search and filtering implementation quality",
+            "Drag-and-drop functionality smoothness",
+            "Mobile adaptation and usability",
+        ],
+        expected_features=[
+            "Complex multi-panel responsive layouts",
+            "Drag-and-drop API implementation",
+            "Real-time search filtering algorithms",
+            "Advanced CSS animations and transitions",
+            "Keyboard event handling and shortcuts",
+            "Context menu implementation",
+        ],
+        time_estimate_minutes=70,
+        tags=["music", "streaming", "audio", "playlist", "interactive", "advanced"],
+    ),
+    "expense_tracker_app": TaskDefinition(
+        name="expense_tracker_app",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.INTERMEDIATE,
+        prompt="""Create a personal expense tracking application with budget management and spending analysis.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a clean, financial-focused interface using professional colors: navy blue (#1E3A8A), success green (#10B981), warning orange (#F59E0B), and neutral grays.
+- Include a comprehensive header with current balance ($2,847.50), monthly budget progress bar, and quick add expense button.
+- Main dashboard sections:
+  * Monthly Overview: Large spending summary with budget vs. actual comparison and percentage completion
+  * Expense Categories: Visual breakdown showing top spending categories (Food & Dining: $420, Transportation: $280, Entertainment: $180, Shopping: $320) with color-coded charts
+  * Recent Transactions: Detailed list of latest expenses with date, description, category, and amount, plus edit/delete options
+  * Add Expense Form: Modal or inline form with amount input, category dropdown, description field, date picker, and receipt upload placeholder
+  * Budget Setting: Interface to set monthly budgets for different categories with visual progress indicators
+  * Spending Analytics: Charts showing spending trends over time with month-over-month comparisons
+- Implement expense categorization with predefined categories (Food, Transportation, Entertainment, Shopping, Bills, Healthcare, etc.)
+- Add expense filtering by date range, category, and amount
+- Include budget alerts and warnings when approaching limits
+- Show spending insights and recommendations based on patterns
+- Implement local storage to persist all financial data and user preferences
+- Add export functionality to download expense reports
+- The application must be fully responsive with mobile-optimized input methods
+- Include data validation for all financial inputs and proper currency formatting""",
+        description="A comprehensive expense tracking app with budget management, categorization, and spending analysis",
+        requirements=[
+            "Dashboard with balance and budget overview",
+            "Expense categorization and management",
+            "Transaction history with full CRUD operations",
+            "Budget setting and progress tracking",
+            "Spending analytics with charts and trends",
+            "Expense filtering by multiple criteria",
+            "Budget alerts and limit warnings",
+            "Local storage for financial data persistence",
+            "Export functionality for expense reports",
+            "Mobile-responsive design with optimized inputs",
+        ],
+        evaluation_criteria=[
+            "Financial data management accuracy",
+            "Budget tracking functionality effectiveness",
+            "User interface clarity for financial tasks",
+            "Data visualization quality for spending insights",
+            "Mobile usability for expense entry",
+            "Data persistence and export features",
+        ],
+        expected_features=[
+            "Complex financial calculations and validations",
+            "Chart rendering for analytics visualization",
+            "Advanced filtering and search capabilities",
+            "Local storage management for financial data",
+            "Modal interfaces for data entry",
+            "Currency formatting and validation",
+        ],
+        time_estimate_minutes=55,
+        tags=["finance", "budget", "tracking", "analytics", "mobile", "data"],
+    ),
+    "social_media_feed": TaskDefinition(
+        name="social_media_feed",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.INTERMEDIATE,
+        prompt="""Create a modern social media feed interface with post interactions and real-time updates.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a contemporary social media layout using modern colors: clean whites, soft grays (#F8F9FA), accent blue (#1877F2), and interaction red (#E53E3E).
+- Layout structure should include:
+  * Top Navigation: Logo/brand name, search bar, notification bell icon (with badge), messages icon, and user profile dropdown
+  * Left Sidebar: Quick navigation links (Home, Friends, Groups, Marketplace, Memories) and trending topics
+  * Main Feed: Central area with post composition box and scrollable feed of posts
+  * Right Sidebar: Friend suggestions, upcoming events, and sponsored content placeholders
+- Post features to implement:
+  * Create Post: Text area with character counter, photo upload button, emoji selector, and privacy settings dropdown
+  * Post Display: User avatar, name, timestamp, post content, image placeholder, like/react buttons, comment count, share count
+  * Interactive Elements: Like button with heart animation, comment sections that expand/collapse, share dropdown with options
+  * Post Types: Text posts, photo posts with captions, shared content, and status updates
+- Add sample posts with realistic social content, user interactions, and engagement metrics
+- Implement infinite scroll behavior with loading animations
+- Include story feature at top of feed with circular user avatars and "Add Story" option
+- Add real-time-style notifications that appear and fade out
+- Show online status indicators for friends and recent activity
+- The interface must be fully responsive with mobile-first design and touch gestures
+- Include dark mode toggle with smooth theme transitions""",
+        description="A modern social media feed with post interactions, stories, and real-time updates",
+        requirements=[
+            "Complete social media layout with navigation and sidebars",
+            "Post creation interface with media and privacy options",
+            "Interactive post display with like, comment, share features",
+            "Story feature with user avatars and add story option",
+            "Infinite scroll with loading states",
+            "Real-time notification system simulation",
+            "Friend suggestions and social discovery",
+            "Dark/light mode toggle with transitions",
+            "Mobile-responsive design with touch optimization",
+            "Character counters and input validation",
+        ],
+        evaluation_criteria=[
+            "Social media interface authenticity and familiarity",
+            "Post interaction functionality and responsiveness",
+            "Feed layout and content organization",
+            "Mobile usability and touch interactions",
+            "Theme switching implementation quality",
+            "Real-time features and notification system",
+        ],
+        expected_features=[
+            "Complex multi-column responsive layouts",
+            "Advanced JavaScript for interactions and animations",
+            "Theme switching with CSS custom properties",
+            "Infinite scroll implementation",
+            "Modal interfaces for expanded content",
+            "Character counting and input validation",
+        ],
+        time_estimate_minutes=60,
+        tags=["social", "feed", "interactive", "real-time", "mobile", "modern"],
+    ),
+    "code_editor_interface": TaskDefinition(
+        name="code_editor_interface",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.EXPERT,
+        prompt="""Create a professional code editor interface with syntax highlighting and developer tools.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a developer-focused dark theme interface using professional colors: dark background (#1E1E1E), syntax highlighting colors (blue for keywords, green for strings, orange for numbers), and subtle UI accents.
+- Layout should include:
+  * Top Menu Bar: File menu (New, Open, Save, Export), Edit menu, View options, and Settings
+  * Left Panel: File explorer tree with folders and files, search panel, and Git status indicator
+  * Main Editor Area: Tabbed interface for multiple files with syntax-highlighted code display
+  * Right Panel: Minimap of code, outline/symbol navigator, and extension marketplace
+  * Bottom Panel: Terminal/console output, problems panel, and status bar with cursor position
+- Code editor features to implement:
+  * Line numbers with proper alignment and highlighting for current line
+  * Syntax highlighting for multiple languages (HTML, CSS, JavaScript, Python) using realistic color schemes
+  * Code folding indicators for functions and blocks
+  * Find and replace functionality with regex support
+  * Auto-completion suggestions popup
+  * Multiple cursor support simulation
+  * Bracket matching and highlighting
+  * Indentation guides and whitespace visualization
+- Add sample code files with proper syntax highlighting and realistic developer workflow
+- Implement theme switching between dark, light, and high contrast modes
+- Include keyboard shortcuts overlay and help system
+- Add split-screen view for comparing files side by side
+- Show Git integration with file status indicators (modified, new, deleted)
+- The interface must be fully responsive while maintaining code editor usability
+- Include settings panel for customizing editor behavior and appearance""",
+        description="A professional code editor with syntax highlighting, file management, and developer tools",
+        requirements=[
+            "Multi-panel layout with file explorer and editor tabs",
+            "Syntax highlighting for multiple programming languages",
+            "Line numbers, code folding, and indentation guides",
+            "Find/replace functionality with regex support",
+            "Multiple theme support (dark, light, high contrast)",
+            "Terminal/console integration panel",
+            "Git status integration and file indicators",
+            "Keyboard shortcuts and help system",
+            "Split-screen editing capabilities",
+            "Settings panel for editor customization",
+        ],
+        evaluation_criteria=[
+            "Code editor interface authenticity and professionalism",
+            "Syntax highlighting accuracy and visual appeal",
+            "Developer workflow features completeness",
+            "Multi-panel layout organization and usability",
+            "Theme implementation and switching quality",
+            "Keyboard navigation and shortcut integration",
+        ],
+        expected_features=[
+            "Advanced CSS for syntax highlighting simulation",
+            "Complex multi-panel responsive layouts",
+            "JavaScript for editor interactions and shortcuts",
+            "Theme switching with CSS custom properties",
+            "Modal interfaces for settings and dialogs",
+            "File tree navigation and tab management",
+        ],
+        time_estimate_minutes=80,
+        tags=["code", "editor", "developer", "syntax", "professional", "expert"],
+    ),
+    "virtual_classroom": TaskDefinition(
+        name="virtual_classroom",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.ADVANCED,
+        prompt="""Create a comprehensive virtual classroom interface for online learning with video conferencing layout.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design an educational-focused interface using professional colors: education blue (#0066CC), success green (#28A745), neutral grays, and warm accents.
+- Main layout should include:
+  * Top Header: Class title "Advanced Web Development - Session 12", current time, participant count (24), and class controls
+  * Video Grid: Main instructor video (large) with smaller participant video tiles in a responsive grid
+  * Side Panel: Participant list with names, mic/camera status indicators, and hand raise icons
+  * Bottom Panel: Chat interface with message history, emoji reactions, and file sharing buttons
+  * Control Bar: Mic on/off, camera on/off, screen share, reactions, hand raise, and leave class buttons
+- Interactive features to implement:
+  * Participant management with mute controls and spotlight options
+  * Chat system with real-time message display, private messaging options, and emoji reactions
+  * Screen sharing simulation with presentation mode toggle
+  * Whiteboard tool with drawing capabilities and collaboration features
+  * Breakout rooms interface with room assignment and management
+  * Recording controls and indicators
+  * Attendance tracking with join/leave timestamps
+  * Poll and quiz creation interface for real-time classroom engagement
+- Add realistic classroom scenarios with sample participants, chat messages, and ongoing lesson content
+- Include accessibility features like closed captions toggle and high contrast mode
+- Implement bandwidth indicator and connection quality monitoring
+- Show lesson materials panel with downloadable resources and assignment submissions
+- The interface must be responsive for tablets and mobile devices with simplified controls
+- Add teacher vs. student role permissions with different available features""",
+        description="A comprehensive virtual classroom with video conferencing, chat, whiteboard, and teaching tools",
+        requirements=[
+            "Video conferencing layout with instructor and participant views",
+            "Interactive chat system with emoji reactions and private messaging",
+            "Participant management with mute controls and permissions",
+            "Whiteboard and screen sharing simulation",
+            "Breakout room management interface",
+            "Real-time polls and quiz creation tools",
+            "Lesson materials and resource sharing panel",
+            "Recording controls and attendance tracking",
+            "Accessibility features and connection monitoring",
+            "Role-based permissions for teachers vs. students",
+        ],
+        evaluation_criteria=[
+            "Virtual classroom interface completeness and realism",
+            "Educational tool integration and usability",
+            "Video conferencing layout organization",
+            "Interactive features functionality and responsiveness",
+            "Teacher workflow support and control options",
+            "Student engagement features and accessibility",
+        ],
+        expected_features=[
+            "Complex grid layouts for video conferencing simulation",
+            "Real-time chat interface with message management",
+            "Role-based UI customization",
+            "Interactive whiteboard drawing simulation",
+            "Modal interfaces for polls and breakout rooms",
+            "Accessibility compliance and keyboard navigation",
+        ],
+        time_estimate_minutes=75,
+        tags=["education", "video", "classroom", "interactive", "collaboration", "advanced"],
+    ),
+    "cryptocurrency_portfolio": TaskDefinition(
+        name="cryptocurrency_portfolio",
+        category=TaskCategory.DASHBOARD,
+        difficulty=DifficultyLevel.ADVANCED,
+        prompt="""Create a professional cryptocurrency portfolio dashboard with real-time market data visualization.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a sophisticated financial interface using crypto-themed colors: dark background (#0D1421), electric blue (#00D4FF), profit green (#00FF88), loss red (#FF4757), and gold accents (#FFD700).
+- Dashboard layout should include:
+  * Top Header: Total portfolio value ($47,893.24), 24h change (+$2,847.56 +6.32%), and market status indicator
+  * Portfolio Overview: Pie chart showing asset allocation with percentages and current values
+  * Holdings Table: Detailed list of owned cryptocurrencies with coin icons, amounts, current prices, 24h changes, and total values
+  * Market Watchlist: Top cryptocurrencies with prices, charts, and quick trade buttons
+  * Transaction History: Recent buy/sell orders with timestamps, amounts, and profit/loss calculations
+  * News Feed: Cryptocurrency news headlines with source attribution and timestamp
+- Advanced features to implement:
+  * Price charts with candlestick patterns, moving averages, and technical indicators
+  * Portfolio performance metrics including ROI, best/worst performers, and total gains/losses
+  * Price alerts system with notification preferences and threshold settings
+  * Currency conversion tools supporting multiple fiat currencies
+  * DeFi integration panel showing staking rewards and yield farming opportunities
+  * Tax reporting interface with transaction categorization and downloadable reports
+  * Advanced analytics with risk assessment and diversification recommendations
+- Add realistic cryptocurrency data with proper price formatting and market indicators
+- Implement dark/light theme toggle optimized for financial data readability
+- Include market sentiment indicators and fear/greed index display
+- Show mining or staking rewards with APY calculations and compound interest projections
+- The dashboard must be responsive with mobile-optimized trading controls
+- Add security features like two-factor authentication simulation and wallet connection status""",
+        description="A professional crypto portfolio dashboard with market data, analytics, and trading features",
+        requirements=[
+            "Portfolio overview with total value and performance metrics",
+            "Detailed holdings table with real-time price data simulation",
+            "Interactive price charts with technical indicators",
+            "Market watchlist with top cryptocurrencies",
+            "Transaction history with profit/loss calculations",
+            "Price alerts and notification system",
+            "DeFi integration with staking and yield information",
+            "Tax reporting and transaction categorization",
+            "Market sentiment and analytics dashboard",
+            "Mobile-responsive design with touch-optimized controls",
+        ],
+        evaluation_criteria=[
+            "Financial dashboard professionalism and accuracy",
+            "Cryptocurrency market data presentation quality",
+            "Portfolio analytics depth and usefulness",
+            "Chart visualization effectiveness and interactivity",
+            "Mobile trading interface usability",
+            "Security features implementation and prominence",
+        ],
+        expected_features=[
+            "Advanced financial calculations and formatting",
+            "Complex chart rendering for price data",
+            "Real-time data simulation with JavaScript",
+            "Responsive design optimized for financial workflows",
+            "Advanced filtering and sorting for large datasets",
+            "Security-focused UI patterns and indicators",
+        ],
+        time_estimate_minutes=70,
+        tags=["crypto", "finance", "portfolio", "charts", "trading", "advanced"],
+    ),
+    "recipe_management_system": TaskDefinition(
+        name="recipe_management_system",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.INTERMEDIATE,
+        prompt="""Create a comprehensive recipe management system with meal planning and shopping list generation.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a warm, kitchen-inspired interface using appetizing colors: warm orange (#FF8C42), fresh green (#8FBC8F), creamy white (#FFF8DC), and rich brown (#8B4513).
+- Main application sections:
+  * Recipe Library: Grid view of recipe cards with images, titles, ratings, prep time, and difficulty level
+  * Recipe Details: Full recipe view with ingredients list, step-by-step instructions, nutritional information, and cooking tips
+  * Meal Planner: Weekly calendar interface for planning breakfast, lunch, and dinner with drag-and-drop functionality
+  * Shopping List: Auto-generated list from planned meals with checkoff capability and quantity adjustments
+  * Recipe Creator: Form for adding new recipes with ingredient measurements, cooking instructions, and photo upload
+  * My Favorites: Saved recipes with personal notes and modifications
+- Advanced features to implement:
+  * Recipe search and filtering by cuisine type, dietary restrictions, cooking time, and difficulty
+  * Ingredient substitution suggestions with automatic measurement conversions
+  * Nutritional calculator showing calories, macros, and dietary information per serving
+  * Cooking timer integration with multiple simultaneous timers for different recipe steps
+  * Recipe scaling functionality to adjust serving sizes with automatic measurement conversions
+  * Recipe sharing and rating system with user reviews and comments
+  * Meal prep planning with batch cooking optimization and storage recommendations
+- Include realistic recipe database with various cuisines and dietary options (vegetarian, vegan, gluten-free, keto)
+- Add grocery store organization for shopping lists with aisle categorization
+- Implement recipe cost calculator with ingredient price tracking
+- Show cooking technique tutorials and video placeholder integration
+- The system must be fully responsive with mobile-optimized cooking mode
+- Include voice control simulation for hands-free recipe reading while cooking""",
+        description="A comprehensive recipe management system with meal planning, shopping lists, and cooking features",
+        requirements=[
+            "Recipe library with search, filtering, and categorization",
+            "Detailed recipe display with ingredients and instructions",
+            "Weekly meal planner with drag-and-drop functionality",
+            "Automatic shopping list generation from meal plans",
+            "Recipe creation and editing interface",
+            "Nutritional information and dietary filtering",
+            "Cooking timers and recipe scaling functionality",
+            "Ingredient substitution and measurement conversion",
+            "Meal prep planning and batch cooking optimization",
+            "Mobile-responsive design with cooking mode optimization",
+        ],
+        evaluation_criteria=[
+            "Recipe management functionality completeness",
+            "Meal planning interface usability and efficiency",
+            "Shopping list generation accuracy and organization",
+            "Cooking workflow support and mobile optimization",
+            "Search and filtering effectiveness",
+            "Nutritional information presentation and accuracy",
+        ],
+        expected_features=[
+            "Complex data management for recipes and ingredients",
+            "Drag-and-drop meal planning interface",
+            "Automatic calculation and conversion algorithms",
+            "Advanced search and filtering implementations",
+            "Timer functionality with multiple concurrent timers",
+            "Mobile-optimized cooking interface with large touch targets",
+        ],
+        time_estimate_minutes=65,
+        tags=["recipe", "cooking", "meal-planning", "food", "mobile", "kitchen"],
+    ),
+    "project_management_board": TaskDefinition(
+        name="project_management_board",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.ADVANCED,
+        prompt="""Create a comprehensive project management board with Kanban workflow and team collaboration features.
+**Instructions:**
+- The entire output must be a single HTML file with all CSS and JavaScript inline.
+- Design a professional productivity interface using modern colors: clean white (#FFFFFF), productivity blue (#0079BF), success green (#61BD4F), warning yellow (#F2D600), and urgent red (#EB5A46).
+- Main board layout should include:
+  * Project Header: Project name, description, team member avatars, and project progress indicators
+  * Kanban Columns: Customizable workflow columns (Backlog, To Do, In Progress, Review, Done) with task counts
+  * Task Cards: Detailed cards with title, description, assignee avatar, due date, priority indicator, and tag labels
+  * Team Panel: Member list with roles, workload indicators, and availability status
+  * Project Analytics: Burn-down charts, velocity tracking, and completion metrics
+  * Activity Timeline: Recent project updates, comments, and team member actions
+- Task management features to implement:
+  * Drag-and-drop card movement between columns with smooth animations
+  * Task creation modal with full details (title, description, assignee, due date, priority, checklist)
+  * Task editing with inline comments, file attachments, and time tracking
+  * Subtask management with progress tracking and dependency visualization
+  * Label and tag system with color coding and filtering capabilities
+  * Due date management with calendar integration and overdue alerts
+  * Team member assignment with workload balancing and availability checking
+- Advanced project features:
+  * Sprint planning with story points and capacity management
+  * Milestone tracking with deliverable management and deadline monitoring
+  * Time tracking with manual entry and automatic timer functionality
+  * Project templates for common workflows and quick project setup
+  * Advanced filtering and search across all project data
+  * Export capabilities for reports and stakeholder communication
+- Add realistic project scenarios with sample tasks, team members, and project timelines
+- Include notification system for task assignments, due dates, and project updates
+- Show project templates and quick-start options for different project types
+- The board must be fully responsive with mobile-optimized task management
+- Implement dark/light theme with team preference synchronization""",
+        description="A comprehensive project management board with Kanban workflow, team collaboration, and analytics",
+        requirements=[
+            "Kanban board with customizable columns and drag-and-drop functionality",
+            "Detailed task cards with assignees, dates, priorities, and labels",
+            "Task creation and editing with full project management features",
+            "Team management with member roles and workload tracking",
+            "Project analytics with burn-down charts and velocity metrics",
+            "Sprint planning and milestone tracking capabilities",
+            "Time tracking with manual and automatic timer options",
+            "Advanced filtering, search, and export functionality",
+            "Notification system for project updates and deadlines",
+            "Mobile-responsive design with touch-optimized task management",
+        ],
+        evaluation_criteria=[
+            "Project management workflow completeness and efficiency",
+            "Kanban board functionality and drag-and-drop smoothness",
+            "Team collaboration features effectiveness",
+            "Analytics and reporting quality and usefulness",
+            "Mobile project management usability",
+            "Professional appearance and productivity focus",
+        ],
+        expected_features=[
+            "Advanced drag-and-drop with Kanban board logic",
+            "Complex project data management and calculations",
+            "Chart rendering for project analytics",
+            "Modal interfaces for task management",
+            "Real-time collaboration simulation",
+            "Mobile-optimized touch interactions for productivity workflows",
+        ],
+        time_estimate_minutes=75,
+        tags=["project", "management", "kanban", "team", "productivity", "advanced"],
+    ),
 }
 
 
