@@ -15,11 +15,17 @@ class ModelConfig:
     """Configuration for individual models."""
 
     name: str
+    provider: str = "ollama"  # ollama, google_genai
     temperature: float = 0.1
     num_ctx: int = 32768  # 32K context
     num_predict: int = -1  # Infinite prediction
     timeout: int = 300  # 5 minutes
     max_retries: int = 3
+    # Google GenAI specific settings
+    google_api_key: Optional[str] = None
+    use_vertex_ai: bool = False
+    project_id: Optional[str] = None
+    location: str = "us-central1"
 
 
 @dataclass
@@ -294,6 +300,21 @@ class Config:
             raise ConfigurationError(f"Failed to load config from {yaml_path}: {e}")
 
     @classmethod
+    def from_yaml_enhanced(cls, yaml_path: str) -> "Config":
+        """Load configuration from YAML file using the enhanced catalog-aware loader."""
+        try:
+            with open(yaml_path, "r") as f:
+                data = yaml.safe_load(f)
+            # Use the enhanced loader that integrates with models catalog
+            from .config_loader import enhance_config_from_dict
+
+            return enhance_config_from_dict(data)
+        except Exception as e:
+            raise ConfigurationError(
+                f"Failed to load enhanced config from {yaml_path}: {e}"
+            )
+
+    @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Config":
         """Create configuration from dictionary."""
         try:
@@ -337,16 +358,25 @@ class Config:
         # Convert models
         data["models"] = []
         for model in self.models:
-            data["models"].append(
-                {
-                    "name": model.name,
-                    "temperature": model.temperature,
-                    "num_ctx": model.num_ctx,
-                    "num_predict": model.num_predict,
-                    "timeout": model.timeout,
-                    "max_retries": model.max_retries,
-                }
-            )
+            model_dict = {
+                "name": model.name,
+                "provider": model.provider,
+                "temperature": model.temperature,
+                "num_ctx": model.num_ctx,
+                "num_predict": model.num_predict,
+                "timeout": model.timeout,
+                "max_retries": model.max_retries,
+            }
+            # Add Google GenAI specific fields if they're not default
+            if model.google_api_key:
+                model_dict["google_api_key"] = model.google_api_key
+            if model.use_vertex_ai:
+                model_dict["use_vertex_ai"] = model.use_vertex_ai
+            if model.project_id:
+                model_dict["project_id"] = model.project_id
+            if model.location != "us-central1":
+                model_dict["location"] = model.location
+            data["models"].append(model_dict)
         # Convert tasks
         data["tasks"] = []
         for task in self.tasks:
