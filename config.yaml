@@ -12,16 +12,31 @@ models:
     - "minicpm-v:8b"
     - "llava-phi3:3.8b"
 
-  # Ollama client settings
-  ollama:
-    host: "http://localhost:11434"
-    timeout: 300
-    num_ctx: 32768 # 32K context window
-    num_predict: -1 # No limit on prediction length
-    temperature: 0.1
-    top_p: 0.9
-    top_k: 40
-    repeat_penalty: 1.1
+# Provider Configuration
+provider:
+  provider_type: "ollama" # Options: ollama, vllm, openrouter
+
+  # Ollama settings
+  ollama_host: "http://localhost:11434"
+
+  # vLLM settings
+  vllm_url: "http://localhost:8000/v1/completions"
+  vllm_model: "meta-llama/Meta-Llama-3-8B-Instruct"
+
+  # OpenRouter settings
+  openrouter_url: "https://openrouter.ai/api/v1/chat/completions"
+  openrouter_model: "meta-llama/llama-3.1-8b-instruct:free"
+  openrouter_api_key: null # Set via OPENROUTER_API_KEY environment variable
+  openrouter_requests_per_minute: 20
+
+  # Common settings
+  timeout: 300
+  num_ctx: 32768 # 32K context window
+  num_predict: -1 # No limit on prediction length
+  temperature: 0.1
+  top_p: 0.9
+  top_k: 40
+  repeat_penalty: 1.1
 
 # Task Configuration
 tasks:

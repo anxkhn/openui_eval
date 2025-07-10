@@ -162,7 +162,7 @@ def main():
         config.output_dir = args.output_dir
         config.log_level = args.log_level
         # Initialize components
-        model_manager = ModelManager(config)
+        model_manager = ModelManager(config=config)
         judge = Judge(model_manager, config.evaluation, config.output_dir)
         logger.info(f"Using judges: {judge_models}")
         # Evaluate each model and task

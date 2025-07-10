@@ -7,10 +7,11 @@ from typing import Any, Dict, List, Optional
 
 import psutil
 
-from ..core.config import ModelConfig
+from ..core.config import Config, ModelConfig
 from ..core.exceptions import MemoryError, ModelError
 from ..core.logger import get_logger
-from .ollama_client import OllamaClient
+from .base_provider import LLMProvider
+from .provider_factory import create_provider
 
 
 @dataclass
@@ -32,24 +33,40 @@ class ModelManager:
 
     def __init__(
         self,
-        models: List[ModelConfig],
-        memory_threshold: float = 0.8,
-        max_concurrent_models: int = 1,
+        config: Config,
+        models: Optional[List[ModelConfig]] = None,
+        memory_threshold: Optional[float] = None,
+        max_concurrent_models: Optional[int] = None,
     ):
-        self.models = {model.name: model for model in models}
-        self.memory_threshold = memory_threshold
-        self.max_concurrent_models = max_concurrent_models
+        # Use config models if not provided directly
+        self.models = {model.name: model for model in (models or config.models)}
+        self.memory_threshold = memory_threshold or config.memory_threshold
+        self.max_concurrent_models = max_concurrent_models or config.max_concurrent_models
         self.logger = get_logger()
-        # Initialize Ollama client
-        self.client = OllamaClient()
+        
+        # Create provider based on config
+        provider_config = {
+            "host": config.provider.ollama_host,
+            "url": config.provider.vllm_url,
+            "model_name": config.provider.vllm_model,
+            "api_key": config.provider.openrouter_api_key,
+            "default_model": config.provider.openrouter_model,
+            "requests_per_minute": config.provider.openrouter_requests_per_minute,
+            "timeout": config.provider.timeout,
+        }
+        
+        self.provider = create_provider(config.provider.provider_type, provider_config)
+        
         # Track model states
         self.model_states = {name: ModelState(name=name) for name in self.models.keys()}
         # Currently loaded models
         self.loaded_models = set()
-        # Check Ollama availability
-        if not self.client.is_available():
-            raise ModelError("Ollama server is not available")
-        self.logger.info(f"ModelManager initialized with {len(self.models)} models")
+        
+        # Check provider availability
+        if not self.provider.is_available():
+            raise ModelError(f"{config.provider.provider_type} provider is not available")
+        
+        self.logger.info(f"ModelManager initialized with {len(self.models)} models using {config.provider.provider_type} provider")
 
     def get_memory_usage(self) -> Dict[str, float]:
         """Get current system memory usage."""
@@ -72,13 +89,7 @@ class ModelManager:
         if model_name not in self.models:
             raise ModelError(f"Model {model_name} not configured")
         try:
-            available_models = self.client.list_models()
-            if model_name not in available_models:
-                self.logger.info(f"Model {model_name} not found locally, pulling...")
-                success = self.client.pull_model(model_name)
-                if not success:
-                    raise ModelError(f"Failed to pull model {model_name}")
-            return True
+            return self.provider.ensure_model_available(model_name)
         except Exception as e:
             self.logger.error(f"Failed to ensure model {model_name} availability: {e}")
             return False
@@ -109,7 +120,7 @@ class ModelManager:
             memory_before = self.get_memory_usage()
             # Test model by making a simple call
             self.logger.info(f"Loading model {model_name}...")
-            test_response = self.client.generate(
+            test_response = self.provider.generate(
                 model_name=model_name,
                 prompt="Hello",
                 temperature=0.1,
@@ -148,7 +159,7 @@ class ModelManager:
             return True
         try:
             # Clear conversation history
-            self.client.clear_conversation_history(model_name)
+            self.provider.clear_conversation_history(model_name)
             # Update state
             state.loaded = False
             state.memory_usage_mb = 0.0
@@ -201,7 +212,7 @@ class ModelManager:
         try:
             start_time = time.time()
             # Generate response
-            response = self.client.generate(model_name, prompt, **kwargs)
+            response = self.provider.generate(model_name, prompt, **kwargs)
             duration = time.time() - start_time
             # Update model state
             state = self.model_states[model_name]
@@ -231,7 +242,7 @@ class ModelManager:
 
     def clear_conversation(self, model_name: str):
         """Clear conversation history for a model."""
-        self.client.clear_conversation_history(model_name)
+        self.provider.clear_conversation_history(model_name)
         self.logger.info(f"Cleared conversation history for {model_name}")
 
     def get_model_stats(self, model_name: Optional[str] = None) -> Dict[str, Any]:
@@ -263,7 +274,7 @@ class ModelManager:
             "total_models": len(self.models),
             "memory_threshold": self.memory_threshold,
             "max_concurrent_models": self.max_concurrent_models,
-            "api_call_stats": self.client.logger.get_api_call_stats(),
+            "provider_type": type(self.provider).__name__,
         }
 
     def cleanup(self):

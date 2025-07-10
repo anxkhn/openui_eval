@@ -15,6 +15,9 @@ dependencies = [
   "pyyaml",
   "tqdm",
   "psutil",
+  
+  # Additional dependencies for multi-provider support
+  "python-dotenv",
 
   # Data handling and validation
   "pydantic",

@@ -57,11 +57,7 @@ class BenchmarkPipeline:
         try:
             self.logger.info("Setting up pipeline components...")
             # Setup model manager
-            self.model_manager = ModelManager(
-                models=self.config.models,
-                memory_threshold=self.config.memory_threshold,
-                max_concurrent_models=self.config.max_concurrent_models,
-            )
+            self.model_manager = ModelManager(config=self.config)
             # Setup HTML generator
             self.html_generator = HTMLGenerator(
                 model_manager=self.model_manager, output_dir=self.config.output_dir
