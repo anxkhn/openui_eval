@@ -11,6 +11,7 @@ from ..core.config import ModelConfig
 from ..core.exceptions import MemoryError, ModelError
 from ..core.logger import get_logger
 from .ollama_client import OllamaClient
+from .google_genai_client import GoogleGenAIClient
 
 
 @dataclass
@@ -40,16 +41,85 @@ class ModelManager:
         self.memory_threshold = memory_threshold
         self.max_concurrent_models = max_concurrent_models
         self.logger = get_logger()
-        # Initialize Ollama client
-        self.client = OllamaClient()
+
+        # Initialize clients based on providers
+        self.clients = {}
+        self._initialize_clients()
+
         # Track model states
         self.model_states = {name: ModelState(name=name) for name in self.models.keys()}
         # Currently loaded models
         self.loaded_models = set()
-        # Check Ollama availability
-        if not self.client.is_available():
-            raise ModelError("Ollama server is not available")
+
         self.logger.info(f"ModelManager initialized with {len(self.models)} models")
+
+    def _initialize_clients(self):
+        """Initialize clients for different providers."""
+        providers_used = set(model.provider for model in self.models.values())
+
+        for provider in providers_used:
+            try:
+                if provider == "ollama":
+                    client = OllamaClient()
+                    if not client.is_available():
+                        self.logger.warning("Ollama server is not available")
+                        continue
+                    self.clients["ollama"] = client
+                    self.logger.info("Initialized Ollama client")
+
+                elif provider == "google_genai":
+                    # For Google GenAI, we might have multiple configurations
+                    # We'll create clients as needed per model
+                    self.logger.info(
+                        "Google GenAI provider will be initialized per model"
+                    )
+
+                else:
+                    self.logger.warning(f"Unknown provider: {provider}")
+
+            except Exception as e:
+                self.logger.error(f"Failed to initialize {provider} client: {e}")
+
+    def _get_client_for_model(self, model_name: str):
+        """Get the appropriate client for a model."""
+        if model_name not in self.models:
+            raise ModelError(f"Model {model_name} not configured")
+
+        model_config = self.models[model_name]
+        provider = model_config.provider
+
+        if provider == "ollama":
+            if "ollama" not in self.clients:
+                raise ModelError("Ollama client not available")
+            return self.clients["ollama"]
+
+        elif provider == "google_genai":
+            # Create or get Google GenAI client for this model
+            client_key = f"google_genai_{model_name}"
+            if client_key not in self.clients:
+                try:
+                    client = GoogleGenAIClient(
+                        api_key=model_config.google_api_key,
+                        use_vertex_ai=model_config.use_vertex_ai,
+                        project_id=model_config.project_id,
+                        location=model_config.location,
+                    )
+                    if not client.is_available():
+                        raise ModelError(
+                            f"Google GenAI client not available for {model_name}"
+                        )
+                    self.clients[client_key] = client
+                    self.logger.info(
+                        f"Initialized Google GenAI client for {model_name}"
+                    )
+                except Exception as e:
+                    raise ModelError(
+                        f"Failed to initialize Google GenAI client for {model_name}: {e}"
+                    )
+            return self.clients[client_key]
+
+        else:
+            raise ModelError(f"Unsupported provider: {provider}")
 
     def get_memory_usage(self) -> Dict[str, float]:
         """Get current system memory usage."""
@@ -72,10 +142,11 @@ class ModelManager:
         if model_name not in self.models:
             raise ModelError(f"Model {model_name} not configured")
         try:
-            available_models = self.client.list_models()
+            client = self._get_client_for_model(model_name)
+            available_models = client.list_models()
             if model_name not in available_models:
                 self.logger.info(f"Model {model_name} not found locally, pulling...")
-                success = self.client.pull_model(model_name)
+                success = client.pull_model(model_name)
                 if not success:
                     raise ModelError(f"Failed to pull model {model_name}")
             return True
@@ -109,13 +180,31 @@ class ModelManager:
             memory_before = self.get_memory_usage()
             # Test model by making a simple call
             self.logger.info(f"Loading model {model_name}...")
-            test_response = self.client.generate(
-                model_name=model_name,
-                prompt="Hello",
-                temperature=0.1,
-                num_ctx=1024,  # Small context for test
-                num_predict=1,
-            )
+            client = self._get_client_for_model(model_name)
+            model_config = self.models[model_name]
+
+            # Prepare test parameters based on provider
+            test_params = {
+                "model_name": model_name,
+                "prompt": "Hello",
+                "temperature": 0.1,
+            }
+
+            if model_config.provider == "ollama":
+                test_params.update(
+                    {
+                        "num_ctx": 1024,  # Small context for test
+                        "num_predict": 1,
+                    }
+                )
+            elif model_config.provider == "google_genai":
+                test_params.update(
+                    {
+                        "max_output_tokens": 1,
+                    }
+                )
+
+            test_response = client.generate(**test_params)
             load_time = time.time() - start_time
             memory_after = self.get_memory_usage()
             memory_used = memory_after["used_gb"] - memory_before["used_gb"]
@@ -148,7 +237,8 @@ class ModelManager:
             return True
         try:
             # Clear conversation history
-            self.client.clear_conversation_history(model_name)
+            client = self._get_client_for_model(model_name)
+            client.clear_conversation_history(model_name)
             # Update state
             state.loaded = False
             state.memory_usage_mb = 0.0
@@ -195,13 +285,23 @@ class ModelManager:
         # Update model configuration
         model_config = self.models[model_name]
         kwargs.setdefault("temperature", model_config.temperature)
-        kwargs.setdefault("num_ctx", model_config.num_ctx)
-        kwargs.setdefault("num_predict", model_config.num_predict)
         kwargs.setdefault("timeout", model_config.timeout)
+
+        # Add provider-specific parameters
+        if model_config.provider == "ollama":
+            kwargs.setdefault("num_ctx", model_config.num_ctx)
+            kwargs.setdefault("num_predict", model_config.num_predict)
+        elif model_config.provider == "google_genai":
+            kwargs.setdefault(
+                "max_output_tokens",
+                model_config.num_predict if model_config.num_predict > 0 else 4096,
+            )
+
         try:
             start_time = time.time()
             # Generate response
-            response = self.client.generate(model_name, prompt, **kwargs)
+            client = self._get_client_for_model(model_name)
+            response = client.generate(model_name, prompt, **kwargs)
             duration = time.time() - start_time
             # Update model state
             state = self.model_states[model_name]
@@ -231,7 +331,8 @@ class ModelManager:
 
     def clear_conversation(self, model_name: str):
         """Clear conversation history for a model."""
-        self.client.clear_conversation_history(model_name)
+        client = self._get_client_for_model(model_name)
+        client.clear_conversation_history(model_name)
         self.logger.info(f"Cleared conversation history for {model_name}")
 
     def get_model_stats(self, model_name: Optional[str] = None) -> Dict[str, Any]:
@@ -263,7 +364,7 @@ class ModelManager:
             "total_models": len(self.models),
             "memory_threshold": self.memory_threshold,
             "max_concurrent_models": self.max_concurrent_models,
-            "api_call_stats": self.client.logger.get_api_call_stats(),
+            "api_call_stats": self.logger.get_api_call_stats(),
         }
 
     def cleanup(self):
