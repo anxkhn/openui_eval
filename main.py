@@ -42,6 +42,11 @@ Examples:
         nargs="+",
         help="List of models to benchmark (default: all supported models)",
     )
+    parser.add_argument(
+        "--list-models",
+        action="store_true",
+        help="List all available models and exit",
+    )
     # Task configuration
     parser.add_argument(
         "--tasks",
@@ -111,16 +116,30 @@ def create_config_from_args(args: argparse.Namespace) -> Config:
     """Create benchmark configuration from command line arguments."""
     # Load base configuration from file if provided
     if args.config:
-        config = Config.from_yaml(args.config)
+        config = Config.from_yaml_enhanced(args.config)
     else:
         config = Config()
     # Store the original judges list before potentially overriding models
     original_judges = config.judges[:]
     # Override with command line arguments
     if args.models:
-        from src.core.config import ModelConfig
+        from src.core.config_loader import create_model_config_from_catalog
+        from src.models.models_catalog import is_model_available, get_all_model_names
 
-        config.models = [ModelConfig(name=model) for model in args.models]
+        # Validate that all specified models are available in catalog
+        invalid_models = [
+            model for model in args.models if not is_model_available(model)
+        ]
+        if invalid_models:
+            available_models = get_all_model_names()
+            raise BenchmarkError(
+                f"Models not found in catalog: {', '.join(invalid_models)}. "
+                f"Available models: {', '.join(available_models)}"
+            )
+
+        config.models = [
+            create_model_config_from_catalog(model) for model in args.models
+        ]
     if args.tasks:
         # Filter existing tasks or create new ones
         from src.core.config import TaskConfig
@@ -170,6 +189,14 @@ def main():
     try:
         # Parse command line arguments
         args = parse_arguments()
+
+        # Handle --list-models option
+        if args.list_models:
+            from src.core.config_loader import get_model_info_for_cli
+
+            print(get_model_info_for_cli())
+            return
+
         # Create configuration
         config = create_config_from_args(args)
         # Initialize logger
@@ -187,9 +214,23 @@ def main():
             return
         # Execute the benchmark
         if config.mode == "generation-only":
+            pipeline._setup_components()
+            pipeline._log_system_info()
+            pipeline._calculate_total_operations()
             results = pipeline.run_generation_phase()
+            if pipeline.model_manager:
+                pipeline.model_manager.cleanup()
+            if pipeline.renderer:
+                pipeline.renderer.cleanup()
         elif config.mode == "judging-only":
+            pipeline._setup_components()
+            pipeline._log_system_info()
+            pipeline._calculate_total_operations()
             results = pipeline.run_evaluation_phase()
+            if pipeline.model_manager:
+                pipeline.model_manager.cleanup()
+            if pipeline.renderer:
+                pipeline.renderer.cleanup()
         else:  # full-pipeline
             results = pipeline.run_full_pipeline()
         logger.info("Benchmark completed successfully")
