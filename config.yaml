@@ -3,25 +3,48 @@
 
 # Model Configuration
 models:
+  # List of models to use in benchmark
+  # You can specify just the model name (uses catalog defaults) or override settings
   enabled_models:
-    - "gemma3n:e2b"
-    - "gemma3:4b"
-    - "qwen2.5vl:7b"
-    - "granite3.2-vision:2b"
-    - "llama3.2-vision:11b"
-    - "minicpm-v:8b"
-    - "llava-phi3:3.8b"
+    # Ollama Models
+    - name: "gemma3n:e2b"
+      # Uses defaults from catalog
+    - name: "gemma3:4b"
+      temperature: 0.2  # Override default temperature
+    - name: "qwen2.5vl:7b"
+    - name: "granite3.2-vision:2b"
+    - name: "llama3.2-vision:11b"
+    - name: "minicpm-v:8b"
+    - name: "llava-phi3:3.8b"
+    
+    # Google GenAI Models (uncomment to use)
+    # - name: "gemini-2.0-flash-001"
+    #   provider: "google_genai"  # Optional if using catalog
+    #   temperature: 0.1
+    # - name: "gemini-1.5-flash-001"
+    # - name: "gemini-1.5-pro-001"
 
-  # Ollama client settings
-  ollama:
-    host: "http://localhost:11434"
-    timeout: 300
-    num_ctx: 32768 # 32K context window
-    num_predict: -1 # No limit on prediction length
-    temperature: 0.1
-    top_p: 0.9
-    top_k: 40
-    repeat_penalty: 1.1
+  # Provider-specific settings
+  providers:
+    ollama:
+      host: "http://localhost:11434"
+      timeout: 300
+      num_ctx: 32768 # 32K context window
+      num_predict: -1 # No limit on prediction length
+      temperature: 0.1
+      top_p: 0.9
+      top_k: 40
+      repeat_penalty: 1.1
+    
+    google_genai:
+      # API key will be read from GOOGLE_API_KEY or GEMINI_API_KEY environment variable
+      # Alternatively, you can specify it here (not recommended for security)
+      # api_key: "your-api-key-here"
+      use_vertex_ai: false
+      project_id: ""  # Required for Vertex AI
+      location: "us-central1"  # Vertex AI location
+      timeout: 300
+      max_retries: 3
 
 # Task Configuration
 tasks:

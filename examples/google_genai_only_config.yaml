@@ -1,0 +1,64 @@
+# Example: Google GenAI Only Configuration
+# This demonstrates using only Google GenAI models for benchmarking
+
+# Model Configuration
+models:
+  enabled_models:
+    # Google GenAI Models
+    - name: "gemini-2.5-pro"
+      temperature: 0.1
+    - name: "gemini-2.5-flash"
+      temperature: 0.1
+    - name: "gemini-2.0-flash"
+      temperature: 0.1
+    - name: "gemini-1.5-flash"
+      temperature: 0.1
+    
+  # Provider-specific settings
+  providers:
+    google_genai:
+      # Make sure to set GOOGLE_API_KEY environment variable
+      use_vertex_ai: false
+      timeout: 300
+      max_retries: 3
+
+# Task Configuration
+tasks:
+  - name: "basic_calculator"
+  - name: "personal_portfolio"
+  - name: "tic_tac_toe"
+  - name: "contact_form"
+  - name: "todo_app"
+
+# Pipeline settings
+iterations: 3
+judges:
+  - "gemini-2.5-pro"
+  - "gemini-2.5-flash"
+  - "gemini-2.0-flash"
+mode: "full-pipeline"
+
+# Output settings
+output_dir: "results/google_genai_only"
+save_intermediate: true
+compress_logs: true
+log_level: "INFO"
+
+# System settings
+max_concurrent_models: 1
+memory_threshold: 0.8
+
+# Evaluation settings
+evaluation:
+  judge_models:
+    - "gemini-2.5-pro"
+    - "gemini-2.5-flash"
+    - "gemini-2.0-flash"
+  criteria:
+    - "visual_appeal"
+    - "functionality"
+    - "responsiveness"
+    - "code_quality"
+    - "task_completion"
+  scoring_scale: 10
+  temperature: 0.1 

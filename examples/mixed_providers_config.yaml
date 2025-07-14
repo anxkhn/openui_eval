@@ -1,0 +1,75 @@
+# Example: Mixed Providers Configuration
+# This demonstrates using both Ollama and Google GenAI models in the same benchmark
+
+# Model Configuration
+models:
+  enabled_models:
+    # Ollama Models (running locally)
+    - name: "gemma3n:e2b"
+      temperature: 0.1
+    - name: "qwen2.5vl:7b"
+      temperature: 0.15
+    - name: "llama3.2-vision:11b"
+      temperature: 0.1
+    
+    # Google GenAI Models (cloud-based)
+    - name: "gemini-2.5-flash"
+      temperature: 0.1
+    - name: "gemini-2.0-flash"
+      temperature: 0.2
+    
+  # Provider-specific settings
+  providers:
+    ollama:
+      host: "http://localhost:11434"
+      timeout: 300
+      num_ctx: 32768
+      num_predict: -1
+      temperature: 0.1
+    
+    google_genai:
+      # API key will be read from GOOGLE_API_KEY environment variable
+      use_vertex_ai: false
+      timeout: 300
+      max_retries: 3
+
+# Task Configuration
+tasks:
+  - name: "basic_calculator"
+  - name: "personal_portfolio" 
+  - name: "tic_tac_toe"
+
+# Pipeline settings
+iterations: 3
+judges:
+  - "gemma3n:e2b"           # Ollama
+  - "qwen2.5vl:7b"          # Ollama
+  - "gemini-2.5-flash"      # Google GenAI
+  - "gemini-2.0-flash"      # Google GenAI
+mode: "full-pipeline"
+
+# Output settings
+output_dir: "results/mixed_providers"
+save_intermediate: true
+compress_logs: true
+log_level: "INFO"
+
+# System settings
+max_concurrent_models: 1
+memory_threshold: 0.8
+
+# Evaluation settings
+evaluation:
+  judge_models:
+    - "gemma3n:e2b"
+    - "qwen2.5vl:7b"
+    - "gemini-2.5-flash"
+    - "gemini-2.0-flash"
+  criteria:
+    - "visual_appeal"
+    - "functionality"
+    - "responsiveness"
+    - "code_quality"
+    - "task_completion"
+  scoring_scale: 10
+  temperature: 0.1 
