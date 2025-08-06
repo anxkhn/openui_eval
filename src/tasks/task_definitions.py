@@ -1435,6 +1435,275 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
         time_estimate_minutes=75,
         tags=["project", "management", "kanban", "team", "productivity", "advanced"],
     ),
+    # Framework-specific tasks
+    "react_todo_app": TaskDefinition(
+        name="react_todo_app",
+        category=TaskCategory.INTERACTIVE,
+        difficulty=DifficultyLevel.INTERMEDIATE,
+        prompt="""Create a modern React 19 todo application with component-based architecture.
+**Instructions:**
+- Create a complete React application using React 19 features including hooks, functional components, and modern patterns
+- Implement CRUD operations: add, edit, delete, and mark todos as complete
+- Include task filtering (All, Active, Completed) and search functionality
+- Add priority levels (High, Medium, Low) with color-coded indicators
+- Implement drag-and-drop reordering using React DnD or similar
+- Use localStorage for data persistence
+- Create multiple reusable components: TodoItem, TodoForm, FilterBar, SearchBox
+- Include proper TypeScript interfaces and props validation
+- Add responsive design for mobile and desktop
+- Implement error handling and loading states
+- Use CSS modules or styled-components for styling
+- Add keyboard shortcuts for common actions
+- Include unit tests for key components""",
+        description="A complete React 19 todo application with modern component architecture",
+        requirements=[
+            "React 19 functional components",
+            "useState and useEffect hooks",
+            "CRUD operations for todos",
+            "Task filtering and search",
+            "Drag-and-drop functionality",
+            "localStorage persistence",
+            "Responsive component design",
+            "TypeScript interfaces",
+            "Error handling",
+            "Unit tests"
+        ],
+        evaluation_criteria=[
+            "React 19 best practices",
+            "Component composition and reusability",
+            "State management effectiveness",
+            "User interface design quality",
+            "Code organization and structure",
+            "Responsive design implementation"
+        ],
+        expected_features=[
+            "Multiple React components",
+            "Modern hook usage",
+            "Event handling",
+            "Conditional rendering",
+            "Local storage integration",
+            "CSS styling system"
+        ],
+        time_estimate_minutes=45,
+        tags=["react", "hooks", "components", "crud", "typescript", "testing"],
+    ),
+    "vue_dashboard": TaskDefinition(
+        name="vue_dashboard",
+        category=TaskCategory.DASHBOARD,
+        difficulty=DifficultyLevel.ADVANCED,
+        prompt="""Create a comprehensive Vue 3.5 analytics dashboard with Composition API.
+**Instructions:**
+- Build a Vue 3.5 application using the Composition API and script setup syntax
+- Create a multi-panel dashboard with navigation sidebar and main content area
+- Implement data visualization components using Chart.js or similar library
+- Include KPI cards showing key metrics with animated counters
+- Add interactive charts: line chart for trends, bar chart for comparisons, pie chart for distributions
+- Create a data table component with sorting, filtering, and pagination
+- Implement real-time data simulation with reactive updates
+- Use Pinia for state management across components
+- Add dark/light theme toggle with persistent preferences
+- Create reusable composables for data fetching and chart rendering
+- Implement responsive grid layout using CSS Grid or Flexbox
+- Add loading skeletons and error handling
+- Use Vue Router for navigation between dashboard sections
+- Include TypeScript for type safety
+- Add Vue DevTools integration""",
+        description="A comprehensive Vue 3.5 analytics dashboard with Composition API and modern patterns",
+        requirements=[
+            "Vue 3.5 Composition API",
+            "Pinia state management",
+            "Chart.js integration",
+            "Responsive dashboard layout",
+            "Real-time data simulation",
+            "Theme toggle functionality",
+            "Vue Router navigation",
+            "TypeScript integration",
+            "Custom composables",
+            "Loading and error states"
+        ],
+        evaluation_criteria=[
+            "Vue 3.5 Composition API usage",
+            "State management architecture",
+            "Data visualization quality",
+            "Component organization",
+            "Responsive design execution",
+            "TypeScript implementation"
+        ],
+        expected_features=[
+            "Composition API patterns",
+            "Reactive data handling",
+            "Chart rendering",
+            "Route-based navigation",
+            "Theme persistence",
+            "Responsive layouts"
+        ],
+        time_estimate_minutes=60,
+        tags=["vue", "composition-api", "dashboard", "charts", "pinia", "typescript"],
+    ),
+    "nextjs_blog": TaskDefinition(
+        name="nextjs_blog",
+        category=TaskCategory.WEBSITE,
+        difficulty=DifficultyLevel.ADVANCED,
+        prompt="""Create a modern blog website using Next.js 15 with App Router and server components.
+**Instructions:**
+- Build a Next.js 15 application using the new App Router and React Server Components
+- Create a blog with multiple pages: home, blog list, individual blog posts, and about page
+- Implement static site generation (SSG) for blog posts and incremental static regeneration (ISR)
+- Create a dynamic routing system for blog posts (/blog/[slug])
+- Add metadata and SEO optimization using Next.js metadata API
+- Implement a markdown-based content system with syntax highlighting
+- Create reusable components: Header, Footer, BlogCard, AuthorBio, TableOfContents
+- Add search functionality with client-side filtering
+- Implement tag-based categorization and filtering
+- Create a responsive design with mobile-first approach
+- Add dark/light theme toggle with system preference detection
+- Implement image optimization using Next.js Image component
+- Add loading UI and not-found pages
+- Create API routes for blog data management
+- Include sitemap generation and RSS feed
+- Add proper TypeScript configuration""",
+        description="A modern blog website using Next.js 15 with App Router and advanced features",
+        requirements=[
+            "Next.js 15 App Router",
+            "React Server Components",
+            "Static Site Generation",
+            "Dynamic routing",
+            "Markdown content system",
+            "SEO optimization",
+            "Image optimization",
+            "API routes",
+            "Theme system",
+            "Search functionality"
+        ],
+        evaluation_criteria=[
+            "Next.js 15 features utilization",
+            "Server/Client component separation",
+            "Performance optimization",
+            "SEO implementation",
+            "Content management system",
+            "User experience quality"
+        ],
+        expected_features=[
+            "App Router navigation",
+            "Server-side rendering",
+            "Static generation",
+            "Metadata management",
+            "Image optimization",
+            "Theme persistence"
+        ],
+        time_estimate_minutes=70,
+        tags=["nextjs", "app-router", "blog", "ssg", "markdown", "seo"],
+    ),
+    "angular_ecommerce": TaskDefinition(
+        name="angular_ecommerce",
+        category=TaskCategory.WEBSITE,
+        difficulty=DifficultyLevel.EXPERT,
+        prompt="""Create a comprehensive e-commerce application using Angular 20 with standalone components.
+**Instructions:**
+- Build an Angular 20 application using standalone components and the latest architecture patterns
+- Create multiple feature modules: products, cart, checkout, user account, and admin
+- Implement product catalog with categories, search, filtering, and sorting
+- Add shopping cart functionality with add/remove items and quantity management
+- Create a multi-step checkout process with form validation and payment simulation
+- Implement user authentication with guards and role-based access control
+- Add product detail pages with image galleries and reviews system
+- Create admin panel for product management with CRUD operations
+- Use Angular Material or PrimeNG for consistent UI components
+- Implement state management using NgRx or Akita
+- Add reactive forms with comprehensive validation
+- Create custom pipes and directives for data formatting
+- Implement lazy loading for feature modules
+- Add internationalization (i18n) support
+- Create unit and integration tests using Jasmine/Karma
+- Implement PWA features with service workers
+- Add responsive design with Angular Flex Layout""",
+        description="A comprehensive e-commerce application using Angular 20 with modern architecture",
+        requirements=[
+            "Angular 20 standalone components",
+            "Multiple feature modules",
+            "Product catalog system",
+            "Shopping cart functionality",
+            "User authentication",
+            "Admin panel",
+            "State management",
+            "Form validation",
+            "Lazy loading",
+            "PWA features"
+        ],
+        evaluation_criteria=[
+            "Angular 20 architecture patterns",
+            "Component design and reusability",
+            "State management implementation",
+            "Form handling and validation",
+            "Security and authentication",
+            "Performance optimization"
+        ],
+        expected_features=[
+            "Standalone components",
+            "Reactive forms",
+            "Route guards",
+            "Custom pipes/directives",
+            "Service workers",
+            "Material Design"
+        ],
+        time_estimate_minutes=90,
+        tags=["angular", "standalone", "ecommerce", "ngrx", "material", "pwa"],
+    ),
+    "svelte_portfolio": TaskDefinition(
+        name="svelte_portfolio",
+        category=TaskCategory.PORTFOLIO,
+        difficulty=DifficultyLevel.INTERMEDIATE,
+        prompt="""Create a stunning portfolio website using Svelte 5 with the latest features and runes system.
+**Instructions:**
+- Build a Svelte 5 application using the new runes system for state management
+- Create a multi-section portfolio: hero, about, skills, projects, experience, and contact
+- Implement smooth scrolling navigation with active section highlighting
+- Add project showcase with filtering by technology and category
+- Create interactive skill visualizations with progress bars and animations
+- Implement a contact form with validation and email integration simulation
+- Add dark/light theme toggle with smooth transitions
+- Create custom Svelte components with proper prop validation
+- Implement page transitions and micro-interactions using Svelte animations
+- Add a blog section with markdown support
+- Create responsive design optimized for all devices
+- Implement SEO optimization with meta tags and structured data
+- Add performance optimizations and lazy loading
+- Create custom Svelte stores for theme and navigation state
+- Implement accessibility features with ARIA labels and keyboard navigation
+- Add analytics integration and performance monitoring
+- Create a build system with TypeScript support""",
+        description="A stunning portfolio website using Svelte 5 with modern features and animations",
+        requirements=[
+            "Svelte 5 runes system",
+            "Multi-section layout",
+            "Project filtering system",
+            "Interactive animations",
+            "Contact form validation",
+            "Theme toggle",
+            "Responsive design",
+            "SEO optimization",
+            "Accessibility features",
+            "TypeScript integration"
+        ],
+        evaluation_criteria=[
+            "Svelte 5 features utilization",
+            "Animation and interaction quality",
+            "Component architecture",
+            "Responsive design execution",
+            "Performance optimization",
+            "Accessibility compliance"
+        ],
+        expected_features=[
+            "Runes state management",
+            "Component composition",
+            "Animation transitions",
+            "Store management",
+            "Event handling",
+            "TypeScript types"
+        ],
+        time_estimate_minutes=55,
+        tags=["svelte", "runes", "portfolio", "animations", "typescript", "accessibility"],
+    ),
 }
 
 
