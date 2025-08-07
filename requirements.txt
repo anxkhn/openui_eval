@@ -31,6 +31,10 @@ pytest
 pytest-asyncio
 black
 
+# Node.js and framework support
+requests
+subprocess32; python_version < '3.0'
+
 # Other dependencies
 annotated-types
 anyio
