@@ -46,6 +46,11 @@ tasks:
     - "tic_tac_toe"
     - "contact_form"
     - "todo_app"
+    # Framework-specific tasks
+    - "react_todo_app"
+    - "vue_dashboard"
+    - "nextjs_blog"
+    - "svelte_portfolio"
 
   # Task execution settings
   timeout_minutes: 10
