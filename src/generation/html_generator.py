@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from ..core.config import TaskConfig
-from ..core.exceptions import HTMLExtractionError, ModelError
+
 from ..core.logger import get_logger
 from ..models.model_manager import ModelManager
 from .html_processor import HTMLProcessor
@@ -48,7 +48,7 @@ class HTMLGenerator:
             # Extract HTML from response
             html_content = self.html_processor.extract_html(response["content"])
             if not html_content:
-                raise HTMLExtractionError("No valid HTML found in model response")
+                raise ValueError("No valid HTML found in model response")
             # Validate HTML
             validation_results = self.html_processor.validate_html(html_content)
             html_stats = self.html_processor.get_html_stats(html_content)
@@ -78,7 +78,7 @@ class HTMLGenerator:
         except Exception as e:
             error_msg = f"Failed to generate initial HTML for {task.name} with {model_name}: {e}"
             self.logger.error(error_msg)
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def improve_html(
         self,
@@ -151,7 +151,7 @@ class HTMLGenerator:
         except Exception as e:
             error_msg = f"Failed to improve HTML for {task.name} iteration {iteration} with {model_name}: {e}"
             self.logger.error(error_msg)
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def _create_improvement_prompt(self, task: TaskConfig, iteration: int) -> str:
         """Create improvement prompt for iterative refinement."""
@@ -299,7 +299,7 @@ Please provide the complete improved HTML code with inline CSS and JavaScript. M
                 f"Failed to generate complete task {task.name} with {model_name}: {e}"
             )
             self.logger.error(error_msg)
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def get_generation_stats(self, results: List[Dict[str, Any]]) -> Dict[str, Any]:
         """Get statistics from generation results."""

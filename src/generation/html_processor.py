@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 
 from bs4 import BeautifulSoup, Comment
 
-from ..core.exceptions import HTMLExtractionError
+
 from ..core.logger import get_logger
 
 
@@ -69,7 +69,7 @@ class HTMLProcessor:
             return None
         except Exception as e:
             self.logger.error(f"Failed to extract HTML: {e}")
-            raise HTMLExtractionError(f"HTML extraction failed: {e}")
+            raise ValueError(f"HTML extraction failed: {e}")
 
     def _clean_html(self, html_content: str) -> str:
         """Clean and normalize HTML content."""
