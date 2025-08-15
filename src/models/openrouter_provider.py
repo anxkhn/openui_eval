@@ -8,7 +8,7 @@ from typing import Any, Dict, List, Optional
 import requests
 from pydantic import BaseModel
 
-from ..core.exceptions import ModelError
+
 from ..core.logger import get_logger
 from .base_provider import LLMProvider
 
@@ -34,7 +34,7 @@ class OpenRouterProvider(LLMProvider):
         self.last_request_time = 0
         
         if not self.api_key:
-            raise ModelError("OpenRouter API key is required. Set OPENROUTER_API_KEY environment variable.")
+            raise ValueError("OpenRouter API key is required. Set OPENROUTER_API_KEY environment variable.")
 
     def _rate_limit(self):
         """Apply rate limiting based on requests per minute."""
@@ -189,7 +189,7 @@ class OpenRouterProvider(LLMProvider):
             response_data = response.json()
             
             if "choices" not in response_data or not response_data["choices"]:
-                raise ModelError("No choices returned from OpenRouter")
+                raise RuntimeError("No choices returned from OpenRouter")
             
             content = response_data["choices"][0]["message"]["content"]
             
@@ -226,7 +226,7 @@ class OpenRouterProvider(LLMProvider):
             self.logger.error(
                 error_msg, model_name=model_name, duration=duration, error=str(e)
             )
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def generate_structured(
         self,
@@ -281,7 +281,7 @@ class OpenRouterProvider(LLMProvider):
         except Exception as e:
             error_msg = f"Failed to generate structured response from OpenRouter: {e}"
             self.logger.error(error_msg, model_name=model_name, error=str(e))
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def clear_conversation_history(self, model_name: Optional[str] = None):
         """Clear conversation history for a model or all models."""

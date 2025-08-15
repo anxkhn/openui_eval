@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 import requests
 from pydantic import BaseModel
 
-from ..core.exceptions import ModelError
+
 from ..core.logger import get_logger
 from .base_provider import LLMProvider
 
@@ -166,7 +166,7 @@ class vLLMProvider(LLMProvider):
             response_data = response.json()
             
             if "choices" not in response_data or not response_data["choices"]:
-                raise ModelError("No choices returned from vLLM")
+                raise RuntimeError("No choices returned from vLLM")
             
             content = response_data["choices"][0]["text"].strip()
             
@@ -201,7 +201,7 @@ class vLLMProvider(LLMProvider):
             self.logger.error(
                 error_msg, model_name=model_name, duration=duration, error=str(e)
             )
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def generate_structured(
         self,
@@ -256,7 +256,7 @@ class vLLMProvider(LLMProvider):
         except Exception as e:
             error_msg = f"Failed to generate structured response from vLLM: {e}"
             self.logger.error(error_msg, model_name=model_name, error=str(e))
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def clear_conversation_history(self, model_name: Optional[str] = None):
         """Clear conversation history for a model or all models."""

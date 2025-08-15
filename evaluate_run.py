@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import List, Optional
 
 from src.core.config import Config
-from src.core.exceptions import BenchmarkError
+
 from src.core.logger import setup_logger
 from src.evaluation.judge import Judge
 from src.models.model_manager import ModelManager
@@ -74,7 +74,7 @@ def discover_run_contents(run_path: Path) -> dict:
         "generations": {},  # model -> task -> [iterations]
     }
     if not run_path.exists():
-        raise BenchmarkError(f"Run directory not found: {run_path}")
+        raise FileNotFoundError(f"Run directory not found: {run_path}")
     # Discover models
     for model_dir in run_path.iterdir():
         if model_dir.is_dir() and model_dir.name not in [".", ".."]:
@@ -146,7 +146,7 @@ def main():
         # Discover run contents
         run_contents = discover_run_contents(run_path)
         if not run_contents["models"]:
-            raise BenchmarkError(f"No models found in run: {args.run_timestamp}")
+            raise RuntimeError(f"No models found in run: {args.run_timestamp}")
         logger.info(f"Found models: {run_contents['models']}")
         # Filter models if specified
         models_to_evaluate = args.models if args.models else run_contents["models"]
@@ -154,7 +154,7 @@ def main():
             m for m in models_to_evaluate if m in run_contents["models"]
         ]
         if not models_to_evaluate:
-            raise BenchmarkError(f"No valid models found to evaluate")
+            raise RuntimeError(f"No valid models found to evaluate")
         # Set up judges
         judge_models = args.judges if args.judges else run_contents["models"]
         # Create basic config for evaluation
@@ -226,7 +226,7 @@ def main():
         else:
             print("Evaluation interrupted by user")
         sys.exit(1)
-    except BenchmarkError as e:
+    except (RuntimeError, FileNotFoundError) as e:
         if logger:
             logger.error(f"Evaluation error: {e}")
         else:

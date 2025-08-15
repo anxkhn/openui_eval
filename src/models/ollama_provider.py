@@ -8,7 +8,7 @@ from typing import Any, Dict, List, Optional, Union
 import ollama
 from pydantic import BaseModel
 
-from ..core.exceptions import ModelError
+
 from ..core.logger import get_logger
 from .base_provider import LLMProvider
 
@@ -235,7 +235,7 @@ class OllamaProvider(LLMProvider):
             self.logger.error(
                 error_msg, model_name=model_name, duration=duration, error=str(e)
             )
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def generate_structured(
         self,
@@ -269,7 +269,7 @@ class OllamaProvider(LLMProvider):
         except Exception as e:
             error_msg = f"Failed to generate structured response: {e}"
             self.logger.error(error_msg, model_name=model_name, error=str(e))
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def clear_conversation_history(self, model_name: Optional[str] = None):
         """Clear conversation history for a model or all models."""

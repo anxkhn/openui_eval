@@ -11,7 +11,7 @@ import psutil
 from tqdm import tqdm
 
 from ..core.config import Config
-from ..core.exceptions import BenchmarkError
+
 from ..core.logger import get_logger, setup_logger
 from ..evaluation.evaluation_schemas import (
     BenchmarkSummary,
@@ -20,8 +20,10 @@ from ..evaluation.evaluation_schemas import (
 )
 from ..evaluation.judge import Judge
 from ..generation.html_generator import HTMLGenerator
+from ..generation.project_generator import ProjectGenerator
 from ..models.model_manager import ModelManager
 from ..rendering.renderer import WebRenderer
+from ..rendering.node_renderer import NodeProjectRenderer
 
 
 class BenchmarkPipeline:
@@ -38,7 +40,9 @@ class BenchmarkPipeline:
         # Initialize components
         self.model_manager = None
         self.html_generator = None
+        self.project_generator = None
         self.renderer = None
+        self.node_renderer = None
         self.judge = None
         # Results storage
         self.results = {
@@ -62,8 +66,16 @@ class BenchmarkPipeline:
             self.html_generator = HTMLGenerator(
                 model_manager=self.model_manager, output_dir=self.config.output_dir
             )
-            # Setup renderer
+            # Setup project generator
+            self.project_generator = ProjectGenerator(
+                model_manager=self.model_manager, output_dir=self.config.output_dir
+            )
+            # Setup renderers
             self.renderer = WebRenderer(self.config.rendering)
+            self.node_renderer = NodeProjectRenderer(
+                config=self.config.rendering, 
+                work_dir=self.config.projects.work_dir
+            )
             # Setup judge
             self.judge = Judge(
                 model_manager=self.model_manager,
@@ -74,7 +86,7 @@ class BenchmarkPipeline:
         except Exception as e:
             error_msg = f"Failed to setup pipeline components: {e}"
             self.logger.error(error_msg)
-            raise BenchmarkError(error_msg)
+            raise RuntimeError(error_msg)
 
     def _log_system_info(self):
         """Log system information for reproducibility."""
@@ -161,14 +173,26 @@ class BenchmarkPipeline:
                     for task in self.config.tasks:
                         task_name = task.name
                         try:
-                            self.logger.info(f"Generating HTML for task: {task_name}")
-                            # Generate HTML with iterations
-                            task_results = self.html_generator.generate_complete_task(
-                                model_name=model_name,
-                                task=task,
-                                iterations=self.config.iterations,
-                                renderer=self.renderer,
-                            )
+                            self.logger.info(f"Generating content for task: {task_name}")
+                            
+                            # Check if this is a framework task
+                            if task.project_type and task.project_type != "html":
+                                # Generate multi-file project
+                                task_results = self.project_generator.generate_complete_project(
+                                    model_name=model_name,
+                                    task=task,
+                                    framework=task.project_type,
+                                    iterations=self.config.iterations,
+                                    renderer=self.node_renderer,
+                                )
+                            else:
+                                # Generate HTML with iterations
+                                task_results = self.html_generator.generate_complete_task(
+                                    model_name=model_name,
+                                    task=task,
+                                    iterations=self.config.iterations,
+                                    renderer=self.renderer,
+                                )
                             generation_results[model_name][task_name] = task_results
                             # Update progress for each iteration
                             for _ in range(self.config.iterations):
@@ -195,7 +219,7 @@ class BenchmarkPipeline:
         except Exception as e:
             error_msg = f"Generation phase failed: {e}"
             self.logger.error(error_msg)
-            raise BenchmarkError(error_msg)
+            raise RuntimeError(error_msg)
 
     def run_evaluation_phase(
         self, generation_results: Optional[Dict[str, Any]] = None
@@ -206,7 +230,7 @@ class BenchmarkPipeline:
             if generation_results is None:
                 generation_results = self.results.get("generation_results", {})
             if not generation_results:
-                raise BenchmarkError("No generation results available for evaluation")
+                raise RuntimeError("No generation results available for evaluation")
             # Determine judge models using the new method
             judge_models = self._determine_judge_models()
             self.logger.info(f"Using judge models: {judge_models}")
@@ -285,7 +309,7 @@ class BenchmarkPipeline:
         except Exception as e:
             error_msg = f"Evaluation phase failed: {e}"
             self.logger.error(error_msg)
-            raise BenchmarkError(error_msg)
+            raise RuntimeError(error_msg)
 
     def create_benchmark_summary(self) -> BenchmarkSummary:
         """Create comprehensive benchmark summary."""
@@ -293,7 +317,7 @@ class BenchmarkPipeline:
             self.logger.info("Creating benchmark summary...")
             task_summaries = self.results.get("task_summaries", {})
             if not task_summaries:
-                raise BenchmarkError(
+                raise RuntimeError(
                     "No task summaries available for benchmark summary"
                 )
             # Calculate model rankings and scores
@@ -409,7 +433,7 @@ class BenchmarkPipeline:
         except Exception as e:
             error_msg = f"Failed to create benchmark summary: {e}"
             self.logger.error(error_msg)
-            raise BenchmarkError(error_msg)
+            raise RuntimeError(error_msg)
 
     def run_full_pipeline(self) -> Dict[str, Any]:
         """Run the complete benchmark pipeline."""
@@ -437,6 +461,8 @@ class BenchmarkPipeline:
                 self.model_manager.cleanup()
             if self.renderer:
                 self.renderer.cleanup()
+            if self.node_renderer:
+                self.node_renderer.cleanup()
             total_duration = time.time() - start_time
             # Save final results
             final_results = {
@@ -461,7 +487,7 @@ class BenchmarkPipeline:
         except Exception as e:
             error_msg = f"Benchmark pipeline failed: {e}"
             self.logger.error(error_msg)
-            raise BenchmarkError(error_msg)
+            raise RuntimeError(error_msg)
         finally:
             # Ensure cleanup
             try:
@@ -469,6 +495,8 @@ class BenchmarkPipeline:
                     self.model_manager.cleanup()
                 if self.renderer:
                     self.renderer.cleanup()
+                if self.node_renderer:
+                    self.node_renderer.cleanup()
             except Exception as e:
                 self.logger.warning(f"Error during cleanup: {e}")
 

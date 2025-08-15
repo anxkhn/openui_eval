@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import List, Optional
 
 from src.core.config import Config
-from src.core.exceptions import BenchmarkError
+
 from src.core.logger import setup_logger
 from src.pipeline.benchmark_pipeline import BenchmarkPipeline
 
@@ -210,7 +210,7 @@ def main():
         else:
             print("Benchmark interrupted by user")
         sys.exit(1)
-    except BenchmarkError as e:
+    except RuntimeError as e:
         if logger:
             logger.error(f"Benchmark error: {e}")
         else:

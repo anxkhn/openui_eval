@@ -3,7 +3,7 @@
 import os
 from typing import Dict, Any
 
-from ..core.exceptions import ConfigurationError
+
 from .base_provider import LLMProvider
 from .ollama_provider import OllamaProvider
 from .vllm_provider import vLLMProvider
@@ -22,7 +22,7 @@ def create_provider(provider_type: str, config: Dict[str, Any] = None) -> LLMPro
         LLMProvider instance
         
     Raises:
-        ConfigurationError: If provider type is invalid or configuration is missing
+        ValueError: If provider type is invalid or configuration is missing
     """
     if config is None:
         config = {}
@@ -45,7 +45,7 @@ def create_provider(provider_type: str, config: Dict[str, Any] = None) -> LLMPro
     elif provider_type == "openrouter":
         api_key = config.get("api_key") or os.getenv("OPENROUTER_API_KEY")
         if not api_key:
-            raise ConfigurationError(
+            raise ValueError(
                 "OpenRouter API key is required. Set OPENROUTER_API_KEY environment variable "
                 "or provide it in the configuration."
             )

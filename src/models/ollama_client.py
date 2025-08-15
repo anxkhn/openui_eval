@@ -8,7 +8,7 @@ from typing import Any, Dict, List, Optional, Union
 import ollama
 from pydantic import BaseModel
 
-from ..core.exceptions import ModelError
+
 from ..core.logger import get_logger
 
 
@@ -117,7 +117,7 @@ class OllamaClient:
             with open(image_path, "rb") as image_file:
                 return base64.b64encode(image_file.read()).decode("utf-8")
         except Exception as e:
-            raise ModelError(f"Failed to encode image {image_path}: {e}")
+            raise RuntimeError(f"Failed to encode image {image_path}: {e}")
 
     def _prepare_messages(
         self,
@@ -270,7 +270,7 @@ class OllamaClient:
             self.logger.error(
                 error_msg, model_name=model_name, duration=duration, error=str(e)
             )
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def generate_structured(
         self,
@@ -315,7 +315,7 @@ class OllamaClient:
         except Exception as e:
             error_msg = f"Failed to generate structured response: {e}"
             self.logger.error(error_msg, model_name=model_name, error=str(e))
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def get_model_info(self, model_name: str) -> Dict[str, Any]:
         """Get information about a specific model."""

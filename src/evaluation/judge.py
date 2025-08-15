@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from ..core.config import EvaluationConfig
-from ..core.exceptions import EvaluationError
+
 from ..core.logger import get_logger
 from ..models.model_manager import ModelManager
 from .evaluation_schemas import CriteriaScore, EvaluationResult, TaskEvaluationSummary
@@ -134,7 +134,7 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
         except Exception as e:
             error_msg = f"Failed to evaluate HTML with {judge_model}: {e}"
             self.logger.error(error_msg)
-            raise EvaluationError(error_msg)
+            raise RuntimeError(error_msg)
 
     def evaluate_all_iterations(
         self,
@@ -218,7 +218,7 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
         except Exception as e:
             error_msg = f"Failed to evaluate all iterations for {task_name}: {e}"
             self.logger.error(error_msg)
-            raise EvaluationError(error_msg)
+            raise RuntimeError(error_msg)
 
     def create_task_summary(
         self, target_model: str, task_name: str, evaluations: List[EvaluationResult]
@@ -234,7 +234,7 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
         """
         try:
             if not evaluations:
-                raise EvaluationError("No evaluations provided for summary")
+                raise ValueError("No evaluations provided for summary")
             # Group evaluations by iteration
             evaluations_by_iteration = {}
             for eval_result in evaluations:
@@ -370,7 +370,7 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
         except Exception as e:
             error_msg = f"Failed to create task summary for {task_name}: {e}"
             self.logger.error(error_msg)
-            raise EvaluationError(error_msg)
+            raise RuntimeError(error_msg)
 
     def get_evaluation_stats(
         self, evaluations: List[EvaluationResult]

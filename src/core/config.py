@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 
 import yaml
 
-from .exceptions import ConfigurationError
+
 
 
 @dataclass
@@ -31,6 +31,8 @@ class TaskConfig:
     prompt_template: str
     expected_elements: List[str] = field(default_factory=list)
     difficulty: str = "medium"  # easy, medium, hard
+    project_type: str = "html"  # html, react, vue, angular, nextjs, svelte
+    framework_version: Optional[str] = None
 
 
 @dataclass
@@ -43,6 +45,30 @@ class RenderingConfig:
     screenshot_format: str = "PNG"
     headless: bool = True
     timeout: int = 30
+
+
+@dataclass
+class ProjectConfig:
+    """Configuration for multi-file projects."""
+
+    work_dir: str = "temp_projects"
+    node_version: str = "22.12.0"  # Node v22 LTS
+    supported_frameworks: List[str] = field(
+        default_factory=lambda: ["react", "nextjs", "vue", "angular", "svelte"]
+    )
+    default_ports: Dict[str, int] = field(
+        default_factory=lambda: {
+            "react": 3000,
+            "nextjs": 3000,
+            "vue": 5173,
+            "angular": 4200,
+            "svelte": 5173,
+        }
+    )
+    install_timeout: int = 300  # 5 minutes
+    build_timeout: int = 300  # 5 minutes
+    server_start_timeout: int = 60  # 1 minute
+    cleanup_on_exit: bool = True
 
 
 @dataclass
@@ -299,6 +325,8 @@ class Config:
     compress_logs: bool = True
     # Rendering settings
     rendering: RenderingConfig = field(default_factory=RenderingConfig)
+    # Project settings
+    projects: ProjectConfig = field(default_factory=ProjectConfig)
     # Evaluation settings
     evaluation: EvaluationConfig = field(default_factory=EvaluationConfig)
     # Provider settings
@@ -316,7 +344,7 @@ class Config:
                 data = yaml.safe_load(f)
             return cls.from_dict(data)
         except Exception as e:
-            raise ConfigurationError(f"Failed to load config from {yaml_path}: {e}")
+            raise ValueError(f"Failed to load config from {yaml_path}: {e}")
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Config":
@@ -427,18 +455,36 @@ class Config:
                 else:
                     data["provider"] = ProviderConfig(**provider_data)
             
+            # Handle project config
+            if "projects" in data:
+                project_data = data["projects"]
+                if isinstance(project_data, dict):
+                    # Extract only the fields that ProjectConfig expects
+                    project_config = {}
+                    expected_fields = {
+                        "work_dir", "node_version", "supported_frameworks", "default_ports",
+                        "install_timeout", "build_timeout", "server_start_timeout", "cleanup_on_exit"
+                    }
+                    for key, value in project_data.items():
+                        if key in expected_fields:
+                            project_config[key] = value
+                    
+                    data["projects"] = ProjectConfig(**project_config)
+                else:
+                    data["projects"] = ProjectConfig(**project_data)
+            
             # Filter out unknown fields that don't belong to the Config class
             config_fields = {
                 "models", "tasks", "iterations", "judges", "mode", "resume_from",
                 "output_dir", "save_intermediate", "compress_logs", "rendering",
-                "evaluation", "provider", "max_concurrent_models", "memory_threshold",
+                "projects", "evaluation", "provider", "max_concurrent_models", "memory_threshold",
                 "log_level"
             }
             filtered_data = {k: v for k, v in data.items() if k in config_fields}
             
             return cls(**filtered_data)
         except Exception as e:
-            raise ConfigurationError(f"Failed to create config from dict: {e}")
+            raise ValueError(f"Failed to create config from dict: {e}")
 
     def to_yaml(self, yaml_path: str):
         """Save configuration to YAML file."""
@@ -447,7 +493,7 @@ class Config:
             with open(yaml_path, "w") as f:
                 yaml.dump(data, f, default_flow_style=False, indent=2)
         except Exception as e:
-            raise ConfigurationError(f"Failed to save config to {yaml_path}: {e}")
+            raise ValueError(f"Failed to save config to {yaml_path}: {e}")
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert configuration to dictionary."""
@@ -475,6 +521,8 @@ class Config:
                     "prompt_template": task.prompt_template,
                     "expected_elements": task.expected_elements,
                     "difficulty": task.difficulty,
+                    "project_type": task.project_type,
+                    "framework_version": task.framework_version,
                 }
             )
         # Add other fields
@@ -500,6 +548,17 @@ class Config:
             "screenshot_format": self.rendering.screenshot_format,
             "headless": self.rendering.headless,
             "timeout": self.rendering.timeout,
+        }
+        # Add project config
+        data["projects"] = {
+            "work_dir": self.projects.work_dir,
+            "node_version": self.projects.node_version,
+            "supported_frameworks": self.projects.supported_frameworks,
+            "default_ports": self.projects.default_ports,
+            "install_timeout": self.projects.install_timeout,
+            "build_timeout": self.projects.build_timeout,
+            "server_start_timeout": self.projects.server_start_timeout,
+            "cleanup_on_exit": self.projects.cleanup_on_exit,
         }
         # Add evaluation config
         data["evaluation"] = {
@@ -565,29 +624,29 @@ class Config:
         """Validate configuration settings."""
         # Validate models
         if not self.models:
-            raise ConfigurationError("At least one model must be specified")
+            raise ValueError("At least one model must be specified")
         for model in self.models:
             if not model.name:
-                raise ConfigurationError("Model name cannot be empty")
+                raise ValueError("Model name cannot be empty")
             if not 0 <= model.temperature <= 1:
-                raise ConfigurationError(
+                raise ValueError(
                     f"Model temperature must be between 0 and 1, got {model.temperature}"
                 )
         # Validate tasks
         if not self.tasks:
-            raise ConfigurationError("At least one task must be specified")
+            raise ValueError("At least one task must be specified")
         for task in self.tasks:
             if not task.name or not task.prompt_template:
-                raise ConfigurationError("Task name and prompt_template are required")
+                raise ValueError("Task name and prompt_template are required")
         # Validate iterations
         if self.iterations < 1:
-            raise ConfigurationError("Iterations must be at least 1")
+            raise ValueError("Iterations must be at least 1")
         # Validate mode
         valid_modes = ["generation-only", "judging-only", "full-pipeline"]
         if self.mode not in valid_modes:
-            raise ConfigurationError(f"Mode must be one of {valid_modes}")
+            raise ValueError(f"Mode must be one of {valid_modes}")
         # Validate output directory
         if not self.output_dir:
-            raise ConfigurationError("Output directory cannot be empty")
+            raise ValueError("Output directory cannot be empty")
         # Create output directory if it doesn't exist
         Path(self.output_dir).mkdir(parents=True, exist_ok=True)

@@ -8,7 +8,7 @@ from typing import Any, Dict, List, Optional
 import psutil
 
 from ..core.config import Config, ModelConfig
-from ..core.exceptions import MemoryError, ModelError
+
 from ..core.logger import get_logger
 from .base_provider import LLMProvider
 from .provider_factory import create_provider
@@ -64,7 +64,7 @@ class ModelManager:
         
         # Check provider availability
         if not self.provider.is_available():
-            raise ModelError(f"{config.provider.provider_type} provider is not available")
+            raise RuntimeError(f"{config.provider.provider_type} provider is not available")
         
         self.logger.info(f"ModelManager initialized with {len(self.models)} models using {config.provider.provider_type} provider")
 
@@ -87,7 +87,7 @@ class ModelManager:
     def ensure_model_available(self, model_name: str) -> bool:
         """Ensure a model is available locally."""
         if model_name not in self.models:
-            raise ModelError(f"Model {model_name} not configured")
+            raise ValueError(f"Model {model_name} not configured")
         try:
             return self.provider.ensure_model_available(model_name)
         except Exception as e:
@@ -97,7 +97,7 @@ class ModelManager:
     def load_model(self, model_name: str) -> bool:
         """Load a model into memory."""
         if model_name not in self.models:
-            raise ModelError(f"Model {model_name} not configured")
+            raise ValueError(f"Model {model_name} not configured")
         state = self.model_states[model_name]
         if state.loaded:
             self.logger.debug(f"Model {model_name} already loaded")
@@ -147,12 +147,12 @@ class ModelManager:
             state.error_count += 1
             error_msg = f"Failed to load model {model_name}: {e}"
             self.logger.error(error_msg)
-            raise ModelError(error_msg)
+            raise RuntimeError(error_msg)
 
     def unload_model(self, model_name: str) -> bool:
         """Unload a model from memory."""
         if model_name not in self.models:
-            raise ModelError(f"Model {model_name} not configured")
+            raise ValueError(f"Model {model_name} not configured")
         state = self.model_states[model_name]
         if not state.loaded:
             self.logger.debug(f"Model {model_name} not loaded")
@@ -198,11 +198,11 @@ class ModelManager:
     def generate(self, model_name: str, prompt: str, **kwargs) -> Dict[str, Any]:
         """Generate response from a model, loading it if necessary."""
         if model_name not in self.models:
-            raise ModelError(f"Model {model_name} not configured")
+            raise ValueError(f"Model {model_name} not configured")
         # Load model if not loaded
         if not self.model_states[model_name].loaded:
             if not self.load_model(model_name):
-                raise ModelError(f"Failed to load model {model_name}")
+                raise RuntimeError(f"Failed to load model {model_name}")
         # Update model configuration
         model_config = self.models[model_name]
         kwargs.setdefault("temperature", model_config.temperature)
@@ -249,7 +249,7 @@ class ModelManager:
         """Get statistics for a model or all models."""
         if model_name:
             if model_name not in self.models:
-                raise ModelError(f"Model {model_name} not configured")
+                raise ValueError(f"Model {model_name} not configured")
             state = self.model_states[model_name]
             return {
                 "name": state.name,
