@@ -40,7 +40,7 @@ class LLMProvider(ABC):
     ) -> Dict[str, Any]:
         """
         Generate response from model.
-        
+
         Args:
             model_name: Name of the model to use
             prompt: Text prompt
@@ -52,7 +52,7 @@ class LLMProvider(ABC):
             format_schema: Optional Pydantic model for structured output
             use_conversation_history: Whether to use conversation history
             timeout: Request timeout in seconds
-            
+
         Returns:
             Dictionary with response data including:
             - content: Generated text

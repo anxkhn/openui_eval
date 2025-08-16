@@ -41,9 +41,11 @@ class ModelManager:
         # Use config models if not provided directly
         self.models = {model.name: model for model in (models or config.models)}
         self.memory_threshold = memory_threshold or config.memory_threshold
-        self.max_concurrent_models = max_concurrent_models or config.max_concurrent_models
+        self.max_concurrent_models = (
+            max_concurrent_models or config.max_concurrent_models
+        )
         self.logger = get_logger()
-        
+
         # Create provider based on config
         provider_config = {
             "host": config.provider.ollama_host,
@@ -54,19 +56,23 @@ class ModelManager:
             "requests_per_minute": config.provider.openrouter_requests_per_minute,
             "timeout": config.provider.timeout,
         }
-        
+
         self.provider = create_provider(config.provider.provider_type, provider_config)
-        
+
         # Track model states
         self.model_states = {name: ModelState(name=name) for name in self.models.keys()}
         # Currently loaded models
         self.loaded_models = set()
-        
+
         # Check provider availability
         if not self.provider.is_available():
-            raise RuntimeError(f"{config.provider.provider_type} provider is not available")
-        
-        self.logger.info(f"ModelManager initialized with {len(self.models)} models using {config.provider.provider_type} provider")
+            raise RuntimeError(
+                f"{config.provider.provider_type} provider is not available"
+            )
+
+        self.logger.info(
+            f"ModelManager initialized with {len(self.models)} models using {config.provider.provider_type} provider"
+        )
 
     def get_memory_usage(self) -> Dict[str, float]:
         """Get current system memory usage."""

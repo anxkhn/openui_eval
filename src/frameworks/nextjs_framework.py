@@ -15,7 +15,7 @@ class NextJSFramework(BaseFramework):
     def get_project_template(self) -> Dict[str, str]:
         """Get Next.js project template files."""
         return {
-            "next.config.js": '''/** @type {import('next').NextConfig} */
+            "next.config.js": """/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
@@ -23,8 +23,8 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig''',
-            "app/layout.js": '''import './globals.css'
+module.exports = nextConfig""",
+            "app/layout.js": """import './globals.css'
 
 export const metadata = {
   title: 'Next.js App',
@@ -37,8 +37,8 @@ export default function RootLayout({ children }) {
       <body>{children}</body>
     </html>
   )
-}''',
-            "app/globals.css": '''html,
+}""",
+            "app/globals.css": """html,
 body {
   padding: 0;
   margin: 0;
@@ -63,8 +63,8 @@ a {
     color: white;
     background: black;
   }
-}''',
-            ".gitignore": '''# Dependencies
+}""",
+            ".gitignore": """# Dependencies
 node_modules/
 .pnp
 .pnp.js
@@ -95,8 +95,8 @@ next-env.d.ts
 
 # OS
 .DS_Store
-Thumbs.db''',
-            "README.md": '''# Next.js App
+Thumbs.db""",
+            "README.md": """# Next.js App
 
 This is a [Next.js](https://nextjs.org/) project.
 
@@ -120,15 +120,15 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-''',
-            "jsconfig.json": '''{
+""",
+            "jsconfig.json": """{
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"]
     }
   }
-}''',
+}""",
         }
 
     def get_package_json(self) -> Dict[str, Any]:
@@ -141,20 +141,15 @@ To learn more about Next.js, take a look at the following resources:
                 "dev": "next dev",
                 "build": "next build",
                 "start": "next start",
-                "lint": "next lint"
+                "lint": "next lint",
             },
             "dependencies": {
                 "react": "^19.0.0",
                 "react-dom": "^19.0.0",
-                "next": "^15.0.0"
+                "next": "^15.0.0",
             },
-            "devDependencies": {
-                "eslint": "^8.57.0",
-                "eslint-config-next": "^15.0.0"
-            },
-            "engines": {
-                "node": ">=22.0.0"
-            }
+            "devDependencies": {"eslint": "^8.57.0", "eslint-config-next": "^15.0.0"},
+            "engines": {"node": ">=22.0.0"},
         }
 
     def get_build_command(self) -> List[str]:
@@ -188,33 +183,29 @@ To learn more about Next.js, take a look at the following resources:
     def _validate_framework_specific(self, project_dir: Path) -> List[str]:
         """Validate Next.js-specific requirements."""
         errors = []
-        
+
         # Check for required Next.js files
-        required_files = [
-            "next.config.js",
-            "app/layout.js",
-            "app/page.js"
-        ]
-        
+        required_files = ["next.config.js", "app/layout.js", "app/page.js"]
+
         for file_path in required_files:
             if not (project_dir / file_path).exists():
                 errors.append(f"Required Next.js file missing: {file_path}")
-        
+
         return errors
 
     def create_page_component(self, component_content: str) -> str:
         """Create the main page component."""
-        return f'''export default function Home() {{
+        return f"""export default function Home() {{
   return (
     <main>
       {component_content}
     </main>
   )
-}}'''
+}}"""
 
     def create_page_css(self, css_content: str = "") -> str:
         """Create page-specific CSS module."""
-        base_css = '''.main {
+        base_css = """.main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -232,8 +223,8 @@ To learn more about Next.js, take a look at the following resources:
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
-}'''
-        
+}"""
+
         if css_content:
             return base_css + "\n\n" + css_content
         return base_css

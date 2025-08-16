@@ -15,7 +15,7 @@ class VueFramework(BaseFramework):
     def get_project_template(self) -> Dict[str, str]:
         """Get Vue project template files."""
         return {
-            "index.html": '''<!DOCTYPE html>
+            "index.html": """<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,13 +27,13 @@ class VueFramework(BaseFramework):
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
-</html>''',
-            "src/main.js": '''import { createApp } from 'vue'
+</html>""",
+            "src/main.js": """import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
-createApp(App).mount('#app')''',
-            "src/style.css": '''#app {
+createApp(App).mount('#app')""",
+            "src/style.css": """#app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -64,8 +64,8 @@ createApp(App).mount('#app')''',
   button {
     background-color: #f9f9f9;
   }
-}''',
-            "vite.config.js": '''import { defineConfig } from 'vite'
+}""",
+            "vite.config.js": """import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
@@ -74,8 +74,8 @@ export default defineConfig({
   server: {
     port: 5173
   }
-})''',
-            ".gitignore": '''# Logs
+})""",
+            ".gitignore": """# Logs
 logs
 *.log
 npm-debug.log*
@@ -98,8 +98,8 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?''',
-            "README.md": '''# Vue 3 + Vite
+*.sw?""",
+            "README.md": """# Vue 3 + Vite
 
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
@@ -117,7 +117,7 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
     1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
     2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-''',
+""",
         }
 
     def get_package_json(self) -> Dict[str, Any]:
@@ -130,18 +130,11 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
             "scripts": {
                 "dev": "vite",
                 "build": "vite build",
-                "preview": "vite preview"
+                "preview": "vite preview",
             },
-            "dependencies": {
-                "vue": "^3.5.0"
-            },
-            "devDependencies": {
-                "@vitejs/plugin-vue": "^4.0.0",
-                "vite": "^5.0.0"
-            },
-            "engines": {
-                "node": ">=22.0.0"
-            }
+            "dependencies": {"vue": "^3.5.0"},
+            "devDependencies": {"@vitejs/plugin-vue": "^4.0.0", "vite": "^5.0.0"},
+            "engines": {"node": ">=22.0.0"},
         }
 
     def get_build_command(self) -> List[str]:
@@ -175,26 +168,32 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
     def _validate_framework_specific(self, project_dir: Path) -> List[str]:
         """Validate Vue-specific requirements."""
         errors = []
-        
+
         # Check for required Vue files
-        required_files = [
-            "vite.config.js",
-            "src/main.js",
-            "src/App.vue"
-        ]
-        
+        required_files = ["vite.config.js", "src/main.js", "src/App.vue"]
+
         for file_path in required_files:
             if not (project_dir / file_path).exists():
                 errors.append(f"Required Vue file missing: {file_path}")
-        
+
         return errors
 
-    def create_app_component(self, template_content: str, script_content: str = "", style_content: str = "") -> str:
+    def create_app_component(
+        self, template_content: str, script_content: str = "", style_content: str = ""
+    ) -> str:
         """Create the main App.vue component."""
-        script_section = f"<script setup>\n{script_content}\n</script>" if script_content else "<script setup>\n// Vue component logic\n</script>"
-        style_section = f"<style scoped>\n{style_content}\n</style>" if style_content else "<style scoped>\n/* Component styles */\n</style>"
-        
-        return f'''{script_section}
+        script_section = (
+            f"<script setup>\n{script_content}\n</script>"
+            if script_content
+            else "<script setup>\n// Vue component logic\n</script>"
+        )
+        style_section = (
+            f"<style scoped>\n{style_content}\n</style>"
+            if style_content
+            else "<style scoped>\n/* Component styles */\n</style>"
+        )
+
+        return f"""{script_section}
 
 <template>
   <div id="app">
@@ -202,17 +201,29 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
   </div>
 </template>
 
-{style_section}'''
+{style_section}"""
 
-    def create_component(self, name: str, template_content: str, script_content: str = "", style_content: str = "") -> str:
+    def create_component(
+        self,
+        name: str,
+        template_content: str,
+        script_content: str = "",
+        style_content: str = "",
+    ) -> str:
         """Create a Vue component."""
-        script_section = f"<script setup>\n{script_content}\n</script>" if script_content else "<script setup>\n// Component logic\n</script>"
-        style_section = f"<style scoped>\n{style_content}\n</style>" if style_content else ""
-        
-        return f'''{script_section}
+        script_section = (
+            f"<script setup>\n{script_content}\n</script>"
+            if script_content
+            else "<script setup>\n// Component logic\n</script>"
+        )
+        style_section = (
+            f"<style scoped>\n{style_content}\n</style>" if style_content else ""
+        )
+
+        return f"""{script_section}
 
 <template>
   {template_content}
 </template>
 
-{style_section}'''
+{style_section}"""

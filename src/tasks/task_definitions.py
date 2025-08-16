@@ -1244,7 +1244,14 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Accessibility compliance and keyboard navigation",
         ],
         time_estimate_minutes=75,
-        tags=["education", "video", "classroom", "interactive", "collaboration", "advanced"],
+        tags=[
+            "education",
+            "video",
+            "classroom",
+            "interactive",
+            "collaboration",
+            "advanced",
+        ],
     ),
     "cryptocurrency_portfolio": TaskDefinition(
         name="cryptocurrency_portfolio",
@@ -1466,7 +1473,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Responsive component design",
             "TypeScript interfaces",
             "Error handling",
-            "Unit tests"
+            "Unit tests",
         ],
         evaluation_criteria=[
             "React 19 best practices",
@@ -1474,7 +1481,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "State management effectiveness",
             "User interface design quality",
             "Code organization and structure",
-            "Responsive design implementation"
+            "Responsive design implementation",
         ],
         expected_features=[
             "Multiple React components",
@@ -1482,7 +1489,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Event handling",
             "Conditional rendering",
             "Local storage integration",
-            "CSS styling system"
+            "CSS styling system",
         ],
         time_estimate_minutes=45,
         tags=["react", "hooks", "components", "crud", "typescript", "testing"],
@@ -1519,7 +1526,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Vue Router navigation",
             "TypeScript integration",
             "Custom composables",
-            "Loading and error states"
+            "Loading and error states",
         ],
         evaluation_criteria=[
             "Vue 3.5 Composition API usage",
@@ -1527,7 +1534,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Data visualization quality",
             "Component organization",
             "Responsive design execution",
-            "TypeScript implementation"
+            "TypeScript implementation",
         ],
         expected_features=[
             "Composition API patterns",
@@ -1535,7 +1542,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Chart rendering",
             "Route-based navigation",
             "Theme persistence",
-            "Responsive layouts"
+            "Responsive layouts",
         ],
         time_estimate_minutes=60,
         tags=["vue", "composition-api", "dashboard", "charts", "pinia", "typescript"],
@@ -1573,7 +1580,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Image optimization",
             "API routes",
             "Theme system",
-            "Search functionality"
+            "Search functionality",
         ],
         evaluation_criteria=[
             "Next.js 15 features utilization",
@@ -1581,7 +1588,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Performance optimization",
             "SEO implementation",
             "Content management system",
-            "User experience quality"
+            "User experience quality",
         ],
         expected_features=[
             "App Router navigation",
@@ -1589,7 +1596,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Static generation",
             "Metadata management",
             "Image optimization",
-            "Theme persistence"
+            "Theme persistence",
         ],
         time_estimate_minutes=70,
         tags=["nextjs", "app-router", "blog", "ssg", "markdown", "seo"],
@@ -1628,7 +1635,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "State management",
             "Form validation",
             "Lazy loading",
-            "PWA features"
+            "PWA features",
         ],
         evaluation_criteria=[
             "Angular 20 architecture patterns",
@@ -1636,7 +1643,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "State management implementation",
             "Form handling and validation",
             "Security and authentication",
-            "Performance optimization"
+            "Performance optimization",
         ],
         expected_features=[
             "Standalone components",
@@ -1644,7 +1651,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Route guards",
             "Custom pipes/directives",
             "Service workers",
-            "Material Design"
+            "Material Design",
         ],
         time_estimate_minutes=90,
         tags=["angular", "standalone", "ecommerce", "ngrx", "material", "pwa"],
@@ -1683,7 +1690,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Responsive design",
             "SEO optimization",
             "Accessibility features",
-            "TypeScript integration"
+            "TypeScript integration",
         ],
         evaluation_criteria=[
             "Svelte 5 features utilization",
@@ -1691,7 +1698,7 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Component architecture",
             "Responsive design execution",
             "Performance optimization",
-            "Accessibility compliance"
+            "Accessibility compliance",
         ],
         expected_features=[
             "Runes state management",
@@ -1699,10 +1706,17 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
             "Animation transitions",
             "Store management",
             "Event handling",
-            "TypeScript types"
+            "TypeScript types",
         ],
         time_estimate_minutes=55,
-        tags=["svelte", "runes", "portfolio", "animations", "typescript", "accessibility"],
+        tags=[
+            "svelte",
+            "runes",
+            "portfolio",
+            "animations",
+            "typescript",
+            "accessibility",
+        ],
     ),
 }
 

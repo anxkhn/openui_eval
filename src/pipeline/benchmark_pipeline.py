@@ -73,8 +73,7 @@ class BenchmarkPipeline:
             # Setup renderers
             self.renderer = WebRenderer(self.config.rendering)
             self.node_renderer = NodeProjectRenderer(
-                config=self.config.rendering, 
-                work_dir=self.config.projects.work_dir
+                config=self.config.rendering, work_dir=self.config.projects.work_dir
             )
             # Setup judge
             self.judge = Judge(
@@ -173,25 +172,31 @@ class BenchmarkPipeline:
                     for task in self.config.tasks:
                         task_name = task.name
                         try:
-                            self.logger.info(f"Generating content for task: {task_name}")
-                            
+                            self.logger.info(
+                                f"Generating content for task: {task_name}"
+                            )
+
                             # Check if this is a framework task
                             if task.project_type and task.project_type != "html":
                                 # Generate multi-file project
-                                task_results = self.project_generator.generate_complete_project(
-                                    model_name=model_name,
-                                    task=task,
-                                    framework=task.project_type,
-                                    iterations=self.config.iterations,
-                                    renderer=self.node_renderer,
+                                task_results = (
+                                    self.project_generator.generate_complete_project(
+                                        model_name=model_name,
+                                        task=task,
+                                        framework=task.project_type,
+                                        iterations=self.config.iterations,
+                                        renderer=self.node_renderer,
+                                    )
                                 )
                             else:
                                 # Generate HTML with iterations
-                                task_results = self.html_generator.generate_complete_task(
-                                    model_name=model_name,
-                                    task=task,
-                                    iterations=self.config.iterations,
-                                    renderer=self.renderer,
+                                task_results = (
+                                    self.html_generator.generate_complete_task(
+                                        model_name=model_name,
+                                        task=task,
+                                        iterations=self.config.iterations,
+                                        renderer=self.renderer,
+                                    )
                                 )
                             generation_results[model_name][task_name] = task_results
                             # Update progress for each iteration
@@ -317,9 +322,7 @@ class BenchmarkPipeline:
             self.logger.info("Creating benchmark summary...")
             task_summaries = self.results.get("task_summaries", {})
             if not task_summaries:
-                raise RuntimeError(
-                    "No task summaries available for benchmark summary"
-                )
+                raise RuntimeError("No task summaries available for benchmark summary")
             # Calculate model rankings and scores
             model_scores = {}
             model_strengths = {}

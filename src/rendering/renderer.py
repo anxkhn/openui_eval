@@ -387,12 +387,12 @@ class WebRenderer:
     ) -> Dict[str, Any]:
         """
         Render a URL and capture screenshot.
-        
+
         Args:
             url: URL to render
             screenshot_path: Path to save screenshot
             create_llm_version: Whether to create LLM-optimized version
-            
+
         Returns:
             Dictionary with paths and success status
         """
@@ -401,15 +401,15 @@ class WebRenderer:
             # Setup driver if not already done
             if not self.driver:
                 self._setup_driver()
-            
+
             self.logger.debug(f"Loading URL: {url}")
-            
+
             # Load the URL
             self.driver.get(url)
-            
+
             # Wait for page to load
             time.sleep(self.config.wait_time)
-            
+
             # Wait for body element to be present
             try:
                 WebDriverWait(self.driver, 10).until(
@@ -419,21 +419,21 @@ class WebRenderer:
                 self.logger.warning(
                     "Body element not found, proceeding with screenshot"
                 )
-            
+
             # Ensure screenshot directory exists
             Path(screenshot_path).parent.mkdir(parents=True, exist_ok=True)
-            
+
             # Capture screenshot
             success = self.driver.save_screenshot(screenshot_path)
             duration = time.time() - start_time
-            
+
             result = {
                 "success": success,
                 "full_screenshot_path": screenshot_path if success else None,
                 "llm_screenshot_path": None,
                 "duration": duration,
             }
-            
+
             if success:
                 # Create LLM-optimized version if requested
                 if create_llm_version:
@@ -446,7 +446,7 @@ class WebRenderer:
                         screenshot_path, str(llm_screenshot_path)
                     ):
                         result["llm_screenshot_path"] = str(llm_screenshot_path)
-                
+
                 self.logger.log_rendering_operation(
                     url=url,
                     screenshot_path=screenshot_path,
@@ -460,9 +460,9 @@ class WebRenderer:
                     duration=duration,
                     success=False,
                 )
-            
+
             return result
-            
+
         except Exception as e:
             duration = time.time() - start_time
             error_msg = f"Failed to render URL {url}: {e}"

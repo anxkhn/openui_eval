@@ -8,8 +8,6 @@ from typing import Any, Dict, List, Optional
 import yaml
 
 
-
-
 @dataclass
 class ModelConfig:
     """Configuration for individual models."""
@@ -76,20 +74,20 @@ class ProviderConfig:
     """Configuration for LLM providers."""
 
     provider_type: str = "ollama"  # ollama, vllm, openrouter
-    
+
     # Ollama settings
     ollama_host: str = "http://localhost:11434"
-    
+
     # vLLM settings
     vllm_url: str = "http://localhost:8000/v1/completions"
     vllm_model: str = "meta-llama/Meta-Llama-3-8B-Instruct"
-    
+
     # OpenRouter settings
     openrouter_url: str = "https://openrouter.ai/api/v1/chat/completions"
     openrouter_model: str = "meta-llama/llama-3.1-8b-instruct:free"
     openrouter_api_key: Optional[str] = None
     openrouter_requests_per_minute: int = 20
-    
+
     # Common settings
     timeout: int = 300
 
@@ -366,7 +364,9 @@ class Config:
                     task_names = data["tasks"]["task_names"]
                     # Filter default tasks to only include the specified ones
                     default_config = cls()
-                    filtered_tasks = [task for task in default_config.tasks if task.name in task_names]
+                    filtered_tasks = [
+                        task for task in default_config.tasks if task.name in task_names
+                    ]
                     data["tasks"] = filtered_tasks
                 elif isinstance(data["tasks"], list):
                     # New format with full task configurations
@@ -377,7 +377,14 @@ class Config:
                         else:
                             # Handle simple string task names
                             default_config = cls()
-                            task = next((t for t in default_config.tasks if t.name == task_data), None)
+                            task = next(
+                                (
+                                    t
+                                    for t in default_config.tasks
+                                    if t.name == task_data
+                                ),
+                                None,
+                            )
                             if task:
                                 tasks.append(task)
                     data["tasks"] = tasks
@@ -390,16 +397,26 @@ class Config:
                     if "webdriver" in rendering_data:
                         webdriver = rendering_data["webdriver"]
                         if "window_size" in webdriver:
-                            rendering_config["viewport_width"] = webdriver["window_size"].get("width", 1920)
-                            rendering_config["viewport_height"] = webdriver["window_size"].get("height", 1080)
+                            rendering_config["viewport_width"] = webdriver[
+                                "window_size"
+                            ].get("width", 1920)
+                            rendering_config["viewport_height"] = webdriver[
+                                "window_size"
+                            ].get("height", 1080)
                         rendering_config["headless"] = webdriver.get("headless", True)
-                        rendering_config["timeout"] = webdriver.get("page_load_timeout", 30)
+                        rendering_config["timeout"] = webdriver.get(
+                            "page_load_timeout", 30
+                        )
                     if "wait_time_seconds" in rendering_data:
-                        rendering_config["wait_time"] = rendering_data["wait_time_seconds"]
+                        rendering_config["wait_time"] = rendering_data[
+                            "wait_time_seconds"
+                        ]
                     if "screenshot" in rendering_data:
                         screenshot = rendering_data["screenshot"]
-                        rendering_config["screenshot_format"] = screenshot.get("format", "PNG").upper()
-                    
+                        rendering_config["screenshot_format"] = screenshot.get(
+                            "format", "PNG"
+                        ).upper()
+
                     # Use the extracted config or fall back to direct mapping
                     if rendering_config:
                         data["rendering"] = RenderingConfig(**rendering_config)
@@ -415,20 +432,28 @@ class Config:
                     # Extract only the fields that EvaluationConfig expects
                     evaluation_config = {}
                     if "judge_models" in evaluation_data:
-                        evaluation_config["judge_models"] = evaluation_data["judge_models"]
+                        evaluation_config["judge_models"] = evaluation_data[
+                            "judge_models"
+                        ]
                     if "criteria" in evaluation_data:
                         evaluation_config["criteria"] = evaluation_data["criteria"]
                     elif "criteria_weights" in evaluation_data:
                         # Extract criteria names from criteria_weights
-                        evaluation_config["criteria"] = list(evaluation_data["criteria_weights"].keys())
+                        evaluation_config["criteria"] = list(
+                            evaluation_data["criteria_weights"].keys()
+                        )
                     if "scoring_scale" in evaluation_data:
-                        evaluation_config["scoring_scale"] = evaluation_data["scoring_scale"]
+                        evaluation_config["scoring_scale"] = evaluation_data[
+                            "scoring_scale"
+                        ]
                     elif "use_structured_output" in evaluation_data:
                         # Default scoring scale
                         evaluation_config["scoring_scale"] = 10
                     if "temperature" in evaluation_data:
-                        evaluation_config["temperature"] = evaluation_data["temperature"]
-                    
+                        evaluation_config["temperature"] = evaluation_data[
+                            "temperature"
+                        ]
+
                     # Use extracted config or fall back to defaults
                     if evaluation_config:
                         data["evaluation"] = EvaluationConfig(**evaluation_config)
@@ -443,18 +468,24 @@ class Config:
                     # Extract only the fields that ProviderConfig expects
                     provider_config = {}
                     expected_fields = {
-                        "provider_type", "ollama_host", "vllm_url", "vllm_model",
-                        "openrouter_url", "openrouter_model", "openrouter_api_key", 
-                        "openrouter_requests_per_minute", "timeout"
+                        "provider_type",
+                        "ollama_host",
+                        "vllm_url",
+                        "vllm_model",
+                        "openrouter_url",
+                        "openrouter_model",
+                        "openrouter_api_key",
+                        "openrouter_requests_per_minute",
+                        "timeout",
                     }
                     for key, value in provider_data.items():
                         if key in expected_fields:
                             provider_config[key] = value
-                    
+
                     data["provider"] = ProviderConfig(**provider_config)
                 else:
                     data["provider"] = ProviderConfig(**provider_data)
-            
+
             # Handle project config
             if "projects" in data:
                 project_data = data["projects"]
@@ -462,26 +493,44 @@ class Config:
                     # Extract only the fields that ProjectConfig expects
                     project_config = {}
                     expected_fields = {
-                        "work_dir", "node_version", "supported_frameworks", "default_ports",
-                        "install_timeout", "build_timeout", "server_start_timeout", "cleanup_on_exit"
+                        "work_dir",
+                        "node_version",
+                        "supported_frameworks",
+                        "default_ports",
+                        "install_timeout",
+                        "build_timeout",
+                        "server_start_timeout",
+                        "cleanup_on_exit",
                     }
                     for key, value in project_data.items():
                         if key in expected_fields:
                             project_config[key] = value
-                    
+
                     data["projects"] = ProjectConfig(**project_config)
                 else:
                     data["projects"] = ProjectConfig(**project_data)
-            
+
             # Filter out unknown fields that don't belong to the Config class
             config_fields = {
-                "models", "tasks", "iterations", "judges", "mode", "resume_from",
-                "output_dir", "save_intermediate", "compress_logs", "rendering",
-                "projects", "evaluation", "provider", "max_concurrent_models", "memory_threshold",
-                "log_level"
+                "models",
+                "tasks",
+                "iterations",
+                "judges",
+                "mode",
+                "resume_from",
+                "output_dir",
+                "save_intermediate",
+                "compress_logs",
+                "rendering",
+                "projects",
+                "evaluation",
+                "provider",
+                "max_concurrent_models",
+                "memory_threshold",
+                "log_level",
             }
             filtered_data = {k: v for k, v in data.items() if k in config_fields}
-            
+
             return cls(**filtered_data)
         except Exception as e:
             raise ValueError(f"Failed to create config from dict: {e}")
@@ -601,7 +650,7 @@ class Config:
             self.output_dir = os.getenv("BENCHMARK_OUTPUT_DIR")
         if os.getenv("BENCHMARK_LOG_LEVEL"):
             self.log_level = os.getenv("BENCHMARK_LOG_LEVEL")
-        
+
         # Provider settings
         if os.getenv("LLM_PROVIDER"):
             self.provider.provider_type = os.getenv("LLM_PROVIDER")
@@ -618,7 +667,9 @@ class Config:
         if os.getenv("OPENROUTER_API_KEY"):
             self.provider.openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
         if os.getenv("OPENROUTER_REQUESTS_PER_MINUTE"):
-            self.provider.openrouter_requests_per_minute = int(os.getenv("OPENROUTER_REQUESTS_PER_MINUTE"))
+            self.provider.openrouter_requests_per_minute = int(
+                os.getenv("OPENROUTER_REQUESTS_PER_MINUTE")
+            )
 
     def validate(self):
         """Validate configuration settings."""

@@ -10,7 +10,6 @@ from .svelte_framework import SvelteFramework
 from .vue_framework import VueFramework
 
 
-
 class FrameworkFactory:
     """Factory for creating framework instances."""
 
@@ -26,22 +25,24 @@ class FrameworkFactory:
     def create_framework(cls, framework_name: str) -> BaseFramework:
         """
         Create a framework instance.
-        
+
         Args:
             framework_name: Name of the framework
-            
+
         Returns:
             Framework instance
-            
+
         Raises:
             FrameworkError: If framework is not supported
         """
         framework_name = framework_name.lower()
-        
+
         if framework_name not in cls._frameworks:
             supported = ", ".join(cls._frameworks.keys())
-            raise ValueError(f"Unsupported framework: {framework_name}. Supported: {supported}")
-        
+            raise ValueError(
+                f"Unsupported framework: {framework_name}. Supported: {supported}"
+            )
+
         framework_class = cls._frameworks[framework_name]
         return framework_class()
 
@@ -59,7 +60,7 @@ class FrameworkFactory:
     def register_framework(cls, name: str, framework_class: Type[BaseFramework]):
         """
         Register a custom framework.
-        
+
         Args:
             name: Framework name
             framework_class: Framework class
@@ -79,10 +80,10 @@ class FrameworkFactory:
     def get_framework_info(cls, framework_name: str) -> Dict[str, any]:
         """
         Get information about a specific framework.
-        
+
         Args:
             framework_name: Name of the framework
-            
+
         Returns:
             Dictionary with framework information
         """

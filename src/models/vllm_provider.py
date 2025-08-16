@@ -19,7 +19,7 @@ class vLLMProvider(LLMProvider):
         self,
         url: str = "http://localhost:8000/v1/completions",
         model_name: str = "meta-llama/Meta-Llama-3-8B-Instruct",
-        **kwargs
+        **kwargs,
     ):
         super().__init__(**kwargs)
         self.url = url
@@ -38,7 +38,7 @@ class vLLMProvider(LLMProvider):
                     return True
             except:
                 pass
-            
+
             # Fallback: try a simple completion request
             test_response = requests.post(
                 self.url,
@@ -67,7 +67,7 @@ class vLLMProvider(LLMProvider):
                         return [model["id"] for model in data["data"]]
             except:
                 pass
-            
+
             # Fallback: return the configured model
             return [self.default_model]
         except Exception as e:
@@ -83,16 +83,16 @@ class vLLMProvider(LLMProvider):
     ) -> str:
         """Prepare prompt for vLLM completion."""
         full_prompt = ""
-        
+
         if system_prompt:
             full_prompt += f"System: {system_prompt}\n\n"
-        
+
         if use_conversation_history and model_name in self.conversation_history:
             for msg in self.conversation_history[model_name]:
                 role = msg["role"].title()
                 content = msg["content"]
                 full_prompt += f"{role}: {content}\n\n"
-        
+
         full_prompt += f"User: {prompt}\n\nAssistant:"
         return full_prompt
 
@@ -102,11 +102,13 @@ class vLLMProvider(LLMProvider):
         """Update conversation history."""
         if model_name not in self.conversation_history:
             self.conversation_history[model_name] = []
-        
-        self.conversation_history[model_name].extend([
-            {"role": "user", "content": user_prompt},
-            {"role": "assistant", "content": response}
-        ])
+
+        self.conversation_history[model_name].extend(
+            [
+                {"role": "user", "content": user_prompt},
+                {"role": "assistant", "content": response},
+            ]
+        )
 
     def generate(
         self,
@@ -123,17 +125,19 @@ class vLLMProvider(LLMProvider):
     ) -> Dict[str, Any]:
         """Generate response from vLLM model."""
         start_time = time.time()
-        
+
         if image_path:
-            self.logger.warning("vLLM provider does not support image inputs, ignoring image_path")
-        
+            self.logger.warning(
+                "vLLM provider does not support image inputs, ignoring image_path"
+            )
+
         try:
             full_prompt = self._prepare_prompt(
                 model_name, prompt, system_prompt, use_conversation_history
             )
-            
+
             max_tokens = num_predict if num_predict > 0 else 4096
-            
+
             request_data = {
                 "model": model_name,
                 "prompt": full_prompt,
@@ -141,12 +145,12 @@ class vLLMProvider(LLMProvider):
                 "temperature": temperature,
                 "stop": ["User:", "\nUser:", "Human:", "\nHuman:"],
             }
-            
+
             if format_schema:
                 # For structured output, add instruction to the prompt
                 structured_prompt = f"{full_prompt}\n\nPlease respond with valid JSON that matches this schema: {format_schema.model_json_schema()}"
                 request_data["prompt"] = structured_prompt
-            
+
             self.logger.debug(
                 f"Sending request to vLLM {model_name}",
                 model_name=model_name,
@@ -154,25 +158,25 @@ class vLLMProvider(LLMProvider):
                 temperature=temperature,
                 max_tokens=max_tokens,
             )
-            
+
             response = requests.post(
                 self.url,
                 json=request_data,
                 timeout=timeout,
             )
             response.raise_for_status()
-            
+
             duration = time.time() - start_time
             response_data = response.json()
-            
+
             if "choices" not in response_data or not response_data["choices"]:
                 raise RuntimeError("No choices returned from vLLM")
-            
+
             content = response_data["choices"][0]["text"].strip()
-            
+
             if use_conversation_history:
                 self._update_conversation_history(model_name, prompt, content)
-            
+
             self.logger.log_api_call(
                 model_name=model_name,
                 prompt=prompt,
@@ -184,7 +188,7 @@ class vLLMProvider(LLMProvider):
                 num_ctx=num_ctx,
                 num_predict=num_predict,
             )
-            
+
             return {
                 "content": content,
                 "model": model_name,
@@ -194,7 +198,7 @@ class vLLMProvider(LLMProvider):
                 "total_duration": duration * 1000,  # Convert to milliseconds
                 "usage": response_data.get("usage", {}),
             }
-            
+
         except Exception as e:
             duration = time.time() - start_time
             error_msg = f"Failed to generate response from vLLM {model_name}: {e}"
@@ -222,24 +226,27 @@ class vLLMProvider(LLMProvider):
                 format_schema=response_model,
                 **kwargs,
             )
-            
+
             content = response["content"]
-            
+
             # Try to extract JSON from the response
             try:
                 # Look for JSON block in markdown
                 import re
-                json_match = re.search(r'```(?:json)?\s*({.*?})\s*```', content, re.DOTALL)
+
+                json_match = re.search(
+                    r"```(?:json)?\s*({.*?})\s*```", content, re.DOTALL
+                )
                 if json_match:
                     json_content = json_match.group(1)
                 else:
                     # Try to find JSON directly
-                    json_match = re.search(r'({.*?})', content, re.DOTALL)
+                    json_match = re.search(r"({.*?})", content, re.DOTALL)
                     if json_match:
                         json_content = json_match.group(1)
                     else:
                         json_content = content
-                
+
                 structured_response = response_model.model_validate_json(json_content)
                 self.logger.debug(
                     f"Successfully parsed structured response from vLLM {model_name}",
@@ -248,11 +255,13 @@ class vLLMProvider(LLMProvider):
                 )
                 return structured_response
             except Exception as parse_error:
-                self.logger.warning(f"Failed to parse structured response, trying direct validation: {parse_error}")
+                self.logger.warning(
+                    f"Failed to parse structured response, trying direct validation: {parse_error}"
+                )
                 # Try parsing the entire content as JSON
                 structured_response = response_model.model_validate_json(content)
                 return structured_response
-                
+
         except Exception as e:
             error_msg = f"Failed to generate structured response from vLLM: {e}"
             self.logger.error(error_msg, model_name=model_name, error=str(e))

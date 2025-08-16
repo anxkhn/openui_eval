@@ -37,7 +37,7 @@ class OllamaProvider(LLMProvider):
         try:
             response = self.client.list()
             self.logger.debug(f"Ollama list response type: {type(response)}")
-            
+
             if hasattr(response, "models"):
                 models = response.models
                 model_names = []
@@ -87,8 +87,10 @@ class OllamaProvider(LLMProvider):
                     elif isinstance(model, str):
                         model_names.append(model)
                 return model_names
-            
-            self.logger.warning(f"Unexpected response structure from Ollama: {response}")
+
+            self.logger.warning(
+                f"Unexpected response structure from Ollama: {response}"
+            )
             return []
         except Exception as e:
             self.logger.error(f"Failed to list models: {e}")
@@ -119,18 +121,18 @@ class OllamaProvider(LLMProvider):
     ) -> List[Dict[str, Any]]:
         """Prepare messages for chat completion."""
         messages = []
-        
+
         if system_prompt:
             messages.append({"role": "system", "content": system_prompt})
-        
+
         if use_conversation_history and model_name in self.conversation_history:
             messages.extend(self.conversation_history[model_name])
-        
+
         user_message = {"role": "user", "content": prompt}
-        
+
         if image_path and Path(image_path).exists():
             user_message["images"] = [image_path]
-        
+
         messages.append(user_message)
         return messages
 
@@ -140,7 +142,7 @@ class OllamaProvider(LLMProvider):
         """Update conversation history."""
         if model_name not in self.conversation_history:
             self.conversation_history[model_name] = []
-        
+
         if messages:
             self.conversation_history[model_name].append(messages[-1])
             self.conversation_history[model_name].append(
@@ -166,23 +168,23 @@ class OllamaProvider(LLMProvider):
             messages = self._prepare_messages(
                 model_name, prompt, image_path, system_prompt, use_conversation_history
             )
-            
+
             options = {
                 "temperature": temperature,
                 "num_ctx": num_ctx,
                 "num_predict": num_predict,
             }
-            
+
             request_params = {
                 "model": model_name,
                 "messages": messages,
                 "options": options,
                 "stream": False,
             }
-            
+
             if format_schema:
                 request_params["format"] = format_schema.model_json_schema()
-            
+
             image_attached = image_path is not None
             self.logger.debug(
                 f"Sending request to {model_name}",
@@ -194,16 +196,16 @@ class OllamaProvider(LLMProvider):
                 num_predict=num_predict,
                 has_format_schema=format_schema is not None,
             )
-            
+
             response = self.client.chat(**request_params)
             duration = time.time() - start_time
             response_content = response["message"]["content"]
-            
+
             if use_conversation_history:
                 self._update_conversation_history(
                     model_name, messages, response_content
                 )
-            
+
             self.logger.log_api_call(
                 model_name=model_name,
                 prompt=prompt,
@@ -215,7 +217,7 @@ class OllamaProvider(LLMProvider):
                 num_ctx=num_ctx,
                 num_predict=num_predict,
             )
-            
+
             return {
                 "content": response_content,
                 "model": response["model"],
@@ -256,7 +258,7 @@ class OllamaProvider(LLMProvider):
                 format_schema=response_model,
                 **kwargs,
             )
-            
+
             structured_response = response_model.model_validate_json(
                 response["content"]
             )

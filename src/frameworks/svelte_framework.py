@@ -15,7 +15,7 @@ class SvelteFramework(BaseFramework):
     def get_project_template(self) -> Dict[str, str]:
         """Get Svelte project template files."""
         return {
-            "vite.config.js": '''import { defineConfig } from 'vite'
+            "vite.config.js": """import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vitejs.dev/config/
@@ -24,15 +24,15 @@ export default defineConfig({
   server: {
     port: 5173
   }
-})''',
-            "svelte.config.js": '''import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+})""",
+            "svelte.config.js": """import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 export default {
   // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
   // for more information about preprocessors
   preprocess: vitePreprocess(),
-}''',
-            "index.html": '''<!DOCTYPE html>
+}""",
+            "index.html": """<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -44,16 +44,16 @@ export default {
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
-</html>''',
-            "src/main.js": '''import './app.css'
+</html>""",
+            "src/main.js": """import './app.css'
 import App from './App.svelte'
 
 const app = new App({
   target: document.getElementById('app'),
 })
 
-export default app''',
-            "src/app.css": ''':root {
+export default app""",
+            "src/app.css": """:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -133,8 +133,8 @@ button:focus-visible {
     background-color: #f9f9f9;
     color: #213547;
   }
-}''',
-            ".gitignore": '''# Logs
+}""",
+            ".gitignore": """# Logs
 logs
 *.log
 npm-debug.log*
@@ -157,8 +157,8 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?''',
-            "README.md": '''# Svelte + Vite
+*.sw?""",
+            "README.md": """# Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
 
@@ -180,7 +180,7 @@ Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also pow
 This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities like HMR updates and hot reloading of stores.
 
 Users can later add TypeScript support with `@sveltejs/vite-plugin-svelte`.
-''',
+""",
         }
 
     def get_package_json(self) -> Dict[str, Any]:
@@ -193,16 +193,14 @@ Users can later add TypeScript support with `@sveltejs/vite-plugin-svelte`.
             "scripts": {
                 "dev": "vite",
                 "build": "vite build",
-                "preview": "vite preview"
+                "preview": "vite preview",
             },
             "devDependencies": {
                 "@sveltejs/vite-plugin-svelte": "^4.0.0",
                 "svelte": "^5.0.0",
-                "vite": "^5.0.0"
+                "vite": "^5.0.0",
             },
-            "engines": {
-                "node": ">=22.0.0"
-            }
+            "engines": {"node": ">=22.0.0"},
         }
 
     def get_build_command(self) -> List[str]:
@@ -236,39 +234,53 @@ Users can later add TypeScript support with `@sveltejs/vite-plugin-svelte`.
     def _validate_framework_specific(self, project_dir: Path) -> List[str]:
         """Validate Svelte-specific requirements."""
         errors = []
-        
+
         # Check for required Svelte files
         required_files = [
             "vite.config.js",
             "svelte.config.js",
             "src/main.js",
-            "src/App.svelte"
+            "src/App.svelte",
         ]
-        
+
         for file_path in required_files:
             if not (project_dir / file_path).exists():
                 errors.append(f"Required Svelte file missing: {file_path}")
-        
+
         return errors
 
-    def create_app_component(self, markup_content: str, script_content: str = "", style_content: str = "") -> str:
+    def create_app_component(
+        self, markup_content: str, script_content: str = "", style_content: str = ""
+    ) -> str:
         """Create the main App.svelte component."""
-        script_section = f"<script>\n{script_content}\n</script>" if script_content else "<script>\n  // Component logic\n</script>"
+        script_section = (
+            f"<script>\n{script_content}\n</script>"
+            if script_content
+            else "<script>\n  // Component logic\n</script>"
+        )
         style_section = f"\n<style>\n{style_content}\n</style>" if style_content else ""
-        
-        return f'''{script_section}
+
+        return f"""{script_section}
 
 <main>
   {markup_content}
 </main>
-{style_section}'''
+{style_section}"""
 
-    def create_component(self, name: str, markup_content: str, script_content: str = "", style_content: str = "") -> str:
+    def create_component(
+        self,
+        name: str,
+        markup_content: str,
+        script_content: str = "",
+        style_content: str = "",
+    ) -> str:
         """Create a Svelte component."""
-        script_section = f"<script>\n{script_content}\n</script>" if script_content else ""
+        script_section = (
+            f"<script>\n{script_content}\n</script>" if script_content else ""
+        )
         style_section = f"\n<style>\n{style_content}\n</style>" if style_content else ""
-        
-        return f'''{script_section}
+
+        return f"""{script_section}
 
 {markup_content}
-{style_section}'''
+{style_section}"""
