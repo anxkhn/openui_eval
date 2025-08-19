@@ -246,6 +246,56 @@ class ModelManager:
         kwargs["image_path"] = image_path
         return self.generate(model_name, prompt, **kwargs)
 
+    def generate_structured(
+        self, model_name: str, prompt: str, response_model, image_path: Optional[str] = None, **kwargs
+    ):
+        """Generate structured response using Pydantic model."""
+        if model_name not in self.models:
+            raise ValueError(f"Model {model_name} not configured")
+        
+        # Load model if not loaded
+        if not self.model_states[model_name].loaded:
+            if not self.load_model(model_name):
+                raise RuntimeError(f"Failed to load model {model_name}")
+        
+        # Update model configuration
+        model_config = self.models[model_name]
+        kwargs.setdefault("temperature", model_config.temperature)
+        kwargs.setdefault("num_ctx", model_config.num_ctx)
+        kwargs.setdefault("num_predict", model_config.num_predict)
+        kwargs.setdefault("timeout", model_config.timeout)
+        
+        try:
+            start_time = time.time()
+            # Generate structured response using provider
+            response = self.provider.generate_structured(
+                model_name=model_name,
+                prompt=prompt,
+                response_model=response_model,
+                image_path=image_path,
+                **kwargs
+            )
+            duration = time.time() - start_time
+            
+            # Update model state
+            state = self.model_states[model_name]
+            state.last_used = time.time()
+            state.total_calls += 1
+            state.total_duration += duration
+            
+            return response
+        except Exception as e:
+            state = self.model_states[model_name]
+            state.error_count += 1
+            # Try to reload model if there were errors
+            if state.error_count >= model_config.max_retries:
+                self.logger.warning(
+                    f"Model {model_name} has {state.error_count} errors, reloading..."
+                )
+                self.unload_model(model_name)
+                state.error_count = 0
+            raise
+
     def clear_conversation(self, model_name: str):
         """Clear conversation history for a model."""
         self.provider.clear_conversation_history(model_name)

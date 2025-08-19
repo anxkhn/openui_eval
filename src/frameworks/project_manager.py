@@ -343,7 +343,7 @@ class ProjectManager:
 
         raise ValueError(f"Cannot detect framework for project: {project_dir}")
 
-    def _wait_for_server(self, server_url: str, timeout: int = 30):
+    def _wait_for_server(self, server_url: str, timeout: int = 60):
         """
         Wait for server to become available.
 

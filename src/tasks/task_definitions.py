@@ -45,6 +45,8 @@ class TaskDefinition:
     expected_features: List[str]
     time_estimate_minutes: int
     tags: List[str]
+    project_type: str = "html"  # html, react, vue, angular, nextjs, svelte
+    framework_version: Optional[str] = None
 
 
 # Predefined tasks for the benchmark system
@@ -1447,6 +1449,8 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
         name="react_todo_app",
         category=TaskCategory.INTERACTIVE,
         difficulty=DifficultyLevel.INTERMEDIATE,
+        project_type="react",
+        framework_version="19.0.0",
         prompt="""Create a modern React 19 todo application with component-based architecture.
 **Instructions:**
 - Create a complete React application using React 19 features including hooks, functional components, and modern patterns
@@ -1498,6 +1502,8 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
         name="vue_dashboard",
         category=TaskCategory.DASHBOARD,
         difficulty=DifficultyLevel.ADVANCED,
+        project_type="vue",
+        framework_version="3.5.0",
         prompt="""Create a comprehensive Vue 3.5 analytics dashboard with Composition API.
 **Instructions:**
 - Build a Vue 3.5 application using the Composition API and script setup syntax
@@ -1551,6 +1557,8 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
         name="nextjs_blog",
         category=TaskCategory.WEBSITE,
         difficulty=DifficultyLevel.ADVANCED,
+        project_type="nextjs",
+        framework_version="15.0.0",
         prompt="""Create a modern blog website using Next.js 15 with App Router and server components.
 **Instructions:**
 - Build a Next.js 15 application using the new App Router and React Server Components
@@ -1660,6 +1668,8 @@ PREDEFINED_TASKS: Dict[str, TaskDefinition] = {
         name="svelte_portfolio",
         category=TaskCategory.PORTFOLIO,
         difficulty=DifficultyLevel.INTERMEDIATE,
+        project_type="svelte",
+        framework_version="5.0.0",
         prompt="""Create a stunning portfolio website using Svelte 5 with the latest features and runes system.
 **Instructions:**
 - Build a Svelte 5 application using the new runes system for state management

@@ -79,7 +79,7 @@ Please evaluate based on the following criteria, providing scores from 0-10 (whe
             prompt = self._create_evaluation_prompt(html_content)
             # Generate structured evaluation
             start_time = time.time()
-            evaluation = self.model_manager.client.generate_structured(
+            evaluation = self.model_manager.generate_structured(
                 model_name=judge_model,
                 prompt=prompt,
                 response_model=EvaluationResult,
