@@ -247,24 +247,29 @@ class ModelManager:
         return self.generate(model_name, prompt, **kwargs)
 
     def generate_structured(
-        self, model_name: str, prompt: str, response_model, image_path: Optional[str] = None, **kwargs
+        self,
+        model_name: str,
+        prompt: str,
+        response_model,
+        image_path: Optional[str] = None,
+        **kwargs,
     ):
         """Generate structured response using Pydantic model."""
         if model_name not in self.models:
             raise ValueError(f"Model {model_name} not configured")
-        
+
         # Load model if not loaded
         if not self.model_states[model_name].loaded:
             if not self.load_model(model_name):
                 raise RuntimeError(f"Failed to load model {model_name}")
-        
+
         # Update model configuration
         model_config = self.models[model_name]
         kwargs.setdefault("temperature", model_config.temperature)
         kwargs.setdefault("num_ctx", model_config.num_ctx)
         kwargs.setdefault("num_predict", model_config.num_predict)
         kwargs.setdefault("timeout", model_config.timeout)
-        
+
         try:
             start_time = time.time()
             # Generate structured response using provider
@@ -273,16 +278,16 @@ class ModelManager:
                 prompt=prompt,
                 response_model=response_model,
                 image_path=image_path,
-                **kwargs
+                **kwargs,
             )
             duration = time.time() - start_time
-            
+
             # Update model state
             state = self.model_states[model_name]
             state.last_used = time.time()
             state.total_calls += 1
             state.total_duration += duration
-            
+
             return response
         except Exception as e:
             state = self.model_states[model_name]

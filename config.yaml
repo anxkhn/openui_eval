@@ -3,14 +3,13 @@
 
 # Model Configuration
 models:
-  enabled_models:
-    - "gemma3n:e2b"
-    - "gemma3:4b"
-    - "qwen2.5vl:7b"
-    - "granite3.2-vision:2b"
-    - "llama3.2-vision:11b"
-    - "minicpm-v:8b"
-    - "llava-phi3:3.8b"
+  - "gemma3n:e4b"
+  - "gemma3:4b"
+  - "qwen2.5vl:7b"
+  - "granite3.2-vision:2b"
+  - "llama3.2-vision:11b"
+  - "minicpm-v:8b"
+  - "llava-phi3:3.8b"
 
 # Provider Configuration
 provider:
@@ -97,7 +96,7 @@ rendering:
 # Evaluation Configuration
 evaluation:
   judge_models:
-    - "gemma3n:e2b"
+    - "gemma3n:e4b"
     - "gemma3:4b"
     - "qwen2.5vl:7b"
     - "granite3.2-vision:2b"

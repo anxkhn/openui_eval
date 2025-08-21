@@ -364,7 +364,7 @@ class Config:
                     task_names = data["tasks"]["task_names"]
                     # Import task definitions
                     from ..tasks.task_definitions import get_task_by_name
-                    
+
                     filtered_tasks = []
                     for task_name in task_names:
                         # Try to get from task definitions first
@@ -376,14 +376,18 @@ class Config:
                                     description=task_def.description,
                                     prompt_template=task_def.prompt,
                                     project_type=task_def.project_type,
-                                    framework_version=task_def.framework_version
+                                    framework_version=task_def.framework_version,
                                 )
                             )
                         else:
                             # Fall back to default tasks
                             default_config = cls()
                             task = next(
-                                (t for t in default_config.tasks if t.name == task_name),
+                                (
+                                    t
+                                    for t in default_config.tasks
+                                    if t.name == task_name
+                                ),
                                 None,
                             )
                             if task:
