@@ -10,7 +10,6 @@ from pathlib import Path
 from typing import List, Optional
 
 from src.core.config import Config
-
 from src.core.logger import setup_logger
 from src.pipeline.benchmark_pipeline import BenchmarkPipeline
 

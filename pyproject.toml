@@ -15,9 +15,12 @@ dependencies = [
   "pyyaml",
   "tqdm",
   "psutil",
-  
+
   # Additional dependencies for multi-provider support
   "python-dotenv",
+
+  # CLI framework
+  "typer",
 
   # Data handling and validation
   "pydantic",
@@ -28,7 +31,6 @@ dependencies = [
   "pillow",
 
   # Logging and utilities
-  "python-dotenv",
   "click",
   "rich",
 
@@ -36,39 +38,43 @@ dependencies = [
   "beautifulsoup4",
   "lxml",
 
-  # Testing (optional)
-  "pytest",
-  "pytest-asyncio",
-  "black",
-
   # Other dependencies
   "annotated-types",
   "anyio",
   "attrs",
+  "cachetools",
   "certifi",
   "charset-normalizer",
+  "google-auth",
   "h11",
   "httpcore",
   "httpx",
   "idna",
   "iniconfig",
+  "lxml",
   "markdown-it-py",
   "mdurl",
   "mypy-extensions",
+  "numpy",
   "outcome",
   "packaging",
   "pathspec",
   "platformdirs",
   "pluggy",
+  "pyasn1",
+  "pyasn1-modules",
   "pydantic-core",
   "pygments",
   "pysocks",
   "python-dateutil",
+  "pytokens",
   "pytz",
+  "rsa",
   "six",
   "sniffio",
   "sortedcontainers",
   "soupsieve",
+  "tenacity",
   "trio",
   "trio-websocket",
   "typing-extensions",
@@ -76,5 +82,15 @@ dependencies = [
   "tzdata",
   "urllib3",
   "websocket-client",
+  "websockets",
   "wsproto"
 ]
+
+[project.scripts]
+openui-eval = "cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+openui_eval = ["tasks/*.json", "tasks/**/*", "tasks/*.md", "tasks/*.txt"]
