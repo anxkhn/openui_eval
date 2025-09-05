@@ -1,0 +1,292 @@
+{
+  "predefined_tasks": {
+    "basic_calculator": {
+      "name": "basic_calculator",
+      "category": "calculator",
+      "difficulty": "beginner",
+      "prompt": "Create a sophisticated, responsive calculator with modern UI design.\n**Instructions:**\n- The entire output must be a single HTML file with all CSS and JavaScript inline.\n- Design a sleek, modern calculator interface with a dark theme using gradients of charcoal and deep blue.\n- Include all basic arithmetic operations (+, -, *, /), number buttons (0-9), decimal point, equals, and clear/all-clear buttons.\n- The display should be large and clearly readable with a subtle inner shadow effect.\n- Buttons should have hover effects with subtle color transitions and a pressed state animation.\n- Implement proper calculation logic with error handling for division by zero and invalid operations.\n- The calculator should be fully responsive, adapting beautifully from mobile (320px) to desktop (1200px+) screens.\n- Use a clean, modern font like 'Segoe UI' or similar system fonts.\n- Add keyboard support for all calculator functions.",
+      "description": "A sophisticated calculator with modern UI design",
+      "requirements": [
+        "Include all basic arithmetic operations (+, -, *, /)",
+        "Number buttons (0-9), decimal point, equals, and clear functions",
+        "Error handling for division by zero and invalid operations",
+        "Responsive design for mobile and desktop",
+        "Keyboard support for all functions"
+      ],
+      "evaluation_criteria": [
+        "Visual design and UI aesthetics",
+        "Functionality and calculation accuracy",
+        "Responsiveness across screen sizes",
+        "Code quality and organization",
+        "User experience and interaction design"
+      ],
+      "expected_features": [
+        "Dark theme with gradients",
+        "Hover effects and animations",
+        "Large readable display",
+        "Keyboard shortcuts support",
+        "Error message display"
+      ],
+      "time_estimate_minutes": 45,
+      "tags": ["calculator", "ui", "responsive", "javascript"],
+      "project_type": "html",
+      "framework_version": null
+    },
+    "tic_tac_toe": {
+      "name": "tic_tac_toe",
+      "category": "game",
+      "difficulty": "beginner",
+      "prompt": "Create a fully functional Tic-Tac-Toe game with modern design.\n**Instructions:**\n- The entire output must be a single HTML file with all CSS and JavaScript inline.\n- Design a clean, modern game interface with a fresh color scheme.\n- Implement complete game logic including win detection for rows, columns, and diagonals.\n- Add player turn indicators, score tracking, and game status display.\n- Include a reset/new game button to start fresh.\n- The game should handle all edge cases (draws, invalid moves).\n- Add smooth animations for moves and win celebrations.\n- Make it responsive and visually appealing on all devices.",
+      "description": "A complete Tic-Tac-Toe game with modern design",
+      "requirements": [
+        "Complete game logic with win detection",
+        "Player turn indicators and status display",
+        "Score tracking system",
+        "Reset/new game functionality",
+        "Smooth animations and transitions"
+      ],
+      "evaluation_criteria": [
+        "Game logic correctness",
+        "Visual design and aesthetics",
+        "User interface clarity",
+        "Animation quality",
+        "Responsiveness and mobile compatibility"
+      ],
+      "expected_features": [
+        "Win detection for all patterns",
+        "Score persistence across games",
+        "Visual feedback for moves",
+        "Celebration animations for wins",
+        "Mobile-friendly touch controls"
+      ],
+      "time_estimate_minutes": 60,
+      "tags": ["game", "javascript", "ui", "responsive"],
+      "project_type": "html",
+      "framework_version": null
+    },
+    "personal_portfolio": {
+      "name": "personal_portfolio",
+      "category": "portfolio",
+      "difficulty": "intermediate",
+      "prompt": "Create a stunning personal portfolio website with modern design.\n**Instructions:**\n- The entire output must be a single HTML file with all CSS and JavaScript inline.\n- Design a professional portfolio showcasing projects, skills, and experience.\n- Include sections: hero, about, projects, skills, contact.\n- Add smooth scrolling navigation and interactive elements.\n- Implement a dark/light theme toggle.\n- Include hover effects on project cards and skill bars.\n- Add a functional contact form with validation.\n- Make it fully responsive and optimized for all devices.\n- Include micro-interactions and attention to detail.",
+      "description": "A professional personal portfolio website",
+      "requirements": [
+        "Multiple sections (hero, about, projects, skills, contact)",
+        "Smooth scrolling navigation",
+        "Theme toggle functionality",
+        "Project showcase with cards",
+        "Contact form with validation"
+      ],
+      "evaluation_criteria": [
+        "Visual design and aesthetics",
+        "Navigation and user experience",
+        "Content organization and hierarchy",
+        "Responsiveness and mobile design",
+        "Interactive elements and animations"
+      ],
+      "expected_features": [
+        "Dark/light theme toggle",
+        "Smooth scroll animations",
+        "Project card hover effects",
+        "Skill progress bars",
+        "Social media links integration"
+      ],
+      "time_estimate_minutes": 90,
+      "tags": ["portfolio", "website", "responsive", "theme-toggle"],
+      "project_type": "html",
+      "framework_version": null
+    },
+    "contact_form": {
+      "name": "contact_form",
+      "category": "form",
+      "difficulty": "intermediate",
+      "prompt": "Create a sophisticated contact form with advanced validation.\n**Instructions:**\n- The entire output must be a single HTML file with all CSS and JavaScript inline.\n- Design a professional contact form with modern UI.\n- Include fields: name, email, subject, message, phone (optional).\n- Implement comprehensive client-side validation with helpful error messages.\n- Add real-time validation feedback as users type.\n- Include a character counter for the message field.\n- Add form submission handling with success/error states.\n- Implement accessibility features and ARIA labels.\n- Make it fully responsive and keyboard accessible.",
+      "description": "A sophisticated contact form with advanced validation",
+      "requirements": [
+        "Multiple input fields with proper types",
+        "Real-time validation with helpful feedback",
+        "Character counter for textarea",
+        "Form submission handling",
+        "Accessibility features and ARIA labels"
+      ],
+      "evaluation_criteria": [
+        "Form validation thoroughness",
+        "User experience and feedback",
+        "Accessibility compliance",
+        "Visual design and layout",
+        "Error handling and edge cases"
+      ],
+      "expected_features": [
+        "Real-time validation feedback",
+        "Input field state indicators",
+        "Form submission states",
+        "Keyboard navigation support",
+        "Mobile-optimized input controls"
+      ],
+      "time_estimate_minutes": 75,
+      "tags": ["form", "validation", "accessibility", "responsive"],
+      "project_type": "html",
+      "framework_version": null
+    },
+    "todo_app": {
+      "name": "todo_app",
+      "category": "interactive",
+      "difficulty": "intermediate",
+      "prompt": "Create a feature-rich todo application with modern design.\n**Instructions:**\n- The entire output must be a single HTML file with all CSS and JavaScript inline.\n- Implement complete CRUD operations (Create, Read, Update, Delete).\n- Add task filtering (All, Active, Completed).\n- Include priority levels with color coding.\n- Add due dates and task descriptions.\n- Implement local storage for data persistence.\n- Add search functionality to filter tasks.\n- Include bulk actions (mark all complete, clear completed).\n- Add smooth animations and transitions.",
+      "description": "A feature-rich todo application with data persistence",
+      "requirements": [
+        "Complete CRUD operations for tasks",
+        "Task filtering by status",
+        "Priority levels with visual indicators",
+        "Local storage for data persistence",
+        "Search and filter functionality"
+      ],
+      "evaluation_criteria": [
+        "Functionality and feature completeness",
+        "Data persistence and management",
+        "User interface design",
+        "Performance and responsiveness",
+        "Code organization and quality"
+      ],
+      "expected_features": [
+        "Task creation with validation",
+        "Task completion toggles",
+        "Priority color coding",
+        "Due date management",
+        "Bulk operations support"
+      ],
+      "time_estimate_minutes": 90,
+      "tags": ["app", "interactive", "data-management", "local-storage"],
+      "project_type": "html",
+      "framework_version": null
+    },
+    "react_todo_app": {
+      "name": "react_todo_app",
+      "category": "interactive",
+      "difficulty": "advanced",
+      "prompt": "Create a modern React todo application using React 18+.\n**Instructions:**\n- Create a multi-file React project using Create React App structure.\n- Implement hooks (useState, useEffect, useReducer) for state management.\n- Add TypeScript for type safety.\n- Include comprehensive testing with React Testing Library.\n- Add routing with React Router.\n- Implement component composition and prop drilling patterns.\n- Add custom hooks for reusable logic.\n- Include proper error boundaries and loading states.\n- Follow React best practices and design patterns.",
+      "description": "A modern React todo application with TypeScript and testing",
+      "requirements": [
+        "React 18+ with hooks usage",
+        "TypeScript implementation",
+        "Component composition patterns",
+        "Testing with React Testing Library",
+        "State management with useReducer or Context"
+      ],
+      "evaluation_criteria": [
+        "React best practices adherence",
+        "Code organization and structure",
+        "Type safety implementation",
+        "Testing coverage and quality",
+        "Performance optimization"
+      ],
+      "expected_features": [
+        "Functional components with hooks",
+        "TypeScript interfaces and types",
+        "Component reusability",
+        "Error boundary implementation",
+        "Unit test coverage"
+      ],
+      "time_estimate_minutes": 120,
+      "tags": ["react", "typescript", "hooks", "testing"],
+      "project_type": "react",
+      "framework_version": "18+"
+    },
+    "vue_dashboard": {
+      "name": "vue_dashboard",
+      "category": "dashboard",
+      "difficulty": "advanced",
+      "prompt": "Create an analytics dashboard using Vue 3 Composition API.\n**Instructions:**\n- Create a Vue 3 project with Composition API.\n- Use Pinia for state management.\n- Implement data visualization with Chart.js or similar.\n- Add responsive design with Tailwind CSS.\n- Include real-time data updates with WebSocket simulation.\n- Implement filtering and date range selection.\n- Add component-based architecture with proper separation of concerns.\n- Include Vue Router for navigation between dashboard sections.\n- Add proper TypeScript support.",
+      "description": "An analytics dashboard with Vue 3 and data visualization",
+      "requirements": [
+        "Vue 3 Composition API usage",
+        "Pinia state management",
+        "Data visualization implementation",
+        "Real-time data updates",
+        "Component-based architecture"
+      ],
+      "evaluation_criteria": [
+        "Vue 3 best practices",
+        "State management design",
+        "Data visualization effectiveness",
+        "Performance optimization",
+        "Code organization and modularity"
+      ],
+      "expected_features": [
+        "Reactive data binding",
+        "Component composition",
+        "Chart integration",
+        "Filtering and search functionality",
+        "Responsive dashboard layout"
+      ],
+      "time_estimate_minutes": 150,
+      "tags": ["vue", "dashboard", "analytics", "composition-api"],
+      "project_type": "vue",
+      "framework_version": "3+"
+    },
+    "nextjs_blog": {
+      "name": "nextjs_blog",
+      "category": "website",
+      "difficulty": "advanced",
+      "prompt": "Create a modern blog platform using Next.js 13+ with App Router.\n**Instructions:**\n- Use Next.js 13+ with App Router and server components.\n- Implement markdown content handling with MDX.\n- Add SEO optimization with metadata API.\n- Include static site generation for posts.\n- Implement search functionality with Fuse.js or similar.\n- Add dark mode support with proper theme switching.\n- Include commenting system integration.\n- Add analytics tracking and performance monitoring.\n- Implement proper error pages and loading states.",
+      "description": "A modern blog platform with Next.js and markdown support",
+      "requirements": [
+        "Next.js 13+ App Router implementation",
+        "MDX content handling",
+        "SEO optimization features",
+        "Static generation capabilities",
+        "Search functionality"
+      ],
+      "evaluation_criteria": [
+        "Next.js best practices",
+        "Performance optimization",
+        "SEO implementation quality",
+        "User experience and design",
+        "Code organization and maintainability"
+      ],
+      "expected_features": [
+        "Server-side rendering",
+        "Static page generation",
+        "Markdown/MDX support",
+        "Theme switching capability",
+        "Search and filtering"
+      ],
+      "time_estimate_minutes": 180,
+      "tags": ["nextjs", "blog", "markdown", "seo"],
+      "project_type": "nextjs",
+      "framework_version": "13+"
+    },
+    "svelte_portfolio": {
+      "name": "svelte_portfolio",
+      "category": "portfolio",
+      "difficulty": "advanced",
+      "prompt": "Create an impressive portfolio website using Svelte 5 with runes.\n**Instructions:**\n- Use Svelte 5 with the new runes syntax ($state, $effect).\n- Implement smooth animations and transitions using Svelte transitions.\n- Add a content management system for easy updates.\n- Include interactive project showcases with hover effects.\n- Implement dark mode with CSS variables.\n- Add a blog section with markdown support.\n- Include contact form with form validation.\n- Optimize for performance and SEO.\n- Add accessibility features and ARIA support.",
+      "description": "A modern portfolio website using Svelte 5 with runes",
+      "requirements": [
+        "Svelte 5 runes implementation",
+        "Animation and transition effects",
+        "Content management system",
+        "Markdown blog integration",
+        "Accessibility compliance"
+      ],
+      "evaluation_criteria": [
+        "Svelte best practices",
+        "Animation quality and smoothness",
+        "Performance optimization",
+        "User experience and design",
+        "Code organization and readability"
+      ],
+      "expected_features": [
+        "Reactive state with runes",
+        "Smooth page transitions",
+        "Interactive project galleries",
+        "Theme switching functionality",
+        "Form validation and submission"
+      ],
+      "time_estimate_minutes": 120,
+      "tags": ["svelte", "portfolio", "runes", "animations"],
+      "project_type": "svelte",
+      "framework_version": "5+"
+    }
+  }
+}
