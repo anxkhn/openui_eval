@@ -1,0 +1,674 @@
+[
+  {
+    "name": "Svelte Project Management Dashboard",
+    "description": "Build project management dashboard using Svelte",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a project management dashboard with:\n- Task assignment and tracking\n- Team member management\n- Project timeline visualization\n- Progress metrics and KPIs\n- Resource allocation charts\n- Sprint planning tools\n- Bug tracking system\n- Time tracking functionality\n- Export reports\n- Real-time updates\n\nRequirements:\n- Use modern framework features\n- Implement state management\n- Add data-testid attributes\n- Include charts and visualizations\n- Ensure responsive design",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Svelte Financial Dashboard",
+    "description": "Build financial dashboard using Svelte",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a financial dashboard with:\n- Portfolio tracking\n- Investment charts\n- Transaction history\n- Budget planning tools\n- Expense categorization\n- Savings goals tracker\n- Market data integration\n- Risk assessment metrics\n- Export financial reports\n- Multi-currency support\n\nRequirements:\n- Real-time data updates\n- Advanced charting\n- Security features\n- Data validation\n- Mobile optimization",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Svelte Healthcare Analytics Dashboard",
+    "description": "Build healthcare analytics dashboard using Svelte",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a healthcare analytics dashboard with:\n- Patient statistics\n- Treatment outcomes\n- Appointment scheduling\n- Medical inventory tracking\n- Staff performance metrics\n- Emergency response times\n- Billing and insurance integration\n- Compliance monitoring\n- Data visualization\n- HIPAA compliance\n\nRequirements:\n- Security and privacy\n- Data encryption\n- Access controls\n- Audit trails\n- Responsive design",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Svelte Restaurant Booking Website",
+    "description": "Build restaurant booking website using Svelte",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a restaurant booking website with:\n- Online reservation system\n- Menu display with categories\n- Table availability calendar\n- Customer reviews and ratings\n- Special events promotion\n- Gift card system\n- Loyalty program\n- Mobile ordering\n- Payment integration\n- Restaurant locator\n\nRequirements:\n- Booking management\n- Payment processing\n- Mobile optimization\n- SEO features\n- Social media integration",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Svelte Real Estate Portal",
+    "description": "Build real estate portal using Svelte",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a real estate portal with:\n- Property search and filters\n- Interactive map integration\n- Virtual tour viewing\n- Mortgage calculator\n- Agent profiles\n- Property comparison tools\n- Saved searches\n- Email alerts\n- Document management\n- Mobile app integration\n\nRequirements:\n- Map integration\n- Advanced search\n- Image galleries\n- Contact forms\n- Lead management",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Svelte Travel Booking Platform",
+    "description": "Build travel booking platform using Svelte",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a travel booking platform with:\n- Flight and hotel search\n- Trip planning tools\n- Itinerary management\n- Price comparison\n- Review system\n- Travel insurance\n- Currency converter\n- Weather integration\n- Mobile booking\n- Loyalty rewards\n\nRequirements:\n- API integration\n- Payment processing\n- Mobile optimization\n- Multi-language support\n- Real-time updates",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Svelte Video Streaming Platform",
+    "description": "Build video streaming platform using Svelte",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a video streaming platform with:\n- Video player with controls\n- Watchlist and favorites\n- User profiles\n- Content recommendations\n- Live streaming\n- Comments and ratings\n- Subscription management\n- Multi-device sync\n- Offline downloads\n- Social sharing\n\nRequirements:\n- Video processing\n- Real-time features\n- CDN integration\n- DRM protection\n- Mobile optimization",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Svelte Online Learning Platform",
+    "description": "Build online learning platform using Svelte",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create an online learning platform with:\n- Course catalog\n- Video lessons\n- Interactive quizzes\n- Progress tracking\n- Certificates\n- Discussion forums\n- Instructor tools\n- Assignment submission\n- Live classes\n- Mobile app\n\nRequirements:\n- Video integration\n- Assessment tools\n- Progress tracking\n- Community features\n- Mobile support",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Svelte Fitness Tracking App",
+    "description": "Build fitness tracking app using Svelte",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a fitness tracking app with:\n- Workout logging\n- Progress charts\n- Nutrition tracking\n- Goal setting\n- Social features\n- Achievement badges\n- Personal trainer AI\n- Workout plans\n- Health metrics\n- Mobile optimization\n\nRequirements:\n- Data visualization\n- Social features\n- Mobile-first design\n- API integrations\n- Real-time updates",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Svelte Data Visualization Tool",
+    "description": "Build data visualization tool using Svelte",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a data visualization tool with:\n- Multiple chart types\n- Real-time data updates\n- Interactive dashboards\n- Data import/export\n- Custom visualization builder\n- Collaboration features\n- Version control\n- API integration\n- Responsive design\n- Performance optimization\n\nRequirements:\n- Charting libraries\n- Real-time data\n- Interactive features\n- Data processing\n- Performance optimization",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "visualization",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Svelte Business Intelligence Dashboard",
+    "description": "Build business intelligence dashboard using Svelte",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a BI dashboard with:\n- KPI tracking\n- Data drill-down\n- Report generation\n- Custom metrics\n- Team collaboration\n- Data connectors\n- Scheduling features\n- Export capabilities\n- Mobile access\n- Security controls\n\nRequirements:\n- Data processing\n- Report generation\n- Security features\n- Mobile optimization\n- API integration",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "visualization",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Svelte Scientific Data Visualizer",
+    "description": "Build scientific data visualizer using Svelte",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a scientific data visualizer with:\n- 3D visualization\n- Real-time data processing\n- Statistical analysis\n- Experiment tracking\n- Data export\n- Collaborative tools\n- Publication features\n- API access\n- High performance\n- Specialized charts\n\nRequirements:\n- 3D graphics\n- Real-time processing\n- Statistical tools\n- Data management\n- Performance optimization",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing attributes"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization",
+      "Testing support"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "visualization",
+      "advanced"
+    ]
+  }
+]

@@ -1,0 +1,1357 @@
+{
+  "react_01_react_task_management_dashboard": {
+    "name": "React Task Management Dashboard",
+    "description": "Build a comprehensive task management dashboard",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a task management dashboard with:\n- Task creation, editing, and deletion\n- Status tracking (todo, in-progress, completed)\n- Priority levels and due dates\n- Categories and tags\n- Search and filter functionality\n- Data visualization and analytics\n- User preferences and settings\n- Export capabilities\n- Responsive design\n- Accessibility features\n\nRequirements:\n- Use React framework features\n- Implement proper state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility compliance",
+    "requirements": [
+      "State management",
+      "CRUD operations",
+      "Data visualization",
+      "Search functionality",
+      "Export features",
+      "Responsive design",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Functionality",
+        "description": "Complete task management features",
+        "weight": 0.4
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Code Quality",
+        "description": "Well-structured code",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "react_02_react_e-commerce_product_catalog": {
+    "name": "React E-commerce Product Catalog",
+    "description": "Build an e-commerce product catalog with filtering",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create an e-commerce product catalog with:\n- Product grid and list views\n- Advanced filtering and sorting\n- Search functionality with autocomplete\n- Product comparison features\n- Wishlist functionality\n- Shopping cart integration\n- User reviews and ratings\n- Product recommendations\n- Pagination and infinite scroll\n- Mobile-optimized design\n\nRequirements:\n- Use framework-specific best practices\n- Implement efficient state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Product management",
+      "Filtering and search",
+      "Shopping cart",
+      "User reviews",
+      "Responsive design",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast loading and filtering",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Shopping-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Mobile Design",
+        "description": "Mobile-optimized",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "react_03_react_analytics_dashboard": {
+    "name": "React Analytics Dashboard",
+    "description": "Build a data analytics dashboard with charts",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create an analytics dashboard with:\n- Multiple chart types (line, bar, pie, area)\n- Real-time data updates\n- Interactive filters and date ranges\n- Data export functionality\n- Customizable widgets\n- Data table with sorting and pagination\n- Responsive layout\n- Dark/light theme support\n- Drill-down capabilities\n- Performance metrics\n\nRequirements:\n- Use charting libraries (Chart.js, D3.js, etc.)\n- Implement real-time data updates\n- Add data-testid attributes for testing\n- Include data processing logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Data visualization",
+      "Real-time updates",
+      "Data processing",
+      "Export functionality",
+      "Theme support",
+      "Interactive features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Data Visualization",
+        "description": "Clear and informative charts",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Interactivity",
+        "description": "Responsive to user input",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient data handling",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive analytics interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "react_04_react_social_media_platform": {
+    "name": "React Social Media Platform",
+    "description": "Build a social media platform with feed functionality",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a social media platform with:\n- User profiles and authentication\n- Post creation with text and images\n- News feed with infinite scroll\n- Like, comment, and share functionality\n- Real-time notifications\n- Search and discovery features\n- Friend/follower system\n- Direct messaging\n- Content moderation tools\n- Mobile-responsive design\n\nRequirements:\n- Implement complex state management\n- Use real-time features\n- Add data-testid attributes for testing\n- Include authentication logic\n- Ensure responsive design\n- Add security features",
+    "requirements": [
+      "User authentication",
+      "Social features",
+      "Real-time updates",
+      "Content management",
+      "Security features",
+      "Mobile optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Social Features",
+        "description": "Complete social platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Real-time Updates",
+        "description": "Live notifications",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "User data protection",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Engaging interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "react_05_react_educational_platform": {
+    "name": "React Educational Platform",
+    "description": "Build an educational platform with course management",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create an educational platform with:\n- Course catalog and search\n- Video player with progress tracking\n- Quiz and assessment system\n- Student dashboard\n- Instructor tools\n- Certificate generation\n- Discussion forums\n- Assignment submission\n- Progress analytics\n- Mobile-responsive design\n\nRequirements:\n- Use video player integration\n- Implement progress tracking\n- Add data-testid attributes for testing\n- Include assessment logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Course management",
+      "Video integration",
+      "Assessment system",
+      "Progress tracking",
+      "Discussion features",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Educational Features",
+        "description": "Complete learning platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Content Delivery",
+        "description": "Effective course presentation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Learning-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Accessibility",
+        "description": "Inclusive design",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "vue_01_vue_task_management_dashboard": {
+    "name": "Vue Task Management Dashboard",
+    "description": "Build a comprehensive task management dashboard",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a task management dashboard with:\n- Task creation, editing, and deletion\n- Status tracking (todo, in-progress, completed)\n- Priority levels and due dates\n- Categories and tags\n- Search and filter functionality\n- Data visualization and analytics\n- User preferences and settings\n- Export capabilities\n- Responsive design\n- Accessibility features\n\nRequirements:\n- Use Vue framework features\n- Implement proper state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility compliance",
+    "requirements": [
+      "State management",
+      "CRUD operations",
+      "Data visualization",
+      "Search functionality",
+      "Export features",
+      "Responsive design",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Functionality",
+        "description": "Complete task management features",
+        "weight": 0.4
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Code Quality",
+        "description": "Well-structured code",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "vue_02_vue_e-commerce_product_catalog": {
+    "name": "Vue E-commerce Product Catalog",
+    "description": "Build an e-commerce product catalog with filtering",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create an e-commerce product catalog with:\n- Product grid and list views\n- Advanced filtering and sorting\n- Search functionality with autocomplete\n- Product comparison features\n- Wishlist functionality\n- Shopping cart integration\n- User reviews and ratings\n- Product recommendations\n- Pagination and infinite scroll\n- Mobile-optimized design\n\nRequirements:\n- Use framework-specific best practices\n- Implement efficient state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Product management",
+      "Filtering and search",
+      "Shopping cart",
+      "User reviews",
+      "Responsive design",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast loading and filtering",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Shopping-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Mobile Design",
+        "description": "Mobile-optimized",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "vue_03_vue_analytics_dashboard": {
+    "name": "Vue Analytics Dashboard",
+    "description": "Build a data analytics dashboard with charts",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create an analytics dashboard with:\n- Multiple chart types (line, bar, pie, area)\n- Real-time data updates\n- Interactive filters and date ranges\n- Data export functionality\n- Customizable widgets\n- Data table with sorting and pagination\n- Responsive layout\n- Dark/light theme support\n- Drill-down capabilities\n- Performance metrics\n\nRequirements:\n- Use charting libraries (Chart.js, D3.js, etc.)\n- Implement real-time data updates\n- Add data-testid attributes for testing\n- Include data processing logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Data visualization",
+      "Real-time updates",
+      "Data processing",
+      "Export functionality",
+      "Theme support",
+      "Interactive features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Data Visualization",
+        "description": "Clear and informative charts",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Interactivity",
+        "description": "Responsive to user input",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient data handling",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive analytics interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "vue_04_vue_social_media_platform": {
+    "name": "Vue Social Media Platform",
+    "description": "Build a social media platform with feed functionality",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a social media platform with:\n- User profiles and authentication\n- Post creation with text and images\n- News feed with infinite scroll\n- Like, comment, and share functionality\n- Real-time notifications\n- Search and discovery features\n- Friend/follower system\n- Direct messaging\n- Content moderation tools\n- Mobile-responsive design\n\nRequirements:\n- Implement complex state management\n- Use real-time features\n- Add data-testid attributes for testing\n- Include authentication logic\n- Ensure responsive design\n- Add security features",
+    "requirements": [
+      "User authentication",
+      "Social features",
+      "Real-time updates",
+      "Content management",
+      "Security features",
+      "Mobile optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Social Features",
+        "description": "Complete social platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Real-time Updates",
+        "description": "Live notifications",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "User data protection",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Engaging interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "vue_05_vue_educational_platform": {
+    "name": "Vue Educational Platform",
+    "description": "Build an educational platform with course management",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create an educational platform with:\n- Course catalog and search\n- Video player with progress tracking\n- Quiz and assessment system\n- Student dashboard\n- Instructor tools\n- Certificate generation\n- Discussion forums\n- Assignment submission\n- Progress analytics\n- Mobile-responsive design\n\nRequirements:\n- Use video player integration\n- Implement progress tracking\n- Add data-testid attributes for testing\n- Include assessment logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Course management",
+      "Video integration",
+      "Assessment system",
+      "Progress tracking",
+      "Discussion features",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Educational Features",
+        "description": "Complete learning platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Content Delivery",
+        "description": "Effective course presentation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Learning-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Accessibility",
+        "description": "Inclusive design",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "angular_01_angular_task_management_dashboard": {
+    "name": "Angular Task Management Dashboard",
+    "description": "Build a comprehensive task management dashboard",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create a task management dashboard with:\n- Task creation, editing, and deletion\n- Status tracking (todo, in-progress, completed)\n- Priority levels and due dates\n- Categories and tags\n- Search and filter functionality\n- Data visualization and analytics\n- User preferences and settings\n- Export capabilities\n- Responsive design\n- Accessibility features\n\nRequirements:\n- Use Angular framework features\n- Implement proper state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility compliance",
+    "requirements": [
+      "State management",
+      "CRUD operations",
+      "Data visualization",
+      "Search functionality",
+      "Export features",
+      "Responsive design",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Functionality",
+        "description": "Complete task management features",
+        "weight": 0.4
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Code Quality",
+        "description": "Well-structured code",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "angular_02_angular_e-commerce_product_catalog": {
+    "name": "Angular E-commerce Product Catalog",
+    "description": "Build an e-commerce product catalog with filtering",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an e-commerce product catalog with:\n- Product grid and list views\n- Advanced filtering and sorting\n- Search functionality with autocomplete\n- Product comparison features\n- Wishlist functionality\n- Shopping cart integration\n- User reviews and ratings\n- Product recommendations\n- Pagination and infinite scroll\n- Mobile-optimized design\n\nRequirements:\n- Use framework-specific best practices\n- Implement efficient state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Product management",
+      "Filtering and search",
+      "Shopping cart",
+      "User reviews",
+      "Responsive design",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast loading and filtering",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Shopping-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Mobile Design",
+        "description": "Mobile-optimized",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "angular_03_angular_analytics_dashboard": {
+    "name": "Angular Analytics Dashboard",
+    "description": "Build a data analytics dashboard with charts",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an analytics dashboard with:\n- Multiple chart types (line, bar, pie, area)\n- Real-time data updates\n- Interactive filters and date ranges\n- Data export functionality\n- Customizable widgets\n- Data table with sorting and pagination\n- Responsive layout\n- Dark/light theme support\n- Drill-down capabilities\n- Performance metrics\n\nRequirements:\n- Use charting libraries (Chart.js, D3.js, etc.)\n- Implement real-time data updates\n- Add data-testid attributes for testing\n- Include data processing logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Data visualization",
+      "Real-time updates",
+      "Data processing",
+      "Export functionality",
+      "Theme support",
+      "Interactive features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Data Visualization",
+        "description": "Clear and informative charts",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Interactivity",
+        "description": "Responsive to user input",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient data handling",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive analytics interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "angular_04_angular_social_media_platform": {
+    "name": "Angular Social Media Platform",
+    "description": "Build a social media platform with feed functionality",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create a social media platform with:\n- User profiles and authentication\n- Post creation with text and images\n- News feed with infinite scroll\n- Like, comment, and share functionality\n- Real-time notifications\n- Search and discovery features\n- Friend/follower system\n- Direct messaging\n- Content moderation tools\n- Mobile-responsive design\n\nRequirements:\n- Implement complex state management\n- Use real-time features\n- Add data-testid attributes for testing\n- Include authentication logic\n- Ensure responsive design\n- Add security features",
+    "requirements": [
+      "User authentication",
+      "Social features",
+      "Real-time updates",
+      "Content management",
+      "Security features",
+      "Mobile optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Social Features",
+        "description": "Complete social platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Real-time Updates",
+        "description": "Live notifications",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "User data protection",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Engaging interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "angular_05_angular_educational_platform": {
+    "name": "Angular Educational Platform",
+    "description": "Build an educational platform with course management",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an educational platform with:\n- Course catalog and search\n- Video player with progress tracking\n- Quiz and assessment system\n- Student dashboard\n- Instructor tools\n- Certificate generation\n- Discussion forums\n- Assignment submission\n- Progress analytics\n- Mobile-responsive design\n\nRequirements:\n- Use video player integration\n- Implement progress tracking\n- Add data-testid attributes for testing\n- Include assessment logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Course management",
+      "Video integration",
+      "Assessment system",
+      "Progress tracking",
+      "Discussion features",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Educational Features",
+        "description": "Complete learning platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Content Delivery",
+        "description": "Effective course presentation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Learning-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Accessibility",
+        "description": "Inclusive design",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "nextjs_01_nextjs_task_management_dashboard": {
+    "name": "Nextjs Task Management Dashboard",
+    "description": "Build a comprehensive task management dashboard",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a task management dashboard with:\n- Task creation, editing, and deletion\n- Status tracking (todo, in-progress, completed)\n- Priority levels and due dates\n- Categories and tags\n- Search and filter functionality\n- Data visualization and analytics\n- User preferences and settings\n- Export capabilities\n- Responsive design\n- Accessibility features\n\nRequirements:\n- Use Nextjs framework features\n- Implement proper state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility compliance",
+    "requirements": [
+      "State management",
+      "CRUD operations",
+      "Data visualization",
+      "Search functionality",
+      "Export features",
+      "Responsive design",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Functionality",
+        "description": "Complete task management features",
+        "weight": 0.4
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Code Quality",
+        "description": "Well-structured code",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "nextjs_02_nextjs_e-commerce_product_catalog": {
+    "name": "Nextjs E-commerce Product Catalog",
+    "description": "Build an e-commerce product catalog with filtering",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create an e-commerce product catalog with:\n- Product grid and list views\n- Advanced filtering and sorting\n- Search functionality with autocomplete\n- Product comparison features\n- Wishlist functionality\n- Shopping cart integration\n- User reviews and ratings\n- Product recommendations\n- Pagination and infinite scroll\n- Mobile-optimized design\n\nRequirements:\n- Use framework-specific best practices\n- Implement efficient state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Product management",
+      "Filtering and search",
+      "Shopping cart",
+      "User reviews",
+      "Responsive design",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast loading and filtering",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Shopping-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Mobile Design",
+        "description": "Mobile-optimized",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "nextjs_03_nextjs_analytics_dashboard": {
+    "name": "Nextjs Analytics Dashboard",
+    "description": "Build a data analytics dashboard with charts",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create an analytics dashboard with:\n- Multiple chart types (line, bar, pie, area)\n- Real-time data updates\n- Interactive filters and date ranges\n- Data export functionality\n- Customizable widgets\n- Data table with sorting and pagination\n- Responsive layout\n- Dark/light theme support\n- Drill-down capabilities\n- Performance metrics\n\nRequirements:\n- Use charting libraries (Chart.js, D3.js, etc.)\n- Implement real-time data updates\n- Add data-testid attributes for testing\n- Include data processing logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Data visualization",
+      "Real-time updates",
+      "Data processing",
+      "Export functionality",
+      "Theme support",
+      "Interactive features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Data Visualization",
+        "description": "Clear and informative charts",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Interactivity",
+        "description": "Responsive to user input",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient data handling",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive analytics interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "nextjs_04_nextjs_social_media_platform": {
+    "name": "Nextjs Social Media Platform",
+    "description": "Build a social media platform with feed functionality",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a social media platform with:\n- User profiles and authentication\n- Post creation with text and images\n- News feed with infinite scroll\n- Like, comment, and share functionality\n- Real-time notifications\n- Search and discovery features\n- Friend/follower system\n- Direct messaging\n- Content moderation tools\n- Mobile-responsive design\n\nRequirements:\n- Implement complex state management\n- Use real-time features\n- Add data-testid attributes for testing\n- Include authentication logic\n- Ensure responsive design\n- Add security features",
+    "requirements": [
+      "User authentication",
+      "Social features",
+      "Real-time updates",
+      "Content management",
+      "Security features",
+      "Mobile optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Social Features",
+        "description": "Complete social platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Real-time Updates",
+        "description": "Live notifications",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "User data protection",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Engaging interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "nextjs_05_nextjs_educational_platform": {
+    "name": "Nextjs Educational Platform",
+    "description": "Build an educational platform with course management",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create an educational platform with:\n- Course catalog and search\n- Video player with progress tracking\n- Quiz and assessment system\n- Student dashboard\n- Instructor tools\n- Certificate generation\n- Discussion forums\n- Assignment submission\n- Progress analytics\n- Mobile-responsive design\n\nRequirements:\n- Use video player integration\n- Implement progress tracking\n- Add data-testid attributes for testing\n- Include assessment logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Course management",
+      "Video integration",
+      "Assessment system",
+      "Progress tracking",
+      "Discussion features",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Educational Features",
+        "description": "Complete learning platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Content Delivery",
+        "description": "Effective course presentation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Learning-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Accessibility",
+        "description": "Inclusive design",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "svelte_01_svelte_task_management_dashboard": {
+    "name": "Svelte Task Management Dashboard",
+    "description": "Build a comprehensive task management dashboard",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a task management dashboard with:\n- Task creation, editing, and deletion\n- Status tracking (todo, in-progress, completed)\n- Priority levels and due dates\n- Categories and tags\n- Search and filter functionality\n- Data visualization and analytics\n- User preferences and settings\n- Export capabilities\n- Responsive design\n- Accessibility features\n\nRequirements:\n- Use Svelte framework features\n- Implement proper state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility compliance",
+    "requirements": [
+      "State management",
+      "CRUD operations",
+      "Data visualization",
+      "Search functionality",
+      "Export features",
+      "Responsive design",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Functionality",
+        "description": "Complete task management features",
+        "weight": 0.4
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Code Quality",
+        "description": "Well-structured code",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "svelte_02_svelte_e-commerce_product_catalog": {
+    "name": "Svelte E-commerce Product Catalog",
+    "description": "Build an e-commerce product catalog with filtering",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create an e-commerce product catalog with:\n- Product grid and list views\n- Advanced filtering and sorting\n- Search functionality with autocomplete\n- Product comparison features\n- Wishlist functionality\n- Shopping cart integration\n- User reviews and ratings\n- Product recommendations\n- Pagination and infinite scroll\n- Mobile-optimized design\n\nRequirements:\n- Use framework-specific best practices\n- Implement efficient state management\n- Add data-testid attributes for testing\n- Include loading states\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Product management",
+      "Filtering and search",
+      "Shopping cart",
+      "User reviews",
+      "Responsive design",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast loading and filtering",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Shopping-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Mobile Design",
+        "description": "Mobile-optimized",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "svelte_03_svelte_analytics_dashboard": {
+    "name": "Svelte Analytics Dashboard",
+    "description": "Build a data analytics dashboard with charts",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create an analytics dashboard with:\n- Multiple chart types (line, bar, pie, area)\n- Real-time data updates\n- Interactive filters and date ranges\n- Data export functionality\n- Customizable widgets\n- Data table with sorting and pagination\n- Responsive layout\n- Dark/light theme support\n- Drill-down capabilities\n- Performance metrics\n\nRequirements:\n- Use charting libraries (Chart.js, D3.js, etc.)\n- Implement real-time data updates\n- Add data-testid attributes for testing\n- Include data processing logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Data visualization",
+      "Real-time updates",
+      "Data processing",
+      "Export functionality",
+      "Theme support",
+      "Interactive features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Data Visualization",
+        "description": "Clear and informative charts",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Interactivity",
+        "description": "Responsive to user input",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient data handling",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive analytics interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "svelte_04_svelte_social_media_platform": {
+    "name": "Svelte Social Media Platform",
+    "description": "Build a social media platform with feed functionality",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a social media platform with:\n- User profiles and authentication\n- Post creation with text and images\n- News feed with infinite scroll\n- Like, comment, and share functionality\n- Real-time notifications\n- Search and discovery features\n- Friend/follower system\n- Direct messaging\n- Content moderation tools\n- Mobile-responsive design\n\nRequirements:\n- Implement complex state management\n- Use real-time features\n- Add data-testid attributes for testing\n- Include authentication logic\n- Ensure responsive design\n- Add security features",
+    "requirements": [
+      "User authentication",
+      "Social features",
+      "Real-time updates",
+      "Content management",
+      "Security features",
+      "Mobile optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Social Features",
+        "description": "Complete social platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Real-time Updates",
+        "description": "Live notifications",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "User data protection",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Engaging interface",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "svelte_05_svelte_educational_platform": {
+    "name": "Svelte Educational Platform",
+    "description": "Build an educational platform with course management",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create an educational platform with:\n- Course catalog and search\n- Video player with progress tracking\n- Quiz and assessment system\n- Student dashboard\n- Instructor tools\n- Certificate generation\n- Discussion forums\n- Assignment submission\n- Progress analytics\n- Mobile-responsive design\n\nRequirements:\n- Use video player integration\n- Implement progress tracking\n- Add data-testid attributes for testing\n- Include assessment logic\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "Course management",
+      "Video integration",
+      "Assessment system",
+      "Progress tracking",
+      "Discussion features",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Educational Features",
+        "description": "Complete learning platform",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Content Delivery",
+        "description": "Effective course presentation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Learning-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Accessibility",
+        "description": "Inclusive design",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  }
+}

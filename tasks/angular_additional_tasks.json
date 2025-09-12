@@ -1,0 +1,277 @@
+[
+  {
+    "name": "Angular CRM Dashboard",
+    "description": "Build a comprehensive CRM dashboard with Angular",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular CRM dashboard with:\n- Customer management system\n- Sales pipeline tracking\n- Lead management and scoring\n- Analytics and reporting\n- Task and activity tracking\n- Email integration\n- Document management\n- Team collaboration features\n- Mobile-responsive design\n- Role-based access control\n\nRequirements:\n- Use Angular 15+ with standalone components\n- Implement NgRx for state management\n- Add data-testid attributes for testing\n- Include proper TypeScript types\n- Ensure accessibility compliance\n- Add comprehensive error handling\n- Implement security best practices",
+    "requirements": [
+      "CRM functionality",
+      "NgRx state management",
+      "Role-based access",
+      "Analytics reporting",
+      "Document management",
+      "Email integration",
+      "Security implementation"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "CRM Features",
+        "description": "Complete CRM functionality",
+        "weight": 0.3
+      },
+      {
+        "aspect": "State Management",
+        "description": "Efficient NgRx implementation",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Security",
+        "description": "Robust access control",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Angular Project Management Tool",
+    "description": "Build a project management application",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular project management tool with:\n- Project creation and management\n- Task assignment and tracking\n- Gantt chart visualization\n- Team collaboration features\n- File sharing and version control\n- Time tracking and reporting\n- Budget management\n- Milestone tracking\n- Calendar integration\n- Resource allocation\n\nRequirements:\n- Use Angular Material for UI components\n- Implement RxJS for reactive programming\n- Add data-testid attributes for testing\n- Include proper TypeScript support\n- Ensure responsive design\n- Add comprehensive validation\n- Implement real-time updates",
+    "requirements": [
+      "Project management features",
+      "Gantt chart visualization",
+      "Team collaboration",
+      "Time tracking",
+      "Budget management",
+      "Calendar integration",
+      "Real-time updates"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "PM Features",
+        "description": "Complete project management",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Visualization",
+        "description": "Clear Gantt charts",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Collaboration",
+        "description": "Team workflow support",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient data handling",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Angular Banking Dashboard",
+    "description": "Build a secure banking dashboard application",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular banking dashboard with:\n- Account overview and balances\n- Transaction history and categorization\n- Budget tracking and alerts\n- Bill payment scheduling\n- Investment portfolio management\n- Security features and authentication\n- Financial reporting and analytics\n- Mobile check deposits\n- Fraud detection alerts\n- Customer support integration\n\nRequirements:\n- Implement strict security measures\n- Use Angular Guards for route protection\n- Add data-testid attributes for testing\n- Include comprehensive TypeScript types\n- Ensure PCI compliance\n- Add encryption for sensitive data\n- Implement proper error handling",
+    "requirements": [
+      "Banking features",
+      "Security implementation",
+      "Transaction management",
+      "Investment tracking",
+      "Fraud detection",
+      "Mobile deposits",
+      "Compliance features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Security",
+        "description": "Robust security measures",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Banking Features",
+        "description": "Complete banking functionality",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Professional interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Compliance",
+        "description": "Regulatory compliance",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Angular Learning Platform",
+    "description": "Build an educational learning platform",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular learning platform with:\n- Course catalog and enrollment\n- Video lesson player with bookmarks\n- Interactive quizzes and assessments\n- Progress tracking and certificates\n- Discussion forums and messaging\n- Instructor dashboard\n- Analytics and reporting\n- Content management system\n- Subscription management\n- Mobile-responsive design\n\nRequirements:\n- Use Angular Universal for SSR\n- Implement proper routing and lazy loading\n- Add data-testid attributes for testing\n- Include comprehensive TypeScript support\n- Ensure accessibility compliance\n- Add progressive web app features",
+    "requirements": [
+      "Educational features",
+      "Video streaming",
+      "Assessment system",
+      "Progress tracking",
+      "Content management",
+      "Analytics reporting",
+      "PWA features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Educational Features",
+        "description": "Complete learning platform",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast video loading",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive learning interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "SEO",
+        "description": "Good search optimization",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Angular Healthcare Portal",
+    "description": "Build a healthcare patient portal",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular healthcare portal with:\n- Patient profiles and medical records\n- Appointment scheduling system\n- Telemedicine video consultations\n- Prescription management\n- Lab results and reports\n- Bill payment and insurance\n- Doctor directory and reviews\n- Health tracking and monitoring\n- Secure messaging with providers\n- Emergency contact management\n\nRequirements:\n- Implement HIPAA compliance\n- Use Angular Security for authentication\n- Add data-testid attributes for testing\n- Include comprehensive encryption\n- Ensure accessibility compliance\n- Add audit logging\n- Implement proper error handling",
+    "requirements": [
+      "Healthcare features",
+      "HIPAA compliance",
+      "Video consultations",
+      "Secure messaging",
+      "Prescription management",
+      "Insurance integration",
+      "Emergency features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Security",
+        "description": "HIPAA compliant security",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Healthcare Features",
+        "description": "Complete medical portal",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Patient-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Compliance",
+        "description": "Regulatory compliance",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Vue Content Management System",
+    "description": "Build content management system using Vue",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a content management system with:\n- Article creation and editing\n- Media library management\n- User roles and permissions\n- Content scheduling\n- SEO optimization tools\n- Analytics integration\n- Multi-language support\n- Template system\n- Comment moderation\n- Mobile-responsive admin\n\nRequirements:\n- Rich text editor\n- File upload system\n- User authentication\n- Content workflow\n- SEO features",
+    "requirements": [
+      "Vue framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Vue implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Vue Event Management Platform",
+    "description": "Build event management platform using Vue",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create an event management platform with:\n- Event creation and scheduling\n- Ticketing system\n- Attendee registration\n- Calendar integration\n- Venue management\n- Speaker profiles\n- Sponsor management\n- Live streaming\n- Mobile app\n- Payment processing\n\nRequirements:\n- Calendar integration\n- Payment processing\n- Real-time updates\n- Mobile optimization\n- Social features",
+    "requirements": [
+      "Vue framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Vue implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Vue Customer Support Portal",
+    "description": "Build customer support portal using Vue",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a customer support portal with:\n- Ticket submission system\n- Knowledge base\n- Live chat support\n- FAQ management\n- User account management\n- Support analytics\n- Email notifications\n- File attachments\n- Multi-language support\n- Mobile optimization\n\nRequirements:\n- Real-time chat\n- Ticket management\n- Knowledge base\n- User authentication\n- Mobile design",
+    "requirements": [
+      "Vue framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Vue implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  }
+]

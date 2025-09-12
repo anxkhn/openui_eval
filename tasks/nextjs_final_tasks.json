@@ -1,0 +1,326 @@
+[
+  {
+    "name": "Nextjs Content Management System",
+    "description": "Build content management system using Nextjs",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a content management system with:\n- Article creation and editing\n- Media library management\n- User roles and permissions\n- Content scheduling\n- SEO optimization tools\n- Analytics integration\n- Multi-language support\n- Template system\n- Comment moderation\n- Mobile-responsive admin\n\nRequirements:\n- Rich text editor\n- File upload system\n- User authentication\n- Content workflow\n- SEO features",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Nextjs Event Management Platform",
+    "description": "Build event management platform using Nextjs",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create an event management platform with:\n- Event creation and scheduling\n- Ticketing system\n- Attendee registration\n- Calendar integration\n- Venue management\n- Speaker profiles\n- Sponsor management\n- Live streaming\n- Mobile app\n- Payment processing\n\nRequirements:\n- Calendar integration\n- Payment processing\n- Real-time updates\n- Mobile optimization\n- Social features",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Nextjs Customer Support Portal",
+    "description": "Build customer support portal using Nextjs",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a customer support portal with:\n- Ticket submission system\n- Knowledge base\n- Live chat support\n- FAQ management\n- User account management\n- Support analytics\n- Email notifications\n- File attachments\n- Multi-language support\n- Mobile optimization\n\nRequirements:\n- Real-time chat\n- Ticket management\n- Knowledge base\n- User authentication\n- Mobile design",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Nextjs Inventory Management System",
+    "description": "Build inventory management system using Nextjs",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create an inventory management system with:\n- Stock level tracking\n- Order management\n- Supplier management\n- Barcode scanning\n- Reporting and analytics\n- Low stock alerts\n- Multi-warehouse support\n- Purchase order management\n- Mobile scanning\n- Real-time updates\n\nRequirements:\n- Real-time tracking\n- Barcode integration\n- Reporting tools\n- Mobile support\n- Data analytics",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Nextjs Social Network Platform",
+    "description": "Build social network platform using Nextjs",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a social network platform with:\n- User profiles and timelines\n- Post creation with media\n- Friend/follower system\n- Groups and communities\n- Messaging system\n- Event creation\n- Live streaming\n- Content moderation\n- Mobile app\n- Real-time notifications\n\nRequirements:\n- Real-time features\n- Media processing\n- Social algorithms\n- Content moderation\n- Mobile optimization",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Nextjs Data Analytics Platform",
+    "description": "Build data analytics platform using Nextjs",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a data analytics platform with:\n- Data import tools\n- Custom dashboard builder\n- Interactive charts\n- Report generation\n- Data cleaning tools\n- SQL query builder\n- Export capabilities\n- Team collaboration\n- API integration\n- Real-time processing\n\nRequirements:\n- Data processing\n- Visualization tools\n- Report generation\n- API integration\n- Performance optimization",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "visualization",
+      "advanced"
+    ]
+  }
+]

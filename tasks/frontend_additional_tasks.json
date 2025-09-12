@@ -1,0 +1,1047 @@
+{
+  "react_01_react_task_management_dashboard": {
+    "name": "React Task Management Dashboard",
+    "description": "Create a comprehensive task management dashboard",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a React task management dashboard with the following features:\n- Task list with add, edit, delete functionality\n- Task status tracking (todo, in-progress, completed)\n- Priority levels (low, medium, high)\n- Due dates and reminders\n- Search and filter capabilities\n- Responsive design with Material-UI or Tailwind CSS\n- Local storage persistence\n- Drag-and-drop task reordering\n\nRequirements:\n- Use React hooks (useState, useEffect)\n- Implement proper state management\n- Add data-testid attributes for testing\n- Include proper form validation\n- Ensure accessibility compliance\n- Add loading states and error handling",
+    "requirements": [
+      "Task CRUD operations",
+      "Status management system",
+      "Priority classification",
+      "Date handling and validation",
+      "Search and filter functionality",
+      "Responsive design",
+      "Data persistence"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Functionality",
+        "description": "All features work correctly",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Code Quality",
+        "description": "Clean, maintainable React code",
+        "weight": 0.2
+      },
+      {
+        "aspect": "UI/UX",
+        "description": "Professional and responsive design",
+        "weight": 0.2
+      },
+      {
+        "aspect": "State Management",
+        "description": "Efficient state handling",
+        "weight": 0.3
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "react_02_react_e-commerce_product_gallery": {
+    "name": "React E-commerce Product Gallery",
+    "description": "Build an e-commerce product gallery with filtering",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a React e-commerce product gallery with:\n- Product grid display with images and details\n- Category and price filtering\n- Search functionality\n- Shopping cart with add/remove items\n- Product details modal\n- Pagination for large product lists\n- Wishlist functionality\n- Product comparison feature\n- Responsive mobile-first design\n- Smooth animations and transitions\n\nRequirements:\n- Use React Router for navigation\n- Implement context or Redux for cart management\n- Add data-testid attributes for testing\n- Include proper error boundaries\n- Ensure accessibility features\n- Add skeleton loading states",
+    "requirements": [
+      "Product display system",
+      "Advanced filtering options",
+      "Shopping cart functionality",
+      "Wishlist management",
+      "Product search",
+      "Modal interactions",
+      "Responsive design"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast loading and smooth interactions",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Code Architecture",
+        "description": "Well-structured component hierarchy",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Mobile Responsiveness",
+        "description": "Excellent mobile experience",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "react_03_react_real-time_chat_application": {
+    "name": "React Real-time Chat Application",
+    "description": "Build a real-time chat application with WebSocket",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a React real-time chat application with:\n- Multiple chat rooms support\n- Real-time messaging with WebSocket\n- User online/offline status\n- Message typing indicators\n- Emoji support and reactions\n- File/image sharing capabilities\n- Message search functionality\n- User profiles and avatars\n- Message read receipts\n- Responsive chat interface\n\nRequirements:\n- Use WebSocket for real-time communication\n- Implement proper authentication flow\n- Add data-testid attributes for testing\n- Include message persistence\n- Ensure security best practices\n- Add error handling for connection issues\n- Implement proper state management",
+    "requirements": [
+      "WebSocket real-time communication",
+      "Multiple chat rooms",
+      "User authentication",
+      "Message persistence",
+      "File sharing capability",
+      "Search functionality",
+      "Security implementation"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Real-time Features",
+        "description": "Smooth real-time communication",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "Secure authentication and data handling",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive chat interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient message handling",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "react_04_react_weather_dashboard": {
+    "name": "React Weather Dashboard",
+    "description": "Create a weather dashboard with API integration",
+    "category": "visualization",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Build a React weather dashboard with:\n- Current weather display for multiple cities\n- 7-day weather forecast\n- Interactive weather maps\n- Weather alerts and notifications\n- Temperature unit conversion (Celsius/Fahrenheit)\n- Weather history and trends\n- Beautiful weather icons and animations\n- Location-based weather detection\n- Sunrise/sunset times\n- Weather data charts and graphs\n\nRequirements:\n- Integrate with OpenWeatherMap API\n- Use Chart.js or similar for data visualization\n- Add data-testid attributes for testing\n- Implement proper error handling\n- Include loading states\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "API integration",
+      "Data visualization",
+      "Multi-city support",
+      "Weather alerts",
+      "Location services",
+      "Data persistence",
+      "Responsive charts"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "API Integration",
+        "description": "Robust API communication",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Data Visualization",
+        "description": "Clear and informative charts",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive weather interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast data loading and updates",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "visualization",
+      "intermediate"
+    ]
+  },
+  "react_05_react_social_media_dashboard": {
+    "name": "React Social Media Dashboard",
+    "description": "Build a social media analytics dashboard",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a React social media dashboard with:\n- Post creation and management\n- User profiles and follower system\n- News feed with infinite scroll\n- Like, comment, and share functionality\n- Analytics and insights dashboard\n- Real-time notifications\n- Image/video upload support\n- Search and discovery features\n- Direct messaging system\n- Content moderation tools\n\nRequirements:\n- Implement complex state management\n- Use real-time updates for notifications\n- Add data-testid attributes for testing\n- Include proper authentication\n- Ensure data privacy and security\n- Add comprehensive error handling\n- Implement content filtering",
+    "requirements": [
+      "Social features implementation",
+      "Real-time updates",
+      "Analytics dashboard",
+      "Content management",
+      "User authentication",
+      "Privacy features",
+      "Moderation tools"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Social Features",
+        "description": "Complete social media functionality",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Real-time Performance",
+        "description": "Fast live updates",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Data Management",
+        "description": "Efficient data handling",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "Robust security measures",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "vue_01_vue_task_management_app": {
+    "name": "Vue Task Management App",
+    "description": "Create a task management app with Vue 3 Composition API",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a Vue 3 task management application using the Composition API with:\n- Task creation, editing, and deletion\n- Drag-and-drop task organization\n- Task categories and tags\n- Progress tracking with visual indicators\n- Deadline management with notifications\n- Team collaboration features\n- Advanced filtering and search\n- Dark/light theme toggle\n- Responsive design with Tailwind CSS\n- Local storage and API integration\n\nRequirements:\n- Use Vue 3 Composition API throughout\n- Implement Pinia for state management\n- Add data-testid attributes for testing\n- Include proper TypeScript support\n- Ensure accessibility compliance\n- Add smooth transitions and animations",
+    "requirements": [
+      "Vue 3 Composition API",
+      "Pinia state management",
+      "Drag-and-drop functionality",
+      "Theme switching",
+      "API integration",
+      "TypeScript support",
+      "Responsive design"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Vue Features",
+        "description": "Modern Vue 3 implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "State Management",
+        "description": "Efficient Pinia usage",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Smooth and intuitive interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Code Quality",
+        "description": "Clean TypeScript code",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "vue_02_vue_e-commerce_platform": {
+    "name": "Vue E-commerce Platform",
+    "description": "Build a full e-commerce platform with Vue 3",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a comprehensive Vue 3 e-commerce platform with:\n- Product catalog with advanced filtering\n- Shopping cart and checkout process\n- User authentication and profiles\n- Order tracking and history\n- Payment gateway integration\n- Product reviews and ratings\n- Inventory management system\n- Admin dashboard\n- Search with autocomplete\n- Mobile PWA support\n\nRequirements:\n- Use Vue Router for navigation\n- Implement Pinia for global state\n- Add data-testid attributes for testing\n- Include proper TypeScript types\n- Ensure PWA features\n- Add comprehensive error handling\n- Implement security best practices",
+    "requirements": [
+      "E-commerce functionality",
+      "Payment integration",
+      "Admin features",
+      "PWA capabilities",
+      "TypeScript implementation",
+      "Security measures",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Code Structure",
+        "description": "Well-organized Vue code",
+        "weight": 0.3
+      },
+      {
+        "aspect": "PWA Features",
+        "description": "Progressive web app capabilities",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  "vue_03_vue_analytics_dashboard": {
+    "name": "Vue Analytics Dashboard",
+    "description": "Build analytics dashboard with real-time data visualization",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a Vue 3 analytics dashboard with:\n- Real-time data visualization with Chart.js\n- Customizable widgets and layouts\n- Data filtering and date ranges\n- Export functionality (PDF, CSV)\n- Responsive grid layout\n- Dark/light theme support\n- Data drill-down capabilities\n- Real-time notifications\n- Performance metrics tracking\n- User behavior analytics\n\nRequirements:\n- Use Vue 3 Composition API\n- Integrate Chart.js for visualizations\n- Add data-testid attributes for testing\n- Implement real-time WebSocket updates\n- Include proper TypeScript support\n- Ensure responsive design\n- Add data caching strategies",
+    "requirements": [
+      "Data visualization",
+      "Real-time updates",
+      "Export functionality",
+      "Customizable layouts",
+      "WebSocket integration",
+      "TypeScript support",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Data Visualization",
+        "description": "Clear and informative charts",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Real-time Features",
+        "description": "Live data updates",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Interface",
+        "description": "Intuitive dashboard layout",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast data processing",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "vue_04_vue_learning_management_system": {
+    "name": "Vue Learning Management System",
+    "description": "Build an LMS with video courses and progress tracking",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a Vue 3 Learning Management System with:\n- Course creation and management\n- Video player with progress tracking\n- Quiz and assessment system\n- Student enrollment and progress\n- Certificate generation\n- Discussion forums\n- Assignment submission and grading\n- Live streaming capabilities\n- Analytics and reporting\n- Mobile-responsive design\n\nRequirements:\n- Use Vue 3 Composition API\n- Implement video player integration\n- Add data-testid attributes for testing\n- Include comprehensive TypeScript support\n- Ensure video streaming optimization\n- Add progress tracking features\n- Implement security for content access",
+    "requirements": [
+      "Video streaming",
+      "Progress tracking",
+      "Quiz system",
+      "Certificate generation",
+      "Forum functionality",
+      "Assignment management",
+      "Analytics reporting"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "LMS Features",
+        "description": "Complete learning platform",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Video Performance",
+        "description": "Smooth video playback",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive learning interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Progress Tracking",
+        "description": "Accurate progress monitoring",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "vue_05_vue_social_network": {
+    "name": "Vue Social Network",
+    "description": "Build a social networking platform with Vue 3",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a Vue 3 social network with:\n- User profiles and timelines\n- Post creation with media support\n- Friend connections and messaging\n- News feed with algorithmic sorting\n- Event creation and management\n- Groups and communities\n- Real-time notifications\n- Photo/video galleries\n- Content reporting system\n- Privacy controls\n\nRequirements:\n- Use Vue 3 Composition API\n- Implement Pinia for state management\n- Add data-testid attributes for testing\n- Include comprehensive TypeScript support\n- Ensure real-time updates\n- Add privacy and security features\n- Implement content moderation",
+    "requirements": [
+      "Social features",
+      "Real-time messaging",
+      "Privacy controls",
+      "Content moderation",
+      "Media handling",
+      "Algorithmic feed",
+      "Security implementation"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Social Features",
+        "description": "Complete social networking",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Real-time Performance",
+        "description": "Fast live updates",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Privacy",
+        "description": "Robust privacy controls",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Engaging interface",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "angular_01_angular_crm_dashboard": {
+    "name": "Angular CRM Dashboard",
+    "description": "Build a comprehensive CRM dashboard with Angular",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular CRM dashboard with:\n- Customer management system\n- Sales pipeline tracking\n- Lead management and scoring\n- Analytics and reporting\n- Task and activity tracking\n- Email integration\n- Document management\n- Team collaboration features\n- Mobile-responsive design\n- Role-based access control\n\nRequirements:\n- Use Angular 15+ with standalone components\n- Implement NgRx for state management\n- Add data-testid attributes for testing\n- Include proper TypeScript types\n- Ensure accessibility compliance\n- Add comprehensive error handling\n- Implement security best practices",
+    "requirements": [
+      "CRM functionality",
+      "NgRx state management",
+      "Role-based access",
+      "Analytics reporting",
+      "Document management",
+      "Email integration",
+      "Security implementation"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "CRM Features",
+        "description": "Complete CRM functionality",
+        "weight": 0.3
+      },
+      {
+        "aspect": "State Management",
+        "description": "Efficient NgRx implementation",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Security",
+        "description": "Robust access control",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "angular_02_angular_project_management_tool": {
+    "name": "Angular Project Management Tool",
+    "description": "Build a project management application",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular project management tool with:\n- Project creation and management\n- Task assignment and tracking\n- Gantt chart visualization\n- Team collaboration features\n- File sharing and version control\n- Time tracking and reporting\n- Budget management\n- Milestone tracking\n- Calendar integration\n- Resource allocation\n\nRequirements:\n- Use Angular Material for UI components\n- Implement RxJS for reactive programming\n- Add data-testid attributes for testing\n- Include proper TypeScript support\n- Ensure responsive design\n- Add comprehensive validation\n- Implement real-time updates",
+    "requirements": [
+      "Project management features",
+      "Gantt chart visualization",
+      "Team collaboration",
+      "Time tracking",
+      "Budget management",
+      "Calendar integration",
+      "Real-time updates"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "PM Features",
+        "description": "Complete project management",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Visualization",
+        "description": "Clear Gantt charts",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Collaboration",
+        "description": "Team workflow support",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient data handling",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "angular_03_angular_banking_dashboard": {
+    "name": "Angular Banking Dashboard",
+    "description": "Build a secure banking dashboard application",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular banking dashboard with:\n- Account overview and balances\n- Transaction history and categorization\n- Budget tracking and alerts\n- Bill payment scheduling\n- Investment portfolio management\n- Security features and authentication\n- Financial reporting and analytics\n- Mobile check deposits\n- Fraud detection alerts\n- Customer support integration\n\nRequirements:\n- Implement strict security measures\n- Use Angular Guards for route protection\n- Add data-testid attributes for testing\n- Include comprehensive TypeScript types\n- Ensure PCI compliance\n- Add encryption for sensitive data\n- Implement proper error handling",
+    "requirements": [
+      "Banking features",
+      "Security implementation",
+      "Transaction management",
+      "Investment tracking",
+      "Fraud detection",
+      "Mobile deposits",
+      "Compliance features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Security",
+        "description": "Robust security measures",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Banking Features",
+        "description": "Complete banking functionality",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Professional interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Compliance",
+        "description": "Regulatory compliance",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "angular_04_angular_learning_platform": {
+    "name": "Angular Learning Platform",
+    "description": "Build an educational learning platform",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular learning platform with:\n- Course catalog and enrollment\n- Video lesson player with bookmarks\n- Interactive quizzes and assessments\n- Progress tracking and certificates\n- Discussion forums and messaging\n- Instructor dashboard\n- Analytics and reporting\n- Content management system\n- Subscription management\n- Mobile-responsive design\n\nRequirements:\n- Use Angular Universal for SSR\n- Implement proper routing and lazy loading\n- Add data-testid attributes for testing\n- Include comprehensive TypeScript support\n- Ensure accessibility compliance\n- Add progressive web app features",
+    "requirements": [
+      "Educational features",
+      "Video streaming",
+      "Assessment system",
+      "Progress tracking",
+      "Content management",
+      "Analytics reporting",
+      "PWA features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Educational Features",
+        "description": "Complete learning platform",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast video loading",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive learning interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "SEO",
+        "description": "Good search optimization",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  "angular_05_angular_healthcare_portal": {
+    "name": "Angular Healthcare Portal",
+    "description": "Build a healthcare patient portal",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an Angular healthcare portal with:\n- Patient profiles and medical records\n- Appointment scheduling system\n- Telemedicine video consultations\n- Prescription management\n- Lab results and reports\n- Bill payment and insurance\n- Doctor directory and reviews\n- Health tracking and monitoring\n- Secure messaging with providers\n- Emergency contact management\n\nRequirements:\n- Implement HIPAA compliance\n- Use Angular Security for authentication\n- Add data-testid attributes for testing\n- Include comprehensive encryption\n- Ensure accessibility compliance\n- Add audit logging\n- Implement proper error handling",
+    "requirements": [
+      "Healthcare features",
+      "HIPAA compliance",
+      "Video consultations",
+      "Secure messaging",
+      "Prescription management",
+      "Insurance integration",
+      "Emergency features"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Security",
+        "description": "HIPAA compliant security",
+        "weight": 0.4
+      },
+      {
+        "aspect": "Healthcare Features",
+        "description": "Complete medical portal",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Patient-friendly interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Compliance",
+        "description": "Regulatory compliance",
+        "weight": 0.1
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  "nextjs_01_next.js_e-commerce_platform": {
+    "name": "Next.js E-commerce Platform",
+    "description": "Build a full-stack e-commerce platform with Next.js",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a Next.js e-commerce platform with:\n- Product catalog with SSR and SSG\n- Shopping cart with persistence\n- User authentication and profiles\n- Payment gateway integration\n- Admin dashboard with CRUD operations\n- Order tracking and fulfillment\n- Product reviews and ratings\n- Search with Algolia integration\n- Email notifications\n- Analytics dashboard\n\nRequirements:\n- Use Next.js 14+ with App Router\n- Implement Server Components and Client Components\n- Add data-testid attributes for testing\n- Use Prisma or MongoDB for database\n- Include proper TypeScript support\n- Ensure SEO optimization\n- Add API routes for backend functionality",
+    "requirements": [
+      "Full-stack e-commerce",
+      "Next.js App Router",
+      "Database integration",
+      "Payment processing",
+      "Admin features",
+      "SEO optimization",
+      "API development"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Full-stack Features",
+        "description": "Complete e-commerce platform",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast SSR/SSG implementation",
+        "weight": 0.2
+      },
+      {
+        "aspect": "SEO",
+        "description": "Excellent search optimization",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Professional shopping experience",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  "nextjs_02_next.js_blog_platform": {
+    "name": "Next.js Blog Platform",
+    "description": "Build a blog platform with CMS capabilities",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a Next.js blog platform with:\n- Markdown-based blog posts with MDX\n- Author profiles and bios\n- Comment system with moderation\n- Category and tag management\n- Search functionality with highlighting\n- Newsletter subscription\n- Social media sharing\n- Reading time estimation\n- Related posts recommendations\n- RSS feed generation\n\nRequirements:\n- Use Next.js 14+ with SSG for posts\n- Implement MDX for rich content\n- Add data-testid attributes for testing\n- Use a headless CMS or database\n- Include proper TypeScript support\n- Ensure optimal SEO\n- Add responsive design",
+    "requirements": [
+      "MDX blog system",
+      "Content management",
+      "Search functionality",
+      "Newsletter integration",
+      "Social features",
+      "SEO optimization",
+      "RSS generation"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Blog Features",
+        "description": "Complete blogging platform",
+        "weight": 0.3
+      },
+      {
+        "aspect": "SEO",
+        "description": "Excellent search optimization",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Content Management",
+        "description": "Easy content creation",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast page loading",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "svelte_01_svelte_task_manager": {
+    "name": "Svelte Task Manager",
+    "description": "Build a task manager with SvelteKit",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a SvelteKit task manager with:\n- Task CRUD operations\n- Drag-and-drop functionality\n- Progress tracking\n- Category and tag system\n- Search and filter\n- Dark/light theme\n- Real-time updates\n- Export functionality\n- Mobile PWA\n\nRequirements:\n- Use SvelteKit with TypeScript\n- Implement Svelte stores for state\n- Add data-testid attributes for testing\n- Include progressive web app features\n- Ensure accessibility\n- Add animations and transitions",
+    "requirements": [
+      "SvelteKit implementation",
+      "State management",
+      "PWA features",
+      "Theme switching",
+      "Real-time updates",
+      "Drag-and-drop",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Svelte Features",
+        "description": "Modern Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and efficient",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Smooth interactions",
+        "weight": 0.2
+      },
+      {
+        "aspect": "PWA Features",
+        "description": "Offline capabilities",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  "svelte_02_svelte_e-commerce_site": {
+    "name": "Svelte E-commerce Site",
+    "description": "Build an e-commerce site with SvelteKit",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a SvelteKit e-commerce site with:\n- Product catalog\n- Shopping cart\n- Checkout process\n- Admin panel\n- Search functionality\n- User accounts\n- Payment integration\n- Order tracking\n- Responsive design\n\nRequirements:\n- Use SvelteKit with TypeScript\n- Implement database integration\n- Add data-testid attributes for testing\n- Include admin features\n- Ensure security\n- Add analytics",
+    "requirements": [
+      "E-commerce functionality",
+      "Database integration",
+      "Admin panel",
+      "Payment processing",
+      "Security features",
+      "Analytics",
+      "Responsive design"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Security",
+        "description": "Secure transactions",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Admin Features",
+        "description": "Complete management system",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  }
+}

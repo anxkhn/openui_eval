@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Next.js E-commerce Platform",
+    "description": "Build a full-stack e-commerce platform with Next.js",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a Next.js e-commerce platform with:\n- Product catalog with SSR and SSG\n- Shopping cart with persistence\n- User authentication and profiles\n- Payment gateway integration\n- Admin dashboard with CRUD operations\n- Order tracking and fulfillment\n- Product reviews and ratings\n- Search with Algolia integration\n- Email notifications\n- Analytics dashboard\n\nRequirements:\n- Use Next.js 14+ with App Router\n- Implement Server Components and Client Components\n- Add data-testid attributes for testing\n- Use Prisma or MongoDB for database\n- Include proper TypeScript support\n- Ensure SEO optimization\n- Add API routes for backend functionality",
+    "requirements": [
+      "Full-stack e-commerce",
+      "Next.js App Router",
+      "Database integration",
+      "Payment processing",
+      "Admin features",
+      "SEO optimization",
+      "API development"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Full-stack Features",
+        "description": "Complete e-commerce platform",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast SSR/SSG implementation",
+        "weight": 0.2
+      },
+      {
+        "aspect": "SEO",
+        "description": "Excellent search optimization",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Professional shopping experience",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  {
+    "name": "Next.js Blog Platform",
+    "description": "Build a blog platform with CMS capabilities",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a Next.js blog platform with:\n- Markdown-based blog posts with MDX\n- Author profiles and bios\n- Comment system with moderation\n- Category and tag management\n- Search functionality with highlighting\n- Newsletter subscription\n- Social media sharing\n- Reading time estimation\n- Related posts recommendations\n- RSS feed generation\n\nRequirements:\n- Use Next.js 14+ with SSG for posts\n- Implement MDX for rich content\n- Add data-testid attributes for testing\n- Use a headless CMS or database\n- Include proper TypeScript support\n- Ensure optimal SEO\n- Add responsive design",
+    "requirements": [
+      "MDX blog system",
+      "Content management",
+      "Search functionality",
+      "Newsletter integration",
+      "Social features",
+      "SEO optimization",
+      "RSS generation"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Blog Features",
+        "description": "Complete blogging platform",
+        "weight": 0.3
+      },
+      {
+        "aspect": "SEO",
+        "description": "Excellent search optimization",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Content Management",
+        "description": "Easy content creation",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast page loading",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  }
+]

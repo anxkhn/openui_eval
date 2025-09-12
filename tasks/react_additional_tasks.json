@@ -1,0 +1,277 @@
+[
+  {
+    "name": "React Task Management Dashboard",
+    "description": "Create a comprehensive task management dashboard",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a React task management dashboard with the following features:\n- Task list with add, edit, delete functionality\n- Task status tracking (todo, in-progress, completed)\n- Priority levels (low, medium, high)\n- Due dates and reminders\n- Search and filter capabilities\n- Responsive design with Material-UI or Tailwind CSS\n- Local storage persistence\n- Drag-and-drop task reordering\n\nRequirements:\n- Use React hooks (useState, useEffect)\n- Implement proper state management\n- Add data-testid attributes for testing\n- Include proper form validation\n- Ensure accessibility compliance\n- Add loading states and error handling",
+    "requirements": [
+      "Task CRUD operations",
+      "Status management system",
+      "Priority classification",
+      "Date handling and validation",
+      "Search and filter functionality",
+      "Responsive design",
+      "Data persistence"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Functionality",
+        "description": "All features work correctly",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Code Quality",
+        "description": "Clean, maintainable React code",
+        "weight": 0.2
+      },
+      {
+        "aspect": "UI/UX",
+        "description": "Professional and responsive design",
+        "weight": 0.2
+      },
+      {
+        "aspect": "State Management",
+        "description": "Efficient state handling",
+        "weight": 0.3
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "React E-commerce Product Gallery",
+    "description": "Build an e-commerce product gallery with filtering",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a React e-commerce product gallery with:\n- Product grid display with images and details\n- Category and price filtering\n- Search functionality\n- Shopping cart with add/remove items\n- Product details modal\n- Pagination for large product lists\n- Wishlist functionality\n- Product comparison feature\n- Responsive mobile-first design\n- Smooth animations and transitions\n\nRequirements:\n- Use React Router for navigation\n- Implement context or Redux for cart management\n- Add data-testid attributes for testing\n- Include proper error boundaries\n- Ensure accessibility features\n- Add skeleton loading states",
+    "requirements": [
+      "Product display system",
+      "Advanced filtering options",
+      "Shopping cart functionality",
+      "Wishlist management",
+      "Product search",
+      "Modal interactions",
+      "Responsive design"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast loading and smooth interactions",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Code Architecture",
+        "description": "Well-structured component hierarchy",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Mobile Responsiveness",
+        "description": "Excellent mobile experience",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "React Real-time Chat Application",
+    "description": "Build a real-time chat application with WebSocket",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a React real-time chat application with:\n- Multiple chat rooms support\n- Real-time messaging with WebSocket\n- User online/offline status\n- Message typing indicators\n- Emoji support and reactions\n- File/image sharing capabilities\n- Message search functionality\n- User profiles and avatars\n- Message read receipts\n- Responsive chat interface\n\nRequirements:\n- Use WebSocket for real-time communication\n- Implement proper authentication flow\n- Add data-testid attributes for testing\n- Include message persistence\n- Ensure security best practices\n- Add error handling for connection issues\n- Implement proper state management",
+    "requirements": [
+      "WebSocket real-time communication",
+      "Multiple chat rooms",
+      "User authentication",
+      "Message persistence",
+      "File sharing capability",
+      "Search functionality",
+      "Security implementation"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Real-time Features",
+        "description": "Smooth real-time communication",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "Secure authentication and data handling",
+        "weight": 0.2
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive chat interface",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Efficient message handling",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  {
+    "name": "React Weather Dashboard",
+    "description": "Create a weather dashboard with API integration",
+    "category": "visualization",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Build a React weather dashboard with:\n- Current weather display for multiple cities\n- 7-day weather forecast\n- Interactive weather maps\n- Weather alerts and notifications\n- Temperature unit conversion (Celsius/Fahrenheit)\n- Weather history and trends\n- Beautiful weather icons and animations\n- Location-based weather detection\n- Sunrise/sunset times\n- Weather data charts and graphs\n\nRequirements:\n- Integrate with OpenWeatherMap API\n- Use Chart.js or similar for data visualization\n- Add data-testid attributes for testing\n- Implement proper error handling\n- Include loading states\n- Ensure responsive design\n- Add accessibility features",
+    "requirements": [
+      "API integration",
+      "Data visualization",
+      "Multi-city support",
+      "Weather alerts",
+      "Location services",
+      "Data persistence",
+      "Responsive charts"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "API Integration",
+        "description": "Robust API communication",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Data Visualization",
+        "description": "Clear and informative charts",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive weather interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast data loading and updates",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "visualization",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "React Social Media Dashboard",
+    "description": "Build a social media analytics dashboard",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a React social media dashboard with:\n- Post creation and management\n- User profiles and follower system\n- News feed with infinite scroll\n- Like, comment, and share functionality\n- Analytics and insights dashboard\n- Real-time notifications\n- Image/video upload support\n- Search and discovery features\n- Direct messaging system\n- Content moderation tools\n\nRequirements:\n- Implement complex state management\n- Use real-time updates for notifications\n- Add data-testid attributes for testing\n- Include proper authentication\n- Ensure data privacy and security\n- Add comprehensive error handling\n- Implement content filtering",
+    "requirements": [
+      "Social features implementation",
+      "Real-time updates",
+      "Analytics dashboard",
+      "Content management",
+      "User authentication",
+      "Privacy features",
+      "Moderation tools"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Social Features",
+        "description": "Complete social media functionality",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Real-time Performance",
+        "description": "Fast live updates",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Data Management",
+        "description": "Efficient data handling",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Security",
+        "description": "Robust security measures",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Svelte Task Manager",
+    "description": "Build a task manager with SvelteKit",
+    "category": "dashboard",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a SvelteKit task manager with:\n- Task CRUD operations\n- Drag-and-drop functionality\n- Progress tracking\n- Category and tag system\n- Search and filter\n- Dark/light theme\n- Real-time updates\n- Export functionality\n- Mobile PWA\n\nRequirements:\n- Use SvelteKit with TypeScript\n- Implement Svelte stores for state\n- Add data-testid attributes for testing\n- Include progressive web app features\n- Ensure accessibility\n- Add animations and transitions",
+    "requirements": [
+      "SvelteKit implementation",
+      "State management",
+      "PWA features",
+      "Theme switching",
+      "Real-time updates",
+      "Drag-and-drop",
+      "Accessibility"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Svelte Features",
+        "description": "Modern Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and efficient",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Smooth interactions",
+        "weight": 0.2
+      },
+      {
+        "aspect": "PWA Features",
+        "description": "Offline capabilities",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "intermediate"
+    ]
+  },
+  {
+    "name": "Svelte E-commerce Site",
+    "description": "Build an e-commerce site with SvelteKit",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a SvelteKit e-commerce site with:\n- Product catalog\n- Shopping cart\n- Checkout process\n- Admin panel\n- Search functionality\n- User accounts\n- Payment integration\n- Order tracking\n- Responsive design\n\nRequirements:\n- Use SvelteKit with TypeScript\n- Implement database integration\n- Add data-testid attributes for testing\n- Include admin features\n- Ensure security\n- Add analytics",
+    "requirements": [
+      "E-commerce functionality",
+      "Database integration",
+      "Admin panel",
+      "Payment processing",
+      "Security features",
+      "Analytics",
+      "Responsive design"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "E-commerce Features",
+        "description": "Complete shopping experience",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Security",
+        "description": "Secure transactions",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Admin Features",
+        "description": "Complete management system",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  }
+]

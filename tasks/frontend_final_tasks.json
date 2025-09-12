@@ -1,0 +1,1136 @@
+{
+  "react_01_react_content_management_system": {
+    "name": "React Content Management System",
+    "description": "Build content management system using React",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a content management system with:\n- Article creation and editing\n- Media library management\n- User roles and permissions\n- Content scheduling\n- SEO optimization tools\n- Analytics integration\n- Multi-language support\n- Template system\n- Comment moderation\n- Mobile-responsive admin\n\nRequirements:\n- Rich text editor\n- File upload system\n- User authentication\n- Content workflow\n- SEO features",
+    "requirements": [
+      "React framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper React implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  "react_02_react_event_management_platform": {
+    "name": "React Event Management Platform",
+    "description": "Build event management platform using React",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create an event management platform with:\n- Event creation and scheduling\n- Ticketing system\n- Attendee registration\n- Calendar integration\n- Venue management\n- Speaker profiles\n- Sponsor management\n- Live streaming\n- Mobile app\n- Payment processing\n\nRequirements:\n- Calendar integration\n- Payment processing\n- Real-time updates\n- Mobile optimization\n- Social features",
+    "requirements": [
+      "React framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper React implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  "react_03_react_customer_support_portal": {
+    "name": "React Customer Support Portal",
+    "description": "Build customer support portal using React",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "react",
+    "prompt": "Create a customer support portal with:\n- Ticket submission system\n- Knowledge base\n- Live chat support\n- FAQ management\n- User account management\n- Support analytics\n- Email notifications\n- File attachments\n- Multi-language support\n- Mobile optimization\n\nRequirements:\n- Real-time chat\n- Ticket management\n- Knowledge base\n- User authentication\n- Mobile design",
+    "requirements": [
+      "React framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper React implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "vue_01_vue_content_management_system": {
+    "name": "Vue Content Management System",
+    "description": "Build content management system using Vue",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a content management system with:\n- Article creation and editing\n- Media library management\n- User roles and permissions\n- Content scheduling\n- SEO optimization tools\n- Analytics integration\n- Multi-language support\n- Template system\n- Comment moderation\n- Mobile-responsive admin\n\nRequirements:\n- Rich text editor\n- File upload system\n- User authentication\n- Content workflow\n- SEO features",
+    "requirements": [
+      "Vue framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Vue implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  "vue_02_vue_event_management_platform": {
+    "name": "Vue Event Management Platform",
+    "description": "Build event management platform using Vue",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create an event management platform with:\n- Event creation and scheduling\n- Ticketing system\n- Attendee registration\n- Calendar integration\n- Venue management\n- Speaker profiles\n- Sponsor management\n- Live streaming\n- Mobile app\n- Payment processing\n\nRequirements:\n- Calendar integration\n- Payment processing\n- Real-time updates\n- Mobile optimization\n- Social features",
+    "requirements": [
+      "Vue framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Vue implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  "vue_03_vue_customer_support_portal": {
+    "name": "Vue Customer Support Portal",
+    "description": "Build customer support portal using Vue",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "vue",
+    "prompt": "Create a customer support portal with:\n- Ticket submission system\n- Knowledge base\n- Live chat support\n- FAQ management\n- User account management\n- Support analytics\n- Email notifications\n- File attachments\n- Multi-language support\n- Mobile optimization\n\nRequirements:\n- Real-time chat\n- Ticket management\n- Knowledge base\n- User authentication\n- Mobile design",
+    "requirements": [
+      "Vue framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Vue implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "vue",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "angular_01_angular_content_management_system": {
+    "name": "Angular Content Management System",
+    "description": "Build content management system using Angular",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create a content management system with:\n- Article creation and editing\n- Media library management\n- User roles and permissions\n- Content scheduling\n- SEO optimization tools\n- Analytics integration\n- Multi-language support\n- Template system\n- Comment moderation\n- Mobile-responsive admin\n\nRequirements:\n- Rich text editor\n- File upload system\n- User authentication\n- Content workflow\n- SEO features",
+    "requirements": [
+      "Angular framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Angular implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  "angular_02_angular_event_management_platform": {
+    "name": "Angular Event Management Platform",
+    "description": "Build event management platform using Angular",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create an event management platform with:\n- Event creation and scheduling\n- Ticketing system\n- Attendee registration\n- Calendar integration\n- Venue management\n- Speaker profiles\n- Sponsor management\n- Live streaming\n- Mobile app\n- Payment processing\n\nRequirements:\n- Calendar integration\n- Payment processing\n- Real-time updates\n- Mobile optimization\n- Social features",
+    "requirements": [
+      "Angular framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Angular implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  "angular_03_angular_customer_support_portal": {
+    "name": "Angular Customer Support Portal",
+    "description": "Build customer support portal using Angular",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "angular",
+    "prompt": "Create a customer support portal with:\n- Ticket submission system\n- Knowledge base\n- Live chat support\n- FAQ management\n- User account management\n- Support analytics\n- Email notifications\n- File attachments\n- Multi-language support\n- Mobile optimization\n\nRequirements:\n- Real-time chat\n- Ticket management\n- Knowledge base\n- User authentication\n- Mobile design",
+    "requirements": [
+      "Angular framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Angular implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "angular",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "nextjs_01_nextjs_content_management_system": {
+    "name": "Nextjs Content Management System",
+    "description": "Build content management system using Nextjs",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a content management system with:\n- Article creation and editing\n- Media library management\n- User roles and permissions\n- Content scheduling\n- SEO optimization tools\n- Analytics integration\n- Multi-language support\n- Template system\n- Comment moderation\n- Mobile-responsive admin\n\nRequirements:\n- Rich text editor\n- File upload system\n- User authentication\n- Content workflow\n- SEO features",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  "nextjs_02_nextjs_event_management_platform": {
+    "name": "Nextjs Event Management Platform",
+    "description": "Build event management platform using Nextjs",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create an event management platform with:\n- Event creation and scheduling\n- Ticketing system\n- Attendee registration\n- Calendar integration\n- Venue management\n- Speaker profiles\n- Sponsor management\n- Live streaming\n- Mobile app\n- Payment processing\n\nRequirements:\n- Calendar integration\n- Payment processing\n- Real-time updates\n- Mobile optimization\n- Social features",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  "nextjs_03_nextjs_customer_support_portal": {
+    "name": "Nextjs Customer Support Portal",
+    "description": "Build customer support portal using Nextjs",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a customer support portal with:\n- Ticket submission system\n- Knowledge base\n- Live chat support\n- FAQ management\n- User account management\n- Support analytics\n- Email notifications\n- File attachments\n- Multi-language support\n- Mobile optimization\n\nRequirements:\n- Real-time chat\n- Ticket management\n- Knowledge base\n- User authentication\n- Mobile design",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "nextjs_04_nextjs_inventory_management_system": {
+    "name": "Nextjs Inventory Management System",
+    "description": "Build inventory management system using Nextjs",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create an inventory management system with:\n- Stock level tracking\n- Order management\n- Supplier management\n- Barcode scanning\n- Reporting and analytics\n- Low stock alerts\n- Multi-warehouse support\n- Purchase order management\n- Mobile scanning\n- Real-time updates\n\nRequirements:\n- Real-time tracking\n- Barcode integration\n- Reporting tools\n- Mobile support\n- Data analytics",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "nextjs_05_nextjs_social_network_platform": {
+    "name": "Nextjs Social Network Platform",
+    "description": "Build social network platform using Nextjs",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a social network platform with:\n- User profiles and timelines\n- Post creation with media\n- Friend/follower system\n- Groups and communities\n- Messaging system\n- Event creation\n- Live streaming\n- Content moderation\n- Mobile app\n- Real-time notifications\n\nRequirements:\n- Real-time features\n- Media processing\n- Social algorithms\n- Content moderation\n- Mobile optimization",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "nextjs_06_nextjs_data_analytics_platform": {
+    "name": "Nextjs Data Analytics Platform",
+    "description": "Build data analytics platform using Nextjs",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "nextjs",
+    "prompt": "Create a data analytics platform with:\n- Data import tools\n- Custom dashboard builder\n- Interactive charts\n- Report generation\n- Data cleaning tools\n- SQL query builder\n- Export capabilities\n- Team collaboration\n- API integration\n- Real-time processing\n\nRequirements:\n- Data processing\n- Visualization tools\n- Report generation\n- API integration\n- Performance optimization",
+    "requirements": [
+      "Nextjs framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Nextjs implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "nextjs",
+      "frontend",
+      "synthetic",
+      "visualization",
+      "advanced"
+    ]
+  },
+  "svelte_01_svelte_content_management_system": {
+    "name": "Svelte Content Management System",
+    "description": "Build content management system using Svelte",
+    "category": "website",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a content management system with:\n- Article creation and editing\n- Media library management\n- User roles and permissions\n- Content scheduling\n- SEO optimization tools\n- Analytics integration\n- Multi-language support\n- Template system\n- Comment moderation\n- Mobile-responsive admin\n\nRequirements:\n- Rich text editor\n- File upload system\n- User authentication\n- Content workflow\n- SEO features",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "advanced"
+    ]
+  },
+  "svelte_02_svelte_event_management_platform": {
+    "name": "Svelte Event Management Platform",
+    "description": "Build event management platform using Svelte",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create an event management platform with:\n- Event creation and scheduling\n- Ticketing system\n- Attendee registration\n- Calendar integration\n- Venue management\n- Speaker profiles\n- Sponsor management\n- Live streaming\n- Mobile app\n- Payment processing\n\nRequirements:\n- Calendar integration\n- Payment processing\n- Real-time updates\n- Mobile optimization\n- Social features",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "intermediate"
+    ]
+  },
+  "svelte_03_svelte_customer_support_portal": {
+    "name": "Svelte Customer Support Portal",
+    "description": "Build customer support portal using Svelte",
+    "category": "website",
+    "difficulty": "intermediate",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a customer support portal with:\n- Ticket submission system\n- Knowledge base\n- Live chat support\n- FAQ management\n- User account management\n- Support analytics\n- Email notifications\n- File attachments\n- Multi-language support\n- Mobile optimization\n\nRequirements:\n- Real-time chat\n- Ticket management\n- Knowledge base\n- User authentication\n- Mobile design",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "website",
+      "intermediate"
+    ]
+  },
+  "svelte_04_svelte_inventory_management_system": {
+    "name": "Svelte Inventory Management System",
+    "description": "Build inventory management system using Svelte",
+    "category": "dashboard",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create an inventory management system with:\n- Stock level tracking\n- Order management\n- Supplier management\n- Barcode scanning\n- Reporting and analytics\n- Low stock alerts\n- Multi-warehouse support\n- Purchase order management\n- Mobile scanning\n- Real-time updates\n\nRequirements:\n- Real-time tracking\n- Barcode integration\n- Reporting tools\n- Mobile support\n- Data analytics",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "dashboard",
+      "advanced"
+    ]
+  },
+  "svelte_05_svelte_social_network_platform": {
+    "name": "Svelte Social Network Platform",
+    "description": "Build social network platform using Svelte",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a social network platform with:\n- User profiles and timelines\n- Post creation with media\n- Friend/follower system\n- Groups and communities\n- Messaging system\n- Event creation\n- Live streaming\n- Content moderation\n- Mobile app\n- Real-time notifications\n\nRequirements:\n- Real-time features\n- Media processing\n- Social algorithms\n- Content moderation\n- Mobile optimization",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "interactive",
+      "advanced"
+    ]
+  },
+  "svelte_06_svelte_data_analytics_platform": {
+    "name": "Svelte Data Analytics Platform",
+    "description": "Build data analytics platform using Svelte",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "estimated_time": "60-120 minutes",
+    "project_type": "svelte",
+    "prompt": "Create a data analytics platform with:\n- Data import tools\n- Custom dashboard builder\n- Interactive charts\n- Report generation\n- Data cleaning tools\n- SQL query builder\n- Export capabilities\n- Team collaboration\n- API integration\n- Real-time processing\n\nRequirements:\n- Data processing\n- Visualization tools\n- Report generation\n- API integration\n- Performance optimization",
+    "requirements": [
+      "Svelte framework features",
+      "State management",
+      "API integration",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "evaluation_criteria": [
+      {
+        "aspect": "Framework Features",
+        "description": "Proper Svelte implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "Functionality",
+        "description": "Complete feature implementation",
+        "weight": 0.3
+      },
+      {
+        "aspect": "User Experience",
+        "description": "Intuitive interface",
+        "weight": 0.2
+      },
+      {
+        "aspect": "Performance",
+        "description": "Fast and responsive",
+        "weight": 0.2
+      }
+    ],
+    "expected_features": [
+      "Complete implementation of all specified features",
+      "Proper component structure and organization",
+      "Correct state management",
+      "Responsive design",
+      "Accessibility compliance",
+      "Performance optimization"
+    ],
+    "tags": [
+      "svelte",
+      "frontend",
+      "synthetic",
+      "visualization",
+      "advanced"
+    ]
+  }
+}
