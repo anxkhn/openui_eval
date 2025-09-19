@@ -1,0 +1,482 @@
+[
+  {
+    "name": "artifacts_game_development_puzzle_1",
+    "category": "game",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Gameplay\n- **Drag and Rotate**: Manipulate blocks to form paths that guide Cub to the destination.\n- **Solve Puzzles**: Each level is designed with specific challenges and obstacles.\n\n# Game Features\n- **Intuitive Controls**: Control the game through simple drag and click operations.\n- **Creative Design**: Each level has a unique layout and solution.\n\n# Game Tips\n- **Strategic Planning**: Plan your moves and rotations in advance to optimize the path.\n- **Observation and Adaptation**: Pay attention to the characteristics and challenges of new levels, and adjust your strategy accordingly.\n\n# Summary\n\"Cub n Pup - Puzzle Game Demo\" is a grid-based, connection-element strategy puzzle game. Players need to drag and rotate blocks to ensure the puppy (Cub) can reach the Star's position. This game fully utilizes creative thinking and strategic planning, providing a challenging and entertaining puzzle-solving experience.",
+    "description": "ArtifactsBench Task: Game Development-Puzzle - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the core puzzle gameplay mechanic fully implemented?",
+      "Implement: Is the level navigation and progression system implemented?",
+      "Implement: Are the path-finding and goal validation mechanics properly implemented?",
+      "Implement: Is the block manipulation system intuitive and responsive?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements the block manipulation system through HTML/JavaScript, including drag functionality, rotation mechanics, and path validation for the puppy's movement. Score 0 if the core interaction logic is not implemented, 5 if only basic dragging is implemented without rotation, and 10 if both dragging and rotation mechanics work seamlessly with proper collision detection.",
+      "Check whether the game includes a proper level selection interface, progress tracking, level completion validation, and the ability to advance to subsequent levels. Deduct 5 points if there's no level progression system, 3 points if progression exists but without state persistence between sessions. The full score is 10 points.",
+      "Evaluate whether the code correctly implements path validation to check if Cub can reach the Star destination, including handling of obstacles and ensuring continuous path connections. Deduct 5 points if path validation is simplistic (only checking start/end points), and 3 points if the validation doesn't account for all possible edge cases. The full score is 10 points.",
+      "Assess whether the block dragging and rotation controls feel natural and responsive, with proper visual feedback during interaction. Check for snap-to-grid functionality, rotation pivot points, and ghost previews of potential placements. Deduct 5 points if dragging feels laggy, and 3 points if rotation lacks clear visual guidance. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as rapid clicking, dragging outside boundaries, browser resizing, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Visual path previews when hovering blocks 2. Undo/redo functionality 3. Hint system for stuck players). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple dragging systems coexisting) 2. Function modules unrelated to the puzzle game (e.g., a built-in social media feed) 3. Fancy effects that affect performance (e.g., unnecessary particle systems). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating game logic/view/input handling layers), unit test coverage, and build process automation. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if the build process is not automated. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern game design principles: 1) Harmonious color matching with consistent theme 2) Proper layout spacing with clear grid visualization 3) Professional UI elements with clear affordances. Deduct 3 points for each inconsistent visual element, 5 points for clashing colors, and 5 points for unclear or confusing game state representation. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Block manipulation response delay ≤ 100ms 2) Path animation and level transitions between 300-500ms 3) Clear visual and audio feedback for successful/unsuccessful moves. Deduct 5 points for each operation without feedback, 3 points for jerky animations during block movement, and 5 points for confusing or missing feedback when reaching the goal. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the core puzzle gameplay mechanic fully implemented?",
+      "Is the level navigation and progression system implemented?",
+      "Are the path-finding and goal validation mechanics properly implemented?",
+      "Is the block manipulation system intuitive and responsive?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional game design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "game-development-puzzle",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Puzzle",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_game_development_role_playing_2",
+    "category": "game",
+    "difficulty": "beginner",
+    "prompt": " the generated code is executable for demonstration.\nPlease use HTML and JavaScript to implement a character leveling up and skill tree system.\n\n**Task**: Implement a character leveling system where characters can level up by collecting experience points, unlock new skills or enhance attributes.\n\n**Hint**: You can use a simple experience point system and skill tree structure to manage upgrades and skill unlocking.\n\nGame, and add some comments to your code so other developers can understand your implementation process.",
+    "description": "ArtifactsBench Task: Game Development-Role-Playing - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the character leveling system implemented correctly?",
+      "Implement: How well is the skill tree structure designed?",
+      "Implement: Is the skill unlocking mechanism properly implemented?",
+      "Implement: Are character attributes and their enhancement implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements an experience point tracking system, level calculation, and level-up events. Check if the experience requirements for each level follow a logical progression (e.g., logarithmic or exponential growth). Verify if the code handles edge cases like max level cap and experience overflow. Score 0 if the core level system is missing, 5 if only basic leveling is implemented, and 10 if it includes animations, sound effects, and visual feedback for level-up events.",
+      "Evaluate if the skill tree has a logical hierarchical structure with clear dependencies between skills. Check if there are multiple branching paths, prerequisites for skill unlocks, and proper visualization of connections between related skills. Verify if skill nodes store proper metadata (cost, effects, requirements). Deduct 5 points if skills aren't organized in a tree/graph structure, 3 points if there are no skill dependencies/prerequisites, and 2 points if the tree doesn't visually represent relationships between skills. The full score is 10 points.",
+      "Check if the code validates all conditions before unlocking skills (level requirements, skill points, prerequisites). Verify if the system prevents invalid operations like unlocking unavailable skills or spending more points than available. Examine if there's proper state management for locked/unlocked skills and visual indication of available/unavailable skills. Deduct 5 points if prerequisite validation is missing and 5 points if there's no proper error handling for invalid unlock attempts. The full score is 10 points.",
+      "Assess if the system includes character attributes (like strength, intelligence, etc.) that can be enhanced through leveling or skill points. Check if attribute changes affect character capabilities in meaningful ways. Verify if there are attribute caps or diminishing returns implemented. Deduct 3 points if attributes don't impact gameplay/visuals, 4 points if there's no way to customize attribute distribution, and 3 points if attribute scaling is unbalanced. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as invalid inputs, skill point misallocation, attribute reset requests, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Skill preview animations 2. Respec/reset mechanisms with appropriate costs 3. Skill combos for special effects when certain combinations are unlocked). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple ways to calculate the same attribute bonus) 2. Function modules unrelated to the skill tree system (e.g., an unnecessary inventory system) 3. Fancy effects that affect performance (e.g., excessive particle effects on every skill hover). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating character data/skill tree logic/UI layers), code organization, and maintainability. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if the code lacks proper comments as requested in the requirements. The full score is 10 points.",
+      "Evaluate whether the skill tree UI follows modern design principles: 1) Harmonious color matching (no more than 3 primary colors) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (body font size ≥ 14px, line height over 1.5 times). Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic text-image layout. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Click feedback delay ≤ 100ms when allocating points or unlocking skills 2) Transition animations when unlocking skills or leveling up controlled between 300-500ms 3) Clear visual focus guidance highlighting available skills or next level milestone. Deduct 5 points for each operation without feedback, 3 points for sluggish animations during skill tree navigation, and 5 points for hard-to-find important UI elements like available skill points or level progress. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the character leveling system implemented correctly?",
+      "How well is the skill tree structure designed?",
+      "Is the skill unlocking mechanism properly implemented?",
+      "Are character attributes and their enhancement implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "game-development-role-playing",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Role-Playing",
+    "original_difficulty": "easy"
+  },
+  {
+    "name": "artifacts_game_development_role_playing_3",
+    "category": "game",
+    "difficulty": "beginner",
+    "prompt": " the code you generate is executable for demonstration purposes.\n\nPlease use HTML and JavaScript to implement an interactive NPC.\n\n**Task**: Implement an interactive NPC system where players can converse with NPCs, accept quests, or obtain clues.\n\n**Hint**: You can set different dialogue content and tasks for each NPC, and adjust the game progression based on player choices.\n\nInclude comments in your code to help other developers understand your implementation process.",
+    "description": "ArtifactsBench Task: Game Development-Role-Playing - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the NPC dialogue system fully implemented?",
+      "Implement: Is the quest/task system functional?",
+      "Implement: Is the NPC state management implemented?",
+      "Implement: Is there a clue/information system that affects gameplay?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code implements a complete dialogue system that includes multiple conversation paths, branching dialogue options, and persistent dialogue state tracking. Score 0 if basic dialogue display is missing, 5 if only linear conversations are supported, and 10 if the system handles complex branching dialogues with contextual responses based on previous player choices.",
+      "Evaluate whether the code includes a quest management system that allows NPCs to offer quests, track quest progress, and provide appropriate rewards. Check if there are quest states (available, active, completed, failed). Deduct 5 points if quest tracking is absent, 3 points if quest state persistence is missing. The full score is 10 points.",
+      "Check if NPCs have different states and behaviors based on game progression, player actions, or time of day. NPCs should remember past interactions and adjust their dialogue/behavior accordingly. Deduct 5 points if NPCs have static behavior regardless of player actions, 3 points if state changes aren't persistent. The full score is 10 points.",
+      "Assess whether information/clues provided by NPCs are tracked and have actual impact on gameplay mechanics or story progression. Check if the system includes hints, critical information, or red herrings that influence player decisions. Deduct 5 points if information has no gameplay impact, 3 points if the information system lacks variety. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as undefined inputs, missing data, user operation errors, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. NPC mood/relationship system 2. Voice acting integration 3. Dynamic facial expressions/animations). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple dialogue display systems) 2. Function modules unrelated to NPC interaction (e.g., a built-in inventory system not connected to dialogues) 3. Fancy effects that affect performance (e.g., unnecessary animations or transitions). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating dialogue logic/view/data layers), code organization, and developer documentation through comments. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if helpful comments are missing or inadequate. The full score is 10 points.",
+      "Evaluate whether the NPC interaction interface follows modern design principles: 1) Harmonious color matching for dialogue boxes and UI elements 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (dialogue text size ≥ 14px, line height over 1.5 times). Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic text-image layout. The full score is 10 points.",
+      "Judge whether the NPC interaction experience conforms to human perception characteristics: 1) Dialogue response delay ≤ 100ms 2) Transition animation duration controlled between 300-500ms 3) Clear visual indication of dialogue options and NPC status. Deduct 5 points for each interaction without feedback, 3 points for jarring transitions between dialogue states, and 5 points for confusing navigation in conversation trees. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the NPC dialogue system fully implemented?",
+      "Is the quest/task system functional?",
+      "Is the NPC state management implemented?",
+      "Is there a clue/information system that affects gameplay?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "game-development-role-playing",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Role-Playing",
+    "original_difficulty": "easy"
+  },
+  {
+    "name": "artifacts_game_development_strategy_4",
+    "category": "game",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. JS Planet Defense Game Introduction\n\n**Game Overview:**\n\"JS Planet Defense Game\" is a strategy defense game developed with JavaScript. Players take on the role of a defense commander in space, operating the only target to combat incoming enemies.\n\n**Gameplay:**\nIn \"JS Planet Defense Game,\" players control a single target, which is the only unit capable of attacking enemies. Players need to use the target's weapon systems and tactical abilities to precisely strike incoming enemies, preventing them from causing damage to Earth or other important objectives. As the game progresses, enemies become increasingly powerful and complex, requiring players to continuously optimize their tactics and strategies to protect their objectives.\n\n**Game Features:**\n1. **Unique Operation Experience**: The uniqueness of the game lies in the fact that players can only operate one target, requiring precise control of movement and attacks to maximize defense effectiveness.\n\n2. **Challenging Level Design**: The game features multiple challenging levels, each with numerous objectives and enemies, demanding flexible thinking and quick reaction from players.\n\n**Game Tips:**\n- **Precise Target Control**: Learn to accurately control the target's movement and attacks, leveraging the characteristics of weapon systems to maximize impact on enemies.\n\n- **Tactical Positioning**: Choose appropriate positions for your target based on enemy movement paths and attack patterns to enhance defensive effectiveness.\n\n- **Tactical Upgrades and Optimization**: Utilize resources and upgrade systems in the game to continuously enhance your target's combat capability and survivability to face increasingly complex enemy challenges.\n\nOverall, \"JS Planet Defense Game\" offers players a brand new space defense challenge through its unique operational experience and deep tactical strategy. Whether pursuing high scores or exploring new tactical layouts, players can find lasting challenges and satisfaction in the game. Please include comments in your code to help other developers understand your implementation process.",
+    "description": "ArtifactsBench Task: Game Development-Strategy - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the core target control system properly implemented?",
+      "Implement: Are the enemy AI and attack patterns implemented?",
+      "Implement: Is the level design system properly structured?",
+      "Implement: Is the tactical upgrade system implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Evaluate whether the code accurately implements target movement and attack mechanics through JavaScript. Check if the control system includes smooth movement (acceleration/deceleration), precision targeting (hit detection), and proper response to user input (mouse/keyboard). Score 0 if core controls are non-functional, 5 if basic movement and shooting are implemented but lack precision, and 10 if the control system feels responsive and precise with advanced features like aim assist or predictive targeting.",
+      "Check whether the code includes sophisticated enemy behavior patterns, varying enemy types with distinct movement and attack strategies, and proper difficulty scaling between levels. Examine if enemies respond dynamically to player positioning. Deduct 5 points if enemies follow only linear paths, 3 points if difficulty scaling is absent, and 2 points if there's no variety in enemy types. The full score is 10 points.",
+      "Review whether the code implements a comprehensive level progression system with increasing challenges, multiple objectives, and diverse enemy configurations. Check for level parameters configuration, wave management, and event triggering mechanisms. Deduct 5 points if levels are hard-coded with no flexible configuration system, and 3 points if there's no proper game state management between levels. The full score is 10 points.",
+      "Assess whether the code includes a robust upgrade system allowing players to enhance the target's capabilities (weapon damage, movement speed, special abilities, etc.). Check for resource management, upgrade persistence between levels, and visual feedback on upgrades. Deduct 5 points if upgrades are limited to simple numerical increases without strategic choices, and 3 points if there's no visual indication of upgrades. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as rapid fire spamming, browser resizing, off-screen enemies, simultaneous input conflicts, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Dynamic weather effects affecting gameplay 2. Voice-controlled alternative inputs 3. Multiplayer observation mode with chat). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple collision detection algorithms) 2. Function modules unrelated to the space defense theme (e.g., a built-in cryptocurrency miner) 3. Fancy effects that affect performance (e.g., excessive particle systems causing frame drops). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating game logic/view/input handling layers), object-oriented patterns implementation, and performance optimization techniques. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if no performance optimizations are implemented for rendering or calculations. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern game UI principles: 1) Space-themed color scheme with appropriate contrast 2) Clear visual hierarchy for game elements (target, enemies, projectiles, and UI) 3) Non-intrusive HUD displaying critical information (health, score, level progress). Deduct 3 points for cluttered UI elements, 5 points for poor contrast making game elements hard to distinguish, and 5 points for essential information being difficult to locate or read. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Target response to input under 50ms 2) Visual feedback for hits, misses, and damage 3) Appropriate game pacing with breaks between intense waves. Deduct 5 points for input lag exceeding 100ms, 3 points for missing visual feedback on critical actions, and 5 points for frame rate drops below 30fps during normal gameplay. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the core target control system properly implemented?",
+      "Are the enemy AI and attack patterns implemented?",
+      "Is the level design system properly structured?",
+      "Is the tactical upgrade system implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "game-development-strategy",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Strategy",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_game_development_casual_6",
+    "category": "game",
+    "difficulty": "beginner",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate, professional responses. Try to ensure the generated code is executable for demonstration.\n\nPlease use HTML and JavaScript to implement 'SkiFree', a skiing simulation game based on JavaScript and canvas. Players need to control the skier on the slope to avoid obstacles such as trees and rocks, while collecting flags to increase their score.\n\n### Gameplay\n- **Control the skier**: Use keyboard arrow keys to move the skier left and right.\n- **Avoid obstacles and collect flags**: Dodge obstacles and collect as many flags as possible to increase your score.\n\n### Game Features\n- **Retro pixel style**: The game adopts a retro pixel art style, recalling the feeling of classic games.\n- **Simple and intuitive**: Easy to operate and get started, suitable for players of all ages.\n\n### Game Tips\n- **Anticipate paths**: Predict and adjust your skiing route in advance to avoid obstacles.\n- **Maintain for long periods**: Keep playing for longer periods to accumulate higher scores.\n\n### Summary\nThis game provides a fast-paced and exciting gaming experience through its simple yet fun gameplay, perfect for players seeking brief entertainment. Please include comments in your code so other developers can understand your implementation process.",
+    "description": "ArtifactsBench Task: Game Development-Casual - You are a code expert. Please use your professional knowledge to generate accurate, professional res...",
+    "requirements": [
+      "Implement: Is the skiing game core mechanics fully implemented?",
+      "Implement: Is the canvas rendering and game loop properly implemented?",
+      "Implement: Are obstacle generation and collision systems accurately designed?",
+      "Implement: Is the retro pixel art style and visual consistency maintained?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements skier movement control through keyboard arrow keys, collision detection with obstacles (trees, rocks), flag collection mechanics, and score calculation system. Score 0 if core skiing mechanics are missing, 5 if only basic movement is implemented, and 10 if all gameplay elements including physics-based skiing simulation are fully functional.",
+      "Check whether the HTML5 Canvas implementation includes proper game loop with requestAnimationFrame, efficient rendering pipeline, and sprite management system. Evaluate scrolling background mechanics and object spawning algorithms. Deduct 5 points if frame rate drops below 30fps, and 3 points if rendering artifacts or flickering occurs. The full score is 10 points.",
+      "Evaluate whether the obstacle generation uses proper randomization algorithms to create realistic skiing terrain with trees and rocks. Check collision detection accuracy using bounding box or pixel-perfect methods. Deduct 5 points if collision detection has false positives/negatives, and 3 points if obstacle distribution feels unnatural or repetitive. The full score is 10 points.",
+      "Check whether the code implements authentic retro pixel art aesthetics with proper sprite scaling, pixelated graphics without anti-aliasing, and consistent 8-bit/16-bit color palette. Evaluate whether visual elements match classic SkiFree appearance. Deduct 5 points if modern graphics break retro immersion, and 3 points if inconsistent pixel density is used. Give 10 points if authentic retro style is maintained throughout.",
+      "Evaluate whether the code can handle common abnormal situations (such as rapid key presses, canvas resize events, browser tab switching, memory leaks from game objects) and provide graceful error handling. Code with strong robustness should effectively manage edge cases and resource cleanup, giving 10 points. If robustness is average, give 5 points, and if no exception handling exists, give 0 points.",
+      "Check whether the code includes engaging features that improve the classic SkiFree experience (e.g., 1. Progressive difficulty scaling 2. Power-ups or special items 3. Particle effects for snow trails 4. Sound effects and background music 5. High score persistence). Add 2 points for each well-implemented innovative feature (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Over-engineered systems not suitable for a simple skiing game 2. Duplicate input handling or rendering logic 3. Excessive visual effects that compromise the retro aesthetic or performance. Deduct 3 points for each redundancy found, and directly deduct 10 points if core skiing gameplay is hindered by unnecessary complexity.",
+      "Review modular design (separating game logic, rendering, input handling), code organization with proper commenting for developer understanding, and clean architecture patterns. Deduct 5 points if global state pollution or poor separation of concerns is found; deduct 3 points if insufficient code comments hinder understanding; deduct 2 points if inconsistent naming conventions are used. The full score is 10 points.",
+      "Evaluate whether the visual design authentically recreates retro gaming aesthetics: 1) Appropriate pixel art scaling without blurring 2) Classic color palette reminiscent of early computer games 3) Proper UI elements for score display and game status 4) Authentic retro typography. Deduct 3 points for each modern design element that breaks immersion, 5 points for inappropriate scaling, and 2 points for inconsistent retro styling. The full score is 10 points.",
+      "Judge whether the skiing controls feel natural and responsive: 1) Keyboard input response delay ≤ 50ms for skiing games 2) Smooth skier movement with appropriate physics 3) Clear visual feedback for collisions and flag collection 4) Intuitive game start/restart mechanisms. Deduct 5 points for each unresponsive control, 3 points for laggy movement, and 2 points for unclear game state feedback. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the skiing game core mechanics fully implemented?",
+      "Is the canvas rendering and game loop properly implemented?",
+      "Are obstacle generation and collision systems accurately designed?",
+      "Is the retro pixel art style and visual consistency maintained?",
+      "Is the code robust?",
+      "Are there any innovative features that enhance gameplay?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface design meet retro gaming standards?",
+      "Is the gameplay interaction responsive and intuitive?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "game-development-casual",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Casual",
+    "original_difficulty": "easy"
+  },
+  {
+    "name": "artifacts_game_development_simulation/management_7",
+    "category": "game",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Make sure that the code you generate is executable and can be demonstrated.\n\nPlease use HTML and JavaScript to implement a Capture and Collection game.\n\n**Task**: Implement a capturing system where players can capture certain objects or creatures in the game through specific operations, and collect them.\n\n**Hint**: You can capture objects by throwing nets or using specific items, and add them to the player's collection.\n\nPlease include comments in your code so other developers can understand your implementation process.",
+    "description": "ArtifactsBench Task: Game Development-Simulation/Management - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the capture mechanism fully implemented?",
+      "Implement: Is the collection system comprehensively designed?",
+      "Implement: Are the game objects and creatures intelligently designed?",
+      "Implement: Is the complete game progression system constructed?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements capture operations through HTML/JavaScript, including throwing mechanics (trajectory calculation, collision detection), capture success/failure logic, and different capture tools (nets, traps, etc.). Score 0 if core capture interaction is not implemented, 5 if only basic click-to-capture is implemented, and 10 if physics-based throwing with realistic trajectories and multiple capture methods are fully included.",
+      "Check whether the collection system includes inventory management, item categorization, rarity systems, and collection progress tracking. Evaluate if captured objects have different attributes (size, rarity, behavior patterns). Deduct 5 points if no inventory UI is provided, 3 points if objects lack unique properties, and 2 points if collection statistics are missing. The full score is 10 points.",
+      "Evaluate whether capturable objects/creatures have realistic movement patterns, AI behaviors (fleeing, hiding, different speeds), and spawn mechanics. Objects should have varied difficulty levels and unique characteristics. Deduct 5 points if objects are static or move in simple patterns, 3 points if no difficulty progression exists, and 2 points if spawn timing is not balanced. The full score is 10 points.",
+      "Check whether the code includes complete progression mechanics such as player levels, unlockable capture tools, achievement systems, and collection milestones. Evaluate if there are rewards for completing collections and progression feedback. Deduct 5 points if no progression tracking is implemented, 3 points if achievements are missing, and 2 points if unlock mechanisms are absent. Give 10 points if fully implemented.",
+      "Evaluate whether the code can handle common abnormal situations (such as out-of-bounds input, rapid clicking, collision edge cases, inventory overflow, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Photo mode for captured creatures 2. Breeding/evolution system 3. Trading mechanism 4. Environmental interaction affecting capture rates 5. Mini-games for difficult captures). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple capture validation logics coexisting) 2. Function modules unrelated to capture/collection gameplay (e.g., built-in calculator) 3. Fancy effects that affect performance (e.g., excessive particle systems on every capture). Deduct 3 points for each redundancy found, and directly deduct 10 points if core functions are interfered with by redundant code.",
+      "Review modular design (such as separating capture logic/collection management/rendering layers), code documentation quality, and maintainable structure. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if comments are insufficient or unclear. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching (no more than 3 primary colors) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (body font size ≥ 14px, line height over 1.5 times) 4) Clear inventory and collection UI organization. Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic text-image layout. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Capture action feedback delay ≤ 100ms 2) Transition animation duration controlled between 300-500ms 3) Clear visual focus guidance for capturable objects 4) Smooth inventory opening/closing animations. Deduct 5 points for each operation without feedback, 3 points for visual after-images during object movement, and 5 points for hard-to-identify interactive elements. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the capture mechanism fully implemented?",
+      "Is the collection system comprehensively designed?",
+      "Are the game objects and creatures intelligently designed?",
+      "Is the complete game progression system constructed?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "game-development-simulation/management",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Simulation/Management",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_game_development_action/rhythm_8",
+    "category": "game",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Make sure the generated code is executable for demonstration purposes.\n\nPlease use HTML and JavaScript to implement \"Pixel Dance!\", an interactive rhythm and music-based game. The game provides a stage where characters dance to music. Players need to follow arrow prompts displayed at the bottom of the screen to control and complete correct dance moves. The game's objective is to accurately complete a series of actions according to the rhythm to achieve the highest score.\n\n### Gameplay\n- **Follow Instructions**: Follow the arrow directions shown on screen, input all direction keys and press the space bar at the right moment.\n- **Rhythm Matching**: Synchronize with the background music's rhythm to complete dance moves.\n\n### Game Features\n- **Visual Effects**: Dynamic pixel art style and visual effects.\n- **Music Interaction**: Gameplay closely integrated with musical rhythm.\n\n### Game Tips\n- **Pay Attention to Rhythm**: Closely follow the music rhythm and screen instructions to ensure accuracy of movements.\n- **Reaction Speed**: Quickly respond to screen instructions to improve scoring rate.\n\n### Summary\nThis game combines music, dance, and pixel art to provide players with a challenging and entertaining gaming experience. Please implement the game and include comments in the code to help other developers understand your implementation process.",
+    "description": "ArtifactsBench Task: Game Development-Action/Rhythm - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the core rhythm-based input system fully implemented?",
+      "Implement: Is the music synchronization mechanism properly implemented?",
+      "Implement: Is the dance animation system responsive and visually satisfying?",
+      "Implement: Is the scoring and feedback system comprehensive?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Evaluate whether the code implements a rhythm-based input system that accurately detects key presses (arrow keys and space bar) synchronized with music beats. Check for timing windows that categorize inputs as 'Perfect', 'Good', or 'Miss'. Score 0 if input detection is missing, 5 if basic key detection exists without timing precision, and 10 if the system includes accurate beat synchronization with visual feedback.",
+      "Check whether arrow prompts are correctly synchronized with the music beats, including proper preloading of audio assets and precise timing calculations. Verify that the game has a calibration system or offset adjustment to account for audio latency. Deduct 3 points if synchronization drifts over time, 5 points if there's no preloading mechanism for audio, and 3 points if there's no way to handle audio latency. The full score is 10 points.",
+      "Assess whether character animations transition smoothly in response to player inputs, with different animations for successful vs. failed moves. Evaluate the pixel art quality and whether animations match the rhythm. Deduct 5 points if animations are jerky or delayed, 3 points if there's no visual difference between successful/failed moves, and 2 points if animations don't match the music's rhythm. The full score is 10 points.",
+      "Evaluate whether the game provides clear scoring feedback (Perfect/Good/Miss indicators), maintains combo counters, and calculates final scores based on accuracy and combo chains. Check if there's appropriate visual and audio feedback for different quality inputs. Deduct 3 points if visual feedback is delayed, 3 points if the combo system is missing, and 4 points if there's no end-game score summary. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as audio loading failures, unsupported browsers, unexpected key presses, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Custom difficulty settings 2. Ability to import custom songs/charts 3. Multiplayer functionality 4. Performance replay features). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple input detection systems) 2. Function modules unrelated to rhythm gaming (e.g., unnecessary mini-games) 3. Fancy effects that affect performance (e.g., excessive particle systems that cause lag). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating game logic/view/audio handling/input detection), unit test coverage, and build process automation. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if the build process is not automated. The full score is 10 points.",
+      "Evaluate whether the pixel art style is consistent and polished: 1) Proper color palette suitable for pixel art (limited colors per element) 2) Consistent pixel sizing (no mixed resolutions) 3) Clear UI elements that don't obstruct gameplay. Deduct 3 points for inconsistent pixel art style, 3 points for poor contrast between UI and game elements, and 4 points for cluttered or confusing interface layout. The full score is 10 points.",
+      "Judge whether the game's performance meets rhythm game requirements: 1) Input lag under 50ms 2) Stable frame rate (minimum 60fps) 3) Smooth transitions between dance moves. Deduct 5 points for noticeable input delay, 3 points for frame rate drops during complex animations, and 2 points for jarring transitions between animations. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the core rhythm-based input system fully implemented?",
+      "Is the music synchronization mechanism properly implemented?",
+      "Is the dance animation system responsive and visually satisfying?",
+      "Is the scoring and feedback system comprehensive?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "game-development-action/rhythm",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Action/Rhythm",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_game_development_strategy_9",
+    "category": "game",
+    "difficulty": "advanced",
+    "prompt": " the generated code is executable for demonstration purposes. \n\nPlease help me implement the following requirements using SVG code: Design an interactive chess game that allows users to move pieces and view game history, implemented using SVG and JavaScript.",
+    "description": "ArtifactsBench Task: Game Development-Strategy - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the chess board and pieces visualization accurately implemented using SVG?",
+      "Implement: Is piece movement and selection properly implemented?",
+      "Implement: Is the chess game logic fully implemented?",
+      "Implement: Is the game history viewer functional and comprehensive?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the SVG code correctly implements the 8x8 chess board grid with proper colors (alternating light and dark squares) and all chess pieces with standard representations. Check if the elements have appropriate ids/classes for manipulation. Pieces should be properly sized and centered in squares. Score 0 if the board is incomplete, 5 if board exists but pieces are improperly represented, 10 if all pieces have proper SVG paths with clean design.",
+      "Evaluate the interaction mechanism for selecting and moving pieces. Check if the code includes proper event listeners (mousedown/click/drag), visual feedback for selection, and validation for legal chess moves. Deduct 5 points if drag-and-drop functionality is missing, 3 points if there's no visual indication of selected pieces, and 5 points if legal move validation is absent. The full score is 10 points.",
+      "Assess whether the code implements the complete ruleset of chess, including special moves like castling, en passant, pawn promotion, and checks/checkmates. Examine if turn-based gameplay is enforced. Score 0 if basic piece movement rules are missing, 5 if basic rules exist but special moves are not implemented, and 10 if all chess rules are correctly enforced with proper game state management.",
+      "Check whether the game history is properly recorded and displayed using a standardized format (like algebraic notation). Verify if users can navigate through previous moves, with the board updating accordingly. Deduct 5 points if history is not visually accessible, 3 points if the notation is non-standard or difficult to read, and 5 points if historical positions cannot be reviewed on the board. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as invalid moves, browser resizing, out-of-sequence operations) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Move suggestions highlighting 2. Captured pieces display 3. Check/checkmate animations or indicators 4. Interactive move analysis). Add 2.5 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple ways to select pieces) 2. Function modules unrelated to chess visualization (e.g., unnecessary animations) 3. Fancy effects that affect performance (e.g., complex shadows or gradients that slow rendering). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating game logic/view/user interaction layers), code organization, and maintainability. Check if SVG elements are properly structured and manipulated. Deduct 5 points if global state pollution is found; deduct 5 points if the code lacks comments or uses cryptic variable names; deduct 5 points if SVG manipulation is inefficient or uses poor practices. The full score is 10 points.",
+      "Evaluate whether the SVG design follows modern design principles: 1) Harmonious color matching between board and pieces 2) Proper visual hierarchy with clear distinction between interactive and static elements 3) Clean, readable design for game history view. Deduct 3 points for each visually cluttered element, 5 points for poor color combinations that affect readability, and 5 points for inconsistent styling. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Piece movement animations feel natural (200-300ms) 2) Selection and highlighting provide immediate visual feedback (≤100ms) 3) Game history navigation is intuitive and responsive. Deduct 5 points for choppy animations, 3 points for delayed visual feedback, and 5 points if the interface becomes unresponsive during animations. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the chess board and pieces visualization accurately implemented using SVG?",
+      "Is piece movement and selection properly implemented?",
+      "Is the chess game logic fully implemented?",
+      "Is the game history viewer functional and comprehensive?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "game-development-strategy",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Strategy",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_game_development_puzzle_11",
+    "category": "game",
+    "difficulty": "intermediate",
+    "prompt": " the generated code is executable.\n\nPlease use HTML and JavaScript to implement environmental interaction.\n**Task**: Add environmental interaction functionality that allows characters to interact with objects in the scene, such as pushing boxes, pulling levers, etc.\n**Tip**: You can use a simple physics engine to implement object movement and design puzzle elements for levels. Please think through and answer in detail, aiming to implement a solution that is as complete as possible, meets the requirements, has a good game interface, and high playability. Note: Use HTML to implement the above functionality, ensuring it can be directly executed in the frontend.\n\nPlease include comments in your code to help other developers understand your implementation process.",
+    "description": "ArtifactsBench Task: Game Development-Puzzle - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the character-object interaction system fully implemented?",
+      "Implement: Is the physics engine properly implemented?",
+      "Implement: Are the interactive puzzle elements well-designed?",
+      "Implement: Is the level design system implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Evaluate whether the code accurately implements core interactions like pushing boxes and pulling levers with proper collision detection and physics calculations. Score 0 if interactions are absent, 5 if only basic interactions work, and 10 if multiple interactions are implemented with physical properties (mass, friction, momentum).",
+      "Check if the code includes essential physics calculations (collision detection, object momentum, velocity) and handles edge cases like stacking objects or preventing objects from passing through walls. Score 0 for no physics implementation, 5 for basic physics without edge cases, and 10 for robust physics handling all scenarios.",
+      "Review whether the solution includes actual puzzle scenarios using the environmental interactions (e.g., box-pushing puzzles, lever-activated doors, pressure plates). Deduct 5 points if puzzle logic is inconsistent, 3 points if puzzle difficulty is poorly balanced. The full score is 10 points.",
+      "Evaluate whether the code includes a level structure with progressive challenges, objectives, and states (solved/unsolved). Check for level progression logic and state management. Deduct 5 points if level state persistence is missing, 3 points if level transitions are abrupt. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as rapid input, out-of-bounds movement, object stacking, wall clipping, etc.) and provide friendly error handling or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Physics-based chain reactions 2. Interactive tutorial system 3. Multiple solution paths for puzzles). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple collision detection systems) 2. Function modules unrelated to environmental interaction (e.g., unnecessary scoring system) 3. Fancy effects that affect performance (e.g., excessive particle effects). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating physics/game logic/input handling/rendering layers), code organization, and implementation of design patterns. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if there are insufficient comments explaining complex physics calculations or game logic. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern game UI principles: 1) Clear visual distinction between interactive and non-interactive elements 2) Intuitive feedback when interacting with objects 3) Visual cues for physics interactions (shadows, movement indicators). Deduct 3 points for each confusing interactive element, 5 points for unclear visual feedback, and 5 points for misleading physics representations. The full score is 10 points.",
+      "Judge whether the movement and physics interactions feel natural: 1) Character movement response ≤ 50ms 2) Physics calculations maintain 60fps even with multiple objects 3) Smooth transitions during object interactions. Deduct 5 points for each laggy interaction, 3 points for physics glitches during complex interactions, and 5 points for jerky animation during object movement. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the character-object interaction system fully implemented?",
+      "Is the physics engine properly implemented?",
+      "Are the interactive puzzle elements well-designed?",
+      "Is the level design system implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "game-development-puzzle",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Puzzle",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_game_development_role_playing_12",
+    "category": "game",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Try to ensure that the generated code is executable for demonstration.\nPlease use HTML and JavaScript to implement a \"Spirit Summoning\" game.\n**Task**: Allow players to summon spirits or pets to assist in battles or puzzle-solving. Spirits can have different abilities and behavior patterns.\n**Hint**: You can set up a summoning system and design unique skills or characteristics for each spirit to help players complete tasks. Please think through and answer in detail, striving to implement a solution that is as complete as possible, meets the requirements, has a good game interface, and high playability. Note: The functionality should be implemented using HTML that can be executed directly in the frontend.\nPlease include comments in your code to help other developers understand your implementation process.",
+    "description": "ArtifactsBench Task: Game Development-Role-Playing - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the core spirit summoning mechanic fully implemented?",
+      "Implement: Are the spirits' unique abilities and behavior patterns well-designed?",
+      "Implement: Is there a meaningful battle or puzzle-solving system where spirits assist?",
+      "Implement: Is there a progression or enhancement system for spirits?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements a spirit summoning system through HTML/JavaScript, including a clear summoning interface, selection mechanism, and successful/failed summoning feedback. Check if summoned spirits appear visually on screen with distinct appearances. Score 0 if summoning doesn't work, 5 if basic summoning exists but lacks variety, and 10 if there's a complete summoning system with multiple spirits and visual effects.",
+      "Evaluate whether each spirit has distinct abilities (attack patterns, special skills, passive effects) and behavior patterns (movement, AI decision-making). Check if spirits react differently to game situations and player commands. Deduct 3 points if spirits are merely cosmetic with no functional differences, 5 points if abilities exist but lack strategic depth, and 7 points if behavior patterns are static/predictable. The full score is 10 points.",
+      "Assess whether the game includes challenges (battles or puzzles) where spirits provide meaningful assistance. Check if different spirits offer strategic advantages in different scenarios. Deduct 5 points if challenges are trivial or spirits' contributions are negligible, and 3 points if the system lacks strategic depth. The full score is 10 points.",
+      "Check for implementation of growth mechanics such as leveling up spirits, unlocking new abilities, upgrading existing skills, or spirit evolution. Verify if player actions influence spirit development and if the system provides clear feedback on progression. Score 0 if no progression exists, 5 if basic progression with minimal impact on gameplay, and 10 if comprehensive progression with meaningful effects on gameplay.",
+      "Evaluate whether the code can handle common abnormal situations (such as invalid inputs, unexpected interactions, rapid clicking, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Dynamic spirit fusion system 2. Environmental interaction between spirits 3. Spirit personality system affecting behaviors). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple spirit selection methods that do the same thing) 2. Function modules unrelated to the core gameplay (e.g., unnecessary mini-games that distract from the main experience) 3. Fancy effects that affect performance (e.g., excessive particle effects causing lag). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating game logic/view/spirits behavior layers), code organization, quality of comments, and maintainability. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if comments are insufficient or misleading. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching (thematic colors appropriate for a mystical/spiritual game) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (body font size ≥ 14px, line height over 1.5 times). Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic text-image layout. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Summoning feedback delay ≤ 100ms 2) Spirit animation transitions controlled between 300-500ms 3) Clear visual indication of spirit actions and abilities. Deduct 5 points for each operation without feedback, 3 points for choppy animations during spirit actions, and 5 points for unclear spirit status indicators. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the core spirit summoning mechanic fully implemented?",
+      "Are the spirits' unique abilities and behavior patterns well-designed?",
+      "Is there a meaningful battle or puzzle-solving system where spirits assist?",
+      "Is there a progression or enhancement system for spirits?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "game-development-role-playing",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Game Development-Role-Playing",
+    "original_difficulty": "medium"
+  }
+]

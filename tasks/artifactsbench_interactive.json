@@ -1,0 +1,482 @@
+[
+  {
+    "name": "artifacts_svg_generation_svg_images_5",
+    "category": "interactive",
+    "difficulty": "beginner",
+    "prompt": " the generated code is executable for demonstration whenever possible. Please help me implement the following requirement using SVG code: create a representation of cleaning up a mess with a wet mop, then wiping away all remaining liquid.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the basic SVG structure implemented correctly?",
+      "Implement: Is the mess representation visually clear and realistic?",
+      "Implement: Is the mop animation sequence implemented correctly?",
+      "Implement: Is the liquid removal transition effect visually convincing?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the SVG code includes proper namespace, viewBox dimensions, and appropriate container elements. All SVG elements should be properly nested and have appropriate identifiers. Score 0 if SVG structure is missing or fundamentally flawed, 5 if basic structure exists but has issues, 10 if structure is complete and well-organized.",
+      "Evaluate how well the 'mess' is depicted in the SVG. Look for appropriate visual elements like splatter patterns, puddles, or stains with realistic coloring and opacity. Score 0 if no mess is visualized, 5 if a basic/abstract mess is shown, 10 if the mess has realistic texture, varied patterns, and appropriate coloring.",
+      "Review the implementation of the mop animation sequence. Check for proper position tracking, rotation mechanics, and realistic movement patterns when cleaning the mess. Score 0 if the mop animation is absent, 5 if basic movement exists but appears mechanical, 10 if the mop moves naturally with convincing physics and cleaning patterns.",
+      "Assess the transition effect of removing liquid from the surface. Check if there's a progressive cleanup effect showing gradual removal rather than an abrupt disappearance. Verify proper use of opacity changes, path morphing, or mask techniques. Score 0 if liquid simply disappears, 5 if basic transitions exist, 10 if transitions show realistic liquid behavior with wetness gradually receding.",
+      "Evaluate whether the code can handle different screen sizes and browser implementations. Check for proper use of viewBox scaling, responsive design principles, and cross-browser compatibility techniques. Code with strong robustness should work across major browsers and adapt to different viewport sizes, giving 10 points. If the robustness is average, give 5 points, and if no adaptation is considered, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Water droplet physics 2. Dynamic reflection/light effects 3. Sound synchronization with visual feedback). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant SVG elements or nested groups that serve identical purposes 2. Unnecessary animations or effects unrelated to the cleaning visualization 3. Excessive filters or gradients that significantly impact performance. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core animation is obscured by redundant elements.",
+      "Review the SVG structure organization (such as proper grouping of related elements), use of reusable components, and optimization techniques. Deduct 5 points if global IDs/classes are overused without proper namespacing; deduct 5 points if similar patterns are repeated without proper symbol definitions; deduct 5 points if the SVG lacks proper optimization (excessive precision in path data, unnecessary attributes). The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching with contextually appropriate palette 2) Proper proportions and scale relationships between elements 3) Consistent stylistic choices throughout the animation. Deduct 3 points for each visual inconsistency, 5 points for jarring color combinations, and 5 points for unbalanced composition. The full score is 10 points.",
+      "Judge whether the animation timing and easing functions create natural motion: 1) Appropriate animation duration for each phase of cleaning 2) Natural easing functions that mimic physical movement 3) Smooth transitions between animation states. Deduct 5 points for jerky or stuttering animations, 3 points for unrealistic timing (too fast/slow), and 5 points for abrupt transitions between states. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the basic SVG structure implemented correctly?",
+      "Is the mess representation visually clear and realistic?",
+      "Is the mop animation sequence implemented correctly?",
+      "Is the liquid removal transition effect visually convincing?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "easy"
+  },
+  {
+    "name": "artifacts_simulation_&_modeling_mathematical_abstraction_10",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "prompt": " the generated code is executable for demonstration purposes. I'd like to make a JS simulation of a sphere where the universe of Conway's Game of Life is unfolding, multicolor, lots of small squares, on a black background.",
+    "description": "ArtifactsBench Task: Simulation & Modeling-Mathematical Abstraction - You are a code expert. Please use your professional knowledge to provide accurate and professional r...",
+    "requirements": [
+      "Implement: Is Conway's Game of Life algorithm correctly implemented?",
+      "Implement: Is the spherical 3D visualization properly rendered?",
+      "Implement: Are multicolor visual effects and animations implemented effectively?",
+      "Implement: Is the grid resolution and performance optimization adequate?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements Conway's Game of Life rules: 1) Live cells with 2-3 neighbors survive 2) Dead cells with exactly 3 neighbors become alive 3) All other cells die or remain dead. Check if the algorithm uses proper neighbor counting for spherical topology (handling pole singularities and longitude wrapping). Score 0 if core rules are missing, 5 if basic rules work but topology is incorrect, 10 if fully implemented with proper spherical neighbor calculation.",
+      "Evaluate whether the sphere rendering uses appropriate 3D graphics (WebGL/Three.js) with correct UV mapping for cellular automata grid projection. Check if the sphere maintains consistent cell size across surface, handles texture distortion at poles, and implements proper camera controls (rotation, zoom). Deduct 5 points if using 2D approximation instead of true 3D sphere, 3 points if pole distortion is severe. Full score requires smooth sphere with uniform cell distribution.",
+      "Check whether the visualization includes dynamic color systems: 1) Different colors for cell states/ages 2) Smooth color transitions during state changes 3) Visually appealing color palette against black background. Evaluate animation smoothness (60fps target) and visual clarity of individual cells. Deduct 5 points if colors are static or harsh, 3 points if animation stutters or cells are hard to distinguish. Requires color coding system and smooth real-time updates.",
+      "Assess whether the implementation supports 'lots of small squares' (minimum 100x50 grid resolution) while maintaining smooth performance. Check for optimization techniques like efficient neighbor calculation, WebGL batching, or delta-based updates. Evaluate if the system can handle multiple generations without performance degradation. Deduct 5 points if grid resolution is too low (<50x25), 5 points if frame rate drops below 30fps, 3 points if memory usage grows unbounded over time.",
+      "Evaluate whether the code can handle common abnormal situations (such as WebGL context loss, browser compatibility issues, extreme zoom levels, invalid initial patterns, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should gracefully degrade on older browsers and handle edge cases effectively, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Interactive seeding by clicking on sphere 2. Multiple preset patterns (gliders, oscillators) adapted for spherical topology 3. Speed controls and generation counter 4. Cell age visualization with color gradients 5. Export/import pattern functionality). Add 2 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple rendering pipelines coexisting) 2. Function modules unrelated to Game of Life simulation (e.g., built-in audio player) 3. Fancy effects that severely impact performance (e.g., excessive particle systems, complex shaders). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core simulation performance is compromised by redundant code.",
+      "Review modular design (such as separating game logic/rendering/input handling), code organization, and maintainability. Check for proper separation of concerns between Game of Life engine and 3D visualization. Deduct 5 points if global state pollution is found or no clear architecture; deduct 5 points if the code duplication rate is too high (over 30%); deduct 3 points if hardcoded magic numbers are excessive. The full score requires clean, well-structured code with clear separation of responsibilities.",
+      "Evaluate whether the overall design follows modern 3D visualization principles: 1) High contrast multicolor cells against pure black background for optimal visibility 2) Appropriate cell size ensuring individual squares are distinguishable 3) Professional color palette with sufficient variety but visual harmony 4) Clean UI controls if present. Deduct 3 points for poor color choices that reduce visibility, 5 points if cells are too small/large to distinguish effectively, 5 points for cluttered or unprofessional visual appearance.",
+      "Judge whether the 3D interaction and animation conform to user expectations: 1) Smooth sphere rotation with mouse/touch controls 2) Responsive zoom without breaking cell visibility 3) Consistent animation timing for Game of Life generations 4) Immediate visual feedback for any interactive elements. Deduct 5 points for laggy or jerky sphere manipulation, 3 points for inconsistent animation timing, 5 points for unresponsive controls or poor camera behavior. Full score requires fluid 60fps 3D interaction."
+    ],
+    "expected_features": [
+      "Is Conway's Game of Life algorithm correctly implemented?",
+      "Is the spherical 3D visualization properly rendered?",
+      "Are multicolor visual effects and animations implemented effectively?",
+      "Is the grid resolution and performance optimization adequate?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "simulation-&-modeling-mathematical-abstraction",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Simulation & Modeling-Mathematical Abstraction",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_svg_generation_svg_images_13",
+    "category": "interactive",
+    "difficulty": "beginner",
+    "prompt": " the generated code is executable for demonstration.\n\nPlease help me implement the following requirement using SVG code: create a rickshaw, which is a three-wheeled vehicle used for transportation in India, also known as a Tuktuk or vehicle.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a code expert. Please use your professional knowledge to generate accurate, professional res...",
+    "requirements": [
+      "Implement: Is the basic structure of the rickshaw (Tuktuk) properly implemented?",
+      "Implement: Are the rickshaw's detailed features accurately represented?",
+      "Implement: Is the SVG code properly structured with appropriate grouping and organization?",
+      "Implement: Is perspective and dimensionality handled effectively?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the SVG code includes the fundamental components of a rickshaw: chassis, three wheels (two at the back, one at the front), passenger compartment, and driver's seat. Deduct 3 points if any major component is missing, 2 points if proportions are unrealistic. Full implementation with correct proportions and structural integrity scores 10 points.",
+      "Evaluate if the rickshaw includes authentic details like handlebars, roof/canopy, passenger seating area, headlights, and characteristic decoration elements. Score 3 points for basic features, 7 points for moderate detail, and 10 points for comprehensive authentic details including decorative elements typical of Indian rickshaws.",
+      "Review if the SVG elements are logically grouped (<g> elements) for different parts of the rickshaw (wheels, body, canopy, etc.). Check if proper naming conventions or comments are used. Score 10 for excellent organization, 5 for basic organization, 0 for unorganized code.",
+      "Check whether the rickshaw design effectively conveys a three-dimensional appearance through appropriate shadowing, gradients, or perspective techniques. A flat, simplistic design scores 3 points; basic dimensionality scores 6 points; realistic 3D appearance scores 10 points.",
+      "Evaluate whether the SVG code is structurally sound, with proper coordinate systems, viewBox settings, and consistent units. Check if it renders properly across different browsers. Code with strong robustness should handle scaling appropriately without distortion. Give 10 points for excellent robustness, 5 for average, 0 if major rendering issues exist.",
+      "Check whether the code includes surprise features that enhance the visualization (e.g., 1. Animation of wheels spinning 2. Interactive elements that respond to user input 3. Variable color schemes or styles). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Duplicate SVG elements that serve the same purpose 2. Unnecessary complex paths that could be simplified 3. Excessive detail that impacts rendering performance. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core representation is obscured by redundant elements.",
+      "Review code cleanliness (indentation, consistent naming), optimization (use of symbols for repeated elements, appropriate path commands), and maintainability. Deduct 5 points if element IDs/classes are missing or poorly named; deduct 5 points if the SVG contains unnecessary complexity or inefficient path definitions. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color scheme appropriate for an Indian rickshaw 2) Balanced proportions and visual weight 3) Attention to cultural authenticity in the design. Deduct 3 points for poor color choices, 5 points for disproportionate elements, and 5 points for culturally inaccurate representations. The full score is 10 points.",
+      "Judge whether the SVG is efficiently implemented: 1) Appropriate use of basic shapes vs. complex paths 2) Elimination of unnecessary decimal precision in coordinates 3) Reuse of elements where possible. Deduct 3 points for each 20% increase in file size over an optimized equivalent, 5 points for unused definitions or attributes, and 5 points for overly complex paths that could be simplified. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the basic structure of the rickshaw (Tuktuk) properly implemented?",
+      "Are the rickshaw's detailed features accurately represented?",
+      "Is the SVG code properly structured with appropriate grouping and organization?",
+      "Is perspective and dimensionality handled effectively?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the visual design meet professional standards?",
+      "Is the final SVG optimized for performance and file size?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "easy"
+  },
+  {
+    "name": "artifacts_svg_generation_svg_images_14",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "prompt": "You are a coding expert. Please use your professional knowledge to generate accurate, professional responses. Take care to ensure the code you generate is executable for demonstration.\n\nPlease help me implement the following requirement using SVG code. The requirement is to create a: Japanese kimono is a traditional garment.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a coding expert. Please use your professional knowledge to generate accurate, professional r...",
+    "requirements": [
+      "Implement: Is the kimono's basic structure and proportions accurately implemented?",
+      "Implement: Are traditional kimono design elements and patterns authentically represented?",
+      "Implement: Is the SVG technical implementation properly structured and optimized?",
+      "Implement: Does the kimono design demonstrate proper fabric draping and fold simulation?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the SVG code accurately depicts the fundamental elements of a Japanese kimono including the main body (hon-mi), sleeves (sode), collar (eri), and obi (sash). Check if the proportions follow traditional kimono measurements where sleeve length typically extends to ankle level and body width allows proper draping. Score 0 if basic kimono silhouette is missing, 5 if only simplified outline is present, and 10 if all structural elements are properly proportioned and positioned.",
+      "Evaluate whether the SVG includes authentic Japanese design elements such as traditional patterns (seigaiha, asanoha, sakura, etc.), proper color combinations following seasonal conventions, and accurate collar overlap (left over right). Check for cultural authenticity in decorative motifs and pattern placement. Deduct 5 points if patterns are culturally inappropriate, 3 points if collar overlap is incorrect. Full score requires authentic traditional elements.",
+      "Assess whether the SVG uses appropriate technical approaches including proper use of groups (<g>), paths, and geometric shapes for efficient rendering. Check if the code utilizes SVG-specific features like gradients, patterns, and transforms effectively. Evaluate if the coordinate system is well-organized and if the viewBox is properly configured. Deduct 5 points if excessive nested elements cause performance issues, 3 points if basic SVG optimization principles are ignored.",
+      "Review whether the SVG successfully simulates the natural draping characteristics of kimono fabric through curved lines, shadow effects, and layering. Check if the obi (sash) shows proper dimensional depth and if sleeve draping appears natural. Evaluate the use of gradients or shading to create fabric texture illusion. Score 0 if completely flat representation, 5 if basic draping attempt, 10 if realistic fabric simulation with proper depth and natural flow.",
+      "Evaluate whether the SVG code can handle common rendering issues across different browsers and screen sizes. Check for proper error handling in path definitions, valid color values, and scalable design elements. Code with strong robustness should render consistently across platforms, giving 10 points. If the robustness is average, give 5 points, and if major rendering issues exist, give 0 points.",
+      "Check whether the SVG includes creative enhancements that elevate the kimono representation (e.g., 1. Interactive hover effects revealing pattern details 2. Animated elements like flowing fabric or seasonal transitions 3. Multi-layered depth with subtle animations). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant path definitions or duplicate elements 2. Unnecessary complex patterns that don't enhance the kimono representation 3. Excessive decorative elements that distract from the main subject. Deduct 3 points for each redundancy found, and directly deduct 10 points if core kimono elements are obscured by redundant code.",
+      "Review SVG code organization including proper use of definitions (<defs>), reusable elements, and clean structure. Check for consistent naming conventions, proper indentation, and logical grouping of related elements. Deduct 5 points if code structure is chaotic or lacks reusability; deduct 5 points if excessive code duplication exists; deduct 5 points if the SVG lacks proper semantic organization. The full score is 10 points.",
+      "Evaluate whether the kimono design follows authentic Japanese aesthetic principles: 1) Harmonious color palette respecting traditional combinations 2) Balanced composition with proper negative space 3) Refined detail level appropriate for the medium. Deduct 3 points for each visually jarring element, 5 points for culturally inappropriate color choices, and 5 points for cluttered or unbalanced composition. The full score is 10 points.",
+      "Judge whether the SVG renders smoothly with clean lines and proper anti-aliasing: 1) Smooth curves without jagged edges 2) Proper stroke-width consistency 3) Clear visual hierarchy and readable details at various scales. Deduct 5 points for each major rendering artifact, 3 points for inconsistent line weights, and 5 points for poor scalability. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the kimono's basic structure and proportions accurately implemented?",
+      "Are traditional kimono design elements and patterns authentically represented?",
+      "Is the SVG technical implementation properly structured and optimized?",
+      "Does the kimono design demonstrate proper fabric draping and fold simulation?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the visual design meet professional aesthetic standards?",
+      "Is the visual presentation smooth and well-rendered?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_svg_generation_svg_images_21",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Make sure the code you generate is executable whenever possible. \n\nPlease help me implement the following requirements using code, which should be created using SVG code. The requirement is to create a diagram of a computer system with several different types of information.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the basic SVG structure properly implemented?",
+      "Implement: Does the computer system diagram include all essential components?",
+      "Implement: Is the information hierarchy visually represented?",
+      "Implement: Are interactive or dynamic elements incorporated?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the SVG document has proper DOCTYPE, namespace declarations, viewBox attributes, and responsive design considerations. Verify the SVG has appropriate dimensions and preserveAspectRatio settings. The base SVG should be properly structured with organized groups (<g>) for different components. Score 0 if SVG basics are missing, 5 if basic structure exists but with issues, and 10 for complete and proper implementation.",
+      "Evaluate whether the diagram includes core computer system components: CPU, memory (RAM), storage devices, motherboard, input/output devices, and their interconnections. Each component should be clearly visualized with appropriate shapes and proportions. Deduct 2 points for each missing major component. Score 10 if the diagram comprehensively represents a computer system architecture.",
+      "Check if the diagram effectively communicates different layers of information through visual hierarchy (size, position, color, grouping). Components should be organized logically with clear relationships and data flows. Examine if subsystems are properly nested and connections between components are meaningful. Score 0 if hierarchy is absent, 5 if basic hierarchy exists but is confusing, and 10 for clear, intuitive information architecture.",
+      "Assess whether the SVG includes interactive features (hover effects, click actions, animations) to enhance understanding of the computer system. Check for JavaScript event handlers, CSS transitions/animations, or SMIL animations. Award 3 points for basic interactivity, 7 points for moderate interactivity with purpose, and 10 points for comprehensive, educational interactive elements that explain system functions.",
+      "Evaluate whether the SVG code handles potential issues like browser compatibility, scaling on different screen sizes, and fallback mechanisms. The code should use best practices like avoiding inline styles when appropriate, using semantic IDs and classes, and implementing proper error handling if JavaScript is used. Score 0 if major compatibility issues exist, 5 if generally compatible but with minor issues, and 10 for robust, cross-browser compatible code.",
+      "Check whether the SVG includes surprise features that enhance the experience (e.g., 1. Animated data flows between components 2. Interactive tooltips with detailed specifications 3. Visual state changes representing system operations). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant graphical elements that convey the same information 2. Excessive decorative elements that don't contribute to understanding the computer system 3. Overly complex animations or effects that distract from the content. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core diagram clarity is compromised by redundant elements.",
+      "Review the SVG code organization (such as appropriate grouping of elements), reuse of common elements through symbols or patterns, and optimization for file size and rendering performance. Deduct 5 points if element IDs/classes are inconsistent or poorly named; deduct 5 points if the code is unnecessarily verbose with duplicated definitions; deduct 5 points if no performance optimizations are implemented (like reducing path points or proper use of primitives). The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching (no more than 3 primary colors with appropriate contrasts for readability) 2) Proper layout spacing and alignment of components 3) Professional typography (readable font family, appropriate size hierarchy). Deduct 3 points for each awkward visual element, 5 points for poor color choices that hinder understanding, and 5 points for inconsistent visual language. The full score is 10 points.",
+      "Judge whether any dynamic effects conform to human perception characteristics: 1) Responsive feedback for interactive elements ≤ 100ms 2) Transition animation duration controlled between 300-500ms 3) Clear visual focus on important components. If animations exist, they should enhance understanding rather than distract. Deduct 5 points for jarring transitions, 3 points for excessive or too fast animations, and 5 points for confusing interaction patterns. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the basic SVG structure properly implemented?",
+      "Does the computer system diagram include all essential components?",
+      "Is the information hierarchy visually represented?",
+      "Are interactive or dynamic elements incorporated?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_svg_generation_svg_images_23",
+    "category": "interactive",
+    "difficulty": "beginner",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Be sure to ensure that the code you generate is executable and can be displayed. Please help me implement this SVG image using code: a white sign with the YouTube logo on it.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the SVG code structure correctly implemented?",
+      "Implement: Is the YouTube logo accurately reproduced?",
+      "Implement: Is the white sign properly designed?",
+      "Implement: Is the color scheme correctly implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the SVG code includes proper namespace declarations, viewBox settings, and a well-structured document. Check if the SVG element hierarchy follows best practices (e.g., grouping related elements with <g> tags, using descriptive IDs). Score 0 if SVG is not implemented at all, 5 if basic structure exists with minor issues, and 10 if structure is perfect with proper organization.",
+      "Evaluate how accurately the YouTube logo is recreated, including proper proportions, rounded corners, and the play button symbol. The logo should match YouTube's official design specifications. Deduct 3 points if proportions are incorrect, 3 points if the play button is misshapen, and 5 points if the overall shape deviates significantly from the official logo. The full score is 10 points.",
+      "Check if the white sign background is properly implemented with appropriate dimensions, color (#FFFFFF), and shape (likely rectangular with possible rounded corners). Evaluate whether the sign provides sufficient contrast for the YouTube logo. Deduct 3 points if the dimensions are inappropriate, 3 points if the color is off-white or has transparency issues, and 5 points if the sign shape is poorly executed. The full score is 10 points.",
+      "Verify that the YouTube logo uses the correct red color (#FF0000) for the main rectangle and pure white (#FFFFFF) for the play triangle. The sign background should be white with appropriate border/shadow if included. Deduct 5 points for incorrect YouTube red, 3 points for wrong play button color, and 5 points for inappropriate background color treatment. The full score is 10 points.",
+      "Evaluate whether the code can handle different viewport sizes and browser compatibility issues. Check for the use of responsive techniques (preserveAspectRatio attribute, percentage-based dimensions, viewBox scaling). Code with strong robustness should work across major browsers and adapt to different contexts, giving 10 points. If the robustness is average, give 5 points, and if no scalability or compatibility considerations are made, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Hover animations 2. Click interactions 3. Gradient effects or subtle shadows). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Unnecessary nested elements or groups 2. Unused attributes or styles 3. Overly complex paths that could be simplified. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core SVG rendering is affected by redundant code.",
+      "Review proper code organization (such as separating structure, presentation, and behavior), effective use of SVG attributes vs. CSS styling, and code readability with appropriate comments. Deduct 5 points for mixing styling concerns inappropriately; deduct 3 points if the code lacks comments or documentation; deduct 3 points if variable naming is unclear or inconsistent. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Proportional scaling of the logo relative to the sign 2) Proper whitespace margins around the logo (at least 10% of logo width) 3) Professional finish with attention to detail (smooth curves, aligned elements). Deduct 3 points for improper spacing, 5 points for misaligned elements, and 5 points for poor curve quality or jagged edges. The full score is 10 points.",
+      "Judge whether the SVG implementation is optimized for performance: 1) Minimal use of filters and complex effects 2) Appropriate precision in path coordinates (not excessive decimal places) 3) Use of simple shapes instead of complex paths where appropriate. Deduct 3 points for unnecessarily complex paths, 3 points for excessive precision in coordinates, and 5 points for using computationally expensive effects unnecessarily. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the SVG code structure correctly implemented?",
+      "Is the YouTube logo accurately reproduced?",
+      "Is the white sign properly designed?",
+      "Is the color scheme correctly implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the implementation optimized for performance?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "easy"
+  },
+  {
+    "name": "artifacts_svg_generation_svg_images_24",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Be sure to make the generated code executable for display whenever possible. Please help me implement this SVG image using code. The toilet has a flusher.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the toilet shape completely and accurately implemented in SVG?",
+      "Implement: Is the flusher mechanism properly implemented and functional?",
+      "Implement: Does the code implement a complete flushing animation?",
+      "Implement: Are appropriate SVG gradient/shading techniques used to create a realistic appearance?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the code properly implements the basic toilet structure including the bowl, tank, seat, and base using SVG elements (rect, path, ellipse, etc.). Look for proper proportions and realistic toilet shape. Deduct 5 points if major components are missing, 3 points for unrealistic proportions. Give 10 points for a complete and anatomically correct toilet representation.",
+      "Evaluate if the code includes an interactive flusher that responds to user input (click/touch events). The flusher should have visual feedback (depression/movement) and trigger a flushing animation. Deduct 5 points if the flusher exists but isn't interactive, 3 points if interaction lacks visual feedback. The full score is 10 points for a fully functional and visually responsive flushing mechanism.",
+      "Check if the code includes a water flushing animation effect that realistically simulates water movement (using SVG animations, CSS transitions, or JavaScript). Look for water swirl effects, changing water levels, and proper animation timing (2-4 seconds for a complete flush cycle). Score 5 points for basic water movement, 10 points for realistic fluid dynamics with proper timing and transitions.",
+      "Evaluate if the implementation uses SVG gradient fills, filters, or shading techniques to create depth and realism. Look for proper light source consistency, use of <linearGradient> or <radialGradient> for ceramic surfaces, and subtle shadows. Deduct 3 points for flat/unrealistic rendering, 5 points for inconsistent lighting. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as browser compatibility issues, responsive scaling, or event handling errors) and provide fallbacks when necessary. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Sound effects for flushing 2. Water ripple effects 3. Interactive lid/seat that can be raised/lowered). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant SVG elements or overlapping paths 2. Unnecessary animations or effects unrelated to toilet functionality 3. Over-complicated code that could be simplified. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular organization (separating structure/style/animation logic), code reusability, and maintenance considerations. Deduct 5 points if inline styles are overused instead of CSS classes; deduct 5 points if animation code is tightly coupled with structure; deduct 5 points if there's no clear organization of SVG components. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Appropriate color choices for ceramic/water elements 2) Proper proportions and scale 3) Clean lines and smooth curves without jagged edges. Deduct 3 points for unrealistic colors, 5 points for poor proportions, and 5 points for low-quality path definitions with visible artifacts. The full score is 10 points.",
+      "Judge whether the interactive elements conform to human perception characteristics: 1) Flusher click feedback delay ≤ 100ms 2) Flushing animation timing feels natural (not too fast/slow) 3) Clear visual feedback for all user interactions. Deduct 5 points for delayed response to user input, 3 points for choppy animations, and 5 points for confusing or missing interaction affordances. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the toilet shape completely and accurately implemented in SVG?",
+      "Is the flusher mechanism properly implemented and functional?",
+      "Does the code implement a complete flushing animation?",
+      "Are appropriate SVG gradient/shading techniques used to create a realistic appearance?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the visual representation meet professional design standards?",
+      "Is the interaction smooth and responsive?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_svg_generation_svg_images_25",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Make sure the code you generate is executable when possible.\nPlease help me implement this SVG image using code. A close up of a person holding a cell phone in their hand.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the basic SVG structure correctly implemented?",
+      "Implement: Is the human hand accurately rendered?",
+      "Implement: Is the cell phone realistically depicted?",
+      "Implement: Are the interaction points between hand and phone accurately represented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the code includes proper SVG namespace, viewBox dimensions, and appropriate canvas size. The SVG should have clear width/height attributes or style properties. Deduct 5 points if the SVG namespace is missing, 3 points for inappropriate viewBox dimensions, and 2 points for missing responsive design considerations. The full score is 10 points.",
+      "Evaluate the anatomical accuracy of the hand including proper finger proportions, natural finger positioning for holding a phone, and realistic skin contours. Check for correct use of path elements or complex shapes to form the hand. Score 10 points for realistic hand representation with proper shading and detail, 5 points for basic but identifiable hand structure, 0 points if the hand appears anatomically incorrect or unrecognizable. The full score is 10 points.",
+      "Analyze whether the cell phone has realistic dimensions proportional to the hand, proper screen-to-body ratio, and recognizable modern smartphone features (camera, buttons, etc.). Deduct 3 points if the phone lacks detail, 4 points if proportions are unrealistic, and 3 points if the phone doesn't appear to be properly held. The full score is 10 points.",
+      "Check if the finger positions naturally wrap around the phone with proper contact points and if the grip looks secure and realistic. Examine if z-index and layering are handled correctly where fingers overlap the phone. Score 0 points if fingers appear to pass through the phone, 5 points for basic contact representation, 10 points for realistic gripping with proper pressure points and natural finger positioning. The full score is 10 points.",
+      "Evaluate whether the code can handle different viewports and scaling without distortion. Check if appropriate groups (<g> elements) are used for logical organization of elements and if the code includes appropriate comments for complex paths. Deduct 3 points for each brittle implementation that breaks on resizing, 2 points for poor code organization, and 2 points for lack of documentation on complex elements. The full score is 10 points.",
+      "Check whether the code includes surprise features that enhance the image (e.g., 1. Screen content on the phone 2. Subtle animations like finger movements or screen interactions 3. Gradient lighting effects or shadows). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Overlapping paths or shapes that add unnecessary complexity 2. Elements unrelated to the hand-holding-phone focus (e.g., excessive background detail) 3. Overly complex filters or effects that impact performance. Deduct 3 points for each redundancy found, and directly deduct 10 points if redundant code interferes with the core visual representation. The full score is 10 points.",
+      "Review modular design (such as using reusable components for fingers or phone elements), variable naming conventions, and optimization techniques (like path simplification). Deduct 5 points if inline styles are overused instead of CSS classes; deduct 3 points if there's excessive path data that could be simplified; deduct 2 points if there's no clear organization of SVG elements. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Realistic color usage for skin tones and phone materials 2) Proper use of gradients and shadows for depth 3) Attention to detail in proportions and perspective. Deduct 3 points for unrealistic coloring, 3 points for flat appearance without depth, and 4 points for perspective inconsistencies. The full score is 10 points.",
+      "Judge the level of visual refinement: 1) Fine details like finger creases, knuckle definition 2) Phone details like buttons, screen bezels, or camera lenses 3) Appropriate use of SVG filters for shadows or highlights. Deduct 3 points for each major area lacking appropriate detail, 2 points for missing subtle visual cues that would enhance realism, and 5 points if the overall image appears too simplistic. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the basic SVG structure correctly implemented?",
+      "Is the human hand accurately rendered?",
+      "Is the cell phone realistically depicted?",
+      "Are the interaction points between hand and phone accurately represented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the rendering visually refined and detailed?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_svg_generation_svg_images_26",
+    "category": "interactive",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Be sure to ensure the code you generate is executable and can be displayed.\n\nPlease help me implement the following requirement using SVG code: create a \"Play with Tiles, Play Domino Game\" visualization.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the basic Domino tile implementation complete?",
+      "Implement: Does the SVG include a complete set of domino tiles?",
+      "Implement: Is the initial game setup and tile arrangement properly implemented?",
+      "Implement: Is the tile placement and matching logic implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the SVG code accurately represents domino tiles with proper dimensions, dots placement, and dividing line. Each tile should have two sections with dots ranging from 0-6. Score 0 if tiles are not visually identifiable as dominoes, 5 if basic representation is present but with visual imperfections, and 10 if tiles appear professional with proper spacing, proportions, and dot arrangements.",
+      "Check if the implementation includes the standard 28 unique domino tiles (from [0,0] to [6,6]). Verify that each tile has a unique visual representation with the correct number of dots on each half. Deduct 5 points if only a subset of tiles is implemented, and 3 points if there are duplicate or incorrect tiles. The full score is 10 points.",
+      "Evaluate whether the SVG provides a starting game state with shuffled/randomized tiles and a clear play area. The implementation should include a visible player area and a 'boneyard' (draw pile). Deduct 5 points if tiles aren't shuffled or if the initial state is unclear. Deduct 3 points if the play area isn't visually distinct. The full score is 10 points.",
+      "Check if the SVG implementation includes interactive elements allowing players to place domino tiles according to matching rules (matching numbers connect). The code should validate legal moves and prevent illegal ones. Deduct 5 points if the matching logic is flawed, 3 points if the visual feedback for placement is unclear. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as invalid tile placements, edge cases in the game rules, browser resize, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Animated tile flipping/placement 2. Visual scoring system 3. Multiple game variants like Mexican Train or Block Domino). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple ways to draw tiles) 2. Function modules unrelated to domino gameplay (e.g., unrelated animations) 3. Fancy effects that affect performance (e.g., excessive filters or gradients that slow rendering). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating game logic/view components), code organization (grouping related SVG elements), and proper use of SVG features (defs for reusable components, groups for logical organization). Deduct 5 points if global variables pollute the namespace; deduct 5 points if there's significant code duplication; deduct 5 points if SVG best practices aren't followed. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching (no more than 3 primary colors) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional visual styling (clear borders, consistent tile design, readable game state). Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic tile arrangements. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Click/drag feedback delay ≤ 100ms 2) Tile movement/placement animations controlled between 300-500ms 3) Clear visual feedback when placing tiles. Deduct 5 points for each interaction without feedback, 3 points for jerky animations, and 5 points for confusing or hard-to-find interactive elements. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the basic Domino tile implementation complete?",
+      "Does the SVG include a complete set of domino tiles?",
+      "Is the initial game setup and tile arrangement properly implemented?",
+      "Is the tile placement and matching logic implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_svg_generation_svg_images_27",
+    "category": "interactive",
+    "difficulty": "intermediate",
+    "prompt": " the generated code is executable for display whenever possible. Please help me implement the following requirement using SVG code: Create a green clover, which is a heart-shaped plant found in nature.",
+    "description": "ArtifactsBench Task: SVG Generation-SVG Images - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the core clover shape accurately implemented with SVG?",
+      "Implement: Is the green coloration appropriate and natural?",
+      "Implement: Are additional botanical details included?",
+      "Implement: Is the SVG code optimized and efficient?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the code properly creates a four-leaf clover using SVG path elements or shape combinations. The clover should have four distinct heart-shaped leaves arranged symmetrically. Deduct 5 points if the leaves don't resemble hearts, 5 points if the arrangement isn't symmetrical, and 10 points if fewer than four leaves are implemented. Full score is 10 points.",
+      "Evaluate whether the clover uses appropriate green tones (like #00AA00, #228B22, or #008000) that look natural. Check if there's color variation or gradient to create depth. Deduct 3 points for unnatural green shades, 5 points for flat single-color implementation without depth, and 3 points if no different shades are used for different parts (leaves vs. stem). Full score is 10 points.",
+      "Check for realistic botanical elements like a stem, veins on the leaves, or subtle textures. Deduct 3 points if the stem is missing, 3 points if leaf veins are absent, and 4 points if there's no texture or detail work to make the clover look natural. Full score is 10 points.",
+      "Review if the SVG implementation uses appropriate elements (paths, circles, etc.) efficiently. Check if the code uses groups (<g>) for related elements and proper coordinate systems. Deduct 3 points for excessive use of elements when fewer would suffice, 4 points for not using groups for logical organization, and 3 points for inefficient path commands. Full score is 10 points.",
+      "Evaluate whether the code can handle different display contexts (browser compatibility, scaling) and includes appropriate viewBox settings. Deduct 5 points if viewBox attribute is missing or improperly configured, 3 points if transforms aren't used appropriately for positioning, and 2 points if there are no fallbacks for older browsers. Full score is 10 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Subtle animation like gentle swaying 2. Interactive elements like hover effects 3. Shadow or lighting effects). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Unnecessary SVG elements that don't contribute to the design 2. Overly complex paths that could be simplified 3. Excessive effects that distract from the core clover representation. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core representation is obscured by unnecessary elements.",
+      "Review code organization, use of appropriate SVG attributes, and implementation of reusable components (if applicable). Deduct 5 points if SVG attributes are inconsistently applied or missing key parameters; deduct 3 points if similar elements aren't defined once and reused; deduct 2 points if the code lacks comments or clear structure. Full score is 10 points.",
+      "Evaluate whether the clover looks professional and polished: 1) Proportional leaf sizes and arrangement 2) Smooth curves without jagged edges 3) Proper use of visual hierarchy. Deduct 3 points for disproportionate elements, 4 points for visibly rough or uneven edges, and 3 points for poor visual balance. Full score is 10 points.",
+      "Judge whether any animations or interactive features enhance the visual representation: 1) Smooth animations with appropriate timing 2) Purposeful interactions that add value 3) Elegant transitions. Deduct 3 points for animations that feel unnatural, 4 points for interactions without visual feedback, and 3 points for animations that hinder rather than enhance the representation. Full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the core clover shape accurately implemented with SVG?",
+      "Is the green coloration appropriate and natural?",
+      "Are additional botanical details included?",
+      "Is the SVG code optimized and efficient?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the visual output meet professional design standards?",
+      "Are interactive or dynamic elements well-implemented?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "svg-generation-svg-images",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "SVG Generation-SVG Images",
+    "original_difficulty": "medium"
+  }
+]

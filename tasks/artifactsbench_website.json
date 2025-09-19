@@ -1,0 +1,482 @@
+[
+  {
+    "name": "artifacts_web_applications_education/learning_215",
+    "category": "website",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Be sure to provide executable code for demonstration. Help me create an animation explaining the principles of multilayer perceptron using HTML+CSS+JS. Focus only on the animation explanation.",
+    "description": "ArtifactsBench Task: Web Applications-Education/Learning - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the multilayer perceptron structure accurately visualized?",
+      "Implement: Is the forward propagation process animated effectively?",
+      "Implement: Are the mathematical concepts properly illustrated?",
+      "Implement: Is the educational flow and interaction design comprehensive?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code correctly renders the MLP architecture through HTML/CSS/JavaScript, including input layer, hidden layers, and output layer with proper node representation. Check if neuron connections (weights) are visually displayed with appropriate styling. Score 0 if basic network structure is missing, 5 if only simple nodes are shown without connections, and 10 if complete MLP topology with weighted connections is accurately represented.",
+      "Evaluate whether the animation demonstrates signal flow from input to output layers, showing data transformation at each layer. Check if activation functions are visually represented and if the propagation timing is educational. Deduct 5 points if layer-by-layer processing is not shown, and 3 points if activation function visualization is missing. Full score requires clear step-by-step forward pass animation.",
+      "Check whether key MLP principles are visually explained: weighted sum calculations, bias addition, and activation function application. Evaluate if mathematical formulas are displayed alongside animations. Deduct 5 points if weight multiplication is not visualized, 3 points if bias terms are ignored, and 5 points if activation functions lack mathematical representation. Full implementation scores 10 points.",
+      "Assess whether the animation provides educational value with proper pacing, step controls, and explanatory text. Check for features like play/pause, step-by-step mode, and parameter adjustment capabilities. Deduct 5 points if no user controls are provided, 3 points if explanatory text is insufficient, and 5 points if the learning progression is unclear. Award full points for comprehensive educational experience.",
+      "Evaluate whether the code can handle common abnormal situations (such as invalid input values, animation state conflicts, browser compatibility issues, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the learning experience (e.g., 1. Real-time parameter tweaking with instant visual feedback 2. Multiple dataset examples with different behaviors 3. Interactive weight adjustment sliders 4. Comparative visualization of different activation functions). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant animation logic or duplicate visual elements 2. Function modules unrelated to MLP explanation (e.g., unrelated mathematical concepts) 3. Overly complex effects that distract from learning (e.g., excessive particle effects or decorative animations). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core educational purpose is interfered with by redundant code.",
+      "Review modular design (such as separating animation logic/rendering/mathematical computation), code organization, and maintainability. Deduct 5 points if global state pollution is found or proper class/module structure is not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 3 points if inconsistent coding style is observed. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern educational visualization principles: 1) Harmonious color coding for different layer types (no more than 4 primary colors) 2) Proper spacing and proportions for network visualization 3) Professional typography for mathematical notation and labels (font size ≥ 14px, clear mathematical symbols). Deduct 3 points for each cluttered visual element, 5 points for poor color contrast affecting readability, and 5 points for unclear mathematical notation. The full score is 10 points.",
+      "Judge whether the animation effects conform to educational presentation standards: 1) Smooth transitions between animation states ≤ 300ms delay 2) Animation duration appropriate for learning (2-5 seconds per forward pass) 3) Clear visual focus and highlighting of active components. Deduct 5 points for each jarring transition, 3 points for animations too fast to follow educationally, and 5 points for unclear visual emphasis on active network components. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the multilayer perceptron structure accurately visualized?",
+      "Is the forward propagation process animated effectively?",
+      "Are the mathematical concepts properly illustrated?",
+      "Is the educational flow and interaction design comprehensive?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "web-applications-education/learning",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Education/Learning",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_web_applications_education/learning_218",
+    "category": "website",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Be sure to provide executable code when possible. Help me create an HTML webpage that compares chip performance.",
+    "description": "ArtifactsBench Task: Web Applications-Education/Learning - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the chip performance comparison functionality fully implemented?",
+      "Implement: Is the data visualization component properly implemented?",
+      "Implement: Is the data source management properly implemented?",
+      "Implement: Is user interaction for comparison selection implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check whether the HTML/JavaScript code correctly implements a comprehensive comparison system for chip performance, including proper data visualization and comparison metrics (such as CPU benchmarks, GPU scores, memory bandwidth, power consumption). Score 0 if no comparison functionality exists, 5 points if only basic metrics are shown, 10 points if multiple sophisticated comparison metrics are implemented with proper visualization.",
+      "Evaluate the implementation of charts and graphs (bar charts, radar charts, line graphs, etc.) for comparing chip performance. Check if appropriate visualization libraries (D3.js, Chart.js, Highcharts, etc.) are utilized effectively. Award 10 points for interactive, responsive visualizations with appropriate scales and legends; 5 points for static but accurate visualizations; 0 points if visualizations are missing or misleading.",
+      "Check if the solution includes a proper data loading mechanism (AJAX calls, fetch API, or static data arrays), data filtering options, and the ability to update/refresh data. Deduct 5 points if there's no way to update or filter data, 3 points if the data structure is inefficient for the comparison task. Full score for a flexible data management system that can accommodate various chip types and metrics.",
+      "Assess whether users can select specific chips to compare, toggle between different metrics, customize the comparison view, and save/export comparison results. Deduct 5 points if chip selection is inflexible, 3 points if metric toggling is missing, and 3 points if there are no export/save capabilities. Award full points for an intuitive, comprehensive comparison UI.",
+      "Evaluate whether the code handles common edge cases (no data, incomplete data, unexpected data types, browser compatibility issues). Check if proper error handling exists with user-friendly error messages. Code with strong robustness should gracefully handle these cases, scoring 10 points. If robustness is average, give 5 points, and if no exception handling exists, give 0 points.",
+      "Check for surprise features that enhance the experience (e.g., 1. Side-by-side animated comparison of thermal performance 2. Price-to-performance ratio calculator 3. Interactive historical performance trend visualization). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple chart libraries doing the same thing) 2. Function modules unrelated to chip comparison (e.g., unnecessary social media features) 3. Fancy effects that affect performance (excessive animations that slow rendering). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating data management/visualization/UI components), code organization, and optimization techniques. Deduct 5 points if global variable pollution is found; deduct 5 points if the code duplication rate is too high; deduct 5 points if no performance optimizations are implemented for handling large datasets. The full score is 10 points.",
+      "Evaluate whether the design follows modern principles: 1) Harmonious color scheme that differentiates chips clearly 2) Proper information hierarchy with primary metrics emphasized 3) Responsive layout that works on different screen sizes. Deduct 3 points for cluttered visualization, 5 points for poor color differentiation making comparisons difficult, and 5 points for non-responsive designs. The full score is 10 points.",
+      "Judge the quality of interactive elements: 1) Quick response time when selecting chips to compare (≤100ms) 2) Smooth transitions when toggling between different metrics or views (300-500ms) 3) Intuitive tooltips or information panels for detailed chip specifications. Deduct 5 points for each interaction without visual feedback, 3 points for jerky transitions between comparison views, and 5 points for unintuitive navigation. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the chip performance comparison functionality fully implemented?",
+      "Is the data visualization component properly implemented?",
+      "Is the data source management properly implemented?",
+      "Is user interaction for comparison selection implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "web-applications-education/learning",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Education/Learning",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_web_applications_communication_221",
+    "category": "website",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Try to ensure the generated code is executable for demonstration. Below is a complete UI design solution for a real-time captioning mobile app, including core functional pages and visual style specifications:\n\n1. Design Style\nColor scheme:\n- Primary color: Deep blue (#2563EB) for tech feel + Light gray (#F5F5F5) for background\n- Secondary colors: Green (#10B981) for real-time caption highlights + Red (#EF4444) for recording warnings\nTypography: Google Sans (tech-oriented sans-serif font)\nIcons: Material Design linear icon library\nAnimation effects: Caption line-by-line scrolling, microphone sound wave animation\n\n2. Core Page Designs\n① Splash Screen\nClean LOGO + Slogan (\"Real-time transcription, communication without barriers\")\nDeep blue background + White dynamic waveform graphic\n\n② Main Page (Real-time Captions)\nMain page illustration\n\nHeader bar: Microphone status icon (dynamic sound wave), Language switch button (Chinese/English)\nCentral area:\n- Real-time caption display box (black background with white text, enlarged font)\n- Caption pause/save button (floating in bottom right corner)\nBottom control bar:\n- Large circular microphone button (red/green status toggle)\n- Settings/History record quick access\n\n③ Settings Page\nLanguage settings:\n- Source language/target language selection (dialect options supported)\n- Translation toggle (Chinese-English bidirectional)\nDisplay settings:\n- Caption font size/color\n- Background opacity adjustment\nAdvanced features:\n- Offline mode toggle\n- Sensitive word filtering\n\n④ History Records Page\nTimeline list (grouped by date)\nEach record displays:\n- Timestamp + first line text preview\n- Category tags (meeting/classroom/video, etc.)\nSearch bar + Batch export button (supports TXT/PDF)\n\n⑤ Recording Details Page\nAudio waveform visualization\nFull text display (editable for corrections)\nBottom action bar:\n- Share/Export/Delete\n- Key segment marking feature\n\n⑥ User Onboarding (First Launch)\n3-screen sliding guide:\n- Permission explanations (microphone/storage)\n- Core feature demonstrations (GIF animations)\n- Personalized setting recommendations\n\n3. Interaction Details\nVoice feedback: Vibration notifications when recording starts/ends\nReal-time optimization:\n- Captions scroll line by line (keeping the last 3 lines)\n- Key terminology highlighting (requires custom glossary)\nAccessibility design:\n- High contrast mode\n- Font scaling up to 200%\n\nPlease output the corresponding complete HTML code for me",
+    "description": "ArtifactsBench Task: Web Applications-Communication - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Are all core UI pages completely implemented according to the design specifications?",
+      "Implement: Does the visual design strictly follow the specified color scheme and typography standards?",
+      "Implement: Are the real-time captioning interface and interaction mechanisms properly implemented?",
+      "Implement: Are the specialized features and accessibility options comprehensively developed?",
+      "Implement: Is the code robust and handles edge cases appropriately?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements all 6 specified pages (Splash Screen, Main Page, Settings, History Records, Recording Details, User Onboarding) with HTML structure matching the design requirements. Check if each page contains the specified elements: splash screen with logo and slogan, main page with header bar/caption display/control bar, settings with language/display/advanced options, history with timeline list, recording details with waveform visualization, and onboarding with 3-screen guide. Score 0 if missing core pages, 5 if only basic structure is implemented, and 10 if all pages are fully detailed according to specifications.",
+      "Evaluate whether the implementation uses the exact color palette: Primary deep blue (#2563EB), light gray background (#F5F5F5), green highlights (#10B981), red warnings (#EF4444). Check if Google Sans font family is properly implemented and Material Design icons are correctly integrated. Verify background opacity settings, high contrast mode availability, and font scaling up to 200% as specified. Deduct 3 points for each incorrect color usage, 5 points if font family is not Google Sans, and 3 points if Material Design icons are missing. Full score is 10 points.",
+      "Check whether the main captioning interface includes: black background caption display box with white enlarged text, line-by-line scrolling animation keeping last 3 lines visible, dynamic microphone sound wave animation, floating pause/save button, large circular microphone button with red/green status toggle, and key terminology highlighting functionality. Verify if the interface supports the specified real-time optimization features and maintains proper visual hierarchy. Score 0 if core captioning interface is missing, 5 if basic display is implemented without animations, and 10 if all real-time features are fully functional.",
+      "Evaluate implementation of advanced features: language switching (Chinese/English with dialect support), translation toggle, offline mode, sensitive word filtering, audio waveform visualization, editable text corrections, category tagging system, search functionality, batch export (TXT/PDF), key segment marking, vibration feedback, and permission handling explanations. Check if accessibility features like high contrast mode and 200% font scaling are working. Deduct 3 points for each missing major feature, 5 points if accessibility options are not implemented. Full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as microphone permission denial, network interruption, audio processing errors, invalid user inputs, page navigation failures, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should include proper error boundaries, fallback mechanisms, and user-friendly error messages. Give 10 points if fully robust, 5 points if average robustness, and 0 points if no exception handling is present.",
+      "Check whether the code includes surprise features that enhance the captioning experience (e.g., 1. Smart punctuation insertion 2. Speaker identification and labeling 3. Custom vocabulary learning 4. Voice command shortcuts 5. Real-time confidence scoring display 6. Automatic meeting minutes generation). Add 3 points for each practical innovative feature implemented that genuinely improves the real-time captioning workflow (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple audio processing pipelines coexisting) 2. Function modules unrelated to real-time captioning (e.g., built-in games or social features) 3. Excessive visual effects that impact performance (e.g., complex 3D animations during captioning). Deduct 3 points for each redundancy found, and directly deduct 10 points if redundant code interferes with core captioning performance or usability.",
+      "Review modular design (such as separating audio processing/UI components/data management layers), component reusability, proper state management, and code organization. Deduct 5 points if global state pollution is found or modern development patterns are not used; deduct 5 points if code duplication rate is too high (over 30%); deduct 3 points if CSS/JavaScript is not properly organized into modules. Evaluate proper use of semantic HTML and accessibility attributes. Full score is 10 points.",
+      "Evaluate whether the overall design follows modern mobile design principles: 1) Proper color contrast ratios (WCAG AA compliance) 2) Touch-friendly element sizing (minimum 44px touch targets) 3) Consistent spacing system (8px grid adherence) 4) Professional typography hierarchy (readable font sizes ≥14px, proper line heights) 5) Proper visual feedback for all interactive elements. Deduct 3 points for each accessibility violation, 5 points for poor color contrast, and 5 points for inconsistent spacing or typography. Full score is 10 points.",
+      "Judge whether the dynamic effects enhance usability: 1) Caption scrolling animations are smooth and don't interfere with reading 2) Microphone sound wave animation reflects actual audio input 3) Page transitions are fluid (300-500ms duration) 4) Touch feedback is immediate (≤100ms) 5) Loading states are properly animated 6) No janky animations or performance issues during real-time captioning. Deduct 5 points for each choppy animation, 3 points for inappropriate timing, and 5 points if animations negatively impact core functionality performance. Full score is 10 points."
+    ],
+    "expected_features": [
+      "Are all core UI pages completely implemented according to the design specifications?",
+      "Does the visual design strictly follow the specified color scheme and typography standards?",
+      "Are the real-time captioning interface and interaction mechanisms properly implemented?",
+      "Are the specialized features and accessibility options comprehensively developed?",
+      "Is the code robust and handles edge cases appropriately?",
+      "Are there innovative features that enhance user experience beyond basic requirements?",
+      "Are there any redundant features that detract from the core functionality?",
+      "Does the code demonstrate high engineering quality and maintainability?",
+      "Does the interface design meet professional mobile app design standards?",
+      "Are the animations and transitions smooth with appropriate timing and performance?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "web-applications-communication",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Communication",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_web_applications_education/learning_222",
+    "category": "website",
+    "difficulty": "intermediate",
+    "prompt": "You are a coding expert. Please use your professional knowledge to generate accurate and professional responses. Be sure to provide executable code for demonstration when possible. Develop a weather forecast mini-program and include an HTML preview.",
+    "description": "ArtifactsBench Task: Web Applications-Education/Learning - You are a coding expert. Please use your professional knowledge to generate accurate and professiona...",
+    "requirements": [
+      "Implement: Is the weather data fetching and integration functionality complete?",
+      "Implement: Is the weather forecast display comprehensive and detailed?",
+      "Implement: Are geolocation features implemented properly?",
+      "Implement: Are visual weather representations (charts/graphs) included?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code connects to a reliable weather API (like OpenWeatherMap, WeatherAPI, etc.), implements proper API key management, and includes error handling. Check if the request includes geolocation capabilities and fallback mechanisms. Score 0 if no data fetching is implemented, 5 if basic fetching exists but lacks error handling, and 10 if complete with robust error handling, caching strategy and data refresh mechanisms.",
+      "Evaluate whether the mini-program displays current conditions, hourly forecasts, and multi-day forecasts with appropriate weather metrics (temperature, humidity, wind speed/direction, precipitation probability, etc.). Check if weather icons/symbols are properly implemented and if temperature units can be toggled (°C/°F). Deduct 3 points if critical metrics are missing, 5 points if only current weather is shown without forecasts, and 2 points if weather condition icons are missing or inappropriate. The full score is 10 points.",
+      "Check if the code implements browser geolocation API or IP-based geolocation, with appropriate permission requests and user-friendly error handling. Verify if manual location search functionality is available as an alternative. Score 0 if no location detection exists, 5 if only basic geolocation is implemented without alternatives, and 10 if both automatic and manual location options are available with proper error handling and location history/favorites.",
+      "Assess whether the mini-program includes visual representations like temperature trend graphs, precipitation probability charts, or other meteorological visualizations using appropriate JavaScript libraries (Chart.js, D3.js, etc.). Score 0 if no visual elements are included, 5 if basic static visualizations exist, and 10 if interactive, responsive visualizations with proper legends and accessibility features are implemented.",
+      "Evaluate whether the code can handle common abnormal situations (such as API failures, network interruption, geolocation errors, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Weather alerts and notifications 2. Air quality index integration 3. Weather-based clothing recommendations 4. Historical weather data comparison). Add 2.5 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant API calls or data fetching mechanisms 2. Function modules unrelated to weather forecasting (e.g., a built-in game) 3. Fancy effects that affect performance (e.g., excessive animations). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating data/view/controller layers), code organization, and best practices implementation. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 3 points if the code duplication rate is too high; deduct 2 points if there's no input validation or sanitization. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern weather app design principles: 1) Weather-appropriate color schemes (cool tones for cold, warm for hot) 2) Proper layout spacing and hierarchy (important data more prominent) 3) Professional typography system (readable even with weather imagery backgrounds). Deduct 3 points for cluttered layouts, 4 points for poor contrast/readability, and 3 points for inconsistent design elements. The full score is 10 points.",
+      "Judge whether the mini-program is responsive across device sizes and has appropriate loading states: 1) Skeleton screens or loaders during API calls 2) Smooth transitions between forecast days/hours 3) Touch-friendly controls on mobile with appropriate tap targets. Deduct 4 points for lack of loading indicators, 3 points for janky scrolling or transitions, and 3 points for poor mobile optimization. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the weather data fetching and integration functionality complete?",
+      "Is the weather forecast display comprehensive and detailed?",
+      "Are geolocation features implemented properly?",
+      "Are visual weather representations (charts/graphs) included?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and responsive?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "web-applications-education/learning",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Education/Learning",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_web_applications_education/learning_225",
+    "category": "website",
+    "difficulty": "intermediate",
+    "prompt": " that the code you generate is executable and can be demonstrated. Please help me create a Flask+Vue project that implements login page redirection to the main page.",
+    "description": "ArtifactsBench Task: Web Applications-Education/Learning - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the Flask backend fully implemented with proper authentication?",
+      "Implement: Is the Vue frontend login page correctly implemented?",
+      "Implement: Is the redirection mechanism properly implemented?",
+      "Implement: Is there proper integration between Flask and Vue?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Examine if the Flask API endpoints are properly set up for authentication (login/register/logout), with session management or JWT token implementation. Check for password hashing, CSRF protection, and proper HTTP status code responses. Score 0 if authentication is missing, 5 if basic auth is implemented but insecure, 10 if it's complete with security best practices.",
+      "Verify if the Vue login component includes proper form validation (required fields, email format, password strength), error handling with user feedback, and accessibility features. Form submission should prevent multiple submissions and display loading states. Deduct 3 points if validation is missing, 2 points if error handling is poor, and 2 points if the UI is not responsive. The full score is 10 points.",
+      "Evaluate whether the redirection after login is properly implemented with Vue Router, including route guards for protected routes, authentication state management (Vuex/Pinia), and handling of unauthorized access attempts. Check if there's proper redirection to the originally requested page after login. Deduct 5 points if route guards are missing, 3 points if state persistence is not implemented. The full score is 10 points.",
+      "Check if the project structure properly separates frontend and backend, with correct API communication setup (Axios/Fetch with proper error handling). Verify if CORS is configured, proxy settings in development are correct, and if the production build setup is provided. Deduct 3 points for missing CORS handling, 3 points for improper API error handling, and 4 points if there's no production deployment configuration. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (invalid credentials, session expiration, network errors, etc.) and provide friendly error prompts or recovery mechanisms. Check for input sanitization to prevent XSS, rate limiting for login attempts, and proper error logging. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Remember-me functionality 2. Social login integration 3. Two-factor authentication 4. Password strength meter with visual feedback 5. Personalized welcome screen after login). Add 2 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant authentication mechanisms coexisting 2. Unnecessary dependencies or libraries 3. Over-engineered solutions for simple requirements. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (separation of concerns between components, services, and stores), code organization (following Vue and Flask best practices), error handling, and build process automation. Deduct 3 points if global state is mismanaged; deduct 3 points if the code has high duplication; deduct 2 points if environment variables are hardcoded; deduct 2 points if the build process is not automated. The full score is 10 points.",
+      "Evaluate whether the login and main page designs follow modern design principles: 1) Harmonious color matching (no more than 3 primary colors) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (body font size ≥ 14px, line height over 1.5 times). Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic form layout. The full score is 10 points.",
+      "Judge whether the login process and transition to the main page conform to human perception characteristics: 1) Form submission feedback delay ≤ 100ms 2) Transition animation duration controlled between 300-500ms 3) Clear visual focus guidance and loading indicators. Deduct 5 points for operations without feedback, 3 points for jarring transitions between pages, and 5 points for confusing navigation patterns after login. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the Flask backend fully implemented with proper authentication?",
+      "Is the Vue frontend login page correctly implemented?",
+      "Is the redirection mechanism properly implemented?",
+      "Is there proper integration between Flask and Vue?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "web-applications-education/learning",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Education/Learning",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_web_applications_web_visuals_226",
+    "category": "website",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Try to ensure that the generated code can be executed and displayed. Based on this HTML foundation, support online editing and exporting of menu images.\n\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Premium Home-style Restaurant Menu</title>\n    <style>\n        body {\n            font-family: 'Microsoft YaHei', sans-serif;\n            background-color: #f8f8f8;\n            padding: 30px;\n        }\n\n        .menu-card {\n            background: white;\n            border-radius: 12px;\n            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\n            padding: 25px;\n            max-width: 600px;\n            margin: 0 auto;\n        }\n\n        h1 {\n            text-align: center;\n            color: #c74a2a;\n            font-size: 28px;\n            margin-bottom: 25px;\n        }\n\n        .menu-table {\n            width: 100%;\n            border-collapse: collapse;\n            margin-bottom: 20px;\n        }\n\n        .menu-table th {\n            background-color: #f8f8f8;\n            font-weight: 600;\n            color: #333;\n            padding: 12px;\n        }\n\n        .menu-table td {\n            padding: 15px;\n            border-bottom: 1px solid #eee;\n            vertical-align: middle;\n        }\n\n        .combo-price {\n            text-align: right;\n            color: #c74a2a;\n            font-weight: bold;\n            width: 80px;\n        }\n\n        .additional {\n            background: #fff9f5;\n            padding: 15px;\n            border-radius: 8px;\n            margin-top: 25px;\n        }\n\n        .additional h3 {\n            color: #c74a2a;\n            margin: 0 0 12px 0;\n        }\n\n        .dish-item {\n            display: flex;\n            justify-content: space-between;\n            padding: 8px 0;\n            border-bottom: 1px dashed #ddd;\n        }\n\n        .price-tag {\n            color: #c74a2a;\n            font-size: 16px;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"menu-card\">\n        <h1>Premium Home-style Restaurant</h1>\n        <p style=\"text-align: center; color: #666; margin-bottom: 25px;\">\n            March 28th Lunch Menu\n        </p>\n\n        <!-- Set Meal Combinations -->\n        <table class=\"menu-table\">\n            <thead>\n                <tr>\n                    <th>Set Meal Combinations</th>\n                    <th class=\"combo-price\">Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr>\n                    <td>Main Meat Dish + Small Meat Dish + Vegetable</td>\n                    <td class=\"combo-price\">¥16</td>\n                </tr>\n                <tr>\n                    <td>2 Main Meat Dishes + Small Meat Dish + Vegetable</td>\n                    <td class=\"combo-price\">¥22</td>\n                </tr>\n            </tbody>\n        </table>\n\n        <!-- Additional Options -->\n        <div class=\"additional\">\n            <h3>Additional Options</h3>\n            <ul>\n                <li>Main Meat Dish ¥8, Small Meat Dish ¥4, Vegetable ¥2</li>\n            </ul>\n        </div>\n\n    <hr></hr>\n\n        <table class=\"menu-table\">\n            <thead>\n                <tr>\n                    <th>Rice with Toppings</th>\n                    <th class=\"combo-price\">Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr>\n                    <td>Homestyle Stir-fried Pork</td>\n                    <td class=\"combo-price\">¥16</td>\n                </tr>\n                <tr>\n                    <td>Kung Pao Chicken</td>\n                    <td class=\"combo-price\">¥14</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</body>\n\n</html>",
+    "description": "ArtifactsBench Task: Web Applications-Web Visuals - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is online menu editing functionality fully implemented?",
+      "Implement: Is the menu image export functionality properly implemented?",
+      "Implement: Is the menu structure data model well-designed?",
+      "Implement: Are interactive UI elements properly implemented for editing?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code includes a complete editing system allowing users to modify menu items, prices, categories, and descriptions. Check for content validation, input field constraints, and real-time preview. Score 0 if no editing features exist, 5 if only basic text editing is supported, and 10 if comprehensive menu structure editing with validation is implemented.",
+      "Evaluate the export functionality for converting the menu to image format (PNG/JPEG/SVG). Check for proper rendering of all elements including special characters, custom fonts, and layout preservation. Score 0 if no export feature exists, 5 if basic screenshot functionality is available but with quality/formatting issues, and 10 if high-quality image export with customization options (resolution, format, crop area) is implemented.",
+      "Assess whether the code uses a structured data model (JSON/object) to represent menu items, categories, and pricing, enabling clean separation between data and presentation. Check if the model allows for dynamic updates and maintains data integrity. Deduct 5 points if global variables are overused; deduct 5 points if the data structure doesn't support menu hierarchy. The full score is 10 points.",
+      "Review the implementation of UI controls (buttons, form fields, dropdowns) for editing menu content. Check for consistent interaction patterns, visual feedback on actions, and clear edit/save states. Deduct 5 points for poor accessibility (no keyboard support, missing ARIA attributes); deduct 3 points if the interface lacks clear visual indication of editable elements. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as invalid input data, image generation failures, browser compatibility issues) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Template gallery with different menu styles 2. QR code generation for digital menu sharing 3. Multilingual support 4. Print-optimized view). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple export methods doing the same thing) 2. Function modules unrelated to menu editing/export (e.g., unnecessary animations) 3. Fancy effects that affect performance (e.g., heavy decorative elements that slow rendering). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating menu data/view/controller layers), browser compatibility, and performance optimization. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if the code doesn't handle different device screen sizes. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching (no more than 3 primary colors) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (body font size ≥ 14px, line height over 1.5 times). Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic text-image layout. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Click feedback delay ≤ 100ms 2) Transition animation duration controlled between 300-500ms 3) Clear visual focus guidance. Deduct 5 points for each operation without feedback, 3 points for visual after-images during fast editing operations, and 5 points for hard-to-find key function buttons. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is online menu editing functionality fully implemented?",
+      "Is the menu image export functionality properly implemented?",
+      "Is the menu structure data model well-designed?",
+      "Are interactive UI elements properly implemented for editing?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "web-applications-web-visuals",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Web Visuals",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_web_applications_web_visuals_228",
+    "category": "website",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and expert responses. Pay attention to ensuring that the code you generate is executable for demonstration. How to download a PDF file and open it using canvas in Vue 2.",
+    "description": "ArtifactsBench Task: Web Applications-Web Visuals - You are a code expert. Please use your professional knowledge to generate accurate and expert respon...",
+    "requirements": [
+      "Implement: Is the PDF file download functionality properly implemented?",
+      "Implement: Is the PDF rendering on Canvas correctly implemented?",
+      "Implement: Is Vue 2 integration and component lifecycle properly managed?",
+      "Implement: Are advanced PDF interaction features implemented?",
+      "Implement: Is the code robust and handles edge cases properly?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code correctly implements PDF file download using appropriate methods (fetch/axios/XMLHttpRequest) with proper headers and response type handling. Check if progress tracking, error handling for network failures, and CORS handling are included. Score 0 if download fails completely, 5 if basic download works but lacks error handling, and 10 if includes progress tracking, proper headers (Content-Type: application/pdf), and comprehensive error handling.",
+      "Evaluate whether PDF.js library is properly integrated and configured to render PDF content on HTML5 Canvas element. Check if the implementation includes proper page scaling, quality settings (devicePixelRatio consideration), and viewport configuration. Deduct 5 points if rendering quality is poor or pixelated, 3 points if scaling doesn't work properly. Full score requires crisp rendering with proper DPI handling and responsive scaling.",
+      "Check whether the implementation properly utilizes Vue 2 lifecycle hooks (mounted, beforeDestroy), reactive data properties, and component methods. Evaluate if PDF loading states are properly managed with Vue's reactivity system and if canvas references are correctly handled. Deduct 5 points if lifecycle management is missing, 3 points if reactivity is not properly utilized. Full score requires proper integration with Vue 2 patterns and state management.",
+      "Assess whether the implementation includes essential PDF interaction features such as page navigation (next/previous), zoom controls (zoom in/out/fit), page number display, and multi-page support. Check if bookmark/outline navigation is available for complex PDFs. Deduct 5 points if only single page display is supported, 3 points if zoom functionality is missing. Full score requires comprehensive PDF navigation and interaction capabilities.",
+      "Evaluate whether the code can handle common problematic scenarios (corrupted PDF files, network timeouts, large file sizes, unsupported PDF versions, mobile device limitations). Code should provide meaningful error messages and graceful degradation. Strong robustness with comprehensive error handling gets 10 points, basic error handling gets 5 points, no exception handling gets 0 points.",
+      "Check whether the code includes valuable enhancement features (e.g., 1. Text selection and search functionality 2. Annotation tools or highlighting 3. Thumbnail preview sidebar 4. Full-screen mode 5. Print functionality). Add 2-3 points for each well-implemented innovative feature that adds real value to the PDF viewing experience (maximum 10 points).",
+      "Strictly identify three types of redundancy: 1. Multiple PDF rendering libraries loaded simultaneously 2. Unnecessary file conversion processes 3. Overly complex animations that impact PDF rendering performance 4. Duplicate canvas elements or rendering loops. Deduct 3 points for each redundancy found, and deduct 10 points if redundant code significantly impacts core PDF functionality.",
+      "Review component modularity (separation of PDF service, canvas renderer, UI controls), proper async/await usage, memory management (canvas cleanup, PDF document disposal), and Vue 2 best practices. Deduct 5 points if memory leaks are present or improper async handling; deduct 5 points if code organization is poor; deduct 5 points if no error boundaries or loading states. Full score requires clean architecture and proper resource management.",
+      "Evaluate whether the PDF viewer UI follows modern design principles: 1) Clean toolbar design with intuitive icons 2) Proper contrast for PDF content readability 3) Responsive layout that works on different screen sizes 4) Loading states and progress indicators. Deduct 3 points for cluttered UI elements, 5 points for poor readability or contrast issues, and 5 points for non-responsive design that breaks on mobile devices.",
+      "Judge whether PDF operations provide smooth user experience: 1) Page transitions without flickering 2) Zoom operations with smooth scaling (≤300ms) 3) Loading indicators during PDF processing 4) Responsive controls with immediate visual feedback (≤100ms). Deduct 5 points for each laggy operation, 3 points for missing loading states, and 5 points for unresponsive or hard-to-find navigation controls."
+    ],
+    "expected_features": [
+      "Is the PDF file download functionality properly implemented?",
+      "Is the PDF rendering on Canvas correctly implemented?",
+      "Is Vue 2 integration and component lifecycle properly managed?",
+      "Are advanced PDF interaction features implemented?",
+      "Is the code robust and handles edge cases properly?",
+      "Are there innovative features that enhance PDF viewing experience?",
+      "Are there any redundant or unnecessary implementations?",
+      "Does the code demonstrate good engineering practices?",
+      "Does the PDF viewer interface meet professional design standards?",
+      "Are PDF interactions smooth and provide immediate feedback?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "web-applications-web-visuals",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Web Visuals",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_other_development_configuration_230",
+    "category": "website",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and expert responses. Be sure to make the code you generate executable for demonstration. How to use Tailwind CSS 4 in Electron.js with Vite, without using other frameworks such as React.",
+    "description": "ArtifactsBench Task: Other-Development Configuration - You are a code expert, please use your professional knowledge to generate accurate and expert respon...",
+    "requirements": [
+      "Implement: Is the Electron.js + Vite integration properly configured?",
+      "Implement: Is Tailwind CSS 4 correctly installed and configured?",
+      "Implement: Is the build process properly set up without framework dependencies?",
+      "Implement: Is there a working demonstration of Tailwind CSS usage in the Electron app?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the code includes proper configuration for Electron.js with Vite, including correct entry points, build scripts, and development server setup. Verify that main and renderer processes are correctly separated and communicate properly. Score 0 if basic integration is missing, 5 if it works but with suboptimal configuration, and 10 if fully optimized with proper HMR support.",
+      "Evaluate if Tailwind CSS 4 is correctly installed with proper postcss configuration. Check for presence of tailwind.config.js with appropriate content paths targeting Electron's renderer process files. Verify that the Tailwind directives (@tailwind base, components, utilities) are properly included. Deduct 5 points if configuration is incomplete, 3 points if customization options are missing, and 3 points if purging/content configuration is incorrect. Full score is 10 points.",
+      "Check if the build process avoids React, Vue, or other frameworks as specified. Verify that the solution uses vanilla JS or minimal libraries that don't qualify as frameworks. Ensure build scripts in package.json correctly handle both development and production builds for Electron without framework-specific configurations. Deduct 10 points if any framework is used, 5 points if build process doesn't handle both dev and prod environments.",
+      "Review whether the code includes practical examples of Tailwind CSS classes being used in HTML elements within the Electron renderer process. Check for demonstration of responsive design, dark mode support, and at least one custom component using Tailwind's @apply directive. Score 0 if no examples provided, 5 if basic examples only, 10 if comprehensive examples showing Tailwind CSS 4's new features.",
+      "Evaluate whether the code can handle common abnormal situations (such as missing files, CSS parsing errors, electron process crashes, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Hot reload with CSS changes preservation 2. Custom Tailwind plugins specific for desktop apps 3. Native OS integration with Tailwind-styled components). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant configuration files or duplicate Tailwind setups 2. Unnecessary dependencies that could bloat the Electron app 3. Overly complex build steps that could be simplified. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functionality is interfered with by redundant code.",
+      "Review modular design (such as separating main/renderer processes, CSS modules, and utility functions), file organization, and build process automation. Deduct 5 points if global state pollution is found; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if the build process is not automated. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching (no more than 3 primary colors) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (body font size ≥ 14px, line height over 1.5 times). Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic text-image layout. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Click feedback delay ≤ 100ms 2) Transition animation duration controlled between 300-500ms 3) Clear visual focus guidance. Deduct 5 points for each operation without feedback, 3 points for visual after-images during fast sliding, and 5 points for hard-to-find key function buttons. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the Electron.js + Vite integration properly configured?",
+      "Is Tailwind CSS 4 correctly installed and configured?",
+      "Is the build process properly set up without framework dependencies?",
+      "Is there a working demonstration of Tailwind CSS usage in the Electron app?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "other-development-configuration",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Other-Development Configuration",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_web_applications_education/learning_231",
+    "category": "website",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Be careful to ensure that the generated code is executable for demonstration. I am a biology teacher and need help designing an HTML webpage for a virtual experiment demonstration of the spread plate technique for a biology class. The webpage should include experimental materials and equipment: test tubes with yeast culture broth, cotton plugs, solid culture medium, inoculation loops, alcohol lamp (flammable), clean bench, and inoculation loops. The material and tool icons should be aesthetically pleasing and resemble actual images, with colors matching the real objects. Icons should be positioned on both sides of the page, movable, and highly interactive.",
+    "description": "ArtifactsBench Task: Web Applications-Education/Learning - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the spread plate technique procedure accurately implemented?",
+      "Implement: Are all required experimental materials and equipment fully implemented?",
+      "Implement: Is the drag-and-drop interaction system properly implemented?",
+      "Implement: Are experimental safety procedures and scientific accuracy maintained?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements all key steps of the spread plate technique (sterilizing the loop, cooling, sampling, inoculation, spreading, incubation). Score 0 if core procedure steps are missing, 5 if basic steps are implemented but lack scientific accuracy, and 10 if all microbiology protocols are followed with proper sequence and safety considerations.",
+      "Check whether all materials (test tubes with yeast culture broth, cotton plugs, solid culture medium, inoculation loops, alcohol lamp, clean bench) are implemented with proper visual representation. Deduct 2 points for each missing item. All items must be interactive and movable. Full implementation with accurate visual representation scores 10 points.",
+      "Evaluate the quality of the drag-and-drop system for moving experimental tools. Check for smooth animation (60fps), precise positioning, proper z-index management, and intuitive interaction. Deduct 3 points if there's noticeable lag, 3 points if tool positioning is imprecise, and 4 points if tools can't be reliably manipulated. Full score is 10 points.",
+      "Assess if the simulation enforces proper microbiology safety protocols (flame sterilization, aseptic technique, contamination prevention) and follows scientific accuracy. Deduct 5 points if critical safety procedures are missing or incorrect. Deduct 5 points if the simulation allows scientifically impossible actions. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as rapid multiple clicks, dropping objects in invalid areas, browser resizing) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the learning experience (e.g., 1. Microscopic view of yeast cells 2. Time-lapse of colony growth 3. Quiz integration to test student knowledge). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple drag-and-drop systems) 2. Function modules unrelated to the spread plate technique (e.g., unrelated biological processes) 3. Fancy effects that affect performance (e.g., excessive animations that distract from learning). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating experiment logic/view/interaction layers), code organization, and maintainability. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if there's no clear separation of concerns. The full score is 10 points.",
+      "Evaluate whether material and tool icons are aesthetically pleasing and resemble actual lab equipment with accurate colors. Check for: 1) Visual clarity and high-quality graphics 2) Proper layout with tools easily accessible on both sides of the page 3) Clear visual instructions and labels. Deduct 3 points for each low-quality or unrealistic icon, 5 points for poor layout of materials, and 5 points for confusing visual hierarchy. The full score is 10 points.",
+      "Judge whether the dynamic effects support learning objectives: 1) Clear visual feedback when tools are used correctly/incorrectly 2) Appropriate animation speed that matches real laboratory timing 3) Instructional cues that guide proper technique. Deduct 5 points for each operation without feedback, 3 points for animations that are too fast to observe properly, and 5 points for missing educational guidance during critical steps. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the spread plate technique procedure accurately implemented?",
+      "Are all required experimental materials and equipment fully implemented?",
+      "Is the drag-and-drop interaction system properly implemented?",
+      "Are experimental safety procedures and scientific accuracy maintained?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional educational design standards?",
+      "Is the dynamic interaction smooth and educational?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "web-applications-education/learning",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Education/Learning",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_web_applications_education/learning_233",
+    "category": "website",
+    "difficulty": "beginner",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Try to ensure that the code you generate is executable and can be demonstrated. I am a young teacher teaching second grade (second semester). I now want to develop a mental arithmetic mini-program for second grade (second semester). This mini-program mainly focuses on multiplication tables as its core, then includes some calculations with multiplication and division, as well as fill-in-the-blank exercises for multiplication tables. These could involve not knowing the first multiplicand and having to fill it in to calculate the product, or not knowing the product or multiplicand and having to fill it in. This mental arithmetic program needs to be under my control with certain buttons. These buttons should preferably be displayed in Chinese.",
+    "description": "ArtifactsBench Task: Web Applications-Education/Learning - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the multiplication table core functionality fully implemented?",
+      "Implement: Are the various calculation exercises properly implemented?",
+      "Implement: Is the teacher control interface comprehensive?",
+      "Implement: Does the program include an appropriate feedback and scoring system?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements the complete multiplication tables (1-9) with proper display and interactions. Check if the program allows students to practice, review, and be tested on the tables. Score 0 if the core functionality is missing, 5 if only basic tables are shown without interaction, and 10 if all multiplication tables are fully interactive with proper learning progression.",
+      "Evaluate whether the code includes different types of exercises: standard multiplication/division calculations, fill-in-the-blank for first multiplicand, fill-in-the-blank for second multiplicand, and fill-in-the-blank for the product. Check if the program generates appropriate difficulty levels for grade 2 students. Deduct 3 points for each missing exercise type. The full score is 10 points.",
+      "Check whether the code provides a teacher control panel with proper Chinese-labeled buttons for adjusting difficulty levels, selecting exercise types, tracking student progress, and managing the program flow. The interface should give the teacher full control over the learning experience. Deduct 2 points for each missing essential function. The full score is 10 points.",
+      "Assess whether the code implements immediate feedback for student answers, appropriate encouragement/correction messages, progress tracking, and a scoring system suitable for second-grade students. Check if visual/audio feedback is child-friendly and educational. Deduct 3 points if immediate feedback is missing, 3 points if the scoring system is not grade-appropriate, and 4 points if there's no progress tracking. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as incorrect inputs, accidental button clicks, interruptions, etc.) and provide child-friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the learning experience (e.g., 1. Gamification elements like reward badges 2. Visual multiplication representations 3. Adaptive difficulty that adjusts to student performance). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple ways to practice the same concept) 2. Function modules unrelated to math learning (e.g., unnecessary games) 3. Fancy effects that may distract young learners. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core learning functions are interfered with by redundant code.",
+      "Review modular design (such as separating UI/logic/data layers), code readability appropriate for educational software, and maintainability for teacher modifications. Deduct 5 points if global state pollution is found; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if the code structure would make it difficult for the teacher to make simple modifications. The full score is 10 points.",
+      "Evaluate whether the overall design follows child-friendly principles: 1) Bright but not overwhelming colors 2) Clear, large buttons with Chinese labels 3) Age-appropriate fonts and sizes (≥16px) 4) Simple, uncluttered layout appropriate for 7-8 year olds. Deduct 3 points for each visually confusing element, 5 points for inappropriate color schemes, and 5 points for text that would be difficult for second-graders to read. The full score is 10 points.",
+      "Judge whether the interactions are appropriate for 7-8 year old children: 1) Large, easy-to-tap buttons (at least 44×44px) 2) Forgiving interaction patterns that don't require precise movements 3) Clear visual/audio feedback for each action 4) Appropriate animation speed for children's cognitive abilities. Deduct 5 points for touch targets that are too small, 3 points for complex gestures, and 5 points for confusing navigation. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the multiplication table core functionality fully implemented?",
+      "Are the various calculation exercises properly implemented?",
+      "Is the teacher control interface comprehensive?",
+      "Does the program include an appropriate feedback and scoring system?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet child-friendly design standards?",
+      "Is the dynamic interaction suitable for young children?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "web-applications-education/learning",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Web Applications-Education/Learning",
+    "original_difficulty": "easy"
+  }
+]

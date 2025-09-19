@@ -1,0 +1,482 @@
+[
+  {
+    "name": "artifacts_data_science_data_visualization_dashboards_204",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Be careful to ensure that the generated code is executable for demonstration. Use HTML to draw an attendance timeline for a day, with different time interval blocks marked in different colors.",
+    "description": "ArtifactsBench Task: Data Science-Data Visualization Dashboards - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the attendance timeline visualization correctly implemented?",
+      "Implement: Are the time interval blocks properly implemented and color-coded?",
+      "Implement: Is the data structure for storing and manipulating attendance data well-designed?",
+      "Implement: Does the implementation include user interaction capabilities?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the code implements a proper timeline visualization that displays a full day (24 hours) with clear time markers. The timeline should have proper time divisions (hourly/half-hourly) with time labels. Deduct 5 points if the timeline doesn't span a full day; deduct 3 points if time markers are inconsistent or missing; deduct 5 points if the timeline orientation is unclear (horizontal/vertical). The full score is 10 points.",
+      "Evaluate if the code successfully implements distinct time interval blocks that represent different attendance states (e.g., present, absent, late, etc.) with different colors. Each block should accurately represent its time range. Deduct 5 points if blocks don't align with the timeline grid; deduct 5 points if color differentiation is missing or inconsistent; deduct 3 points if block boundaries are ambiguous. The full score is 10 points.",
+      "Review the data model used to represent attendance events. It should efficiently store start/end times and attendance status. The model should handle overlapping events and time zone considerations. Deduct 5 points for inefficient data structures; deduct 3 points if overlapping events aren't handled; deduct 3 points if edge cases (midnight crossing, etc.) are ignored. The full score is 10 points.",
+      "Check if the code provides ways to interact with the timeline, such as hovering for details, clicking for more information, or the ability to add/edit attendance blocks. Deduct 5 points if there's no hover information; deduct 5 points if there's no way to view detailed attendance information; deduct 3 points if the timeline lacks edit capabilities. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as invalid time inputs, overlapping attendance periods, browser compatibility issues, etc.) and provide friendly error messages or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Customizable time granularity 2. Animation for time progression 3. Summary statistics of attendance data). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant visual elements that clutter the timeline 2. Unnecessary calculations that slow rendering 3. Excessive styling that doesn't improve clarity. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core timeline functionality is compromised by redundant code.",
+      "Review modular design (such as separating data/view/controller logic), reusability, and maintainability. Deduct 5 points if global variables are overused; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if there's no clear separation of concerns. The full score is 10 points.",
+      "Evaluate whether the timeline design follows modern design principles: 1) Harmonious color palette for attendance states (colorblind-friendly) 2) Proper layout spacing with proportional time intervals 3) Clear typography for time labels (readable at various screen sizes). Deduct 3 points for each visual accessibility issue, 5 points for poor color contrast, and 5 points for inconsistent time block sizing. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Responsive tooltips appearing within 100ms 2) Smooth scrolling/panning if timeline is zoomable 3) Clear visual indication of current time. Deduct 5 points for laggy rendering when displaying many attendance blocks, 3 points for jerky transitions between states, and 5 points for confusing navigation controls. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the attendance timeline visualization correctly implemented?",
+      "Are the time interval blocks properly implemented and color-coded?",
+      "Is the data structure for storing and manipulating attendance data well-designed?",
+      "Does the implementation include user interaction capabilities?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "data-science-data-visualization-dashboards",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Data Science-Data Visualization Dashboards",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_data_science_data_visualization_dashboards_207",
+    "category": "visualization",
+    "difficulty": "beginner",
+    "prompt": " the generated code is executable for demonstration. For a Vue 3 interface, organize a data list by extracting time as the x-axis and values as the y-axis data, arranging them into three line charts.",
+    "description": "ArtifactsBench Task: Data Science-Data Visualization Dashboards - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the data extraction and organization logic correctly implemented?",
+      "Implement: Is the Vue 3 implementation following best practices?",
+      "Implement: Are the three line charts properly implemented and configured?",
+      "Implement: Is the time axis (x-axis) properly formatted and scaled?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Evaluate whether the code accurately extracts time values for x-axis and corresponding values for y-axis from the provided dataset. Check for proper data validation, formatting (especially time/date parsing using libraries like dayjs or date-fns), and error handling for invalid data points. Score 0 if data extraction is missing, 5 if basic extraction is done but with formatting issues, and 10 if extraction includes robust validation and proper type handling.",
+      "Check whether the code properly uses Vue 3's Composition API (setup(), ref(), computed(), etc.) and follows Vue 3's reactive principles. Evaluate proper component structure, lifecycle hooks usage, and reactivity management. Deduct 5 points if using Options API instead of Composition API without justification, 3 points if reactivity is broken when data changes, and 5 points if Vue 3 specific features are ignored. Full score is 10 points.",
+      "Verify the implementation of three distinct line charts using a suitable charting library (e.g., ECharts, Chart.js, D3.js). Assess whether each chart is correctly configured with appropriate axes, legends, tooltips, and responsive design. Deduct 5 points if charts don't resize properly, 3 points if interactive features like tooltips are missing, and 5 points if customization options are not utilized. Full score is 10 points.",
+      "Evaluate time axis implementation including proper time formatting, appropriate time intervals, handling of irregular time data, and time zone considerations. Check for time range selection/filtering capabilities. Deduct 5 points for inappropriate time formatting, 3 points for missing time scale adaptability, and 5 points for incorrect time sorting. Full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as empty datasets, malformed data, asynchronous loading failures, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Interactive data point highlighting across all charts 2. Dynamic theme switching 3. Animation transitions between data updates). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple charting libraries used simultaneously) 2. Function modules unrelated to data visualization (e.g., unnecessary UI components) 3. Fancy effects that affect performance (e.g., excessive animations or 3D effects). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating data processing/visualization/UI layers), component reusability, and build process optimization. Deduct 5 points if global state pollution is found or composition functions aren't properly utilized; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if performance optimizations are neglected (like memoization with computed/memo). The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color schemes for the three charts (distinguishable but coordinated) 2) Proper layout spacing and chart proportions 3) Professional typography for labels, legends and tooltips (readable font sizes, appropriate contrast). Deduct 3 points for each crowded visual element, 5 points for clashing colors between charts, and 5 points for poor information hierarchy. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Responsive hover/click feedback on data points ≤ 100ms 2) Smooth transitions between data updates or filtering 3) Intuitive zoom/pan interactions if implemented. Deduct 5 points for laggy chart rendering, 3 points for abrupt transitions between states, and 5 points for confusing interactive elements. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the data extraction and organization logic correctly implemented?",
+      "Is the Vue 3 implementation following best practices?",
+      "Are the three line charts properly implemented and configured?",
+      "Is the time axis (x-axis) properly formatted and scaled?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "data-science-data-visualization-dashboards",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Data Science-Data Visualization Dashboards",
+    "original_difficulty": "easy"
+  },
+  {
+    "name": "artifacts_data_science_data_visualization_dashboards_280",
+    "category": "visualization",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Be sure to ensure that the generated code is executable for demonstration. Create a line chart in Vue 3 using TypeScript syntax with ECharts, implemented through a remote request, and include search functionality.",
+    "description": "ArtifactsBench Task: Data Science-Data Visualization Dashboards - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the Vue 3 + TypeScript integration properly implemented?",
+      "Implement: Is ECharts correctly integrated and initialized in the Vue 3 component?",
+      "Implement: Is the remote data fetching mechanism implemented correctly?",
+      "Implement: Is the search functionality complete and effective?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check whether the code uses Vue 3 composition API with proper TypeScript type definitions. Verify that components, props, emits, and refs all have proper typing. Deduct 5 points if TypeScript interfaces are missing for data structures, 3 points if any 'any' types are used unnecessarily, and 5 points if there are TypeScript compilation errors. The full score is 10 points.",
+      "Evaluate whether ECharts is properly imported and initialized using Vue lifecycle hooks (onMounted, onUnmounted, etc.). Check for proper chart instance management, responsive resizing handling, and memory leak prevention. Deduct 5 points if the chart is not properly destroyed on component unmount, 3 points if window resize events aren't handled, and 3 points if chart options are not typed correctly. The full score is 10 points.",
+      "Review if the code implements proper API calls with error handling and loading states. Check for the use of Axios/Fetch with proper request configurations, response type validation, and retry mechanisms. Deduct 5 points if there's no loading indicator during data fetching, 5 points if error handling is inadequate, and 3 points if there's no request timeout or cancellation on component unmount. The full score is 10 points.",
+      "Assess whether the search function includes debounce/throttle mechanisms, proper validation, and clear feedback to users. Check if searching updates the chart dynamically and if the UI provides clear indications of current search state. Deduct 5 points if search has no input validation, 3 points if there's no debounce implementation for performance, and 5 points if search results don't properly update the chart visualization. The full score is 10 points.",
+      "Evaluate whether the code handles edge cases such as empty data sets, API errors, invalid search inputs, and window resize events. Code with strong robustness should gracefully handle these scenarios with appropriate user feedback. Deduct 3 points for each unhandled edge case, with a maximum deduction of 10 points. The full score is 10 points.",
+      "Check whether the implementation includes additional valuable features beyond the basic requirements (e.g., 1. Advanced filtering options 2. Data export functionality 3. Dynamic theme switching 4. Interactive tooltips with rich content). Add 2.5 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant state management 2. Duplicate data processing functions 3. Unnecessary wrapper components that add complexity without value. Deduct 3 points for each redundancy found, and directly deduct 10 points if core functionality is obscured by redundant code. The full score is 10 points.",
+      "Review component organization, type definitions, code reusability, and separation of concerns. Check if the code follows Vue 3 best practices and clean code principles. Deduct 3 points if components exceed 300 lines, 3 points if business logic isn't separated from the UI layer, and 4 points if there's no proper error boundary implementation. The full score is 10 points.",
+      "Evaluate whether the chart design follows data visualization best practices: 1) Clear axes with proper labels 2) Appropriate use of colors (color-blind friendly) 3) Proper spacing and sizing of chart elements 4) Responsive design across different screen sizes. Deduct 3 points for cluttered visualizations, 3 points for poor color choices, and 4 points for illegible text or overlapping elements. The full score is 10 points.",
+      "Judge whether interactions with the chart and search functionality feel responsive and intuitive: 1) Chart animations are smooth (≤500ms) 2) Search results update without jarring UI shifts 3) Loading states are clearly communicated. Deduct 3 points for laggy chart updates, 3 points for abrupt visual changes, and 4 points for confusing interaction patterns that don't follow standard UX conventions. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the Vue 3 + TypeScript integration properly implemented?",
+      "Is ECharts correctly integrated and initialized in the Vue 3 component?",
+      "Is the remote data fetching mechanism implemented correctly?",
+      "Is the search functionality complete and effective?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "data-science-data-visualization-dashboards",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Data Science-Data Visualization Dashboards",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_data_science_data_visualization_dashboards_293",
+    "category": "visualization",
+    "difficulty": "intermediate",
+    "prompt": " the generated code is executable when possible. I want to create a desktop BI analysis software. Could you help me generate one that can import Excel files, properly map the imported fields, and automatically generate BI analysis reports?",
+    "description": "ArtifactsBench Task: Data Science-Data Visualization Dashboards - You are a code expert. Please use your professional knowledge to generate accurate, professional res...",
+    "requirements": [
+      "Implement: Is the Excel import functionality properly implemented?",
+      "Implement: Is the data field mapping system fully developed?",
+      "Implement: Are the BI analysis functions comprehensive and appropriate?",
+      "Implement: Does the report generation system provide meaningful insights?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Verify that the code can handle various Excel file formats (XLS, XLSX, CSV), supports multiple sheets, and properly manages data types during import (numbers, dates, text, etc.). Check for error handling for corrupted files, large datasets, and character encoding issues. Score 0 if import is not implemented, 5 if basic import exists with limitations, and 10 if the implementation is robust with comprehensive error handling.",
+      "Evaluate whether the code implements an intelligent field mapping system that can auto-detect data types, suggest appropriate mappings, and allow manual overrides. Check for data cleansing capabilities, handling of missing values, and validation of mapped fields. Deduct 3 points if automatic field type detection is missing, 3 points if there's no data preview functionality, and 4 points if field relationship detection is absent. The full score is 10 points.",
+      "Check whether the code includes essential BI analysis capabilities: descriptive statistics, trend analysis, correlation analysis, outlier detection, and predictive modeling. Verify that the analysis methods match the data types (categorical vs. numerical). Deduct 2 points for each missing core analysis function. Give 10 points if all essential analyses are implemented with appropriate algorithms and statistical validations.",
+      "Assess whether the automatic report generation system produces actionable insights rather than just raw data. Check if it includes anomaly highlighting, trend identification, key metric summaries, and comparative analysis. Verify that reports can be customized and saved in multiple formats (PDF, HTML, etc.). Deduct 3 points if insights are not highlighted, 3 points if export options are limited, and 4 points if report templates are missing. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as out-of-memory errors with large datasets, unexpected input values, application crashes). Check for proper exception handling, graceful degradation, and data recovery mechanisms. Code with strong robustness should provide meaningful error messages and recovery paths, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. AI-powered insight generation 2. Natural language query interface 3. Automatic dashboard recommendations based on data patterns 4. Real-time collaboration features). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant analysis calculations that could be optimized 2. Function modules unrelated to BI analytics (e.g., unnecessary multimedia features) 3. Resource-intensive visualizations that don't contribute to data understanding. Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating data processing/analysis/visualization layers), unit test coverage, and performance optimization techniques. Deduct 5 points if global state management is poorly implemented; deduct 3 points if the code lacks comments and documentation; deduct 2 points if there's no consideration for memory management with large datasets. The full score is 10 points.",
+      "Evaluate whether the UI follows modern data visualization principles: 1) Consistent data visualization style 2) Clear information hierarchy with proper emphasis on key metrics 3) Appropriate use of white space and grid alignment 4) Color schemes that account for data types and accessibility. Deduct 3 points for cluttered dashboards, 3 points for improper chart selection for data types, and 4 points for poor readability of data labels and values. The full score is 10 points.",
+      "Judge whether the interactive elements enhance data exploration: 1) Filtering and drill-down capabilities respond within 300ms 2) Smooth transitions between different views and analyses 3) Intuitive interactions for data selection and comparison. Deduct 3 points for laggy visualizations with large datasets, 3 points for unintuitive interaction patterns, and 4 points if essential interactions (zoom, filter, details-on-demand) are missing. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the Excel import functionality properly implemented?",
+      "Is the data field mapping system fully developed?",
+      "Are the BI analysis functions comprehensive and appropriate?",
+      "Does the report generation system provide meaningful insights?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "data-science-data-visualization-dashboards",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Data Science-Data Visualization Dashboards",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_data_science_data_visualization_dashboards_334",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "prompt": " the code you generate is executable whenever possible. Given a large scatter dataset [x,y,value], create a heatmap using d3.js.",
+    "description": "ArtifactsBench Task: Data Science-Data Visualization Dashboards - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the core heatmap visualization properly implemented?",
+      "Implement: Is the data processing and binning logic correctly implemented?",
+      "Implement: Is the color scale appropriately designed and implemented?",
+      "Implement: Are appropriate interactions and responsiveness implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Evaluate whether the code correctly creates a d3.js heatmap from [x,y,value] data. Check if it properly handles data binning, color mapping, and heat intensity visualization. Score 0 if the heatmap is not implemented, 5 if only basic visualization is present without proper data processing, and 10 if it includes proper data binning, smoothing, and appropriate color scales for the heatmap.",
+      "Check whether the code includes adequate data processing for converting scattered [x,y,value] points into a gridded heatmap. Verify the binning algorithm (hexagonal or rectangular), density calculation method, and handling of overlapping points. Deduct 5 points if the binning algorithm is inefficient for large datasets (>1000 points), and 3 points if edge cases (like outliers or sparse areas) are not handled. The full score is 10 points.",
+      "Assess the color scale implementation – whether it uses appropriate sequential/diverging color schemes, provides proper contrast for data visibility, and includes color legend integration. The scale should respect perceptual uniformity and accessibility standards. Deduct 5 points if the color scale does not match data distribution, 3 points for poor color accessibility, and 2 points if no legend is provided. The full score is 10 points.",
+      "Evaluate whether the heatmap includes useful interactions like tooltips for data points, zooming/panning capabilities, and whether it's responsive to different screen sizes. Check for smooth transitions when filtering or updating data. Deduct 3 points for each missing key interaction (tooltip, zoom, responsive sizing), and 5 points if transitions between data updates are jarring. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as empty datasets, non-numeric values, extremely large datasets, browser resize events, etc.) and provide friendly error handling or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Dynamic kernel density estimation 2. Animated transitions between different dataset views 3. Customizable smoothing parameters 4. Integration with statistical analysis tools). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant data processing loops that could be optimized 2. Function modules unrelated to heatmap visualization 3. Fancy effects that affect performance (e.g., unnecessary animations or DOM manipulations). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating data processing/visualization/interaction logic), reusable components, and performance optimization. Deduct 5 points if global state pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if there are no performance optimizations for large datasets (>10,000 points). The full score is 10 points.",
+      "Evaluate whether the overall design follows modern visualization principles: 1) Clean, non-distracting container design 2) Proper aspect ratio and use of space (data-ink ratio) 3) Professional labeling and typography (consistent font family, readable sizes). Deduct 3 points for cluttered axes or legends, 5 points for poor use of visualization space, and 5 points for inconsistent or unreadable text elements. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Hover feedback delay ≤ 100ms 2) Transition animation duration controlled between 200-400ms 3) Clear visual cues for interactive elements. Deduct 5 points for each interaction without feedback, 3 points for laggy rendering with large datasets, and 5 points for confusing or inconsistent interaction patterns. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the core heatmap visualization properly implemented?",
+      "Is the data processing and binning logic correctly implemented?",
+      "Is the color scale appropriately designed and implemented?",
+      "Are appropriate interactions and responsiveness implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "data-science-data-visualization-dashboards",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Data Science-Data Visualization Dashboards",
+    "original_difficulty": "hard"
+  },
+  {
+    "name": "artifacts_data_science_data_visualization_dashboards_339",
+    "category": "visualization",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Make sure the generated code is executable for demonstration. Create a comprehensive dashboard for the economic and environmental benefits of embroidery products (in economic benefits, achieve 30% growth in overseas market sales by 2025, help intangible cultural heritage inheritors increase order volume by 20%, and raise average order value from $200 to $800). Requirements include visualization design and detailed data presentation. Please output in HTML format to ensure it's executable.",
+    "description": "ArtifactsBench Task: Data Science-Data Visualization Dashboards - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the dashboard visualization for economic benefits fully implemented?",
+      "Implement: Is the environmental benefits visualization component properly implemented?",
+      "Implement: Is the intangible cultural heritage data presentation component implemented?",
+      "Implement: Is the overseas market analysis component properly implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code accurately implements charts/graphs showing economic metrics (30% growth in overseas market, 20% increase in order volume, and average order value increase from $200 to $800). Verify if the visualization includes trend analysis, comparative views, and forecasting elements.Score 0 if economic visualizations are missing, 5 points if basic charts are implemented without interactivity, and 10 points if comprehensive interactive visualizations with forecasting capabilities through 2025 are included.",
+      "Evaluate whether the code implements visualizations for environmental impact metrics related to embroidery products (such as sustainable materials usage, carbon footprint reduction, water conservation, etc.). Check if the environmental data is properly contextualized with industry benchmarks.Score 0 if environmental visualizations are absent, 5 points if basic environmental metrics are shown without context, and 10 points if comprehensive environmental impact analysis with comparative industry benchmarks is included.",
+      "Check whether the dashboard includes specific visualizations for intangible cultural heritage inheritors' data (number of artisans, geographical distribution, skill categories, etc.) and how their order volumes have changed. Verify if the visualization connects cultural preservation with economic outcomes.Score 0 if cultural heritage data is missing, 5 points if basic inheritor data is shown without economic correlation, and 10 points if comprehensive visualization of cultural-economic relationships is implemented.",
+      "Assess whether the code implements geographical market visualization showing the 30% growth target in overseas markets. Check if the visualization includes market segmentation, regional performance comparison, and growth trajectory toward the 2025 goal.Score 0 if overseas market visualization is missing, 5 points if basic geographical data is presented without growth projections, and 10 points if comprehensive market analysis with interactive geographic elements and clear growth pathways is included.",
+      "Evaluate whether the code can handle common abnormal situations (such as missing data, browser compatibility issues, responsive design requirements, etc.) and provide friendly error prompts or recovery mechanisms.Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. AI-driven market prediction model 2. Interactive embroidery pattern explorer tied to sales data 3. Virtual tour of artisan workshops with economic impact indicators).Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar visualizations (e.g., multiple charts showing the same data differently) 2. Function modules unrelated to embroidery economics/environmental impact (e.g., general textile industry data) 3. Fancy effects that affect performance (e.g., unnecessary 3D effects or animations).Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating data processing/visualization/interaction layers), code reusability for different chart types, and implementation of design patterns.Deduct 5 points if global variable pollution is found or design patterns are not used; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if the visualization library implementation is inconsistent. The full score is 10 points.",
+      "Evaluate whether the dashboard design follows modern design principles: 1) Harmonious color matching (no more than 3 primary colors with appropriate accent colors) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (body font size ≥ 14px, line height over 1.5 times) 4) Clear visual hierarchy between economic and environmental data sections.Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic chart-text layout. The full score is 10 points.",
+      "Judge whether the dashboard interactions conform to human perception characteristics: 1) Filter/selection feedback delay ≤ 100ms 2) Chart transition animation duration controlled between 300-500ms 3) Clear visual focus guidance between economic and environmental sections. 4) Intuitive drill-down capabilities from summary to detailed data views.Deduct 5 points for each interaction without feedback, 3 points for visual lag during data filtering/sorting, and 5 points for hard-to-find key data comparison functions. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the dashboard visualization for economic benefits fully implemented?",
+      "Is the environmental benefits visualization component properly implemented?",
+      "Is the intangible cultural heritage data presentation component implemented?",
+      "Is the overseas market analysis component properly implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "data-science-data-visualization-dashboards",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Data Science-Data Visualization Dashboards",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_mermaid_flowcharts_mind_maps_361",
+    "category": "visualization",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Make sure the generated code is executable for demonstration purposes. Generate frontend code for implementing a mind map using Vue2 and G6.",
+    "description": "ArtifactsBench Task: Mermaid Flowcharts-Mind Maps - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the core mind map data structure properly implemented?",
+      "Implement: Is the G6 graph initialization and configuration properly implemented?",
+      "Implement: Are the core mind map operations implemented?",
+      "Implement: Is the Vue2 integration with G6 properly implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Evaluate whether the code defines a proper hierarchical data structure for the mind map, including nodes and edges with appropriate attributes. Check if it handles parent-child relationships, node positions, and visual properties. Give 0 points if the data structure is missing, 5 points if it's basic but functional, and 10 points if it's comprehensive with support for rich metadata.",
+      "Check if G6 is correctly initialized with proper container, plugins, and configurations. Evaluate whether the code sets appropriate behaviors (drag, zoom, click), node/edge styles, and layout algorithms. Deduct 3 points if basic configuration is missing, 5 points if interaction modes are incomplete, and 2 points if performance optimizations are absent. The full score is 10 points.",
+      "Review whether essential operations are implemented: adding nodes, deleting nodes, editing node content, collapsing/expanding branches, and reorganizing the hierarchy. Score 0 if these core functions are missing, 5 if only basic operations work, and 10 if all operations are implemented with proper event handling and state management.",
+      "Evaluate the integration between Vue2 reactive system and G6 rendering. Check for proper component lifecycle management, reactive data flow, and event handling between Vue and G6. Deduct 5 points if G6 instances aren't properly disposed on component destruction, 3 points if reactivity is broken, and 3 points if Vue events don't properly trigger G6 updates. The full score is 10 points.",
+      "Evaluate whether the code can handle common abnormal situations (such as invalid data structures, operation errors, rendering failures) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Automatic layout optimization 2. Keyboard shortcuts for quick operations 3. Custom node themes 4. Export/import functionality). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functions (e.g., multiple ways to perform the same action) 2. Function modules unrelated to mind mapping (e.g., built-in calculators or unrelated widgets) 3. Fancy effects that affect performance (e.g., excessive animations that slow down interaction). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating graph logic/UI components/data management), component reusability, and code maintainability. Deduct 5 points if global state management is messy or Vue best practices aren't followed; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if there's no separation of concerns between G6 rendering and Vue component logic. The full score is 10 points.",
+      "Evaluate whether the mind map follows modern design principles: 1) Harmonious color matching (no more than 3 primary colors for nodes) 2) Proper layout spacing (consistent node distances and hierarchy indentation) 3) Professional typography (readable font sizes and weights for different hierarchy levels). Deduct 3 points for each visual inconsistency, 5 points for poor color contrast, and 5 points for cluttered node arrangements. The full score is 10 points.",
+      "Judge whether the mind map interactions feel natural: 1) Node dragging responds immediately 2) Expand/collapse animations are smooth and under 300ms 3) Zooming and panning work intuitively. Deduct 5 points for laggy node creation/deletion, 3 points for jerky animations during rearrangement, and 5 points for unresponsive editing interactions. Check if the mind map properly renders and updates even with large datasets. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the core mind map data structure properly implemented?",
+      "Is the G6 graph initialization and configuration properly implemented?",
+      "Are the core mind map operations implemented?",
+      "Is the Vue2 integration with G6 properly implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "mermaid-flowcharts-mind-maps",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Mermaid Flowcharts-Mind Maps",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_data_science_data_visualization_dashboards_407",
+    "category": "visualization",
+    "difficulty": "beginner",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate and professional responses. Try to ensure that the code generated is executable and can be displayed.\n\n```python\nfrom flask import app, jsonify\nfrom pyspark import SparkConf\nfrom pyspark.sql.session import SparkSession\n\nsparkconf = SparkConf() \\\n    .setMaster(\"local[*]\") \\\n    .setAppName(\"MartialArtsProfessional\") \\\n    .set(\"hive.metastore.uris\", \"thrift://node1:9083\") \\\n    .set(\"spark.sql.warehouse.dir\", \"hdfs://node1:8020/user/hive/warehouse\") \\\n    .set(\"hive.metastore.schema.verification\", \"true\") \\\n    .set(\"hive.metastore.schema.version.record\", \"true\") \\\n    .set(\"spark.sql.hive.convertMetastoreOrc\", \"false\") \\\n    .set(\"spark.sql.shuffle.partitions\", \"8\")\n\nspark = SparkSession.Builder() \\\n    .config(conf=sparkconf) \\\n    .enableHiveSupport() \\\n    .getOrCreate()\nspark.sql(\"select * from ads_medical_system.department_analysis\").show()\n\n\n@app.route(\"/department\", methods=[\"GET\"])\ndef department_analysis():\n    '''\n    Department analysis\n    '''\n    df = spark.sql(\"select department,total_visits from ads_medical_system.department_analysis\")\n    return jsonify(df.collect())\n\n\n@app.route(\"/avg_fee\", methods=[\"GET\"])\ndef avg_fee_analysis():\n    '''\n    Average fee analysis\n    '''\n    df = spark.sql(\"select department,avg_fee from ads_medical_system.department_analysis\")\n    return jsonify(df.collect())\n\n\n@app.route(\"/avg_workday_fee\", methods=[\"GET\"])\ndef avg_workday_fee_analysis():\n    '''\n    Average workday fee analysis\n    '''\n    df = spark.sql(\"select department,avg_workday_fee from ads_medical_system.department_analysis\")\n    return jsonify(df.collect())\n\n\n@app.route(\"/avg_holiday_fee\", methods=[\"GET\"])\ndef avg_holiday_fee_analysis():\n    '''\n    Average holiday fee analysis\n    '''\n    df = spark.sql(\"select department,avg_holiday_fee from ads_medical_system.department_analysis\")\n    return jsonify(df.collect())\n\n\n@app.route(\"/visit_rank\", methods=[\"GET\"])\ndef visit_rank_analysis():\n    '''\n    Visit volume ranking\n    '''\n    df = spark.sql(\"select department,visit_rank from ads_medical_system.department_analysis\")\n    return jsonify(df.collect())\n\n@app.router(\"/unique_patients\", methods=[\"GET\"])\ndef unique_patients_analysis():\n    '''\n    Unique patient count analysis\n    '''\n    df = spark.sql(\"select department,unique_patients from ads_medical_system.department_analysis\")\n    return jsonify(df.collect())\n\n\n@app.router(\"/most_common_test\", methods=[\"GET\"])\ndef most_common_test_analysis():\n    '''\n    Most common examination items\n    '''\n    df = spark.sql(\"select most_common_test,avg_holiday_fee from ads_medical_system.department_analysis\")\n    return jsonify(df.collect())\n\n@app.router(\"/age\", methods=[\"GET\"])\ndef age():\n    df=spark.sql(\"select age,count(1) as result from dim_medical_system.dim_patient\")\n    return jsonify(df.collect())\n```\n\nUsing these interfaces, create a visually stunning medical visualization dashboard with HTML. The frontend code should run normally. Please provide complete code for each chart in a single HTML file.",
+    "description": "ArtifactsBench Task: Data Science-Data Visualization Dashboards - You are a code expert. Please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the medical dashboard visualization fully implemented?",
+      "Implement: Is data fetching and integration properly implemented?",
+      "Implement: Is the dashboard layout and organization properly structured?",
+      "Implement: Are interactive features implemented to enhance data exploration?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Review whether the code creates a comprehensive dashboard that visualizes all the available API endpoints: department analysis, average fees (regular, workday, holiday), visit rankings, unique patients, common tests, and age distribution. Score 0 if visualization is missing, 5 if only basic charts are implemented, and 10 if all endpoints are visualized with appropriate chart types (bar charts, line charts, pie charts, etc.) for each data type.",
+      "Check whether the frontend properly handles API requests to all 8 endpoints, including error handling for failed requests, loading states, and data transformation before visualization. Verify that the code correctly parses the JSON responses from Flask endpoints. Deduct 3 points for each missing endpoint integration, and 5 points if there's no error handling or loading indicators. The full score is 10 points.",
+      "Evaluate whether the dashboard follows best practices in information architecture: logical grouping of related metrics (e.g., fee-related charts together), hierarchical information display (overview first, details on demand), and responsive design principles. Deduct 5 points if charts are randomly placed without logical organization, and 5 points if the layout breaks on different screen sizes. The full score is 10 points.",
+      "Assess whether the dashboard includes interactive elements such as filtering capabilities, drill-down options, tooltips for detailed information, zoom functionality for dense visualizations, and cross-filtering between charts. Give 2 points for each well-implemented interactive feature up to a maximum of 10 points. Score 0 if no interactive features are implemented.",
+      "Evaluate whether the code can handle common abnormal situations (such as API failures, empty data responses, unexpected data formats, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Auto-refreshing data 2. Export functionality for reports 3. Custom theming options 4. User-configurable dashboard layout). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar visualizations (e.g., multiple charts showing the same data) 2. Visualization elements unrelated to medical data (e.g., irrelevant animations) 3. Fancy effects that affect performance (e.g., heavy animations causing lag). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating data fetching/processing/visualization logic), code reusability for chart generation, and proper script organization. Deduct 5 points if global variable pollution is found; deduct 5 points if there's significant code duplication across chart implementations; deduct 5 points if there's no separation between data processing and visualization. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching suitable for medical context (calming blues/greens, clear contrast for data) 2) Proper layout spacing (element spacing follows the 8px multiple principle) 3) Professional font system (body font size ≥ 14px, line height over 1.5 times). Deduct 3 points for each crowded visual element, 5 points for inappropriate color schemes for medical data, and 5 points for chaotic chart arrangement. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Chart loading and transitions complete within 500ms 2) Interactive feedback delay ≤ 100ms 3) Clear visual cues for interactive elements. Deduct 5 points for sluggish chart rendering, 3 points for delayed interaction feedback, and 5 points for hidden or unclear interactive controls. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the medical dashboard visualization fully implemented?",
+      "Is data fetching and integration properly implemented?",
+      "Is the dashboard layout and organization properly structured?",
+      "Are interactive features implemented to enhance data exploration?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 30,
+    "tags": [
+      "data-science-data-visualization-dashboards",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Data Science-Data Visualization Dashboards",
+    "original_difficulty": "easy"
+  },
+  {
+    "name": "artifacts_data_science_data_visualization_dashboards_416",
+    "category": "visualization",
+    "difficulty": "intermediate",
+    "prompt": "You are a code expert, please use your professional knowledge to generate accurate and professional responses. Pay attention to ensure the generated code is executable for demonstration. Visualization dashboard word cloud code, created with npm.",
+    "description": "ArtifactsBench Task: Data Science-Data Visualization Dashboards - You are a code expert, please use your professional knowledge to generate accurate and professional ...",
+    "requirements": [
+      "Implement: Is the word cloud visualization core functionality implemented correctly?",
+      "Implement: Does the code handle data input and processing appropriately?",
+      "Implement: Is the dashboard integration complete and functional?",
+      "Implement: Are word cloud customization options implemented?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Check if the code implements a proper word cloud visualization using appropriate npm packages (e.g., d3-cloud, react-wordcloud). The implementation should handle text processing, word frequency calculation, and visual rendering. Score 0 if no word cloud is generated, 5 if basic functionality exists with flaws, and 10 if the implementation is complete with proper text processing and visualization.",
+      "Evaluate how the code handles text input (from files, APIs, or user input), processes it (tokenization, stopword removal, stemming/lemmatization), and calculates word frequencies. Check if it handles different languages, special characters, and case sensitivity. Deduct 3 points if stopwords aren't handled, 3 points if no text preprocessing exists, and 2 points if it only works with English text. The full score is 10 points.",
+      "Assess if the word cloud is properly integrated into a dashboard context with appropriate layout structure. The dashboard should include controls for customization, data refresh mechanisms, and possibly other complementary visualizations. Deduct 5 points if the word cloud exists in isolation without dashboard elements, and 3 points if integration exists but with limited functionality. The full score is 10 points.",
+      "Check if the code allows customization of the word cloud appearance and behavior: font styles/sizes, color schemes, layout options (shape, orientation), minimum/maximum word count, and animation settings. Deduct 2 points for each major customization category missing. The full score is 10 points if comprehensive customization is available with intuitive controls.",
+      "Evaluate whether the code can handle common abnormal situations (such as empty input, extremely large texts, malformed data, browser compatibility issues) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Interactive hovering effects with additional word information 2. Real-time word cloud updates based on streaming data 3. Exportable word cloud as SVG/PNG with custom branding). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementation of similar functionality (e.g., multiple text processing pipelines) 2. Function modules unrelated to the word cloud dashboard (e.g., unnecessary analytics) 3. Fancy effects that affect performance (e.g., excessive animations that slow rendering). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating data processing/visualization/UI components), code organization, dependency management, and build configuration. Deduct 5 points if global state pollution is found; deduct 3 points if npm dependencies are not properly managed; deduct 5 points if the code lacks comments or documentation. Check if the project has a proper structure with clear separation of concerns. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern dashboard design principles: 1) Harmonious color matching with consistent palette 2) Proper layout with appropriate use of space and grid systems 3) Professional typography with readable fonts and proper contrast ratios. Deduct 3 points for cluttered layout, 5 points for poor color choices affecting readability, and 5 points for inconsistent styling across components. The full score is 10 points.",
+      "Judge whether the word cloud and dashboard interactions are fluid and responsive: 1) Smooth transitions when filtering or updating data 2) Responsive design that works across device sizes 3) Performance optimization for large datasets without UI freezing. Deduct 5 points for laggy rendering with large word sets, 3 points for missing loading states during data processing, and 3 points for non-responsive design on different screen sizes. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the word cloud visualization core functionality implemented correctly?",
+      "Does the code handle data input and processing appropriately?",
+      "Is the dashboard integration complete and functional?",
+      "Are word cloud customization options implemented?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and responsive?"
+    ],
+    "time_estimate_minutes": 60,
+    "tags": [
+      "data-science-data-visualization-dashboards",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Data Science-Data Visualization Dashboards",
+    "original_difficulty": "medium"
+  },
+  {
+    "name": "artifacts_mermaid_flowcharts_mind_maps_420",
+    "category": "visualization",
+    "difficulty": "advanced",
+    "prompt": "You are a code expert. Please use your professional knowledge to generate accurate, professional responses. Be sure to ensure that the code you generate is executable for demonstration. Create Vue code to parse JSON xmind files and display them as a mind map on a webpage.",
+    "description": "ArtifactsBench Task: Mermaid Flowcharts-Mind Maps - You are a code expert. Please use your professional knowledge to generate accurate, professional res...",
+    "requirements": [
+      "Implement: Is the Vue component structure properly organized for the mind map?",
+      "Implement: Does the code correctly parse the JSON xmind file format?",
+      "Implement: Is the mind map visualization fully implemented?",
+      "Implement: Are interactive features implemented for mind map manipulation?",
+      "Implement: Is the code robust?"
+    ],
+    "evaluation_criteria": [
+      "Evaluate if the code follows Vue best practices with a clear component hierarchy separating concerns (parser, renderer, interactions). Check for proper use of props, emits and vue lifecycle hooks. Score 0 if components are missing or poorly structured, 5 if basic structure exists but has organizational issues, and 10 if components are well-designed with clear responsibilities and interfaces.",
+      "Review whether the parser can handle the complete xmind JSON schema, including root topics, subtopics, relationships, markers, notes, and labels. Check for edge cases like empty nodes, deeply nested structures, and special characters. Deduct 3 points if only basic topic structure is parsed, 3 points if relationships are missing, and 2 points if markers or notes aren't supported. The full score is 10 points.",
+      "Assess if the code properly renders the hierarchical structure with appropriate layout algorithms (radial, horizontal, vertical). Check if the visualization handles different node depths, maintains proper spacing, and avoids overlapping elements. Score 0 if visualization is broken/missing, 5 if basic rendering exists but has layout issues, and 10 if the mind map is properly displayed with a professional appearance.",
+      "Evaluate if the implementation includes essential interaction features: expand/collapse nodes, drag-and-drop positioning, zooming, and panning. Check if the code handles selecting nodes and editing content. Deduct 2 points per missing core interaction feature. Award full 10 points only if all interactions feel smooth and intuitive on different screen sizes.",
+      "Evaluate whether the code can handle common abnormal situations (such as malformed JSON, missing properties, extremely large mind maps, etc.) and provide friendly error prompts or recovery mechanisms. Code with strong robustness should be able to effectively handle these edge cases, giving 10 points. If the robustness is average, give 5 points, and if no exceptions are handled, give 0 points.",
+      "Check whether the code includes surprise features that enhance the experience (e.g., 1. Real-time collaborative editing 2. Export to different formats (PNG, PDF) 3. Keyboard shortcuts for navigation 4. Customizable themes or node styling). Add 3 points for each practical innovative feature implemented (maximum 10 points).",
+      "Strictly check three types of redundancy: 1. Redundant implementations of similar functions (e.g., multiple rendering engines coexisting) 2. Function modules unrelated to mind mapping (e.g., unrelated visualizations) 3. Fancy effects that affect performance (e.g., unnecessary animations that slow rendering). Deduct 3 points for each redundancy found, and directly deduct 10 points if the core functions are interfered with by redundant code.",
+      "Review modular design (such as separating parsing/rendering/interaction layers), unit test coverage, and build process automation. Deduct 5 points if global state pollution is found or if Vue composition API/options API are inconsistently mixed; deduct 5 points if the code duplication rate is too high (over 30%); deduct 5 points if there's no error handling or logging. The full score is 10 points.",
+      "Evaluate whether the overall design follows modern design principles: 1) Harmonious color matching for nodes and connections 2) Proper layout spacing between nodes and branches 3) Professional font system with good readability and hierarchy. Deduct 3 points for each crowded visual element, 5 points for a glaring color combination, and 5 points for chaotic node arrangement or unclear hierarchical representation. The full score is 10 points.",
+      "Judge whether the dynamic effects conform to human perception characteristics: 1) Node expansion/collapse animations between 200-400ms 2) Smooth transitions when navigating or rearranging 3) Clear visual feedback for selections and interactions. Deduct 5 points for jerky animations, 3 points for laggy performance with larger mind maps, and 5 points for confusing interaction patterns. The full score is 10 points."
+    ],
+    "expected_features": [
+      "Is the Vue component structure properly organized for the mind map?",
+      "Does the code correctly parse the JSON xmind file format?",
+      "Is the mind map visualization fully implemented?",
+      "Are interactive features implemented for mind map manipulation?",
+      "Is the code robust?",
+      "Are there any innovative features that are eye-catching?",
+      "Are there any redundant features?",
+      "Does the code have engineering quality?",
+      "Does the interface vision meet professional design standards?",
+      "Is the dynamic interaction smooth and seamless?"
+    ],
+    "time_estimate_minutes": 90,
+    "tags": [
+      "mermaid-flowcharts-mind-maps",
+      "artifactsbench"
+    ],
+    "project_type": "html",
+    "framework_version": null,
+    "source": "artifactsbench",
+    "original_class": "Mermaid Flowcharts-Mind Maps",
+    "original_difficulty": "hard"
+  }
+]
