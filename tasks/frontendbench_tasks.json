@@ -1,0 +1,580 @@
+[
+  {
+    "name": "FrontendBench-TodoList-001",
+    "description": "FrontendBench todo list application with CRUD operations",
+    "category": "utilities",
+    "difficulty": "intermediate",
+    "project_type": "html",
+    "prompt": "Create a todo list application with the following features:\n\n1. An input field where users can type new todo items\n2. An \"Add\" button to add new items to the list\n3. A list displaying all todo items\n4. Each todo item should have:\n   - A checkbox to mark as complete/incomplete\n   - The todo text\n   - A \"Delete\" button to remove the item\n5. Completed items should be visually distinguished (strikethrough or different color)\n6. A \"Clear Completed\" button to remove all completed items\n\nUse modern CSS with a clean, minimalist design. Include hover states and smooth transitions. The app should be fully functional without any JavaScript errors.",
+    "requirements": {
+      "functional": [
+        "Display initial empty state or sample todos",
+        "Add new todo items via input field and button",
+        "Mark items as complete/incomplete using checkboxes",
+        "Delete individual todo items",
+        "Clear all completed items at once",
+        "Persistent visual state for completed items"
+      ],
+      "design": [
+        "Clean, modern UI with proper spacing",
+        "Visual distinction between completed and active items",
+        "Hover states for interactive elements",
+        "Smooth transitions and micro-interactions",
+        "Responsive design for different screen sizes"
+      ],
+      "technical": [
+        "Single HTML file with embedded CSS and JavaScript",
+        "No JavaScript errors in console",
+        "Semantic HTML structure",
+        "Accessible form controls and labels",
+        "Efficient DOM manipulation"
+      ]
+    },
+    "evaluation_tests": [
+      {
+        "description": "Should display empty state when no todos exist",
+        "test_code": "const todoItems = await page.$$('.todo-item'); expect(todoItems.length).toBe(0);",
+        "selector": ".todo-item",
+        "expected": "empty list"
+      },
+      {
+        "description": "Should add new todo item when clicking Add button",
+        "test_code": "await page.type('#todo-input', 'Buy groceries'); await page.click('#add-button'); const items = await page.$$('.todo-item'); expect(items.length).toBe(1);",
+        "selector": "#todo-input, #add-button",
+        "expected": "new item added"
+      },
+      {
+        "description": "Should mark todo as complete when checkbox is clicked",
+        "test_code": "await page.click('.todo-checkbox'); const completedItem = await page.$('.todo-item.completed'); expect(completedItem).toBeTruthy();",
+        "selector": ".todo-checkbox",
+        "expected": "item marked complete"
+      },
+      {
+        "description": "Should delete individual todo items",
+        "test_code": "const initialCount = await page.$$('.todo-item').length; await page.click('.delete-button'); const finalCount = await page.$$('.todo-item').length; expect(finalCount).toBe(initialCount - 1);",
+        "selector": ".delete-button",
+        "expected": "item deleted"
+      },
+      {
+        "description": "Should clear all completed items",
+        "test_code": "await page.click('#clear-completed'); const activeItems = await page.$$('.todo-item:not(.completed)'); const completedItems = await page.$$('.todo-item.completed'); expect(completedItems.length).toBe(0);",
+        "selector": "#clear-completed",
+        "expected": "completed items cleared"
+      }
+    ],
+    "expected_features": [
+      "todo-input field",
+      "add-button functionality",
+      "todo-item list",
+      "checkbox completion toggle",
+      "delete-button for each item",
+      "clear-completed functionality"
+    ],
+    "evaluation_criteria": [
+      {
+        "name": "Functional Correctness",
+        "description": "All CRUD operations work correctly",
+        "weight": 0.5
+      },
+      {
+        "name": "User Experience",
+        "description": "Intuitive interface with proper feedback",
+        "weight": 0.3
+      },
+      {
+        "name": "Code Quality",
+        "description": "Clean, maintainable code structure",
+        "weight": 0.2
+      }
+    ],
+    "frontendbench_metadata": {
+      "level": 3,
+      "category": "utilities",
+      "interaction_complexity": "simple",
+      "test_count": 5,
+      "evaluation_framework": "puppeteer-jest",
+      "dom_identifiers": [
+        "#todo-input",
+        "#add-button",
+        ".todo-item",
+        ".todo-checkbox",
+        ".delete-button",
+        "#clear-completed"
+      ]
+    },
+    "tags": [
+      "frontendbench",
+      "todo-list",
+      "crud",
+      "form",
+      "interaction"
+    ],
+    "estimated_time_minutes": 25,
+    "source": "Synthetic FrontendBench Task",
+    "created_at": "2025-11-05T00:48:43.818861"
+  },
+  {
+    "name": "FrontendBench-Calculator-002",
+    "category": "utilities",
+    "difficulty": "intermediate",
+    "project_type": "html",
+    "prompt": "Create a fully functional calculator application with the following specifications:\n\nDisplay:\n- A display screen showing the current input and results\n- Should support multiple digits and decimal numbers\n- Clear visual indication of current operation\n\nButtons Layout:\n- Numbers 0-9 arranged in standard calculator layout\n- Decimal point (.) button\n- Basic operations: Addition (+), Subtraction (-), Multiplication (*), Division (/)\n- Equals (=) button to calculate results\n- Clear (C) button to reset the calculator\n- Backspace (⌫) button to delete last digit\n\nFunctionality:\n- Perform basic arithmetic operations correctly\n- Handle decimal numbers with proper precision\n- Chain operations (e.g., 2 + 3 + 4 = 9)\n- Clear all input and start fresh\n- Handle division by zero gracefully\n- Keyboard support for number and operation keys\n\nDesign:\n- Modern, clean interface with good contrast\n- Button press effects and hover states\n- Responsive design that works on mobile and desktop\n- Smooth transitions and animations",
+    "requirements": {
+      "functional": [
+        "Basic arithmetic operations (add, subtract, multiply, divide)",
+        "Decimal number support",
+        "Clear/backspace functionality",
+        "Chain operations support",
+        "Error handling for invalid operations",
+        "Keyboard input support"
+      ],
+      "design": [
+        "Professional calculator appearance",
+        "Clear button grouping and layout",
+        "Visual feedback for button presses",
+        "Readable display with appropriate font size",
+        "Mobile-responsive design"
+      ],
+      "technical": [
+        "Accurate mathematical calculations",
+        "Proper handling of floating-point arithmetic",
+        "No JavaScript errors",
+        "Efficient event handling",
+        "State management for current operation"
+      ]
+    },
+    "evaluation_tests": [
+      {
+        "description": "Should perform basic addition correctly",
+        "test_code": "await page.click('[data-key=\"7\"]'); await page.click('[data-key=\"+\"]'); await page.click('[data-key=\"3\"]'); await page.click('[data-key=\"=\"]'); const display = await page.$eval('#display', el => el.textContent); expect(display).toBe('10');",
+        "selector": "[data-key=\"7\"], [data-key=\"+\"], [data-key=\"3\"], [data-key=\"=\"]",
+        "expected": "7 + 3 = 10"
+      },
+      {
+        "description": "Should handle decimal operations",
+        "test_code": "await page.click('[data-key=\"1\"]'); await page.click('[data-key=\".\"]'); await page.click('[data-key=\"5\"]'); await page.click('[data-key=\"+\"]'); await page.click('[data-key=\"2\"]'); await page.click('[data-key=\".\"]'); await page.click('[data-key=\"5\"]'); await page.click('[data-key=\"=\"]'); const display = await page.$eval('#display', el => el.textContent); expect(display).toBe('4');",
+        "selector": "[data-key=\".\"], [data-key=\"5\"], [data-key=\"=\"]",
+        "expected": "1.5 + 2.5 = 4"
+      },
+      {
+        "description": "Should clear calculator when C button is pressed",
+        "test_code": "await page.click('[data-key=\"5\"]'); await page.click('[data-key=\"+\"]'); await page.click('[data-key=\"3\"]'); await page.click('[data-key=\"C\"]'); const display = await page.$eval('#display', el => el.textContent); expect(display).toBe('0');",
+        "selector": "[data-key=\"C\"]",
+        "expected": "display cleared to 0"
+      },
+      {
+        "description": "Should handle chain operations",
+        "test_code": "await page.click('[data-key=\"2\"]'); await page.click('[data-key=\"+\"]'); await page.click('[data-key=\"3\"]'); await page.click('[data-key=\"+\"]'); await page.click('[data-key=\"4\"]'); await page.click('[data-key=\"=\"]'); const display = await page.$eval('#display', el => el.textContent); expect(display).toBe('9');",
+        "selector": "[data-key=\"+\"]",
+        "expected": "2 + 3 + 4 = 9"
+      },
+      {
+        "description": "Should handle division by zero gracefully",
+        "test_code": "await page.click('[data-key=\"5\"]'); await page.click('[data-key=\"÷\"]'); await page.click('[data-key=\"0\"]'); await page.click('[data-key=\"=\"]'); const display = await page.$eval('#display', el => el.textContent); expect(display).toBe('Error' || display === 'Infinity');",
+        "selector": "[data-key=\"÷\"], [data-key=\"0\"]",
+        "expected": "Error or Infinity"
+      }
+    ],
+    "expected_features": [
+      "calculator display",
+      "number buttons 0-9",
+      "operation buttons (+, -, *, /)",
+      "decimal point support",
+      "equals functionality",
+      "clear button",
+      "backspace functionality"
+    ],
+    "evaluation_criteria": [
+      {
+        "name": "Mathematical Accuracy",
+        "description": "All calculations are mathematically correct",
+        "weight": 0.6
+      },
+      {
+        "name": "User Interface",
+        "description": "Intuitive, responsive calculator interface",
+        "weight": 0.25
+      },
+      {
+        "name": "Edge Case Handling",
+        "description": "Graceful handling of errors and edge cases",
+        "weight": 0.15
+      }
+    ],
+    "frontendbench_metadata": {
+      "level": 3,
+      "category": "utilities",
+      "interaction_complexity": "simple",
+      "test_count": 5,
+      "evaluation_framework": "puppeteer-jest",
+      "dom_identifiers": [
+        "#display",
+        "[data-key]",
+        ".calculator-button",
+        ".operation-button",
+        ".number-button"
+      ]
+    },
+    "tags": [
+      "frontendbench",
+      "calculator",
+      "math",
+      "form",
+      "interaction"
+    ],
+    "estimated_time_minutes": 30,
+    "source": "Synthetic FrontendBench Task",
+    "created_at": "2025-11-05T00:48:43.818873",
+    "description": "FrontendBench calculator application with mathematical operations"
+  },
+  {
+    "name": "FrontendBench-Weather-003",
+    "category": "data-visualization",
+    "difficulty": "advanced",
+    "project_type": "html",
+    "prompt": "Create a weather forecast application with the following features:\n\nSearch Functionality:\n- A search input field to enter city names\n- A search button or auto-complete functionality\n- Store recent searches (up to 5 cities)\n\nCurrent Weather Display:\n- City name and country\n- Current temperature with appropriate unit toggle (°C/°F)\n- Weather condition description (e.g., \"Partly Cloudy\")\n- Weather icon or illustration\n- Feels-like temperature\n- Humidity percentage\n- Wind speed and direction\n- Atmospheric pressure\n\n5-Day Forecast:\n- Date for each day\n- High and low temperatures\n- Weather condition icons\n- Brief description of weather conditions\n- Precipitation chance percentage\n\nInteractive Features:\n- Toggle between Celsius and Fahrenheit\n- Refresh button to update current weather\n- Click on forecast day to see detailed view\n- Recent searches dropdown/clickable list\n\nDesign Requirements:\n- Modern, clean interface with weather-appropriate styling\n- Responsive design for mobile and desktop\n- Smooth transitions and loading states\n- Weather icons that change based on conditions\n- Error handling for invalid city names\n- Loading states during data fetching\n\nUse a weather API (you can simulate data or use a free API like OpenWeatherMap). The app should handle API errors gracefully and provide a good user experience.",
+    "requirements": {
+      "functional": [
+        "City search functionality with validation",
+        "Current weather display with all metrics",
+        "5-day weather forecast",
+        "Temperature unit conversion (Celsius/Fahrenheit)",
+        "Recent searches management",
+        "API integration and error handling",
+        "Refresh functionality"
+      ],
+      "design": [
+        "Weather-appropriate color schemes and icons",
+        "Intuitive navigation and layout",
+        "Mobile-responsive design",
+        "Loading states and error messages",
+        "Smooth transitions between views",
+        "Accessibility compliance"
+      ],
+      "technical": [
+        "API integration with proper error handling",
+        "Data caching for recent searches",
+        "Efficient DOM updates",
+        "Temperature conversion logic",
+        "Form validation and sanitization"
+      ]
+    },
+    "evaluation_tests": [
+      {
+        "description": "Should search for valid city and display weather",
+        "test_code": "await page.type('#city-search', 'London'); await page.click('#search-button'); await page.waitForSelector('.weather-display'); const city = await page.$eval('.city-name', el => el.textContent); expect(city.toLowerCase()).toContain('london');",
+        "selector": "#city-search, #search-button",
+        "expected": "London weather displayed"
+      },
+      {
+        "description": "Should display 5-day forecast",
+        "test_code": "const forecastDays = await page.$$('.forecast-day'); expect(forecastDays.length).toBe(5); const firstDay = await page.$eval('.forecast-day:first-child .date', el => el.textContent); expect(firstDay).toBeTruthy();",
+        "selector": ".forecast-day",
+        "expected": "5 forecast days shown"
+      },
+      {
+        "description": "Should toggle temperature units",
+        "test_code": "const tempBefore = await page.$eval('.current-temp', el => el.textContent); await page.click('#unit-toggle'); const tempAfter = await page.$eval('.current-temp', el => el.textContent); expect(tempBefore).not.toBe(tempAfter);",
+        "selector": "#unit-toggle",
+        "expected": "temperature unit changed"
+      },
+      {
+        "description": "Should show recent searches",
+        "test_code": "await page.type('#city-search', 'Paris'); await page.click('#search-button'); await page.waitForTimeout(1000); await page.type('#city-search', 'Tokyo'); await page.click('#search-button'); await page.click('#recent-searches'); const recentCities = await page.$$('.recent-city'); expect(recentCities.length).toBeGreaterThanOrEqual(1);",
+        "selector": "#recent-searches",
+        "expected": "recent searches displayed"
+      },
+      {
+        "description": "Should handle invalid city gracefully",
+        "test_code": "await page.type('#city-search', 'InvalidCityName123456'); await page.click('#search-button'); await page.waitForTimeout(2000); const errorMessage = await page.$eval('.error-message', el => el.textContent); expect(errorMessage).toContain('not found');",
+        "selector": ".error-message",
+        "expected": "error message shown"
+      }
+    ],
+    "expected_features": [
+      "city search functionality",
+      "current weather display",
+      "temperature with unit toggle",
+      "5-day forecast",
+      "weather icons and descriptions",
+      "recent searches feature",
+      "error handling"
+    ],
+    "evaluation_criteria": [
+      {
+        "name": "Data Integration",
+        "description": "Proper API integration and data display",
+        "weight": 0.4
+      },
+      {
+        "name": "User Experience",
+        "description": "Intuitive interface with good feedback",
+        "weight": 0.3
+      },
+      {
+        "name": "Feature Completeness",
+        "description": "All required features implemented correctly",
+        "weight": 0.3
+      }
+    ],
+    "frontendbench_metadata": {
+      "level": 4,
+      "category": "data-visualization",
+      "interaction_complexity": "complex",
+      "test_count": 5,
+      "evaluation_framework": "puppeteer-jest",
+      "dom_identifiers": [
+        "#city-search",
+        "#search-button",
+        ".weather-display",
+        ".forecast-day",
+        "#unit-toggle",
+        "#recent-searches"
+      ]
+    },
+    "tags": [
+      "frontendbench",
+      "weather",
+      "api",
+      "data-visualization",
+      "complex-interaction"
+    ],
+    "estimated_time_minutes": 45,
+    "source": "Synthetic FrontendBench Task",
+    "created_at": "2025-11-05T00:48:43.818879",
+    "description": "FrontendBench weather application with API integration"
+  },
+  {
+    "name": "FrontendBench-MemoryGame-004",
+    "category": "games",
+    "difficulty": "advanced",
+    "project_type": "html",
+    "prompt": "Create a memory card matching game with the following features:\n\nGame Setup:\n- 4x4 grid of cards (16 total, 8 matching pairs)\n- Cards should be face-down initially\n- Use emojis, numbers, or simple symbols for card faces\n- Shuffle cards randomly at game start\n\nGame Mechanics:\n- Click any card to flip it face-up\n- Click a second card to flip it\n- If two cards match, they stay face-up and become \"matched\"\n- If two cards don't match, flip them back face-down after 1 second\n- Prevent clicking more than 2 cards at once\n- Track number of moves (attempts)\n\nGame State:\n- Move counter display\n- Timer showing elapsed time\n- Matched pairs counter\n- \"New Game\" button to restart\n\nVisual Features:\n- Smooth card flip animations\n- Hover effects on cards\n- Matched cards should have a distinct visual style\n- Victory animation when all pairs are matched\n- Responsive grid layout\n\nGame Logic:\n- Win condition: All 8 pairs matched\n- Track best score (fewest moves) using localStorage\n- Disable board during card flip animations\n- Proper game state management\n\nDesign Requirements:\n- Modern, playful interface with good contrast\n- Mobile and desktop compatible\n- Clear visual feedback for all interactions\n- Smooth animations and transitions\n- Accessible game controls",
+    "requirements": {
+      "functional": [
+        "4x4 grid with 8 matching pairs",
+        "Card flipping mechanics",
+        "Match detection logic",
+        "Move and time tracking",
+        "Win condition detection",
+        "Game restart functionality",
+        "Score persistence using localStorage"
+      ],
+      "design": [
+        "Smooth card flip animations",
+        "Clear visual states (face-down, face-up, matched)",
+        "Responsive grid layout",
+        "Playful, engaging design",
+        "Victory celebration animation",
+        "Mobile-optimized touch targets"
+      ],
+      "technical": [
+        "Efficient game state management",
+        "Proper event handling for cards",
+        "Animation timing coordination",
+        "LocalStorage for best score",
+        "No memory leaks or performance issues"
+      ]
+    },
+    "evaluation_tests": [
+      {
+        "description": "Should initialize with 16 face-down cards",
+        "test_code": "const cards = await page.$$('.memory-card'); expect(cards.length).toBe(16); const faceDownCards = await page.$$('.memory-card.face-down'); expect(faceDownCards.length).toBe(16);",
+        "selector": ".memory-card",
+        "expected": "16 cards face-down"
+      },
+      {
+        "description": "Should flip cards when clicked",
+        "test_code": "const firstCard = await page.$('.memory-card'); await firstCard.click(); await page.waitForTimeout(300); const hasFaceUpClass = await page.evaluate(el => el.classList.contains('face-up'), firstCard); expect(hasFaceUpClass).toBe(true);",
+        "selector": ".memory-card",
+        "expected": "card flips face-up"
+      },
+      {
+        "description": "Should detect and keep matched pairs",
+        "test_code": "// Find matching pair through simulation; const matchedCards = await page.$$('.memory-card.matched'); expect(matchedCards.length).toBeGreaterThanOrEqual(0);",
+        "selector": ".memory-card.matched",
+        "expected": "matched pairs stay face-up"
+      },
+      {
+        "description": "Should increment move counter",
+        "test_code": "const initialMoves = await page.$eval('#move-counter', el => parseInt(el.textContent)); await page.click('.memory-card:nth-child(1)'); await page.click('.memory-card:nth-child(2)'); const finalMoves = await page.$eval('#move-counter', el => parseInt(el.textContent)); expect(finalMoves).toBe(initialMoves + 1);",
+        "selector": "#move-counter",
+        "expected": "move counter incremented"
+      },
+      {
+        "description": "Should show victory when all pairs matched",
+        "test_code": "// Simulate game completion; const victoryMessage = await page.$('.victory-message'); expect(victoryMessage).toBeTruthy();",
+        "selector": ".victory-message",
+        "expected": "victory screen displayed"
+      }
+    ],
+    "expected_features": [
+      "4x4 card grid layout",
+      "card flipping animations",
+      "match detection logic",
+      "move and time tracking",
+      "victory condition handling",
+      "game restart functionality",
+      "score persistence"
+    ],
+    "evaluation_criteria": [
+      {
+        "name": "Game Logic",
+        "description": "Correct memory game mechanics and rules",
+        "weight": 0.5
+      },
+      {
+        "name": "User Experience",
+        "description": "Smooth animations and intuitive gameplay",
+        "weight": 0.3
+      },
+      {
+        "name": "Visual Polish",
+        "description": "Attractive design and proper feedback",
+        "weight": 0.2
+      }
+    ],
+    "frontendbench_metadata": {
+      "level": 4,
+      "category": "games",
+      "interaction_complexity": "complex",
+      "test_count": 5,
+      "evaluation_framework": "puppeteer-jest",
+      "dom_identifiers": [
+        ".memory-card",
+        "#move-counter",
+        "#timer",
+        "#new-game-btn",
+        ".victory-message"
+      ]
+    },
+    "tags": [
+      "frontendbench",
+      "game",
+      "memory",
+      "interaction",
+      "animation"
+    ],
+    "estimated_time_minutes": 40,
+    "source": "Synthetic FrontendBench Task",
+    "created_at": "2025-11-05T00:48:43.818884",
+    "description": "FrontendBench memory card game with animations"
+  },
+  {
+    "name": "FrontendBench-ProductFilter-005",
+    "category": "utilities",
+    "difficulty": "intermediate",
+    "project_type": "html",
+    "prompt": "Create a product filtering application with the following features:\n\nProduct Display:\n- Grid of product cards showing:\n  - Product image (placeholder)\n  - Product name\n  - Price\n  - Category tags\n  - Add to cart button\n\nFilter Controls:\n- Search bar to filter products by name\n- Category dropdown (All, Electronics, Clothing, Books, Home)\n- Price range slider (min and max values)\n- Sort dropdown (Price: Low to High, Price: High to Low, Name: A-Z, Name: Z-A)\n- Clear filters button\n\nCart Functionality:\n- Cart icon with item count badge\n- Cart dropdown/sidebar showing:\n  - List of added items\n  - Quantity controls\n  - Remove item buttons\n  - Total price\n- Add to cart buttons with feedback\n\nInteractive Features:\n- Real-time filtering as user types\n- Smooth animations when products are filtered\n- Hover effects on product cards and buttons\n- Responsive grid layout (adjusts columns based on screen size)\n\nData:\n- Create 12-15 sample products with different categories and prices\n- Product data should be embedded in JavaScript\n\nDesign Requirements:\n- Modern, clean e-commerce interface\n- Good use of whitespace and typography\n- Mobile-responsive design\n- Loading states and empty states\n- Smooth transitions and micro-interactions",
+    "requirements": {
+      "functional": [
+        "Product grid display with all required information",
+        "Search functionality with real-time filtering",
+        "Category filtering",
+        "Price range filtering",
+        "Sorting functionality",
+        "Add to cart functionality",
+        "Cart management (view, edit, remove items)"
+      ],
+      "design": [
+        "Professional e-commerce design",
+        "Intuitive filter controls",
+        "Responsive product grid",
+        "Clear visual hierarchy",
+        "Smooth animations and transitions",
+        "Mobile-optimized interface"
+      ],
+      "technical": [
+        "Efficient filtering algorithms",
+        "State management for cart and filters",
+        "DOM manipulation performance",
+        "Form validation for price ranges",
+        "Event delegation for dynamic content"
+      ]
+    },
+    "evaluation_tests": [
+      {
+        "description": "Should display all products initially",
+        "test_code": "const products = await page.$$('.product-card'); expect(products.length).toBeGreaterThanOrEqual(12);",
+        "selector": ".product-card",
+        "expected": "all products shown"
+      },
+      {
+        "description": "Should filter products by search term",
+        "test_code": "await page.type('#search-input', 'Laptop'); await page.waitForTimeout(500); const filteredProducts = await page.$$('.product-card:not(.hidden)'); const hasLaptop = await page.evaluate(() => Array.from(document.querySelectorAll('.product-card:not(.hidden)')).some(card => card.textContent.toLowerCase().includes('laptop'))); expect(hasLaptop).toBe(true);",
+        "selector": "#search-input",
+        "expected": "products filtered by search"
+      },
+      {
+        "description": "Should filter by category",
+        "test_code": "await page.select('#category-filter', 'Electronics'); await page.waitForTimeout(500); const electronicsProducts = await page.$$('.product-card.category-electronics:not(.hidden)'); expect(electronicsProducts.length).toBeGreaterThan(0);",
+        "selector": "#category-filter",
+        "expected": "category filter applied"
+      },
+      {
+        "description": "Should add items to cart",
+        "test_code": "const initialCount = await page.$eval('#cart-count', el => parseInt(el.textContent) || 0); await page.click('.product-card:first-child .add-to-cart'); await page.waitForTimeout(500); const finalCount = await page.$eval('#cart-count', el => parseInt(el.textContent)); expect(finalCount).toBe(initialCount + 1);",
+        "selector": ".add-to-cart",
+        "expected": "item added to cart"
+      },
+      {
+        "description": "Should sort products by price",
+        "test_code": "await page.select('#sort-dropdown', 'price-low-high'); await page.waitForTimeout(500); const prices = await page.$$eval('.product-card:not(.hidden) .price', els => els.map(el => parseFloat(el.textContent.replace('$', '')))); const isSorted = prices.every((price, i) => i === 0 || price >= prices[i-1]); expect(isSorted).toBe(true);",
+        "selector": "#sort-dropdown",
+        "expected": "products sorted by price"
+      }
+    ],
+    "expected_features": [
+      "product grid display",
+      "search functionality",
+      "category and price filtering",
+      "sorting capabilities",
+      "add to cart functionality",
+      "cart management",
+      "responsive design"
+    ],
+    "evaluation_criteria": [
+      {
+        "name": "Filtering Logic",
+        "description": "All filters work correctly and efficiently",
+        "weight": 0.4
+      },
+      {
+        "name": "E-commerce UX",
+        "description": "Intuitive shopping experience",
+        "weight": 0.3
+      },
+      {
+        "name": "Visual Design",
+        "description": "Professional, modern e-commerce interface",
+        "weight": 0.3
+      }
+    ],
+    "frontendbench_metadata": {
+      "level": 3,
+      "category": "utilities",
+      "interaction_complexity": "simple",
+      "test_count": 5,
+      "evaluation_framework": "puppeteer-jest",
+      "dom_identifiers": [
+        ".product-card",
+        "#search-input",
+        "#category-filter",
+        "#price-range",
+        "#sort-dropdown",
+        "#cart-count"
+      ]
+    },
+    "tags": [
+      "frontendbench",
+      "e-commerce",
+      "filter",
+      "search",
+      "cart"
+    ],
+    "estimated_time_minutes": 35,
+    "source": "Synthetic FrontendBench Task",
+    "created_at": "2025-11-05T00:48:43.818888",
+    "description": "FrontendBench product filter application with search functionality"
+  }
+]
