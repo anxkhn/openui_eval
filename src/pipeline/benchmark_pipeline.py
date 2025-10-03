@@ -10,20 +10,20 @@ from typing import Any, Dict, List, Optional
 import psutil
 from tqdm import tqdm
 
-from ..core.config import Config
-
-from ..core.logger import get_logger, setup_logger
-from ..evaluation.evaluation_schemas import (
+from core.config import Config
+from core.logger import get_logger, setup_logger
+from tasks.task_loader import get_task_loader, TaskConfig
+from evaluation.evaluation_schemas import (
     BenchmarkSummary,
     ModelRanking,
     TaskDifficultyRanking,
 )
-from ..evaluation.judge import Judge
-from ..generation.html_generator import HTMLGenerator
-from ..generation.project_generator import ProjectGenerator
-from ..models.model_manager import ModelManager
-from ..rendering.renderer import WebRenderer
-from ..rendering.node_renderer import NodeProjectRenderer
+from evaluation.judge import Judge
+from generation.html_generator import HTMLGenerator
+from generation.project_generator import ProjectGenerator
+from models.model_manager import ModelManager
+from rendering.node_renderer import NodeProjectRenderer
+from rendering.renderer import WebRenderer
 
 
 class BenchmarkPipeline:
@@ -37,6 +37,8 @@ class BenchmarkPipeline:
             level=config.log_level,
             enable_compression=config.compress_logs,
         )
+        # Initialize task loader
+        self.task_loader = get_task_loader()
         # Initialize components
         self.model_manager = None
         self.html_generator = None
@@ -55,6 +57,70 @@ class BenchmarkPipeline:
         self.total_operations = 0
         self.completed_operations = 0
         self.logger.info("BenchmarkPipeline initialized")
+
+    def _get_tasks(self):
+        """Get tasks based on configuration."""
+        if isinstance(self.config.tasks, list):
+            task_config = TaskConfig(
+                tasks_dir="tasks",
+                include_default_tasks=True,
+                include_artifactsbench=True,
+                include_webgen_bench=True,
+                include_frontendbench=True,
+                include_astra=True,
+                custom_task_files=[],
+            )
+            configured_task_names = [task.name for task in self.config.tasks]
+        else:
+            task_config = TaskConfig(
+                tasks_dir=self.config.tasks.tasks_dir,
+                include_default_tasks=self.config.tasks.include_default_tasks,
+                include_artifactsbench=self.config.tasks.include_artifactsbench,
+                include_webgen_bench=self.config.tasks.include_webgen_bench,
+                custom_task_files=self.config.tasks.custom_task_files,
+            )
+            configured_task_names = self.config.tasks.task_names
+
+        self.task_loader = get_task_loader(task_config)
+        loaded_tasks = self.task_loader.load_all_tasks()
+
+        # Apply filters
+        filtered_tasks = {}
+        for task_name, task in loaded_tasks.items():
+            # Filter by task names
+            if configured_task_names and task_name not in configured_task_names:
+                continue
+
+            # Filter by categories (only if using TasksConfig format)
+            if (
+                not isinstance(self.config.tasks, list)
+                and self.config.tasks.categories
+                and task.category.value not in self.config.tasks.categories
+            ):
+                continue
+
+            # Filter by difficulties (only if using TasksConfig format)
+            if (
+                not isinstance(self.config.tasks, list)
+                and self.config.tasks.difficulties
+                and task.difficulty.value not in self.config.tasks.difficulties
+            ):
+                continue
+
+            # Filter by project types (only if using TasksConfig format)
+            if (
+                not isinstance(self.config.tasks, list)
+                and self.config.tasks.project_types
+                and task.project_type not in self.config.tasks.project_types
+            ):
+                continue
+
+            filtered_tasks[task_name] = task
+
+        self.logger.info(
+            f"Loaded {len(loaded_tasks)} total tasks, {len(filtered_tasks)} after filtering"
+        )
+        return list(filtered_tasks.values())
 
     def _setup_components(self):
         """Initialize all pipeline components."""
@@ -118,10 +184,9 @@ class BenchmarkPipeline:
         """Calculate total number of operations for progress tracking."""
         if self.config.mode == "generation-only":
             # Model x Task x Iterations
+            tasks = self._get_tasks()
             self.total_operations = (
-                len(self.config.models)
-                * len(self.config.tasks)
-                * self.config.iterations
+                len(self.config.models) * len(tasks) * self.config.iterations
             )
         elif self.config.mode == "judging-only":
             # Assume existing results, count evaluations
@@ -129,10 +194,9 @@ class BenchmarkPipeline:
             self.total_operations = 100  # Placeholder
         else:  # full-pipeline
             # Generation + Evaluation
+            tasks = self._get_tasks()
             generation_ops = (
-                len(self.config.models)
-                * len(self.config.tasks)
-                * self.config.iterations
+                len(self.config.models) * len(tasks) * self.config.iterations
             )
             # Determine judge models using the new method
             judge_models = self._determine_judge_models()
@@ -161,15 +225,16 @@ class BenchmarkPipeline:
         try:
             self.logger.info("Starting generation phase...")
             generation_results = {}
+            tasks = self._get_tasks()
             with tqdm(
-                total=len(self.config.models) * len(self.config.tasks),
+                total=len(self.config.models) * len(tasks),
                 desc="Generating HTML",
             ) as pbar:
                 for model_config in self.config.models:
                     model_name = model_config.name
                     generation_results[model_name] = {}
                     self.logger.info(f"Starting generation with model: {model_name}")
-                    for task in self.config.tasks:
+                    for task in tasks:
                         task_name = task.name
                         try:
                             self.logger.info(
@@ -256,14 +321,7 @@ class BenchmarkPipeline:
                             continue
                         try:
                             # Find task config
-                            task_config = next(
-                                (
-                                    task
-                                    for task in self.config.tasks
-                                    if task.name == task_name
-                                ),
-                                None,
-                            )
+                            task_config = self.task_loader.get_task(task_name)
                             if not task_config:
                                 self.logger.error(
                                     f"Task config not found for {task_name}"
@@ -399,7 +457,7 @@ class BenchmarkPipeline:
             summary = BenchmarkSummary(
                 benchmark_timestamp=datetime.now().isoformat(),
                 total_models=len(self.config.models),
-                total_tasks=len(self.config.tasks),
+                total_tasks=len(self._get_tasks()),
                 total_iterations_per_task=self.config.iterations,
                 model_rankings=model_rankings,
                 model_scores=model_scores,

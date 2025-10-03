@@ -1,13 +1,13 @@
 """Provider factory for creating LLM providers."""
 
 import os
-from typing import Dict, Any
+from typing import Any, Dict
 
-
-from .base_provider import LLMProvider
-from .ollama_provider import OllamaProvider
-from .vllm_provider import vLLMProvider
-from .openrouter_provider import OpenRouterProvider
+from models.base_provider import LLMProvider
+from models.gemini_provider import GeminiProvider
+from models.ollama_provider import OllamaProvider
+from models.openrouter_provider import OpenRouterProvider
+from models.vllm_provider import vLLMProvider
 
 
 def create_provider(provider_type: str, config: Dict[str, Any] = None) -> LLMProvider:
@@ -15,7 +15,7 @@ def create_provider(provider_type: str, config: Dict[str, Any] = None) -> LLMPro
     Create a provider instance based on the provider type and configuration.
 
     Args:
-        provider_type: Type of provider ("ollama", "vllm", "openrouter")
+        provider_type: Type of provider ("ollama", "vllm", "openrouter", "gemini")
         config: Configuration dictionary for the provider
 
     Returns:
@@ -64,10 +64,13 @@ def create_provider(provider_type: str, config: Dict[str, Any] = None) -> LLMPro
             },
         )
 
+    elif provider_type == "gemini":
+        return GeminiProvider(config)
+
     else:
-        raise ConfigurationError(
+        raise ValueError(
             f"Unknown provider type: {provider_type}. "
-            f"Supported providers: ollama, vllm, openrouter"
+            f"Supported providers: ollama, vllm, openrouter, gemini"
         )
 
 
@@ -100,6 +103,13 @@ def get_available_providers() -> Dict[str, bool]:
         providers["openrouter"] = openrouter_provider.is_available()
     except Exception:
         providers["openrouter"] = False
+
+    # Check Gemini
+    try:
+        gemini_provider = create_provider("gemini")
+        providers["gemini"] = gemini_provider.is_available()
+    except Exception:
+        providers["gemini"] = False
 
     return providers
 

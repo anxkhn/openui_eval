@@ -6,6 +6,10 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import yaml
+from dotenv import load_dotenv
+
+# Load environment variables immediately
+load_dotenv()
 
 
 @dataclass
@@ -73,7 +77,7 @@ class ProjectConfig:
 class ProviderConfig:
     """Configuration for LLM providers."""
 
-    provider_type: str = "ollama"  # ollama, vllm, openrouter
+    provider_type: str = "ollama"  # ollama, vllm, openrouter, gemini
 
     # Ollama settings
     ollama_host: str = "http://localhost:11434"
@@ -87,6 +91,9 @@ class ProviderConfig:
     openrouter_model: str = "meta-llama/llama-3.1-8b-instruct:free"
     openrouter_api_key: Optional[str] = None
     openrouter_requests_per_minute: int = 20
+
+    # Gemini settings
+    gemini_api_key: Optional[str] = None
 
     # Common settings
     timeout: int = 300
@@ -121,6 +128,24 @@ class EvaluationConfig:
 
 
 @dataclass
+class TasksConfig:
+    """Configuration for task loading and management."""
+
+    # Task loading settings
+    tasks_dir: str = "tasks"
+    include_default_tasks: bool = True
+    include_artifactsbench: bool = True
+    include_webgen_bench: bool = True
+    custom_task_files: List[str] = field(default_factory=list)
+
+    # Task filtering
+    task_names: List[str] = field(default_factory=list)
+    categories: List[str] = field(default_factory=list)
+    difficulties: List[str] = field(default_factory=list)
+    project_types: List[str] = field(default_factory=list)
+
+
+@dataclass
 class Config:
     """Main configuration class for the benchmark system."""
 
@@ -137,179 +162,7 @@ class Config:
         ]
     )
     # Task settings
-    tasks: List[TaskConfig] = field(
-        default_factory=lambda: [
-            TaskConfig(
-                name="responsive_calculator",
-                description="Create a responsive calculator with modern UI",
-                prompt_template="""Create a sophisticated, responsive calculator with modern UI design.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- Design a sleek, modern calculator interface with a dark theme using gradients of charcoal and deep blue.
-- Include all basic arithmetic operations (+, -, *, /), number buttons (0-9), decimal point, equals, and clear/all-clear buttons.
-- The display should be large and clearly readable with a subtle inner shadow effect showing "0" or a sample calculation.
-- Style buttons with modern design - subtle gradients, proper spacing, and professional appearance.
-- The calculator should be fully responsive, adapting beautifully from mobile (320px) to desktop (1200px+) screens.
-- Use a clean, modern font like 'Segoe UI' or similar system fonts.
-- Focus on visual design excellence - proper button sizing, consistent spacing, and professional color scheme.
-- The layout should be intuitive with a clear visual hierarchy between display, numbers, and operations.""",
-            ),
-            TaskConfig(
-                name="google_search_clone",
-                description="Create a Google Search bar clone",
-                prompt_template="""Create a pixel-perfect Google Search homepage clone with authentic styling.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- Replicate Google's clean, minimalist homepage design with accurate spacing, colors, and typography.
-- Include the Google logo (use text-based logo with authentic colors), centered search input field, and both 'Google Search' and 'I'm Feeling Lucky' buttons.
-- The search bar should have Google's characteristic rounded corners, subtle shadow, and proper styling.
-- Style buttons to match Google's actual appearance with proper colors and spacing.
-- Add the characteristic grid of apps icon in the top-right corner and Gmail/Images links.
-- Include Google's footer with links like 'About', 'Advertising', 'Privacy', 'Terms', etc.
-- The page must be fully responsive and maintain Google's clean aesthetic on all screen sizes.
-- Include the microphone icon in the search bar with proper positioning.
-- Focus on achieving pixel-perfect visual accuracy to Google's actual homepage design.""",
-            ),
-            TaskConfig(
-                name="book_review_website",
-                description="Create a book review website",
-                prompt_template="""Create a comprehensive book review website with elegant design.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- Design a warm, literary-themed layout using a sophisticated color palette of deep burgundy, cream, and gold accents.
-- Include a header with navigation (Home, Reviews, Genres, About, Contact), hero section with featured book of the month.
-- Create sections for: Recent Reviews (with book covers, ratings, and excerpts), Top Rated Books, Browse by Genre, and Featured Authors.
-- Each book review card should include: book cover placeholder, title, author, star rating display (★★★★☆), review excerpt, and 'Read Full Review' button.
-- Display star ratings using visual star symbols or styled elements.
-- Use elegant typography with serif fonts for headings and clean sans-serif for body text.
-- Include a search bar and filter options display (by genre, rating, author) with proper styling.
-- Add a newsletter signup section with attractive form styling.
-- The design must be fully responsive with professional layout and visual hierarchy.
-- Include book genre tags with color-coded styling for visual appeal.""",
-            ),
-            TaskConfig(
-                name="portfolio_website",
-                description="Create a portfolio website",
-                prompt_template="""Create a stunning, professional portfolio website for a web developer with modern design.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- Design a modern, dark-themed portfolio with a sophisticated color scheme of deep navy, electric blue accents, and white text.
-- Include a fixed navigation header with clean menu items linking to sections.
-- Hero section: Large name/title, professional photo placeholder, role description text, and compelling call-to-action button.
-- About section: Personal story, professional journey, and key achievements with professional layout.
-- Skills section: Visual skill bars showing percentages, technology icons, and organized skill categories.
-- Projects section: Grid of project cards with image placeholders, descriptions, tech stack tags, and 'View Project' buttons.
-- Contact section: Professional contact form with proper styling and social media links with icons.
-- Footer: Additional links and copyright information.
-- Focus on professional visual design, proper spacing, and clear visual hierarchy throughout.
-- The site must be fully responsive with mobile-first design approach.
-- Include a theme toggle button (dark/light) with proper styling.""",
-            ),
-            TaskConfig(
-                name="todo_list_app",
-                description="Create a todo list application",
-                prompt_template="""Create a feature-rich, modern todo list application with beautiful UI design.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- Design a clean, modern interface with a light theme using soft blues, whites, and subtle gray accents.
-- Include a header with app title, add-new-task input field, and task statistics display.
-- Show sample tasks in different states: active tasks, completed tasks (with strikethrough), and various priority levels.
-- Display task filtering options: All, Active, Completed buttons with proper styling.
-- Include a search bar with proper styling for task filtering.
-- Show tasks with priority levels (High, Medium, Low) using color-coded indicators.
-- Display due dates and show some tasks as overdue with visual indicators.
-- Include task categories/tags with color coding for visual organization.
-- Show edit and delete buttons for each task with proper icon styling.
-- Design task items with checkboxes, task text, priority indicators, and action buttons.
-- The app must be fully responsive with mobile-friendly layout and touch-friendly button sizes.""",
-            ),
-            TaskConfig(
-                name="modern_landing_page",
-                description="A dark-themed, futuristic landing page for a SaaS product",
-                prompt_template="""Design a visually striking landing page for a fictional SaaS product called 'SynthWave'.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- The design should be dark-themed, using a palette of deep purples, electric blues, and neon pinks.
-- Use a bold, futuristic font for the main headline and a clean, readable sans-serif font for the body text.
-- The layout should be a single, centered column.
-- It must include a hero section with the product name 'SynthWave' and a prominent call-to-action button.
-- Add three distinct sections below the hero: 'Features', 'Pricing', and a simple 'Contact' layout.
-- Style the call-to-action button with a subtle glowing effect and modern design.
-- Ensure the page is fully responsive and looks polished on mobile, tablet, and desktop screens.""",
-            ),
-            TaskConfig(
-                name="minimalist_blog_layout",
-                description="A clean, minimalist, and content-focused blog layout",
-                prompt_template="""Create the layout for a minimalist and elegant blog.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- The design must be clean and content-focused, with a light color scheme (primarily white and light gray) and a single accent color for links.
-- Use a classic, highly readable serif font for the blog post body and a modern sans-serif for headings.
-- The layout should feature a simple header with the blog's title, a main content area with a placeholder title and text for a single blog post, and a minimal footer.
-- The page must be fully responsive, with typography and spacing that adapt beautifully to different screen sizes.""",
-            ),
-            TaskConfig(
-                name="ecommerce_product_page",
-                description="An elegant and luxurious product page for a high-end watch",
-                prompt_template="""Construct a product detail page for a high-end wristwatch.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- The visual style should be luxurious and elegant, using a sophisticated color palette (e.g., charcoal, gold, and off-white).
-- On a desktop, the layout should be a two-column grid: the left for a product image placeholder and the right for the watch's name, a short description, the price, and an 'Add to Cart' button.
-- On mobile devices, these two columns should stack vertically.
-- Use a classic serif font for headings and a clean sans-serif for body text.
-- The 'Add to Cart' button should have a premium look with a subtle animation on click.
-- The page must be fully responsive.""",
-            ),
-            TaskConfig(
-                name="travel_website_hero",
-                description="An immersive and visually beautiful hero section for a travel website",
-                prompt_template="""Design a visually immersive hero section for a travel website.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- The design should evoke a sense of adventure, using a vibrant color scheme inspired by nature (e.g., deep blues, lush greens).
-- The layout should feature a large, bold, and inspiring headline font over a placeholder for a full-width background image.
-- A clean and modern search bar for destinations should be centered over the background.
-- The entire section must be fully responsive, ensuring the text is always readable and the layout is well-balanced on all devices.""",
-            ),
-            TaskConfig(
-                name="photography_portfolio_gallery",
-                description="A minimalist, image-focused gallery for a photography portfolio",
-                prompt_template="""Create a gallery page for a photography portfolio.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- The design should be image-centric and minimalist, with a dark background to make the (placeholder) images stand out.
-- The gallery should be a responsive grid of placeholders for photos.
-- On hover, each placeholder should have a subtle zoom effect.
-- The page needs a simple header with the photographer's name and a footer with social media icon placeholders.
-- The grid layout must be fluid, adapting from a single column on mobile to multiple columns on wider screens.""",
-            ),
-            TaskConfig(
-                name="recipe_card_display",
-                description="A warm and inviting, well-organized recipe card",
-                prompt_template="""Design a single, visually appealing recipe card as a web page.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- The style should be warm and inviting, using a color palette reminiscent of a kitchen (e.g., warm browns, creamy whites, a splash of herbal green).
-- The layout should be well-organized with clear sections for the recipe title, a short description, an ingredients list, and step-by-step instructions.
-- Use a charming, slightly rustic font for headings and a clear, legible font for the body.
-- The page must be fully responsive, so the recipe is easy to read on a phone or a larger screen.""",
-            ),
-            TaskConfig(
-                name="event_announcement_page",
-                description="A modern and stylish announcement page for a virtual tech conference",
-                prompt_template="""Create a stylish announcement page for a virtual tech conference.
-**Instructions:**
-- The entire output must be a single HTML file with all CSS and JavaScript inline.
-- The design should be modern and tech-savvy, with a dark theme that uses gradients of blue and purple.
-- The typography should be clean and futuristic.
-- The page should have a prominent headline with the event name and date.
-- Below the headline, include sections for a keynote speaker (with a placeholder for their photo and bio) and a large 'Register Now' button.
-- The 'Register Now' button should be a focal point with an eye-catching hover effect.
-- The layout must be fully responsive and look professional on all devices.""",
-            ),
-        ]
-    )
+    tasks: TasksConfig = field(default_factory=TasksConfig)
     # Pipeline settings
     iterations: int = 3
     judges: List[str] = field(
@@ -360,15 +213,15 @@ class Config:
             # Handle tasks
             if "tasks" in data:
                 if isinstance(data["tasks"], dict) and "task_names" in data["tasks"]:
-                    # Legacy format with just task names - use task definitions
+                    # Task names from configuration
                     task_names = data["tasks"]["task_names"]
                     # Import task definitions
-                    from ..tasks.task_definitions import get_task_by_name
+                    from tasks.task_loader import get_task
 
                     filtered_tasks = []
                     for task_name in task_names:
-                        # Try to get from task definitions first
-                        task_def = get_task_by_name(task_name)
+                        # Get task from task loader
+                        task_def = get_task(task_name)
                         if task_def:
                             filtered_tasks.append(
                                 TaskConfig(
@@ -501,6 +354,7 @@ class Config:
                         "openrouter_model",
                         "openrouter_api_key",
                         "openrouter_requests_per_minute",
+                        "gemini_api_key",
                         "timeout",
                     }
                     for key, value in provider_data.items():
@@ -588,17 +442,37 @@ class Config:
         # Convert tasks
         data["tasks"] = []
         for task in self.tasks:
-            data["tasks"].append(
-                {
-                    "name": task.name,
-                    "description": task.description,
-                    "prompt_template": task.prompt_template,
-                    "expected_elements": task.expected_elements,
-                    "difficulty": task.difficulty,
-                    "project_type": task.project_type,
-                    "framework_version": task.framework_version,
-                }
-            )
+            # Handle both TaskConfig and TaskDefinition objects
+            if hasattr(task, "prompt_template"):
+                # This is a TaskConfig object
+                data["tasks"].append(
+                    {
+                        "name": task.name,
+                        "description": task.description,
+                        "prompt_template": task.prompt_template,
+                        "expected_elements": getattr(task, "expected_elements", []),
+                        "difficulty": getattr(task, "difficulty", "medium"),
+                        "project_type": getattr(task, "project_type", "html"),
+                        "framework_version": getattr(task, "framework_version", None),
+                    }
+                )
+            else:
+                # This is a TaskDefinition object
+                data["tasks"].append(
+                    {
+                        "name": task.name,
+                        "description": task.description,
+                        "prompt_template": task.prompt,
+                        "expected_elements": task.expected_features,
+                        "difficulty": (
+                            task.difficulty.value
+                            if hasattr(task.difficulty, "value")
+                            else str(task.difficulty)
+                        ),
+                        "project_type": task.project_type,
+                        "framework_version": task.framework_version,
+                    }
+                )
         # Add other fields
         data.update(
             {

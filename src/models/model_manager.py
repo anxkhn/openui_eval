@@ -7,11 +7,10 @@ from typing import Any, Dict, List, Optional
 
 import psutil
 
-from ..core.config import Config, ModelConfig
-
-from ..core.logger import get_logger
-from .base_provider import LLMProvider
-from .provider_factory import create_provider
+from core.config import Config, ModelConfig
+from core.logger import get_logger
+from models.base_provider import LLMProvider
+from models.provider_factory import create_provider
 
 
 @dataclass
@@ -54,6 +53,7 @@ class ModelManager:
             "api_key": config.provider.openrouter_api_key,
             "default_model": config.provider.openrouter_model,
             "requests_per_minute": config.provider.openrouter_requests_per_minute,
+            "gemini_api_key": config.provider.gemini_api_key,
             "timeout": config.provider.timeout,
         }
 

@@ -6,11 +6,14 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from ..core.config import EvaluationConfig
-
-from ..core.logger import get_logger
-from ..models.model_manager import ModelManager
-from .evaluation_schemas import CriteriaScore, EvaluationResult, TaskEvaluationSummary
+from core.config import EvaluationConfig
+from core.logger import get_logger
+from models.model_manager import ModelManager
+from evaluation.evaluation_schemas import (
+    CriteriaScore,
+    EvaluationResult,
+    TaskEvaluationSummary,
+)
 
 
 class Judge:
